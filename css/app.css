@@ -1,0 +1,1818 @@
+@font-face {
+    font-family: GilRoy;
+    src: url("../fonts/SVN-GILROY LIGHT.OTF");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: GilRoy;
+    src: url("../fonts/SVN-GILROY MEDIUM.OTF");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: GilRoy;
+    src: url("../fonts/SVN-GILROY BOLD.OTF");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: GilRoy;
+    src: url("../fonts/SVN-GILROY XBOLD.OTF");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap
+}
+
+.loadicon>span {
+    -webkit-mask-image: url(../images/logo.svg);
+    mask-image: url(../images/logo.svg);
+    -webkit-mask-position: center center;
+    mask-position: center center;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    mask-size: contain
+}
+
+.loading-light span::after {
+    background: url(../images/effect/light-04.png) no-repeat center center/contain
+}
+
+.close-search {
+    background: url(../images/close_search.svg) no-repeat center center/contain
+}
+
+.nav li .link-home::after {
+    background-image: url(../images/home.svg);
+    background-repeat: no-repeat
+}
+
+.flower-right span:nth-child(1) {
+    background: url(../images/home-loading/01.png) no-repeat center center/contain
+}
+
+.flower-right span:nth-child(2) {
+    background: url(../images/home-loading/02.png) no-repeat center center/contain
+}
+
+.flower-right span:nth-child(3) {
+    background: url(../images/home-loading/03.png) no-repeat center center/contain
+}
+
+.flower-left span:nth-child(1) {
+    background: url(../images/home-loading/04.png) no-repeat center center/contain
+}
+
+.flower-left span:nth-child(2) {
+    background: url(../images/home-loading/05.png) no-repeat center center/contain
+}
+
+.navigation>span {
+    background: url(../images/menu/flower-menu.png) no-repeat center center/contain
+}
+
+.regis-info::after {
+    background: url(../images/menu/register-bg.png) no-repeat center center/contain
+}
+
+.loadx::after {
+    background: var(--coloractive) url(../images/load-text.svg) no-repeat center center/contain
+}
+
+.loadx::before {
+    background: url(../images/load-logo.svg) no-repeat center center/contain
+}
+
+.pic-home-intro .bg-cover.bg-lazy::after {
+    background: url(../images/home/home-intro.png) no-repeat center center/cover
+}
+
+.pic-home-news .bg-cover.bg-lazy::after {
+    background: url(../images/home/home-news.png) no-repeat center center/cover
+}
+
+.pic-home-business .bg-cover.bg-lazy::after {
+    background: url(../images/home/home-business.png) no-repeat center center/cover;
+    mix-blend-mode: multiply;
+    opacity: .2
+}
+
+.box-txt-home-intro::before {
+    background: url(../images/quote.svg) no-repeat center center/contain
+}
+
+.pic-about-intro .bg-cover.bg-lazy::after {
+    background: url(../images/about/intro-flower.png) no-repeat center center/cover
+}
+
+.pic-about-achievement .bg-cover.bg-lazy::after {
+    background: url(../images/about/about-achieve.png) no-repeat center center/cover
+}
+
+.pic-business-01 .bg-cover.bg-lazy::after {
+    background: url(../images/business/01.png) no-repeat center center/cover
+}
+
+.pic-business-02 .bg-cover.bg-lazy::after {
+    background: url(../images/business/02.png) no-repeat center center/cover
+}
+
+.pic-member-01 .bg-cover.bg-lazy::after {
+    background: url(../images/member/01.png) no-repeat center center/cover
+}
+
+.pic-member-02 .bg-cover.bg-lazy::after {
+    background: url(../images/member/02.png) no-repeat center center/cover
+}
+
+.pic-member-03 .bg-cover.bg-lazy::after {
+    background: url(../images/member/03.png) no-repeat center center/cover
+}
+
+.pic-member-intro-01 {
+    background: url(../images/recruitment/01.png) no-repeat center center/cover
+}
+
+.pic-member-intro-02 {
+    background: url(../images/recruitment/02.png) no-repeat center center/cover
+}
+
+.recruitment-intro .pic-about-intro .bg-cover.bg-lazy::after {
+    background: url(../images/about/recruit-intro-flower.png) no-repeat center center/cover
+}
+
+.recruitment-enviroment .bg-cover {
+    -webkit-mask-image: url(../images/mask.svg);
+    mask-image: url(../images/mask.svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: right;
+    mask-position: right;
+    -webkit-mask-size: cover;
+    mask-size: cover
+}
+
+.pic-recruit-policy .bg-cover.bg-lazy::after {
+    background: url(../images/recruitment/03.png) no-repeat center center/cover
+}
+
+.pic-contact-form .bg-cover.bg-lazy::after {
+    background: url(../images/contact/contact-form.jpg) no-repeat center center/cover
+}
+
+.pic-contact-intro .bg-cover.bg-lazy::after {
+    background: url(../images/contact/01.png) no-repeat center center/cover
+}
+
+.pic-search-bg .bg-cover.bg-lazy::after {
+    background: url(../images/contact/contact-form.jpg) no-repeat center center/cover
+}
+
+.mask-content {
+    -webkit-mask-image: url(../images/mask3.svg);
+    mask-image: url(../images/mask3.svg)
+}
+
+.link-map::before {
+    background: url(../images/map.svg) no-repeat center center/contain
+}
+
+.save-but::before {
+    background: url(../images/print-share/favorite.svg) no-repeat 50%/80%
+}
+
+.print-but::before {
+    background: url(../images/print-share/print.svg) no-repeat 50%/80%
+}
+
+.share-but::before {
+    background: url(../images/print-share/share.svg) no-repeat 50%/80%
+}
+
+.view-album::after {
+    background: url(../images/album-white.svg) no-repeat 50%/66%
+}
+
+.view-video::after {
+    background: url(../images/player.svg) no-repeat 50%/60%
+}
+
+.view-pdf::after {
+    background: url(../images/pdf.svg) no-repeat 50%/70%
+}
+
+.view-popup {
+    background: #f1a20a url(../images/arrow.svg) no-repeat center center/contain
+}
+
+.download-pdf::before {
+    background: #fff url(../images/pdf.svg) no-repeat center 50%/80%
+}
+
+.download-but a::after {
+    background: rgba(255, 255, 255, .3) url(../images/arrow-down-white.png) no-repeat 50%/80%
+}
+
+.zoom::after {
+    background: var(--bgactive) url(../images/zoom.svg) no-repeat 50%/66%
+}
+
+.close-360::after,
+.close-album::after,
+.close-menu::after,
+.close-pics::after,
+.close-popup::after,
+.close-video::after,
+.close::after {
+    background: url(../images/close.svg) no-repeat 50%/70%
+}
+
+.zoom-hover::after {
+    background: var(--coloractive) url(../images/zoom.svg) no-repeat 50%/66%
+}
+
+.zoom-pic {
+    cursor: url(../images/zoom-pic.svg) 6 8, zoom-in
+}
+
+.pic-news .pic-img::before {
+    background: var(--color-black30) url(../images/zoom.svg) no-repeat 50%/66%
+}
+
+.flower-footer>span:nth-child(1) {
+    background: url(../images/footer-flower/01.png) no-repeat center center/contain
+}
+
+.flower-footer>span:nth-child(2) {
+    background: url(../images/footer-flower/02.png) no-repeat center center/contain
+}
+
+.flower-footer>span:nth-child(3) {
+    background: url(../images/footer-flower/03.png) no-repeat center center/contain
+}
+
+.flower-footer>span:nth-child(4) {
+    background: url(../images/footer-flower/04.png) no-repeat center center/contain
+}
+
+.flower-footer>span:nth-child(5) {
+    background: url(../images/footer-flower/05.png) no-repeat center center/contain
+}
+
+.contact-success::before {
+    background: url(../images/alert.svg) no-repeat center center/contain
+}
+
+.contact-success.mess-success::before {
+    background: url(../images/success.svg) no-repeat center center/contain
+}
+
+@media screen and (max-width:1100px) {
+    .pic-home-business .bg-cover {
+        opacity: .5
+    }
+}
+
+@media (hover:hover) and (pointer:fine) and (min-width:1100px) {
+    .close-search:hover {
+        background: url(../images/close_search2.svg) no-repeat center center/contain;
+        transform: rotate(90deg)
+    }
+    .print-box>.active.share-but::before {
+        background: url(../images/print-share/share2.svg) no-repeat 50%/80%
+    }
+    .save-but:hover::before {
+        background: url(../images/print-share/favorite2.svg) no-repeat 50%/80%;
+        opacity: 1
+    }
+    .print-but:hover::before {
+        background: url(../images/print-share/print2.svg) no-repeat 50%/80%;
+        opacity: 1
+    }
+    .share-but:hover::before {
+        background: url(../images/print-share/share2.svg) no-repeat 50%/80%;
+        opacity: 1
+    }
+}
+
+@keyframes Start {
+    from {
+        visibility: hidden
+    }
+    to {
+        visibility: visible
+    }
+}
+
+@keyframes Preloader {
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+@keyframes Callicon {
+    0% {
+        transform: scale(1) rotate(0)
+    }
+    40% {
+        transform: scale(1.1) rotate(40deg)
+    }
+    45% {
+        transform: scale(1.2) rotate(20deg)
+    }
+    50% {
+        transform: scale(1.3) rotate(40deg)
+    }
+    55% {
+        transform: scale(1.2) rotate(20deg)
+    }
+    60% {
+        transform: scale(1.1) rotate(40deg)
+    }
+    100% {
+        transform: scale(1) rotate(0)
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1
+    }
+    100% {
+        opacity: 0
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 100px, 0)
+    }
+    100% {
+        opacity: 1;
+        transform: none
+    }
+}
+
+@keyframes fadeIn50 {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: .5
+    }
+}
+
+@keyframes fadeIn30 {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: .3
+    }
+}
+
+@keyframes fadeInUp2 {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0)
+    }
+    100% {
+        opacity: 1;
+        transform: none
+    }
+}
+
+@keyframes gotoLeft {
+    0% {
+        opacity: 0;
+        left: -100%
+    }
+    100% {
+        opacity: 1;
+        left: 0
+    }
+}
+
+@keyframes trackBallSlide {
+    0% {
+        opacity: 1;
+        transform: translateY(-12px)
+    }
+    15% {
+        opacity: 0;
+        transform: translateY(8px)
+    }
+    30% {
+        opacity: 1;
+        transform: translateY(-12px)
+    }
+    50% {
+        opacity: 0;
+        transform: translateY(8px)
+    }
+    60% {
+        opacity: 1;
+        transform: translateY(-12px)
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(-12px)
+    }
+}
+
+@keyframes goLeft {
+    0% {
+        opacity: 0;
+        transform: translate3d(100px, 0, 0)
+    }
+    100% {
+        opacity: 1;
+        transform: none
+    }
+}
+
+@keyframes goRight {
+    0% {
+        opacity: 0;
+        transform: translate3d(-100px, 0, 0)
+    }
+    100% {
+        opacity: 1;
+        transform: none
+    }
+}
+
+@keyframes goLeft2 {
+    0% {
+        opacity: 0;
+        transform: translate3d(100%, 0, 0)
+    }
+    100% {
+        opacity: 1;
+        transform: none
+    }
+}
+
+@keyframes goRight2 {
+    0% {
+        opacity: 0;
+        transform: translate3d(-100%, 0, 0)
+    }
+    100% {
+        opacity: 1;
+        transform: none
+    }
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, -100px, 0)
+    }
+    100% {
+        opacity: 1;
+        transform: none
+    }
+}
+
+@keyframes fadeInDown2 {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, -50px, 0)
+    }
+    100% {
+        opacity: 1;
+        transform: none
+    }
+}
+
+@keyframes scaleLarge {
+    0% {
+        opacity: 0;
+        transform: scale(1.1)
+    }
+    100% {
+        opacity: 1;
+        transform: none
+    }
+}
+
+@keyframes scaleLarge2 {
+    0% {
+        opacity: 0;
+        transform: scale(1.3)
+    }
+    100% {
+        opacity: 1;
+        transform: none
+    }
+}
+
+@keyframes scaleSmall {
+    0% {
+        opacity: 0;
+        transform: scale(.6)
+    }
+    100% {
+        opacity: 1;
+        transform: none
+    }
+}
+
+@keyframes scaleSmallX {
+    0% {
+        transform: scaleX(0)
+    }
+    100% {
+        transform: none
+    }
+}
+
+@keyframes scaleToLarge {
+    0% {
+        transform: none
+    }
+    100% {
+        transform: scale(1.05)
+    }
+}
+
+@keyframes scaleSmallY {
+    0% {
+        transform: scaleY(0)
+    }
+    100% {
+        transform: none
+    }
+}
+
+@keyframes goWidth {
+    0% {
+        width: 100%
+    }
+    100% {
+        width: 0
+    }
+}
+
+@keyframes goHeight {
+    0% {
+        height: 100%
+    }
+    100% {
+        height: 0
+    }
+}
+
+@keyframes Rotate {
+    0% {
+        transform: rotate(0)
+    }
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+@keyframes fadeInRotate {
+    0% {
+        opacity: 0;
+        transform: rotate(-90deg)
+    }
+    100% {
+        opacity: 1;
+        transform: rotate(0)
+    }
+}
+
+@keyframes Move-Arrow {
+    25% {
+        opacity: 1
+    }
+    33.3% {
+        opacity: 1;
+        transform: translateY(7px)
+    }
+    66.6% {
+        opacity: 1;
+        transform: translateY(14px)
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(21px) scale(.7)
+    }
+}
+
+@keyframes flipInX {
+    0% {
+        transform: perspective(400px) rotateX(30deg) scale(.9);
+        opacity: 0
+    }
+    100% {
+        transform: perspective(400px) rotateX(0) scale(1);
+        opacity: 1
+    }
+}
+
+@keyframes GoUp {
+    0% {
+        transform: none
+    }
+    100% {
+        transform: translate3d(0, -100%, 0)
+    }
+}
+
+@keyframes DrawStroke {
+    0% {
+        stroke-dashoffset: 1100
+    }
+    100% {
+        stroke-dashoffset: 0
+    }
+}
+
+@keyframes DrawStroke5 {
+    0% {
+        stroke-dashoffset: 500
+    }
+    100% {
+        stroke-dashoffset: 0
+    }
+}
+
+@keyframes WheelArrow {
+    0% {
+        height: 0
+    }
+    50% {
+        height: 100%
+    }
+    100% {
+        height: 0
+    }
+}
+
+@keyframes WheelArrow2 {
+    0% {
+        height: 100%
+    }
+    100% {
+        height: 0
+    }
+}
+
+@keyframes aniWidth {
+    0% {
+        transform: scale3d(1, 1, 1)
+    }
+    100% {
+        transform: scale3d(0, 1, 1)
+    }
+}
+
+@keyframes bounce {
+    to {
+        opacity: .3;
+        transform: translate3d(0, -1rem, 0)
+    }
+}
+
+.fadein {
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-fill-mode: forwards
+}
+
+.fadeout {
+    animation-name: fadeOut;
+    animation-duration: 1s;
+    animation-fill-mode: forwards
+}
+
+.fadeinup {
+    animation-name: fadeInUp;
+    animation-duration: 1s;
+    animation-fill-mode: forwards
+}
+
+.fadeindown {
+    animation-name: fadeInDown;
+    animation-duration: 1s;
+    animation-fill-mode: forwards
+}
+
+.gotoleft {
+    animation-name: gotoLeft;
+    animation-duration: 1s;
+    animation-fill-mode: forwards
+}
+
+.toright {
+    animation-name: toRight;
+    animation-duration: 1s;
+    animation-fill-mode: forwards
+}
+
+.goleft {
+    animation-name: goLeft;
+    animation-duration: 1s;
+    animation-fill-mode: forwards
+}
+
+.goright {
+    animation-name: goRight;
+    animation-duration: 1s;
+    animation-fill-mode: forwards
+}
+
+.bg-degree,
+.text-news-regis {
+    animation: Start 1s steps(1, end) 0s 1 normal both
+}
+
+@media screen and (min-width:1100px) {
+    .ani-item.on-show {
+        animation-name: fadeInUp;
+        animation-duration: 1.2s;
+        animation-delay: .3s;
+        animation-fill-mode: forwards
+    }
+    .ani-pic {
+        overflow: hidden
+    }
+    .ani-pic::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: var(--coloractive);
+        pointer-events: none;
+        z-index: 9
+    }
+    .ani-pic .bg-cover {
+        opacity: 0
+    }
+    .ani-pic.ani-item.on-show {
+        animation: none;
+        opacity: 1
+    }
+    .ani-pic.on-show::after {
+        animation-name: goHeight;
+        animation-duration: 2s;
+        animation-delay: 0s;
+        animation-fill-mode: forwards
+    }
+    .ani-pic.on-show .bg-cover {
+        animation-name: scaleLarge;
+        animation-duration: 3s;
+        animation-fill-mode: forwards;
+        animation-delay: .3s
+    }
+    .header::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 8rem;
+        background: linear-gradient(0deg, var(--bgactive0), var(--bgactive30));
+        top: 0;
+        left: 0;
+        pointer-events: none;
+        mix-blend-mode: multiply;
+        opacity: 0;
+        transition: opacity .6s ease-in-out;
+        z-index: -1
+    }
+    .header.show-bg::before {
+        opacity: 1
+    }
+    .logo,
+    .right-header,
+    .social {
+        transition: all .3s ease-in-out
+    }
+    .nav-click svg {
+        transition: width .3s ease-in-out, height .3s ease-in-out
+    }
+    .header.hide {
+        --height: min(5rem, 80px)
+    }
+    .header.hide::after {
+        height: var(--height);
+        transition: height .4s ease-in-out
+    }
+    .header.hide .logo {
+        height: min(6rem, 100px)
+    }
+    .header.hide .nav-click svg {
+        width: 80%;
+        height: 80%
+    }
+    .home-banner .slide-background .bg::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 25%;
+        bottom: 0;
+        left: 0;
+        background: linear-gradient(0deg, var(--bgactive20), var(--bgactive0));
+        mix-blend-mode: multiply;
+        pointer-events: none;
+        opacity: 0
+    }
+    .home-banner .slide-background .bg.is-active::after {
+        animation: fadeIn;
+        animation-duration: 1s;
+        animation-delay: .5s;
+        animation-fill-mode: forwards
+    }
+    .text-banner::after {
+        transform: scaleX(0);
+        transition: transform .5s ease-in-out 0s;
+        transform-origin: left
+    }
+    .home-banner .slide-background .bg.is-active .text-banner::after {
+        transition: transform .5s ease-in-out .7s;
+        transform: none
+    }
+    .text-banner .wrap-view-details,
+    .text-banner p,
+    .title-banner {
+        opacity: 0
+    }
+    .slide-background .bg.is-active .title-banner {
+        animation: fadeInUp;
+        animation-duration: 1s;
+        animation-delay: 1s;
+        animation-fill-mode: forwards
+    }
+    .slide-background .bg.is-active .text-banner p {
+        animation: fadeInUp;
+        animation-duration: 1s;
+        animation-delay: 1.4s;
+        animation-fill-mode: forwards
+    }
+    .slide-background .bg.is-active .text-banner .wrap-view-details {
+        animation: scaleLarge;
+        animation-duration: 1s;
+        animation-delay: 1.8s;
+        animation-fill-mode: forwards
+    }
+    .business-home-list.on-show {
+        animation-name: fadeInBlur02;
+        animation-duration: 1.2s;
+        animation-delay: .3s;
+        animation-fill-mode: forwards
+    }
+    .pic-business-page.ani-item {
+        opacity: 1;
+        animation: none
+    }
+    .pic-business-page::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: calc(100% + 2px);
+        left: 0;
+        background-color: #fff;
+        transform-origin: top left;
+        z-index: 1
+    }
+    .pic-business-page.on-show::after {
+        animation: aniWidth 1.2s ease forwards
+    }
+    .content-business-page:nth-child(even) .pic-business-page::after {
+        transform-origin: top right
+    }
+    .player-vid {
+        cursor: pointer
+    }
+    .table-recruitment tr td::after,
+    .table-recruitment tr:hover td {
+        transition: all .3s ease-in-out
+    }
+    .table-recruitment tr:hover td::after {
+        background-color: var(--coloractive)
+    }
+    .table-recruitment tr:hover td {
+        color: #fff
+    }
+    .table-recruitment tr {
+        cursor: pointer
+    }
+    .file-up:hover .file-mark {
+        background-color: var(--bgactive);
+        color: #fff
+    }
+    .item-recuits {
+        transition: background-color .3s ease-in-out
+    }
+    .item-recuits:hover {
+        background-color: var(--color-black10)
+    }
+    .flower-footer.ani-item {
+        opacity: .08;
+        animation: none
+    }
+    .pic-home-news.on-show,
+    .pic-member-01.on-show,
+    .pic-member-02.on-show,
+    .pic-member-03.on-show {
+        animation-name: fadeIn;
+        animation-duration: 1s;
+        animation-delay: .3s;
+        animation-fill-mode: forwards
+    }
+}
+
+@media screen and (max-width:1100px) {
+    .ani-item.on-show {
+        animation-name: fadeInUp;
+        animation-duration: 1.2s;
+        animation-delay: 0s;
+        animation-fill-mode: forwards
+    }
+    .pic-contact-intro.on-show,
+    .pic-member-01.on-show,
+    .pic-member-02.on-show,
+    .pic-member-03.on-show {
+        animation-name: fadeIn50;
+        animation-duration: 1s;
+        animation-delay: .3s;
+        animation-fill-mode: forwards
+    }
+    .pic-home-news.on-show {
+        animation-name: fadeIn30;
+        animation-duration: 1s;
+        animation-delay: .3s;
+        animation-fill-mode: forwards
+    }
+    .flower-footer.ani-item {
+        opacity: .05;
+        animation: none
+    }
+}
+
+@media (hover:hover) and (pointer:fine) and (min-width:1100px) {
+    .language li button,
+    .search-but {
+        transition: all .3s ease-in-out
+    }
+    .language li button:hover,
+    .search-but:hover {
+        color: var(--coloractive) !important
+    }
+    .title-big>a {
+        transition: color .3s ease-in-out
+    }
+    .title-big>a:hover {
+        color: var(--coloractive)
+    }
+    .text-news-regis {
+        transition: all .3s ease-in-out
+    }
+    .news-regis:hover {
+        filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, .2))
+    }
+    .news-regis:hover .icon-news-regis {
+        background-color: var(--coloractive);
+        color: var(--color-white);
+        border-color: var(--color-white0);
+        backdrop-filter: unset
+    }
+    .news-hotline:hover .icon-news-regis svg {
+        animation: Callicon 3s infinite
+    }
+    .news-regis .text-news-regis {
+        position: absolute;
+        transform: translateX(-30px);
+        opacity: 0;
+        padding: 10px 15px 7px 42px;
+        background-color: var(--coloractive);
+        border-radius: 30px;
+        left: calc(100% - 35px);
+        white-space: nowrap;
+        top: calc(50% - 19px);
+        z-index: -1
+    }
+    .news-regis .text-news-regis::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        border-radius: 0 30px 30px 0;
+        z-index: -1
+    }
+    .news-regis:hover .text-news-regis {
+        transform: none;
+        opacity: 1
+    }
+    .news-regis::after {
+        content: '';
+        position: absolute;
+        width: calc(100% + 14px);
+        height: calc(100% + 14px);
+        top: -7px;
+        left: -7px;
+        border-radius: 50%;
+        border: 1px solid var(--coloractive);
+        transform: scale(.5);
+        opacity: 0;
+        transition: all .3s ease-in-out;
+        z-index: -2
+    }
+    .news-regis:hover::after {
+        opacity: 1;
+        transform: scale(1)
+    }
+    .nav-item a {
+        transition: color .3s ease-in-out
+    }
+    .nav-item a:hover {
+        color: var(--coloractive)
+    }
+    .nav-click {
+        transition: all .3s ease-in-out
+    }
+    .nav-click .rotate-logo {
+        animation: Preloader 3s infinite linear;
+        transform-origin: center;
+        animation-play-state: paused
+    }
+    .nav-click:hover .rotate-logo {
+        animation-play-state: running
+    }
+    .nav-click:hover {
+        color: var(--coloractive)
+    }
+    .close-menu {
+        transition: color .3s ease-in-out
+    }
+    .close-menu:hover {
+        color: var(--coloractive)
+    }
+    .close-menu.show:hover .toggle-1 {
+        transform: rotate(-180deg);
+        transition: transform .3s ease-in-out
+    }
+    .close-menu.show:hover .toggle-2 {
+        transform: rotate(-180deg);
+        transition: transform .3s ease-in-out
+    }
+    .close-format:hover {
+        color: var(--coloractive)
+    }
+    .close-format:hover .toggle-1 {
+        transform: none
+    }
+    .close-format:hover .toggle-2 {
+        transform: none
+    }
+    .social li a,
+    .social-footer ul li a {
+        transition: color .3s ease-in-out
+    }
+    .social li a:hover,
+    .social-footer ul li a:hover {
+        color: var(--coloractive) !important
+    }
+    .wheel-submit {
+        transition: all .3s ease-in-out
+    }
+    .wheel-submit:hover {
+        background-color: var(--coloractive)
+    }
+    .wheel-submit:hover span:after,
+    .wheel-submit:hover span:before {
+        background-color: #fff !important
+    }
+    .button-animation svg {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        transform: rotate(-90deg);
+        overflow: visible;
+        border-radius: 50%;
+        transition: background-color .3s ease-in-out
+    }
+    .button-animation circle {
+        fill: none;
+        stroke-width: .8;
+        width: calc(100% - 2px);
+        height: calc(100% - 2px);
+        stroke-dasharray: 321%;
+        stroke-dashoffset: 642%;
+        transition-property: stroke-dashoffset, transform;
+        transform-origin: 50% 50%;
+        will-change: stroke-dashoffset, transform;
+        transition-duration: 1.3s;
+        transition-timing-function: ease;
+        transform: rotate(-90deg);
+        stroke: var(--color-white0)
+    }
+    .button-animation circle+circle {
+        stroke: var(--coloractive);
+        stroke-dashoffset: 321%
+    }
+    .button-animation:hover circle {
+        transform: rotate(0)
+    }
+    .button-animation:hover circle+circle {
+        stroke-dashoffset: 0
+    }
+    .enter-site span {
+        transition: all .6s ease-in-out
+    }
+    .enter-site:hover span {
+        transform: scale(.9)
+    }
+    .enter-site:hover::before {
+        background-color: rgba(0, 161, 254, .2);
+        width: 70px;
+        height: 70px;
+        top: calc(50% - 35px);
+        left: calc(50% - 35px)
+    }
+    .wheel {
+        transition: all .3s ease-in-out
+    }
+    .wheel:hover {
+        color: var(--coloractive)
+    }
+    .item-news-home:hover .view-details {
+        padding-left: 3.5rem;
+        color: var(--coloractive)
+    }
+    .item-news-home:hover .small-logo-ico {
+        opacity: 1
+    }
+    .item-news-home:hover .small-logo-ico .rotate-logo {
+        animation: Preloader 3s infinite linear;
+        transform-origin: center
+    }
+    .pic-news-home .pic-img::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: var(--color-black20);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity .3s ease-in-out;
+        z-index: 2
+    }
+    .item-news-home:hover .pic-news-home .pic-img::after {
+        opacity: 1
+    }
+    .item-news-home:hover .pic-news-home .pic-img img {
+        transform: scale(1.07)
+    }
+    .pic-project-home::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: var(--color-black20);
+        opacity: 0;
+        transition: opacity .3s ease-in-out;
+        pointer-events: none
+    }
+    .pic-project-home:hover::after {
+        opacity: 1
+    }
+    .pic-project-home:hover .pic-img img {
+        transform: scale(1.05)
+    }
+    .business-home {
+        cursor: pointer
+    }
+    .business-home .svg-stroke,
+    .logo-bus-home svg {
+        transition: all .3s ease-in-out
+    }
+    .business-home:hover .svg-stroke {
+        stroke-opacity: 0;
+        fill-opacity: 1
+    }
+    .business-home:hover .logo-bus-home svg {
+        color: var(--bgactive);
+        transform: scale(.9)
+    }
+    .view-details {
+        transition: all .5s ease-in-out
+    }
+    .small-logo-ico {
+        transition: opacity .3s ease-in-out
+    }
+    .view-details:hover {
+        padding-left: 3.5rem;
+        color: var(--coloractive)
+    }
+    .view-details:hover .small-logo-ico {
+        opacity: 1
+    }
+    .view-details:hover .small-logo-ico .rotate-logo {
+        animation: Preloader 3s infinite linear;
+        transform-origin: center
+    }
+    .big-view .view-details:hover {
+        padding-left: 4.5rem
+    }
+    .small-logo-ico-more::after {
+        transition: background-color .3s ease-in-out
+    }
+    .small-logo-ico-more {
+        transition: margin .3s ease-in-out
+    }
+    .view-line {
+        transition: background-color .3s ease-in-out
+    }
+    .view-more:hover .view-line {
+        background-color: var(--coloractive)
+    }
+    .view-more .rotate-logo {
+        animation: Preloader 3s infinite linear;
+        transform-origin: center;
+        animation-play-state: paused
+    }
+    .view-more:hover .rotate-logo {
+        animation-play-state: running
+    }
+    .view-more:hover {
+        color: var(--coloractive)
+    }
+    .view-more:hover .small-logo-ico-more::after {
+        background-color: var(--coloractive)
+    }
+    .view-more:hover .small-logo-ico-more {
+        margin-right: 3rem
+    }
+    .pic-achievement {
+        transition: all .5s ease-in-out
+    }
+    .box-achievement:hover .pic-achievement {
+        border: 8px solid var(--color-white0)
+    }
+    .pic-member-page::after {
+        transition: background-color .3s ease-in-out
+    }
+    .pic-member-page .logo-bus-home svg {
+        transition: all .5s ease-in-out
+    }
+    .pic-member-page:hover::after {
+        background-color: var(--coloractive)
+    }
+    .pic-member-page:hover .logo-bus-home svg {
+        transform: scale(.95);
+        color: var(--bgactive)
+    }
+    .sub-company li .sub-company-a {
+        transition: all .3s ease-in-out
+    }
+    .sub-company li .sub-company-a svg {
+        transition: transform .4s ease-in-out
+    }
+    .sub-company li .sub-company-a:hover {
+        background-color: var(--bgactive-02);
+        color: var(--coloractive)
+    }
+    .sub-company li .sub-company-a:hover svg {
+        transform: scale(.95)
+    }
+    .sub-nav li .sub-nav-a {
+        transition: all .3s ease-in-out
+    }
+    .sub-nav li .sub-nav-a:hover {
+        background-color: var(--bgactive-02)
+    }
+    .item-news {
+        cursor: pointer
+    }
+    .item-news:hover .pic-img img {
+        transform: scale(1.07)
+    }
+    .pic-news .pic-img::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: var(--color-black20);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity .3s ease-in-out;
+        z-index: 2
+    }
+    .item-news:hover .pic-news .pic-img::after {
+        opacity: 1
+    }
+    .pic-news .pic-img::before {
+        content: '';
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        top: calc(50% - 25px);
+        left: calc(50% - 25px);
+        border-radius: 50%;
+        transform: scale(1.1) rotate(90deg);
+        opacity: 0;
+        transition: all .3s ease-in-out;
+        z-index: 9
+    }
+    .item-news:hover .pic-news .pic-img::before {
+        opacity: 1;
+        transform: none
+    }
+    .item-news:hover .view-details {
+        padding-left: 3.5rem;
+        color: var(--coloractive)
+    }
+    .item-news:hover .view-details .small-logo-ico {
+        opacity: 1
+    }
+    .item-news:hover .view-details .small-logo-ico .rotate-logo {
+        animation: Preloader 3s infinite linear;
+        transform-origin: center
+    }
+    .date {
+        transition: background-color .3s ease-in-out
+    }
+    .item-news:hover .date {
+        background-color: var(--coloractive)
+    }
+    .r-text {
+        transition: all .3s ease-in-out
+    }
+    .list-box:hover .r-text {
+        background-color: var(--bgactive);
+        color: var(--color-white)
+    }
+    .num-report span {
+        transition: color .3s ease-in-out
+    }
+    .num-report span:hover {
+        color: var(--coloractive)
+    }
+    .company-info li a,
+    .company-regis-info a,
+    .copyright a {
+        transition: all .3s ease-in-out
+    }
+    .company-info li a:hover,
+    .company-regis-info a:hover,
+    .copyright a:hover {
+        color: var(--coloractive)
+    }
+    .go-top {
+        transition: color .3s ease-in-out
+    }
+    .go-top::after {
+        transition: all .3s ease-in-out
+    }
+    .go-top:hover {
+        color: var(--color-white)
+    }
+    .go-top:hover::after {
+        background-color: var(--coloractive);
+        border-radius: 7px
+    }
+    .sub-but::after {
+        transition: all .3s ease-in-out .3s
+    }
+    .sub-but::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: var(--coloractive);
+        transform: translateX(-100%);
+        transition: all .3s ease-in-out
+    }
+    .sub-but:hover {
+        color: var(--coloractive)
+    }
+    .sub-but:hover::after {
+        transform: translateX(100%);
+        transition: all .3s ease-in-out
+    }
+    .sub-but:hover::before {
+        transform: none;
+        transition: all .3s ease-in-out .3s
+    }
+    .social-regis ul li a {
+        transition: background-color .3s ease-in-out
+    }
+    .social-regis ul li a:hover {
+        background-color: var(--coloractive)
+    }
+    .file-mark,
+    .zoom,
+    .zoom::after,
+    button {
+        transition: all .3s ease-in-out
+    }
+    .pic-img img {
+        transition: all .6s ease-in-out
+    }
+    .join-us .input-but .button {
+        transition: all .3s ease-in-out
+    }
+    .join-us .input-but .button:hover {
+        background: var(--coloractive)
+    }
+    .join-us .file-name {
+        transition: background-color .3s ease-in-out
+    }
+    .join-us .file-up:hover .file-name {
+        background-color: #fff;
+        color: var(--bgactive)
+    }
+    .text-des a {
+        transition: color .3s ease-in-out
+    }
+    .text-des a:hover {
+        color: var(--coloractive)
+    }
+    .player-vid {
+        transition: background-color .3s ease-in-out
+    }
+    .player-vid svg,
+    .player-vid::after {
+        transition: all .3s ease-in-out
+    }
+    .player-vid:hover svg {
+        fill: #fff
+    }
+    .player-vid:hover {
+        background-color: #000
+    }
+    .player-vid:hover::after {
+        border-color: #fff
+    }
+    .right-button button svg {
+        transition: all .3s ease-in-out
+    }
+    .right-button button:hover svg {
+        fill: #fff
+    }
+    .zoom:hover::after {
+        background-color: var(--coloractive) !important;
+        transform: rotate(90deg) scale(.95)
+    }
+    .zoom-hover {
+        overflow: hidden
+    }
+    .zoom-hover::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        bottom: 0;
+        left: 0;
+        transition: opacity .3s ease-in-out;
+        opacity: 0;
+        pointer-events: none;
+        background-color: rgba(0, 0, 0, .1);
+        z-index: 10
+    }
+    .zoom-hover:hover::before {
+        opacity: 1
+    }
+    .zoom-hover::after {
+        content: '';
+        position: absolute;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        top: calc(50% - 25px);
+        left: calc(50% - 25px);
+        transform: scale(1.2);
+        opacity: 0;
+        transition: all .3s ease-in-out;
+        z-index: 11
+    }
+    .zoom-hover:hover::after {
+        transform: none;
+        opacity: 1
+    }
+    .title-pic {
+        transition: all .6s ease-in-out
+    }
+    .view-album,
+    .view-album::after,
+    .view-degree,
+    .view-pdf,
+    .view-video {
+        transition: all .3s ease-in-out
+    }
+    .item-album .pic-img::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        transition: opacity .5s ease-in-out;
+        opacity: 0;
+        background-color: var(--color-black20);
+        pointer-events: none
+    }
+    .item-album:hover .pic-img::after {
+        opacity: 1
+    }
+    .item-album:hover .pic-img img {
+        transform: scale(1.07)
+    }
+    .item-album {
+        cursor: pointer;
+        transition: all .3s ease-in-out
+    }
+    .item-album:hover {
+        background-color: var(--color-white)
+    }
+    .slide-library-report .item-album:hover {
+        background-color: unset
+    }
+    .slide-library-report .item-album:hover:hover .title-pic {
+        color: var(--coloractive)
+    }
+    .item-album:hover .view-album {
+        background-color: var(--coloractive);
+        transform: scale(1.1);
+        border-color: rgba(255, 255, 255, .2)
+    }
+    .item-album:hover .view-video {
+        background-color: var(--coloractive);
+        transform: scale(1.1);
+        border-color: rgba(255, 255, 255, .2)
+    }
+    .view-album:hover {
+        background-color: var(--coloractive);
+        box-shadow: 0 10px 30px var(--color-white50)
+    }
+    .view-album:hover::after {
+        transform: rotate(45deg)
+    }
+    .view-album>span {
+        content: '';
+        position: absolute;
+        width: 80vw;
+        height: 80vw;
+        top: calc(50% - 40vw);
+        left: calc(50% - 40vw);
+        transition: all .5s ease-in-out;
+        transform: skewX(-45deg) scale3d(0, 1, 1);
+        transform-origin: center center;
+        background-color: var(--color-black20);
+        pointer-events: none
+    }
+    .view-album:hover>span {
+        transform: skewX(-45deg) scale3d(1, 1, 1)
+    }
+    .pdf {
+        transition: all .3s ease-in-out
+    }
+    .item-album:hover .pdf {
+        transform: scale(.9);
+        background-color: #e5b52d;
+        color: #fff
+    }
+    .item-album svg path {
+        stroke-miterlimit: 10;
+        stroke-width: 0;
+        stroke-dasharray: 500;
+        stroke-dashoffset: 500
+    }
+    .item-album:hover .pdf svg path {
+        fill: none;
+        stroke: #fff;
+        stroke-width: 2;
+        animation-name: DrawStroke5;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 1;
+        animation-direction: normal;
+        animation-timing-function: linear
+    }
+    .print-box>a,
+    .share-item a,
+    .share-item button {
+        transition: all .3s ease-in-out
+    }
+    .share-item li a svg {
+        transition: transform .5s ease-in-out
+    }
+    .share-but.active,
+    .share-but:hover {
+        background-color: rgba(0, 0, 0, .2)
+    }
+    .share-item a:hover,
+    .share-item button:hover {
+        color: #fff;
+        border-color: #fff;
+        background-color: var(--bgactive)
+    }
+    .share-item li:hover a svg {
+        transform: scale(.9)
+    }
+    .share-item li {
+        transition: all .3s cubic-bezier(.44, .39, .34, 1.03)
+    }
+    .print-box>a.active,
+    .print-box>a:hover {
+        background-color: var(--bgactive);
+        color: #fff
+    }
+    .input-but button {
+        transition: all .3s ease-in-out
+    }
+    .input-but button:hover {
+        background-color: var(--coloractive);
+        color: #fff
+    }
+    .item-search {
+        transition: background-color .3s ease-in-out, box-shadow .3s ease-in-out, border-color .3s ease-in-out;
+        cursor: pointer
+    }
+    .item-search a,
+    .item-search h3,
+    .item-search img {
+        transition: all .6s ease-in-out
+    }
+    .item-search:hover {
+        background-color: var(--coloractive);
+        box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .08);
+        border-color: var(--color-light)
+    }
+    .item-search img {
+        filter: grayscale(.8);
+        opacity: .8
+    }
+    .item-search:hover img {
+        transform: scale(1.05);
+        filter: none;
+        opacity: 1
+    }
+    .item-search:hover h3 {
+        color: var(--color-white)
+    }
+    .item-search:hover a {
+        color: var(--color-white)
+    }
+    .share ul li a::before,
+    .share ul li button::before {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 0;
+        top: 50%;
+        left: 50%;
+        border-radius: 50%;
+        background-color: var(--coloractive);
+        transition: all .3s ease-in-out;
+        z-index: -1
+    }
+    .share ul li a:hover::before,
+    .share ul li button:hover::before {
+        width: 80%;
+        height: 80%;
+        top: 10%;
+        left: 10%
+    }
+    .share ul li a,
+    .share ul li button {
+        transition: all .3s ease-in-out
+    }
+    .share ul li a:hover,
+    .share ul li button:hover {
+        color: var(--color-white)
+    }
+    .share:hover>span {
+        color: var(--color-black)
+    }
+}
+
+.line-bottom.on-show {
+    opacity: 1;
+    animation-name: scaleSmallX;
+    animation-duration: 2s;
+    animation-delay: 0s;
+    animation-fill-mode: forwards
+}
+
+.view-line.on-show {
+    opacity: 1;
+    animation-name: scaleSmallX;
+    animation-duration: 2.5s;
+    animation-delay: 0s;
+    animation-fill-mode: forwards
+}
+
+.title-ani-color.ani-item {
+    opacity: 1;
+    animation: none
+}
+
+.title-ani-color h2,
+.title-ani-color h3 {
+    transform: translateX(-100%)
+}
+
+.title-ani-color.on-show h2,
+.title-ani-color.on-show h3 {
+    animation-name: goRight2;
+    animation-duration: 1s;
+    animation-delay: .3s;
+    animation-fill-mode: forwards
+}
+
+.content-thankyou.on-show {
+    animation-name: flipInX;
+    animation-duration: 1.2s;
+    animation-delay: .7s;
+    animation-fill-mode: forwards
+}
+
+.box-footer.on-show {
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-delay: 0s;
+    animation-fill-mode: forwards
+}
+
+.item-search.on-show {
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-delay: 0s;
+    animation-fill-mode: forwards
+}
+
+.flower-footer span {
+    opacity: 0
+}
+
+.flower-footer.on-show>span:nth-child(1) {
+    animation: goLeft 1.2s ease .3s forwards
+}
+
+.flower-footer.on-show>span:nth-child(2) {
+    animation: goRight 1.2s ease .6s forwards
+}
+
+.flower-footer.on-show>span:nth-child(3) {
+    animation: fadeInDown 1.2s ease .9s forwards
+}
+
+.flower-footer.on-show>span:nth-child(4) {
+    animation: flipInX 1.2s ease 1.2s forwards
+}
+
+.flower-footer.on-show>span:nth-child(5) {
+    animation: fadeInUp 2s ease 1.5s forwards
+}
+
+.header {
+    transition: transform .6s ease-in-out
+}
+
+.header.scrolling-down {
+    transform: translateY(-120px);
+    transition: all .4s ease-in-out
+}
+
+.header-widget {
+    transition: transform .6s ease-in-out
+}
+
+.header-widget.scrolling-down {
+    transform: translateX(-90px);
+    transition: all .4s ease-in-out
+}
+
+.outer-nav.on-show {
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-delay: .3s;
+    animation-fill-mode: forwards
+}
