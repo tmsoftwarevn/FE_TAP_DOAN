@@ -57,7 +57,7 @@
         <div class="wrap-enter-site"><button class="enter-site" aria-label="click"><span>Enter site</span></button>
         </div>
     </div>
-    
+
     <div class="loadicon" style="display:none"><span></span> <svg xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 220 250">
             <path class="stroke-line" d="M181.5,40.8c0-0.2-0.1-0.3-0.3-0.4c-0.1,0-0.2,0-0.3,0c-7.1,0.7-21.1,2.4-35.7,6.5c-2,0.6-4,1.2-5.9,1.8
@@ -151,7 +151,7 @@ h-2.2v9.2h2.2c1.3,0,2.3-0.4,2.9-1.1c0.6-0.7,0.9-1.9,0.9-3.6c0-1.6-0.3-2.8-0.9-3.
         else window.addEventListener('load', loadDeferredStyles);
     </script>
 
-<?php require "header.php" ?>
+    <?php require "header.php" ?>
 
     <main class="main">
         <div class="smooth-scroll">
@@ -187,7 +187,7 @@ h-2.2v9.2h2.2c1.3,0,2.3-0.4,2.9-1.1c0.6-0.7,0.9-1.9,0.9-3.6c0-1.6-0.3-2.8-0.9-3.
                                                 tọa lạc ngay tại trái tim của  khu Tây Sài Gòn. Với việc sở hữu được
                                                 vị trí vô cùng đắc địa mặt tiền đường An Dươn</p>
                                             <div class="wrap-view-details"><a
-                                                    href="/cong-ty-thanh-vien/sen-real/the-privia.html"
+                                                    href="/du-an/detail-du-an.php"
                                                     class="view-details link-load" aria-label="link"><span
                                                         class="small-logo-ico"><svg>
                                                             <use xlink:href="#ico-view-details-logo"></use>
@@ -775,8 +775,8 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                 </section>
 
                 <?php require "footer.php" ?>
-                
-                
+
+
             </div>
         </div>
     </main>
@@ -906,9 +906,9 @@ c3.7-3.7,9.6-3.7,13.3,0s3.7,9.5,0,13.2s-9.6,3.7-13.3,0S13.4,19,17.1,15.5z" />
     <!-- // reload mỗi khi reload -->
 
     <script>
-    window.addEventListener("pageshow", function (event) {
-        if (event.persisted) {
-            window.location.reload();
-        }
-    });
-</script>
+        window.addEventListener("pageshow", function(event) {
+            if (event.persisted) {
+                window.location.reload();
+            }
+        });
+    </script>
