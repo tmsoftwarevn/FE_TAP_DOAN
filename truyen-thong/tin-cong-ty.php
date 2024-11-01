@@ -1,5 +1,5 @@
 <div class="title-main color-blue text-center title-underline bold-medium">
-    <h2 class="text-ani-item">TIN CÔNG TY</h2>
+    <h2 class="text-ani-item">TIN TỨC</h2>
 </div>
 <div class="news-list">
     <div class="item-news ani-item">

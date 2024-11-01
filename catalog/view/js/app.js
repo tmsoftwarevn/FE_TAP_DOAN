@@ -6550,7 +6550,8 @@ function Option() {
           opacity: 1,
           ease: "none",
         }),
-          d(),
+          // remove d();
+          // d(),
           VideoLoad(c, e);
       });
   });
