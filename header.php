@@ -152,16 +152,16 @@ C57.9,89.7,53.8,90.3,49.6,90.3z" />
                         data-hrefvi="/linh-vuc-hoat-dong.html" data-title="Lĩnh vực hoạt động"
                         data-description="SEN GROUP" data-keyword="SEN GROUP" aria-label="link-change-url"></div>
                 </li>
-                <li class="nav-item"><a class="link-load nav-item-a" href="/cong-ty-thanh-vien.html"
+                <!-- <li class="nav-item"><a class="link-load nav-item-a" href="/cong-ty-thanh-vien.html"
                         data-name="project-page" aria-label="nav">Công ty thành viên</a>
                     <div class="class-hidden link-change-url" data-hrefen="/members.html"
                         data-hrefvi="/cong-ty-thanh-vien.html" data-title="Công ty thành viên"
                         data-description="SEN GROUP" data-keyword="SEN GROUP" aria-label="link-change-url"></div>
-                </li>
-                <li class="nav-item"><a class="link-load nav-item-a" href="/hoat-dong-tieu-bieu.html"
-                        data-name="activities-page" aria-label="nav">Hoạt động tiêu biểu</a>
-                    <div class="class-hidden link-change-url" data-hrefen="/activities.html"
-                        data-hrefvi="/hoat-dong-tieu-bieu.html" data-title="Hoạt động tiêu biểu"
+                </li> -->
+                <li class="nav-item"><a class="link-load nav-item-a" href="/du-an-tieu-bieu.php"
+                        data-name="activities-page" aria-label="nav">Dự án tiêu biểu</a>
+                    <div class="class-hidden link-change-url" data-hrefen="/du-an-tieu-bieu.php"
+                        data-hrefvi="/du-an-tieu-bieu.php" data-title="Hoạt động tiêu biểu"
                         data-description="SEN GROUP" data-keyword="SEN GROUP" aria-label="link-change-url"></div>
                 </li>
                 <li class="nav-item"><a class="link-load nav-item-a" href="/phat-trien-nguon-nhan-luc.html"
@@ -170,9 +170,9 @@ C57.9,89.7,53.8,90.3,49.6,90.3z" />
                         data-hrefvi="/phat-trien-nguon-nhan-luc.html" data-title="Phát triển nguồn nhân lực"
                         data-description="SEN GROUP" data-keyword="SEN GROUP" aria-label="link-change-url"></div>
                 </li>
-                <li class="nav-item"><a class="link-load nav-item-a" href="/truyen-thong.html" data-name="news-page"
+                <li class="nav-item"><a class="link-load nav-item-a" href="/truyen-thong.php" data-name="news-page"
                         aria-label="nav">Truyền thông</a>
-                    <div class="class-hidden link-change-url" data-hrefen="/media.html" data-hrefvi="/truyen-thong.html"
+                    <div class="class-hidden link-change-url" data-hrefen="/truyen-thong.php" data-hrefvi="/truyen-thong.php"
                         data-title="Truyền thông" data-description="SEN GROUP" data-keyword="SEN GROUP"
                         aria-label="link-change-url"></div>
                 </li>

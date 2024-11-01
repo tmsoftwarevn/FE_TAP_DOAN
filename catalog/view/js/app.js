@@ -6506,7 +6506,7 @@ function Option() {
             ease: "none",
           }),
           AlbumLoad(c, 0),
-          d(),
+          // d(),
           !1
         );
       });
@@ -9801,7 +9801,7 @@ function ContentLoad() {
       );
     }, 1e3),
     setTimeout(function () {
-      d();
+      // d();
     }, 6e3);
 }
 

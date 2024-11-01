@@ -550,7 +550,7 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                                     src="/banner/du-an-the-privia-khang-dien-binh-tan.jpg"
                                                     data-src="/banner/du-an-the-privia-khang-dien-binh-tan.jpg"
                                                     alt="THE PRIVIA" class="lazy"></div><a class="link-load"
-                                                href="/about.php"></a>
+                                                href="/du-an/detail-du-an.php"></a>
                                         </div>
                                     </div>
                                     <div class="item-project-home slidebox-item"><span class="logo-pro-home"><svg>
@@ -675,8 +675,8 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                 <div class="item-news-home">
                                     <div class="pic-news-home">
                                         <div class="pic-img"><img
-                                                src="/pictures/mobile/catalog/teambuilding/z56201144530750407b32ec5eb1bb009ce666199e1245f.jpg"
-                                                data-src="/pictures/catalog/teambuilding/z56201144530750407b32ec5eb1bb009ce666199e1245f.jpg"
+                                                src="/banner/1920x960.png"
+                                                data-src="/banner/1920x960.png"
                                                 alt="“CHÀO HÈ RỰC RỠ - BỨT PHÁ THÀNH CÔNG” – HÀNH TRÌNH KHÔNG THỂ NÀO QUÊN CỦA SENGROUP TẠI PHAN THIẾT"
                                                 class="lazy"></div>
                                     </div>
@@ -684,7 +684,7 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                         <h3>“CHÀO HÈ RỰC RỠ - BỨT PHÁ THÀNH CÔNG” – HÀNH TRÌNH KHÔNG THỂ NÀO QUÊN CỦA
                                             SENGROUP TẠI PHAN THIẾT</h3>
                                         <div class="wrap-view-details"><a
-                                                href="/hoat-dong-tieu-bieu/sen-real/chao-he-ruc-ro-but-pha-thanh-cong-hanh-trinh-khong-the-nao-quen-cua-sengroup-tai-phan-thiet.html"
+                                                href="/tin-tuc/detail-tintuc.php"
                                                 class="view-details dark link-load" aria-label="link"><span
                                                     class="small-logo-ico"><svg>
                                                         <use xlink:href="#ico-view-details-logo"></use>
@@ -698,8 +698,8 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                 <div class="item-news-home">
                                     <div class="pic-news-home">
                                         <div class="pic-img"><img
-                                                src="/pictures/mobile/catalog/the-emerald-golf-view/ky-ket-hop-tac/IMG1105-Edit-copy.jpg"
-                                                data-src="/pictures/catalog/the-emerald-golf-view/ky-ket-hop-tac/IMG1105-Edit-copy.jpg"
+                                                src="/banner/1920x960.png"
+                                                data-src="/banner/1920x960.png"
                                                 alt="LỄ KÝ KẾT HỢP TÁC PHÂN PHỐI ĐỘC QUYỀN DỰ ÁN THE EMERALD GOLF VIEW"
                                                 class="lazy"></div>
                                     </div>
@@ -722,6 +722,7 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                         <div class="pic-img"><img src="/catalog/view/images/bg_temp.jpg"
                                                 data-src="/catalog/view/images/bg_temp.jpg"
                                                 alt="CHÍNH THỨC KHAI TRƯƠNG VĂN PHÒNG BÁN HÀNG DỰ ÁN THE EMERALD GOLF VIEW – CHI NHÁNH BÌNH DƯƠNG THUỘC TẬP ĐOÀN SEN GROUP"
+
                                                 class="lazy"></div>
                                     </div>
                                     <div class="txt-news-home">
@@ -742,8 +743,8 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                 <div class="item-news-home">
                                     <div class="pic-news-home">
                                         <div class="pic-img"><img
-                                                src="/pictures/mobile/catalog/news/hdtb/dvtt/3018710865587590660425472471476668777012316n.jpg"
-                                                data-src="/pictures/catalog/news/hdtb/dvtt/3018710865587590660425472471476668777012316n.jpg"
+                                                src="/banner/1920x960.png"
+                                                data-src="/banner/1920x960.png"
                                                 alt="“DỊCH VỤ TỪ TÂM” SUN GROUP CHÌA KHÓA CHĂM SÓC KHÁCH HÀNG THÀNH CÔNG"
                                                 class="lazy"></div>
                                     </div>
@@ -763,7 +764,7 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                 </div>
                             </div>
                         </div>
-                        <div class="wrap-view-details big-view"><a href="/truyen-thong.html"
+                        <div class="wrap-view-details big-view"><a href="/truyen-thong.php"
                                 class="view-details dark link-load" aria-label="link"><span class="small-logo-ico"><svg>
                                         <use xlink:href="#ico-view-details-logo"></use>
                                     </svg> <span class="rotate-logo"><svg>

@@ -162,7 +162,7 @@ h-2.2v9.2h2.2c1.3,0,2.3-0.4,2.9-1.1c0.6-0.7,0.9-1.9,0.9-3.6c0-1.6-0.3-2.8-0.9-3.
                 <div class="tile-reveal"></div>
                 <section class="banner-inner">
                     <div class="title-page">
-                        <h1>Truyền thông</h1>
+                        <h1>Dự án tiêu biểu</h1>
                     </div>
                     <div class="bg-inner"><img src="/pictures/mobile/catalog/banner/small-7.jpg" data-src="/pictures/catalog/banner/small-7.jpg" alt="Truyền thông" class="lazy"></div>
                     <div class="wrap-wheel">
@@ -171,33 +171,19 @@ h-2.2v9.2h2.2c1.3,0,2.3-0.4,2.9-1.1c0.6-0.7,0.9-1.9,0.9-3.6c0-1.6-0.3-2.8-0.9-3.
                 </section>
                 <section class="section-outernav">
                     <div class="outer-nav release ani-item sub-ajax">
-                        <div class="sub-nav">
+                        <div class="sub-nav" style="display: none;">
                             <ul>
-                                <li><a class="sub-nav-a current" data-name="news-373" href="/truyen-thong/tin-cong-ty.php" aria-label="TIN CÔNG TY">TIN CÔNG TY</a>
+                                <li><a class="sub-nav-a current" data-name="news-373" href="/du-an-tieu-bieu/data.php" aria-label="TIN CÔNG TY">DỰ ÁN TIÊU BIỂU</a>
                                     <div class="class-hidden link-change-url" data-title="Hình ảnh" data-description="SEN GROUP"
-                                        data-keyword="SEN GROUP" data-hrefen="/truyen-thong/tin-cong-ty.php" data-hrefvi="/truyen-thong/tin-cong-ty.php" aria-label="link-change-url"></div>
+                                        data-keyword="SEN GROUP" data-hrefen="/du-an-tieu-bieu/data.php" data-hrefvi="/du-an-tieu-bieu/data.php" aria-label="link-change-url"></div>
                                 </li>
-                                <!-- <li><a class="sub-nav-a" data-name="news-374" href="/truyen-thong/tin-thi-truong.html" aria-label="TIN THỊ TRƯỜNG">TIN THỊ TRƯỜNG</a>
-
-                                </li> -->
-                                <li><a class="sub-nav-a" data-name="news-375" href="/truyen-thong/videos.php" aria-label="Videos">Videos</a>
-                                    <div class="class-hidden link-change-url" data-title="Hình ảnh" data-description="SEN GROUP"
-                                        data-keyword="SEN GROUP" data-hrefen="/truyen-thong/videos.php" data-hrefvi="/truyen-thong/videos.php" aria-label="link-change-url"></div>
-                                </li>
-                                <li><a class="sub-nav-a" data-name="news-342" href="/truyen-thong/image.php" aria-label="Hình ảnh">Hình ảnh</a>
-                                    <div class="class-hidden link-change-url" data-title="Hình ảnh" data-description="SEN GROUP"
-                                        data-keyword="SEN GROUP" data-hrefen="/truyen-thong/image.php" data-hrefvi="/truyen-thong/image.php" aria-label="link-change-url"></div>
-                                </li>
+                                                              
                             </ul>
                         </div>
-                        <div class="wheel-submit wheel-next"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-                                <path fill="currentColor" d="M5.5,2.7L10.9,8l-5.3,5.4l-0.7-0.7L9.4,8L4.8,3.4L5.5,2.7z" />
-                            </svg></div>
-                        <div class="wheel-submit hide wheel-prev"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-                                <path fill="currentColor" d="M10.1,13.4L4.8,8l5.3-5.3l0.7,0.7L6.2,8l4.7,4.6L10.1,13.4z" />
-                            </svg></div>
+                        
                     </div>
                 </section>
+
                 <section class="news-list-section">
                     <div class="wrap-content">
                         <div class="load-news-list">
