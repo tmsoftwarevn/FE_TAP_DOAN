@@ -140,10 +140,10 @@ C57.9,89.7,53.8,90.3,49.6,90.3z" />
                         data-hrefvi="/trang-chu.html" data-title="Trang chủ" data-description="SEN GROUP"
                         data-keyword="SEN GROUP" aria-label="link-change-url"></div>
                 </li>
-                <li class="nav-item"><a class="link-load nav-item-a" href="/gioi-thieu.html" data-name="about-page"
+                <li class="nav-item"><a class="link-load nav-item-a" href="/gioi-thieu.php" data-name="about-page"
                         aria-label="nav">Giới thiệu</a>
-                    <div class="class-hidden link-change-url" data-hrefen="/about-us.html"
-                        data-hrefvi="/gioi-thieu.html" data-title="Giới thiệu" data-description="SEN GROUP"
+                    <div class="class-hidden link-change-url" data-hrefen="/gioi-thieu.php"
+                        data-hrefvi="/gioi-thieu.php" data-title="Giới thiệu" data-description="SEN GROUP"
                         data-keyword="SEN GROUP" aria-label="link-change-url"></div>
                 </li>
                 <li class="nav-item"><a class="link-load nav-item-a" href="/linh-vuc-hoat-dong.html"
