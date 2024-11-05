@@ -6564,8 +6564,8 @@ function Option() {
           i.classList.add("already"),
             i.addEventListener("click", function (c) {
               this.classList.contains("pic-background") &&
-                s.classList.add("has-background"),
-                d();
+                s.classList.add("has-background");
+                // d();
               var e = i.querySelector("img") || i,
                 t =
                   (WinScroll.stop(),

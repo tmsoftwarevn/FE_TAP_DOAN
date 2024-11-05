@@ -659,7 +659,7 @@ C77.5,30.76,77.5,33.53,76.19,35.13z"></path>
                         </div>
                     </div>
                 </section>
-                <section class="section-outernav">
+                <!-- <section class="section-outernav">
                     <div class="outer-nav release ani-item sub-ajax">
                         <div class="sub-nav">
                             <ul>
@@ -688,7 +688,7 @@ C77.5,30.76,77.5,33.53,76.19,35.13z"></path>
                                 <path fill="currentColor" d="M10.1,13.4L4.8,8l5.3-5.3l0.7,0.7L6.2,8l4.7,4.6L10.1,13.4z" />
                             </svg></div>
                     </div>
-                </section>
+                </section> -->
                 <footer class="footer">
                     <div class="flower-footer ani-item"><span></span> <span></span> <span></span> <span></span> <span></span></div>
                     <div class="box-footer">

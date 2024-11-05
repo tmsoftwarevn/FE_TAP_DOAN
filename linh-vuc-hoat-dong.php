@@ -11,10 +11,10 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="format-detection" content="telephone=no">
     <meta name="theme-color" content="#004a8f">
-    <title id="hdtitle">Giới thiệu</title>
+    <title id="hdtitle">Lĩnh vực hoạt động</title>
     <meta name="description" content="SEN GROUP">
     <meta name="keywords" content="SEN GROUP">
-    <meta property="og:title" content="Giới thiệu">
+    <meta property="og:title" content="Lĩnh vực hoạt động">
     <meta property="og:description" content="SEN GROUP">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="SEN GROUP">
@@ -29,18 +29,17 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="SEN GROUP">
-    <!-- <link rel="shortcut icon" href="/catalog/view/images/favicon.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="/catalog/view/images/favicon.svg" type="image/x-icon">
     <link rel="icon" sizes="512x512" href="/catalog/view/images/icon-512.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/catalog/view/images/apple-touch-icon.png">
     <link rel="manifest" href="/manifest.json">
-    <link rel="alternate" href="/gioi-thieu.html" hreflang="vi-vn">
-    <link rel="alternate" href="/about-us.html" hreflang="en-vn">
-    <link href="/gioi-thieu.html" rel="canonical">
-    <meta property="og:url" content="/gioi-thieu.html"> -->
-   
+    <link rel="alternate" href="/linh-vuc-hoat-dong.html" hreflang="vi-vn">
+    <link rel="alternate" href="/business-sector.html" hreflang="en-vn">
+    <link href="/linh-vuc-hoat-dong.html" rel="canonical">
+    <meta property="og:url" content="/linh-vuc-hoat-dong.html">
+    
     <link rel="stylesheet" href="/css/main.css">
     <script src="https://cdn.tailwindcss.com"></script>
-
 
 </head>
 
@@ -136,7 +135,7 @@ h-2.2v9.2h2.2c1.3,0,2.3-0.4,2.9-1.1c0.6-0.7,0.9-1.9,0.9-3.6c0-1.6-0.3-2.8-0.9-3.
 
     <main class="main">
         <div class="smooth-scroll">
-            <div class="container" id="about-page">
+            <div class="container" id="business-page">
                 <script>
                     if (document.querySelector('#home-page')) {
                         Array.from(document.querySelectorAll('.mask, .loadicon'), function(element) {
@@ -148,162 +147,91 @@ h-2.2v9.2h2.2c1.3,0,2.3-0.4,2.9-1.1c0.6-0.7,0.9-1.9,0.9-3.6c0-1.6-0.3-2.8-0.9-3.
                 <div class="tile-reveal"></div>
                 <section class="banner-inner">
                     <div class="title-page">
-                        <h1>Giới thiệu</h1>
+                        <h1>Lĩnh vực hoạt động</h1>
                     </div>
-                    <div class="bg-inner"><img src="/banner/1920x960.png" data-src="/banner/1920x960.png" alt="Giới thiệu" class="lazy"></div>
+                    <div class="bg-inner"><img src="/banner/1920x960.png" data-src="/banner/1920x960.png" alt="Lĩnh vực hoạt động" class="lazy"></div>
                     <div class="wrap-wheel">
                         <div class="wheel"><span>Scroll down</span></div>
                     </div>
                 </section>
-                <section class="about-intro">
-                    <div class="pic-about-intro trans-y" data-speed="-2">
-                        <div class="bg-cover bg-lazy"></div>
+                <section class="business-section"><span class="stroke-page"></span>
+                    <div class="pic-business-01 ani-item">
+                        <div class="bg-cover trans-y bg-lazy" data-speed="-2"></div>
                     </div>
-                    <div class="wrap-content">
-                        <div class="left-content">
-                            <div class="title-main text-left color-blue title-underline bold-medium">
-                                <h2 class="text-ani-item">TỔNG QUAN</h2>
+                    <div class="pic-business-02 ani-item">
+                        <div class="bg-cover trans-y bg-lazy" data-speed="-2"></div>
+                    </div>
+                    <div class="list-business">
+                        <div class="content-business-page"><span class="circle-stroke ani-item"></span>
+                            <div class="pic-business-page ani-item">
+                                <div class="bg-cover"><img class="trans-y lazy" data-speed="-1" src="/banner/1920x960.png" data-src="/banner/1920x960.png" alt="Bất động sản"></div>
                             </div>
-                        </div>
-                        <div class="right-content">
-                            <div class="text-about-intro ani-item text-fixed">
-                                <div class="box-txt">
-                                    <p style="text-align: justify;"><span style="font-size: 14pt;">SEN GROUP được hình thành từ năm 2015, mang trong mình ngọn lửa của Ý Chí chinh phục mọi khó khăn và Khát Vọng Cống Hiến những giá trị tốt đẹp nhất cho cuộc sống!</span></p>
-                                    <p style="text-align: justify;"><span style="font-size: 14pt;">Để hiện thực hóa mục tiêu trở thành tập đoàn kinh tế tư nhân hàng đầu Việt Nam SEN GROUP đang tập trung xây dựng 5 mũi nhọn chiến lược: Bất động sản, Chăm sóc sức khoẻ, Du lịch, Xây dựng và Khai thác khoáng sản.</span></p>
-                                    <p style="text-align: justify;"><span style="font-size: 14pt;">Với những tiền đề và nội lực sẵn có cùng sự quyết tâm không ngừng đổi mới và hoàn thiện. SEN GROUP sẽ hoàn thành những mục tiêu đề ra và mang đến những giá trị tốt đẹp cho đối tác và khách hàng, chung tay xây dựng một Việt Nam Phồn Vinh và Thịnh Vượng!</span></p>
-                                    <p style="text-align: justify;"><span style="font-size: 14pt;">Với bề dày kinh nghiệm trong lĩnh vực Bất Động Sản cùng sự đam mê, tận tâm và nhiệt huyết của tất cả cán bộ công nhân viên, SEN GROUP đã cùng với các khách hàng, đối tác gặt hái rất nhiều thành công qua các dự án và sản phẩm mà SEN GROUP triển khai, nhanh chóng trở thành đơn vị hợp tác đầu tư, phân phối bất động sản hàng đầu tại thị trường Phú Quốc.</span></p>
+                            <div class="text-business-page">
+                                <div class="title-post color-blue">
+                                    <h2 class="text-ani-item">Bất động sản</h2>
                                 </div>
+                                <p>SEN REAL đã phát triển nhiều dự án BĐS nghỉ dưỡng cao cấp, gây tiếng vang lớn.</p>
+                                <p>Thời gian sắp tới, Tập đoàn có kế hoạch đầu tư và phát triển đa dạng sản phẩm nằm trong phân khúc cao cấp tại nhiều tỉnh thành lớn trên khắp cả nước như Miền Nam (Phú Quốc, Tp.HCM, Long An, Bình Dương, Đồng Nai, BRVT),
+                                    Miền Trung (Nha Trang, Đà Nẵng), Miền Bắc (Vĩnh Phúc, Quảng Ninh)...v.v</p>
+                            </div>
+                        </div>
+                        <div class="content-business-page"><span class="circle-stroke ani-item"></span>
+                            <div class="pic-business-page ani-item">
+                            <div class="bg-cover"><img class="trans-y lazy" data-speed="-1" src="/banner/1920x960.png" data-src="/banner/1920x960.png" alt="Bất động sản"></div>
+                            </div>
+                            <div class="text-business-page">
+                                <div class="title-post color-blue">
+                                    <h2 class="text-ani-item">Chăm Sóc Sức Khoẻ</h2>
+                                </div>
+                                <p>'Sau nhiều năm nghiên cứu khoa học lĩnh vực chăm sóc sức khỏe, sản xuất dược phẩm chất lượng cao.</p>
+                                <p>SEN HEALTHCARE ra đời như một minh chứng cho sự tận tâm và nhiệt huyết của Tập đoàn. Sở hữu nhà máy sản xuất công nghệ hiện đại bậc nhất, góp phần nâng tầm vị thế ngành dược phẩm Việt Nam trên bản đồ thế giới. Sắp tới SEN
+                                    HEALTHCARE còn cho ra mắt hệ thống phòng khám SEN CLINIC.</p>
+                                <p>Sứ mệnh "Vì một Việt Nam khỏe đẹp" SEN HEALTHCARE mong muốn góp một phần vào chăm sóc sức khỏe cộng đồng và trở thành một hệ sinh thái toàn diện của Tập đoàn SEN GROUP.</p>
+                            </div>
+                        </div>
+                        <div class="content-business-page"><span class="circle-stroke ani-item"></span>
+                            <div class="pic-business-page ani-item">
+                            <div class="bg-cover"><img class="trans-y lazy" data-speed="-1" src="/banner/1920x960.png" data-src="/banner/1920x960.png" alt="Bất động sản"></div>
+                            </div>
+                            <div class="text-business-page">
+                                <div class="title-post color-blue">
+                                    <h2 class="text-ani-item">Xây dựng</h2>
+                                </div>
+                                <p>SEN CONSTRUCTION tập trung lĩnh vực đầu tư, thiết kế và xây dựng công trình là một mắt xích quan trọng trong hệ sinh thái của Tập đoàn SEN GROUP.</p>
+                            </div>
+                        </div>
+                        <div class="content-business-page"><span class="circle-stroke ani-item"></span>
+                            <div class="pic-business-page ani-item">
+                            <div class="bg-cover"><img class="trans-y lazy" data-speed="-1" src="/banner/1920x960.png" data-src="/banner/1920x960.png" alt="Bất động sản"></div>
+                            </div>
+                            <div class="text-business-page">
+                                <div class="title-post color-blue">
+                                    <h2 class="text-ani-item">Du lịch</h2>
+                                </div>
+                                <p>SEN GROUP kết hợp cùng tập đoàn chuyên nghiệp nước ngoài để vận hành và quản lý các chuỗi du lịch, chăm sóc sức khỏe, mở ra một hướng đi chuyên biệt mới, đáp ứng nhu cầu cho những du khách bận rộn với cuộc sống hiện đại,
+                                    cần một không gian trong sạch, hòa mình với thiên nhiên cùng các liệu pháp thư giãn hoàn toàn để tái tạo năng lượng và tinh thần cho bản thân.</p>
+                            </div>
+                        </div>
+                        <div class="content-business-page"><span class="circle-stroke ani-item"></span>
+                            <div class="pic-business-page ani-item">
+                            <div class="bg-cover"><img class="trans-y lazy" data-speed="-1" src="/banner/1920x960.png" data-src="/banner/1920x960.png" alt="Bất động sản"></div>
+                            </div>
+                            <div class="text-business-page">
+                                <div class="title-post color-blue">
+                                    <h2 class="text-ani-item">Khai thác khoáng sản</h2>
+                                </div>
+                                <p>Khai thác khoáng sản là lĩnh vực mũi nhọn nằm trong kế hoạch phát triển tương lai gần của SEN GROUP.</p>
+                                <p>Với sự đầu tư nguồn nhân lực, nguồn vốn và hệ thống máy móc thiết bị công nghệ hiện đại từ khâu khai thác nguyên liệu đến khâu chế biến, luyện kim, SEN GROUP hứa hẹn tạo ra những sản phẩm đạt tiêu chuẩn xuất khẩu ra thị
+                                    trường quốc tế, đem lại giá trị gia tăng tối đa cho nguồn tài nguyên của Quốc Gia. SEN MINING, mở ra cơ hội mới, củng cố, gia tăng sức mạnh cho tập đoàn</p>
                             </div>
                         </div>
                     </div>
-                    <div class="scroll-text font-accent trans-x" data-speed="4"><span>LINGO GROUP LINGO GROUP LINGO GROUP LINGO GROUP</span> <span>LINGO GROUP LINGO GROUP LINGO GROUP LINGO GROUP</span></div>
                 </section>
-                <section class="about-value">
-                    <div class="bg-cover"><img class="trans-y lazy" data-speed="-2" src="/banner/1920x960.png" data-src="/banner/1920x960.png" alt="Giá trị cốt lõi"></div>
-                    <div class="wrap-content">
-                        <div class="title-main text-center color-white title-underline bold-medium">
-                            <h2 class="text-ani-item">Giá trị cốt lõi</h2>
-                        </div>
-                        <div class="value-list ani-item">
-                            <div class="box-value color-white">
-                                <div class="about-logo-value"><svg><use xlink:href="#ico-loading-logo"></use></svg> <span class="circle-rotate"><svg><use xlink:href="#ico-loading-text"></use></svg></span></div>
-                                <div class="title-small color-yellow">
-                                    <h2>Tầm Nhìn</h2>
-                                </div>
-                                <ul>
-                                    <li>2028: Trở thành 1 trong 10 tập đoàn kinh tế tư nhân hàng đầu Việt Nam</li>
-                                </ul>
-                            </div>
-                            <div class="box-value color-white">
-                                <div class="about-logo-value"><svg><use xlink:href="#ico-loading-logo"></use></svg> <span class="circle-rotate"><svg><use xlink:href="#ico-loading-text"></use></svg></span></div>
-                                <div class="title-small color-yellow">
-                                    <h2>Sứ mệnh</h2>
-                                </div>
-                                <ul>
-                                    <li>Mang đến cho khách hàng những sản phẩm, dịch vụ tốt nhất với sự hài lòng cao nhất.</li>
-                                    <li>Thấu hiểu, hỗ trợ và giữ uy tín để đồng hành cùng đối tác.</li>
-                                    <li>Tạo tối đa mọi điều kiện cho nhân viên phát triển đúng năng lực bản thân và hưởng xứng đáng những thành quả đạt được.</li>
-                                    <li>Chung tay góp sức vì một xã hội giàu mạnh và đầy lòng nhân ái.</li>
-                                </ul>
-                            </div>
-                            <div class="box-value color-white">
-                                <div class="about-logo-value"><svg><use xlink:href="#ico-loading-logo"></use></svg> <span class="circle-rotate"><svg><use xlink:href="#ico-loading-text"></use></svg></span></div>
-                                <div class="title-small color-yellow">
-                                    <h2>Giá trị cốt lõi</h2>
-                                </div>
-                                <p><span style="font-size: 18pt;"><strong>ĐẠO ĐỨC - TRÍ TUỆ - UY TÍN</strong></span><br />Với 3 chữ làm kim chỉ nam: ĐẠO ĐỨC làm gốc, TRÍ TUỆ dẫn đường và UY TÍN để đi xa hơn, trong mọi hoạt động của công ty, chúng tôi luôn
-                                    tâm niệm phải mang lại những giá trị Đích Thực cho Khách Hàng, Đối Tác và Nhân Viên.</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                
-                <section class="about-achievement">
-                    <div class="pic-about-achievement ani-item">
-                        <div class="bg-cover bg-lazy"></div>
-                    </div>
-                    <div class="wrap-content">
-                        <div class="title-main text-center color-blue title-underline bold-medium">
-                            <h2 class="text-ani-item">Giải thưởng</h2>
-                        </div>
-                        <div class="slide-achieve slide-three arrow-outside dot-blue">
-                            <div class="slidebox-track">
-                                <div class="slidebox-list">
-                                    <div class="box-achievement slidebox-item">
-                                        <div class="wrap-box-achieve">
-                                            <div class="pic-achievement zoom-pic zoom-hover"><img src="/banner/1920x960.png" data-src="/banner/1920x960.png" alt="TẬP ĐOÀN SEN GROUP ĐÃ HỖ TRỢ 20.000 KHẨU TRANG Y TẾ CHO CÔNG TÁC PHÒNG CHỐNG DỊCH BỆNH COVID-19"
-                                                    class="lazy"></div>
-                                            <div class="text-achievement">
-                                                <h3>TẬP ĐOÀN SEN GROUP ĐÃ HỖ TRỢ 20.000 KHẨU TRANG Y TẾ CHO CÔNG TÁC PHÒNG CHỐNG DỊCH BỆNH COVID-19</h3>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="box-achievement slidebox-item">
-                                    <div class="wrap-box-achieve">
-                                            <div class="pic-achievement zoom-pic zoom-hover"><img src="/banner/1920x960.png" data-src="/banner/1920x960.png" alt="TẬP ĐOÀN SEN GROUP ĐÃ HỖ TRỢ 20.000 KHẨU TRANG Y TẾ CHO CÔNG TÁC PHÒNG CHỐNG DỊCH BỆNH COVID-19"
-                                                    class="lazy"></div>
-                                            <div class="text-achievement">
-                                                <h3>TẬP ĐOÀN SEN GROUP ĐÃ HỖ TRỢ 20.000 KHẨU TRANG Y TẾ CHO CÔNG TÁC PHÒNG CHỐNG DỊCH BỆNH COVID-19</h3>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="box-achievement slidebox-item">
-                                    <div class="wrap-box-achieve">
-                                            <div class="pic-achievement zoom-pic zoom-hover"><img src="/banner/1920x960.png" data-src="/banner/1920x960.png" alt="TẬP ĐOÀN SEN GROUP ĐÃ HỖ TRỢ 20.000 KHẨU TRANG Y TẾ CHO CÔNG TÁC PHÒNG CHỐNG DỊCH BỆNH COVID-19"
-                                                    class="lazy"></div>
-                                            <div class="text-achievement">
-                                                <h3>TẬP ĐOÀN SEN GROUP ĐÃ HỖ TRỢ 20.000 KHẨU TRANG Y TẾ CHO CÔNG TÁC PHÒNG CHỐNG DỊCH BỆNH COVID-19</h3>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="box-achievement slidebox-item">
-                                    <div class="wrap-box-achieve">
-                                            <div class="pic-achievement zoom-pic zoom-hover"><img src="/banner/1920x960.png" data-src="/banner/1920x960.png" alt="TẬP ĐOÀN SEN GROUP ĐÃ HỖ TRỢ 20.000 KHẨU TRANG Y TẾ CHO CÔNG TÁC PHÒNG CHỐNG DỊCH BỆNH COVID-19"
-                                                    class="lazy"></div>
-                                            <div class="text-achievement">
-                                                <h3>TẬP ĐOÀN SEN GROUP ĐÃ HỖ TRỢ 20.000 KHẨU TRANG Y TẾ CHO CÔNG TÁC PHÒNG CHỐNG DỊCH BỆNH COVID-19</h3>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="box-achievement slidebox-item">
-                                        <div class="wrap-box-achieve">
-                                            <div class="pic-achievement zoom-pic zoom-hover"><img src="/pictures/mobile/catalog/about/giai-thuong/GT5.jpg" data-src="/pictures/catalog/about/giai-thuong/GT5.jpg" alt="SÀN GIAO DỊCH BẤT ĐỘNG SẢN TIÊU BIỂU TOP 30 NĂM 2017"
-                                                    class="lazy"></div>
-                                            <div class="text-achievement">
-                                                <h3>SÀN GIAO DỊCH BẤT ĐỘNG SẢN TIÊU BIỂU TOP 30 NĂM 2017</h3>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="box-achievement slidebox-item">
-                                        <div class="wrap-box-achieve">
-                                            <div class="pic-achievement zoom-pic zoom-hover"><img src="/pictures/mobile/catalog/about/giai-thuong/GT6.jpg" data-src="/pictures/catalog/about/giai-thuong/GT6.jpg" alt="TẬP ĐOÀN SEN GROUP ĐÃ TÍCH CỰC THAM GIA ĐÓNG GÓP 10.000 KHẨU TRANG ỦNG HỘ PHÒNG, CHỐNG DỊCH COVID-19"
-                                                    class="lazy"></div>
-                                            <div class="text-achievement">
-                                                <h3>TẬP ĐOÀN SEN GROUP ĐÃ TÍCH CỰC THAM GIA ĐÓNG GÓP 10.000 KHẨU TRANG ỦNG HỘ PHÒNG, CHỐNG DỊCH COVID-19</h3>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="box-achievement slidebox-item">
-                                        <div class="wrap-box-achieve">
-                                            <div class="pic-achievement zoom-pic zoom-hover"><img src="/pictures/mobile/catalog/about/giai-thuong/GT7.jpg" data-src="/pictures/catalog/about/giai-thuong/GT7.jpg" alt="TẬP ĐOÀN SEN GROUP ĐÃ TRAO TẶNG SÁCH CHO THƯ VIỆN TỈNH KIÊN GIANG"
-                                                    class="lazy"></div>
-                                            <div class="text-achievement">
-                                                <h3>TẬP ĐOÀN SEN GROUP ĐÃ TRAO TẶNG SÁCH CHO THƯ VIỆN TỈNH KIÊN GIANG</h3>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="scroll-text font-accent trans-x" data-speed="4"><span>LINGO GROUP LINGO GROUP LINGO GROUP LINGO GROUP</span> <span>LINGO GROUP LINGO GROUP LINGO GROUP LINGO GROUP</span></div>
-                </section>
-
                 <?php require "footer.php" ?>
-
             </div>
         </div>
     </main>
+    
     <div class="register"><span></span> <button class="close-regis close-format" aria-label="close"><svg><use xlink:href="#ico-close-menu"></use></svg> <span class="line-toggle toggle-1"></span> <span class="line-toggle toggle-2"></span></button>
         <div class="register-form">
             <div class="wrap-register-form">

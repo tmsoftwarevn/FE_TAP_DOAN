@@ -145,11 +145,11 @@
 }
 
 .recruitment-intro .pic-about-intro .bg-cover.bg-lazy::after {
-    background: url(../images/about/recruit-intro-flower.png) no-repeat center center/cover
+    background: url(../images/intro-flower.png) no-repeat center center/cover
 }
 
 .recruitment-enviroment .bg-cover {
-    -webkit-mask-image: url(../images/mask.svg);
+    /* -webkit-mask-image: url(../images/mask.svg); */
     mask-image: url(../images/mask.svg);
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
