@@ -18,13 +18,22 @@
         <div class="txt-news">
             <h3> SỰ KIỆN ĐÀO TẠO NỘI BỘ PHONG CÁCH BÁN HÀNG CHUẨN SEN GROUP &amp; ĐÀO TẠO DỰ ÁN THE EMERALD GOLF VIEW ️</h3>
         </div>
-        <div class="wrap-view-details"><a href="../tin-tuc/detail-tintuc.php" class="view-details dark link-load" aria-label=" SỰ KIỆN ĐÀO TẠO NỘI BỘ PHONG CÁCH BÁN HÀNG CHUẨN SEN GROUP &amp; ĐÀO TẠO DỰ ÁN THE EMERALD GOLF VIEW ️"><span class="small-logo-ico"><svg>
-                        <use xlink:href="#ico-view-details-logo"></use>
-                    </svg> <span class="rotate-logo"><svg>
+        <div class="wrap-view-details">
+            <a href="../tin-tuc/detail-tintuc.php" class="view-details dark link-load" aria-label=" SỰ KIỆN ĐÀO TẠO NỘI BỘ PHONG CÁCH BÁN HÀNG CHUẨN SEN GROUP &amp; ĐÀO TẠO DỰ ÁN THE EMERALD GOLF VIEW ️">
+                <span class="small-logo-ico">
+                    <?php include "../component/logoLoading.php" ?>
+                    <span class="rotate-logo">
+                        <svg>
                             <use xlink:href="#ico-view-details-rotate"></use>
-                        </svg> </span></span> XEM TIN <svg class="viewdetails-svg">
+                        </svg>
+                    </span>
+                </span>
+                XEM TIN
+                <svg class="viewdetails-svg">
                     <use xlink:href="#arrow"></use>
-                </svg></a></div>
+                </svg>
+            </a>
+        </div>
     </div>
 
     <div class="item-news ani-item">
@@ -36,13 +45,22 @@
         <div class="txt-news">
             <h3> SỰ KIỆN ĐÀO TẠO NỘI BỘ PHONG CÁCH BÁN HÀNG CHUẨN SEN GROUP &amp; ĐÀO TẠO DỰ ÁN THE EMERALD GOLF VIEW ️</h3>
         </div>
-        <div class="wrap-view-details"><a href="../tin-tuc/detail-tintuc.php" class="view-details dark link-load" aria-label=" SỰ KIỆN ĐÀO TẠO NỘI BỘ PHONG CÁCH BÁN HÀNG CHUẨN SEN GROUP &amp; ĐÀO TẠO DỰ ÁN THE EMERALD GOLF VIEW ️"><span class="small-logo-ico"><svg>
-                        <use xlink:href="#ico-view-details-logo"></use>
-                    </svg> <span class="rotate-logo"><svg>
+        <div class="wrap-view-details">
+            <a href="../tin-tuc/detail-tintuc.php" class="view-details dark link-load" aria-label=" SỰ KIỆN ĐÀO TẠO NỘI BỘ PHONG CÁCH BÁN HÀNG CHUẨN SEN GROUP &amp; ĐÀO TẠO DỰ ÁN THE EMERALD GOLF VIEW ️">
+                <span class="small-logo-ico">
+                    <?php include "../component/logoLoading.php" ?>
+                    <span class="rotate-logo">
+                        <svg>
                             <use xlink:href="#ico-view-details-rotate"></use>
-                        </svg> </span></span> XEM TIN <svg class="viewdetails-svg">
+                        </svg>
+                    </span>
+                </span>
+                XEM TIN
+                <svg class="viewdetails-svg">
                     <use xlink:href="#arrow"></use>
-                </svg></a></div>
+                </svg>
+            </a>
+        </div>
     </div>
 
     <div class="item-news ani-item">
@@ -54,13 +72,22 @@
         <div class="txt-news">
             <h3> SỰ KIỆN ĐÀO TẠO NỘI BỘ PHONG CÁCH BÁN HÀNG CHUẨN SEN GROUP &amp; ĐÀO TẠO DỰ ÁN THE EMERALD GOLF VIEW ️</h3>
         </div>
-        <div class="wrap-view-details"><a href="../tin-tuc/detail-tintuc.php" class="view-details dark link-load" aria-label=" SỰ KIỆN ĐÀO TẠO NỘI BỘ PHONG CÁCH BÁN HÀNG CHUẨN SEN GROUP &amp; ĐÀO TẠO DỰ ÁN THE EMERALD GOLF VIEW ️"><span class="small-logo-ico"><svg>
-                        <use xlink:href="#ico-view-details-logo"></use>
-                    </svg> <span class="rotate-logo"><svg>
+        <div class="wrap-view-details">
+            <a href="../tin-tuc/detail-tintuc.php" class="view-details dark link-load" aria-label=" SỰ KIỆN ĐÀO TẠO NỘI BỘ PHONG CÁCH BÁN HÀNG CHUẨN SEN GROUP &amp; ĐÀO TẠO DỰ ÁN THE EMERALD GOLF VIEW ️">
+                <span class="small-logo-ico">
+                    <?php include "../component/logoLoading.php" ?>
+                    <span class="rotate-logo">
+                        <svg>
                             <use xlink:href="#ico-view-details-rotate"></use>
-                        </svg> </span></span> XEM TIN <svg class="viewdetails-svg">
+                        </svg>
+                    </span>
+                </span>
+                XEM TIN
+                <svg class="viewdetails-svg">
                     <use xlink:href="#arrow"></use>
-                </svg></a></div>
+                </svg>
+            </a>
+        </div>
     </div>
     <div class="item-news ani-item">
         <div class="pic-news">
@@ -71,13 +98,22 @@
         <div class="txt-news">
             <h3> SỰ KIỆN ĐÀO TẠO NỘI BỘ PHONG CÁCH BÁN HÀNG CHUẨN SEN GROUP &amp; ĐÀO TẠO DỰ ÁN THE EMERALD GOLF VIEW ️</h3>
         </div>
-        <div class="wrap-view-details"><a href="../tin-tuc/detail-tintuc.php" class="view-details dark link-load" aria-label=" SỰ KIỆN ĐÀO TẠO NỘI BỘ PHONG CÁCH BÁN HÀNG CHUẨN SEN GROUP &amp; ĐÀO TẠO DỰ ÁN THE EMERALD GOLF VIEW ️"><span class="small-logo-ico"><svg>
-                        <use xlink:href="#ico-view-details-logo"></use>
-                    </svg> <span class="rotate-logo"><svg>
+        <div class="wrap-view-details">
+            <a href="../tin-tuc/detail-tintuc.php" class="view-details dark link-load" aria-label=" SỰ KIỆN ĐÀO TẠO NỘI BỘ PHONG CÁCH BÁN HÀNG CHUẨN SEN GROUP &amp; ĐÀO TẠO DỰ ÁN THE EMERALD GOLF VIEW ️">
+                <span class="small-logo-ico">
+                    <?php include "../component/logoLoading.php" ?>
+                    <span class="rotate-logo">
+                        <svg>
                             <use xlink:href="#ico-view-details-rotate"></use>
-                        </svg> </span></span> XEM TIN <svg class="viewdetails-svg">
+                        </svg>
+                    </span>
+                </span>
+                XEM TIN
+                <svg class="viewdetails-svg">
                     <use xlink:href="#arrow"></use>
-                </svg></a></div>
+                </svg>
+            </a>
+        </div>
     </div>
     <div class="item-news ani-item">
         <div class="pic-news">
@@ -88,13 +124,22 @@
         <div class="txt-news">
             <h3> SỰ KIỆN ĐÀO TẠO NỘI BỘ PHONG CÁCH BÁN HÀNG CHUẨN SEN GROUP &amp; ĐÀO TẠO DỰ ÁN THE EMERALD GOLF VIEW ️</h3>
         </div>
-        <div class="wrap-view-details"><a href="../tin-tuc/detail-tintuc.php" class="view-details dark link-load" aria-label=" SỰ KIỆN ĐÀO TẠO NỘI BỘ PHONG CÁCH BÁN HÀNG CHUẨN SEN GROUP &amp; ĐÀO TẠO DỰ ÁN THE EMERALD GOLF VIEW ️"><span class="small-logo-ico"><svg>
-                        <use xlink:href="#ico-view-details-logo"></use>
-                    </svg> <span class="rotate-logo"><svg>
+        <div class="wrap-view-details">
+            <a href="../tin-tuc/detail-tintuc.php" class="view-details dark link-load" aria-label=" SỰ KIỆN ĐÀO TẠO NỘI BỘ PHONG CÁCH BÁN HÀNG CHUẨN SEN GROUP &amp; ĐÀO TẠO DỰ ÁN THE EMERALD GOLF VIEW ️">
+                <span class="small-logo-ico">
+                    <?php include "../component/logoLoading.php" ?>
+                    <span class="rotate-logo">
+                        <svg>
                             <use xlink:href="#ico-view-details-rotate"></use>
-                        </svg> </span></span> XEM TIN <svg class="viewdetails-svg">
+                        </svg>
+                    </span>
+                </span>
+                XEM TIN
+                <svg class="viewdetails-svg">
                     <use xlink:href="#arrow"></use>
-                </svg></a></div>
+                </svg>
+            </a>
+        </div>
     </div>
     <div class="item-news ani-item">
         <div class="pic-news">

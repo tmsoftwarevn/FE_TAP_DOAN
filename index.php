@@ -18,7 +18,7 @@
     <meta property="og:description" content="LINGO GROUP">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="LINGO GROUP">
-    <!-- <meta property="og:image" content="/catalog/view/images/social-share.jpg"> -->
+    <meta property="og:image" content="/images/logo.png">
     <meta property="og:locale" content="vi">
 
     <meta name="mobile-web-app-capable" content="yes">

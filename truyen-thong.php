@@ -3,40 +3,34 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="google" content="notranslate">
+
     <meta name="language" content="vi">
     <meta name="robots" content="index, follow">
-    <meta name="author" content="SEN GROUP">
+    <meta name="author" content="LINGO GROUP">
     <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="format-detection" content="telephone=no">
-    <meta name="theme-color" content="#004a8f">
+
     <title id="hdtitle">Truyền thông</title>
-    <meta name="description" content="SEN GROUP">
-    <meta name="keywords" content="SEN GROUP">
+    <meta name="description" content="LINGO GROUP">
+    <meta name="keywords" content="LINGO GROUP">
     <meta property="og:title" content="Truyền thông">
-    <meta property="og:description" content="SEN GROUP">
+    <meta property="og:description" content="LINGO GROUP">
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="SEN GROUP">
-    <meta property="og:image" content="/catalog/view/images/social-share.jpg">
+    <meta property="og:site_name" content="LINGO GROUP">
+    <meta property="og:image" content="/images/logo.png">
     <meta property="og:locale" content="vi">
-    <meta name="DC.title" content="SEN GROUP">
-    <meta name="geo.region" content="VN-HCM">
-    <meta name="geo.placename" content="3 District, Ho Chi Minh City">
-    <meta name="geo.position" content="10.7828786;106.6932583">
-    <meta name="ICBM" content="10.7828786, 106.6932583">
+
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="SEN GROUP">
-    <link rel="shortcut icon" href="/catalog/view/images/favicon.svg" type="image/x-icon">
-    <link rel="icon" sizes="512x512" href="/catalog/view/images/icon-512.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/catalog/view/images/apple-touch-icon.png">
-    <!-- <link rel="manifest" href="/manifest.json"> -->
-    <link rel="alternate" href="/truyen-thong.html" hreflang="vi-vn">
-    <link rel="alternate" href="/media.html" hreflang="en-vn">
-    <link href="/truyen-thong.html" rel="canonical">
-    <meta property="og:url" content="/truyen-thong.html">
+    <meta name="apple-mobile-web-app-title" content="LINGO GROUP">
+
+    <link rel="icon" href="/images/logo.png" type="image/x-icon" />
+    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.png" />
+
+    <link href="/truyen-thong.php" rel="canonical">
+    <meta property="og:url" content="/truyen-thong.php">
 
     <link rel="stylesheet" href="/css/main.css">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -202,9 +196,9 @@ h-2.2v9.2h2.2c1.3,0,2.3-0.4,2.9-1.1c0.6-0.7,0.9-1.9,0.9-3.6c0-1.6-0.3-2.8-0.9-3.
                     <div class="wrap-content">
                         <div class="load-news-list">
 
-                            
+
                         </div>
-                        
+
                     </div>
                 </section>
                 <footer class="footer">
