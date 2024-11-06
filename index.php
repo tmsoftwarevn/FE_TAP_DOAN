@@ -57,84 +57,10 @@
     </div>
 
     <div class="loadicon" style="display:none"><span></span>
-    <img src="/images/logo.png" class="w-full h-auto" />
-        <!-- <svg xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 220 250">
-            <path class="stroke-line" d="M181.5,40.8c0-0.2-0.1-0.3-0.3-0.4c-0.1,0-0.2,0-0.3,0c-7.1,0.7-21.1,2.4-35.7,6.5c-2,0.6-4,1.2-5.9,1.8
-c-1.6-2.6-3.4-5.2-5.4-7.8c-8.9-12.1-18.8-22-23.9-26.8c-0.2-0.2-0.4-0.2-0.6,0c-5.1,4.8-15,14.7-23.9,26.8
-c-1.9,2.6-3.7,5.2-5.4,7.8c-1.8-0.6-3.8-1.2-5.9-1.8c-14.6-4.1-28.6-5.8-35.6-6.5c-0.1,0-0.2,0-0.3,0c-0.2,0.1-0.3,0.2-0.3,0.4
-c0,6.9,0.3,20.6,2.9,35.1c2.1,12.1,5.4,22.2,9.7,30.1c5.6,10.4,13,17,21.9,19.7c7.7,2.3,14.9,2.5,21.5,0.6c3.8-1.1,7.2-2.9,10.3-5.4
-c1.7,0.1,3.5,0.2,5.4,0.2c1.8,0,3.7,0,5.4-0.2c3,2.5,6.5,4.3,10.3,5.4c3,0.9,6.1,1.3,9.3,1.3c3.9,0,8-0.6,12.2-1.9
-c9-2.7,16.3-9.3,21.9-19.7c4.3-7.9,7.5-18,9.7-30.1C181.1,61.4,181.5,47.7,181.5,40.8 M72.2,54.5c1.2,0.3,2.5,0.8,3.8,1.2l0,0
-c0,0.1-0.1,0.1-0.1,0.2c0,0,0,0.1,0,0.1c-2.5,4.6-4.4,9.1-5.8,13.3c-3.7,11.4-3.4,21.5,0.8,30c3.7,7.3,8.6,12.8,14.6,16.3
-c2.4,1.4,4.9,2.4,7.5,3.1c-5.3,1.8-11.5,1.7-18.1-0.3c-16.2-4.9-23.2-26.5-26.3-43.8c-1.4-7.8-2.3-16.3-2.6-25.3
-C55.3,50.4,63.8,52.2,72.2,54.5 M170.9,74.5c-3.1,17.3-10.1,38.9-26.3,43.8c-6.6,2-12.8,2.1-18.1,0.2c2.6-0.7,5.1-1.7,7.5-3.1
-c6-3.5,11-9,14.6-16.3c4.3-8.5,4.6-18.6,0.8-30c-1.4-4.3-3.4-8.8-6-13.5l0.1,0c1.3-0.4,2.5-0.8,3.8-1.1c8.4-2.3,16.9-4.1,26.1-5.3
-C173.2,58.2,172.3,66.8,170.9,74.5 M102.3,113c-3.8-0.8-6.4-1.5-6.9-1.7c-0.1,0-0.1,0-0.2,0c-1-0.3-1.9-0.7-2.8-1.1
-c-0.3-0.1-0.6-0.2-0.8-0.4c-0.1,0-0.2-0.1-0.3-0.1c-0.4-0.2-0.8-0.4-1.1-0.6c0,0-0.1,0-0.1-0.1l-0.1,0c-0.3-0.2-0.7-0.4-1-0.6
-l-0.1-0.1c0,0-0.1-0.1-0.1-0.1c-0.3-0.2-0.7-0.5-1.1-0.7c-0.1-0.1-0.1-0.1-0.2-0.2l-0.1,0c-0.4-0.3-0.7-0.5-1-0.8l-0.1-0.1
-c-0.3-0.2-0.6-0.5-0.9-0.8l0,0c-0.1-0.1-0.1-0.1-0.2-0.2c-0.3-0.3-0.6-0.6-0.9-0.9c-0.1-0.1-0.1-0.1-0.2-0.2l-0.1-0.1
-c-0.3-0.3-0.6-0.6-0.8-0.9l-0.1-0.1c0,0-0.1-0.1-0.1-0.1c-0.3-0.3-0.6-0.7-0.9-1.1c-0.1-0.1-0.2-0.2-0.3-0.3
-c-0.3-0.4-0.6-0.8-0.8-1.1c0-0.1-0.1-0.1-0.1-0.2l-0.1-0.1c-0.2-0.3-0.5-0.7-0.7-1L79.9,99c0-0.1-0.1-0.2-0.1-0.2
-c-0.2-0.4-0.5-0.8-0.7-1.3c-0.1-0.1-0.1-0.2-0.2-0.4l0-0.1c-0.2-0.4-0.5-0.8-0.7-1.2c0,0,0-0.1,0-0.1c0,0,0,0,0-0.1c0,0,0-0.1,0-0.1
-c0,0,0-0.1,0-0.1c-0.1-0.2-0.2-0.5-0.3-0.7c-0.1-0.1-0.1-0.2-0.2-0.4c-0.1-0.2-0.2-0.5-0.3-0.7c0-0.1-0.1-0.2-0.1-0.3
-c-0.1-0.3-0.2-0.5-0.3-0.8c0-0.1-0.1-0.2-0.1-0.4c-0.1-0.2-0.2-0.5-0.2-0.7l0-0.1c0-0.1,0-0.1,0-0.2c-0.1-0.3-0.1-0.6-0.2-0.9
-c0-0.1-0.1-0.2-0.1-0.3c-0.1-0.3-0.1-0.5-0.2-0.8l0-0.1c0,0,0-0.1,0-0.1c0-0.1,0-0.2,0-0.3l0,0c-0.1-0.6-0.1-1.1-0.2-1.7
-c0,0,0-0.1,0-0.1C74.3,72.9,83.8,56.7,92,45.6c6.2-8.5,13.1-15.9,17.9-20.7c4.8,4.8,11.6,12.3,17.9,20.7
-c8.1,11.1,17.6,27.2,16.4,41.2c0,0,0,0,0,0v0c0,0,0,0,0,0.1c0,0,0,0.1,0,0.1c0,0.3-0.1,0.5-0.1,0.8c0,0.1,0,0.2,0,0.3
-c0,0.4-0.1,0.7-0.1,1c0,0,0,0.1,0,0.1l0,0.1c0,0.3-0.1,0.5-0.2,0.8c0,0.1,0,0.2-0.1,0.3c-0.1,0.3-0.1,0.6-0.2,0.9c0,0.1,0,0.1,0,0.2
-l0,0.1c-0.1,0.2-0.1,0.5-0.2,0.7c0,0.1-0.1,0.2-0.1,0.4c-0.1,0.3-0.2,0.5-0.3,0.8c0,0.1-0.1,0.2-0.1,0.3c-0.1,0.2-0.2,0.5-0.3,0.7
-c-0.1,0.1-0.1,0.2-0.2,0.4c-0.1,0.2-0.2,0.5-0.3,0.7c0,0,0,0.1,0,0.1c0,0,0,0.1,0,0.1c0,0,0,0,0,0.1c0,0,0,0.1,0,0.1
-c-0.2,0.4-0.4,0.8-0.7,1.2l0,0.1c-0.1,0.1-0.1,0.2-0.2,0.3c-0.3,0.4-0.5,0.9-0.7,1.3c0,0.1-0.1,0.2-0.1,0.2l-0.1,0.1
-c-0.2,0.4-0.5,0.7-0.7,1l-0.1,0.1c0,0.1-0.1,0.1-0.1,0.2c-0.3,0.4-0.5,0.7-0.8,1.1c-0.1,0.1-0.2,0.2-0.3,0.3
-c-0.3,0.4-0.6,0.8-0.9,1.1c0,0-0.1,0.1-0.1,0.1l-0.1,0.1c-0.3,0.3-0.5,0.6-0.8,0.9l-0.1,0.1c-0.1,0.1-0.1,0.1-0.2,0.2
-c-0.3,0.3-0.6,0.6-0.9,0.9c-0.1,0.1-0.1,0.1-0.2,0.2l-0.1,0c-0.3,0.3-0.7,0.6-0.9,0.8l-0.1,0.1c-0.3,0.2-0.6,0.5-1,0.8l-0.1,0
-c-0.1,0.1-0.1,0.1-0.2,0.2c-0.4,0.3-0.7,0.5-1.1,0.7c0,0-0.1,0.1-0.1,0.1l-0.1,0.1c-0.3,0.2-0.7,0.4-1,0.6l-0.1,0c0,0-0.1,0-0.1,0.1
-c-0.4,0.2-0.7,0.4-1.1,0.6c-0.1,0-0.2,0.1-0.3,0.1c-0.3,0.1-0.6,0.2-0.8,0.4c-0.9,0.4-1.8,0.8-2.8,1.1c-0.1,0-0.1,0-0.2,0
-c-0.5,0.3-3.2,0.9-6.9,1.7c-2.5,0.5-5,0.7-7.5,0.7C107.3,113.7,104.7,113.5,102.3,113" />
-            <path class="stroke-line" d="M64.1,141.3l-6.9,11.1H36.6h-2.1c-1.5-0.1-2.7,0-3.7,0.2c-1,0.2-1.8,0.6-2.4,1.1c-0.6,0.5-1,1-1.3,1.7
-c-0.2,0.7-0.4,1.4-0.5,2.1c0,0.8,0.3,1.8,0.9,2.9c0.6,1,1.5,1.5,2.7,1.7c1.2,0.2,2.9,0.3,5,0.3h9.1c4.3,0,7.6,0.6,10.1,1.8
-c1.3,0.6,2.5,1.4,3.5,2.4c1.1,1,2,2.2,2.8,3.6c0.8,1.4,1.4,2.9,1.9,4.6c0.5,1.7,0.7,3.5,0.7,5.3c0,4.2-0.9,7.8-2.7,10.8
-c-1.7,3-3.9,4.9-6.7,5.8c-2.8,0.8-6.4,1.2-10.9,1.2h-30v-11.2h25.6H40c1.6,0.1,3,0,4.2-0.2c1.2-0.3,2.2-0.6,2.9-1.2
-c0.8-0.5,1.3-1.1,1.7-1.8c0.3-0.7,0.5-1.4,0.4-2.2c-0.1-1.4-0.6-2.6-1.7-3.7c-1.1-1-2.7-1.4-4.8-1.2h-2.1h-9.2c-3.8,0-7-0.6-9.5-1.7
-c-1.3-0.6-2.6-1.5-3.7-2.6c-1.1-1.1-2.1-2.3-2.9-3.7c-0.8-1.4-1.4-3-1.9-4.7c-0.5-1.7-0.7-3.5-0.7-5.4c0-3.6,0.8-6.9,2.4-9.9
-c0.8-1.4,1.8-2.6,3-3.5c1.2-0.9,2.6-1.7,4.1-2.2c1.5-0.5,3.2-0.9,4.9-1.1c1.8-0.2,3.6-0.3,5.5-0.3h2.2H64.1z" />
-            <path class="stroke-line" d="M176.5,141.3 194.1,188.4 194.1,141.3 206.9,141.3 206.9,198 184.9,198 168.4,152.1 168.4,198 
-155.5,198 155.5,141.3z" />
-            <rect class="stroke-line" x="98.9" y="164.1" width="41.1" height="11.2" />
-            <path class="stroke-line" d="M93.2,152.4 93.2,165.1 93.2,165.1 93.2,176.2 93.2,176.2 93.2,186.8 111.6,186.8 111.6,186.8 
-140,186.8 140,198 120.9,198 120.9,198 79.7,198 79.7,141.3 140,141.3 140,152.4z" />
-            <path class="stroke-line" d="M109.3,107c-4.1,0-8.2-1.1-12.2-3.3c-1.4-0.7-2.3-1-2.8-1c-0.9,0-1.4,0.6-1.5,1.9l-0.1,1.3h-1.8V90.4h1.7
-c0.6,4.8,2.3,8.3,5.3,10.5c3,2.3,6.6,3.4,10.7,3.4c4.1,0,7.2-1.1,9.4-3.3c2.1-2.2,3.2-4.9,3.2-7.9c0-4.8-2.8-8.5-8.3-10.9l-11-4.9
-c-3.3-1.5-5.8-3.5-7.5-6.1c-1.7-2.6-2.5-5.3-2.5-8.3c0-4.5,1.5-8.4,4.5-11.6c3-3.2,7.4-4.9,13.1-4.9c3.3,0,6.8,1.1,10.3,3.3
-c1.2,0.7,2,1,2.4,1c0.8,0,1.2-0.6,1.3-1.9l0.1-1.9h1.8v16h-1.7c-0.5-4.8-2-8.3-4.6-10.5c-2.6-2.3-5.7-3.4-9.4-3.4
-c-3.7,0-6.5,1-8.5,3c-2,2-3,4.3-3,6.9c0,2.6,0.7,4.9,2.1,6.9c1.4,2,3.4,3.6,6.2,4.8l11.1,4.9c3.7,1.7,6.5,3.8,8.4,6.5
-c1.9,2.7,2.8,5.6,2.8,8.7c0,4.4-1.8,8.2-5.3,11.4C119.9,105.4,115.2,107,109.3,107" />
-            <path class="stroke-line" d="M24.5,227.3h6.9v1h-0.7c-0.3,0-0.6,0.1-0.7,0.2c-0.1,0.1-0.2,0.3-0.2,0.7v0.8c0,1.9-0.7,3.3-2.2,4.5
-c-1.5,1.1-3.4,1.7-5.7,1.7c-2.7,0-4.9-0.9-6.6-2.7c-1.7-1.8-2.5-4.1-2.5-6.9c0-2.9,0.9-5.2,2.6-7c1.7-1.8,4-2.7,6.9-2.7
-c1,0,1.9,0.1,2.7,0.3c0.8,0.2,1.4,0.4,1.8,0.5c0.4,0.2,0.7,0.3,0.8,0.3c0.2,0,0.3-0.1,0.3-0.4v-0.4h1v4.9h-1c0-2.8-1.7-4.2-5.1-4.2
-c-1.9,0-3.4,0.7-4.5,2.2c-1.1,1.5-1.6,3.6-1.6,6.4c0,2.8,0.5,4.9,1.4,6.4c0.9,1.5,2.3,2.2,4.1,2.2c1.4,0,2.4-0.4,3-1.1
-c0.6-0.7,0.9-1.9,0.9-3.6v-1.3c0-0.3-0.1-0.6-0.2-0.7c-0.1-0.1-0.3-0.2-0.7-0.2h-0.7V227.3z" />
-            <path class="stroke-line" d="M75.7,234.8h0.7v1h-2.9c-1.4,0-2.5-0.3-3.3-0.9c-0.7-0.6-1.3-1.6-1.6-3.1c-0.2-1-0.5-1.8-0.6-2.4
-s-0.5-1-0.8-1.3c-0.3-0.3-0.7-0.5-1-0.5c-0.3-0.1-0.8-0.1-1.5-0.1h-1.8v6.5c0,0.3,0,0.6,0.1,0.7c0.1,0.1,0.3,0.2,0.7,0.2h0.7v1h-6.9
-v-1h0.7c0.4,0,0.6-0.1,0.7-0.2c0.1-0.1,0.1-0.3,0.1-0.7v-15.1c0-0.3,0-0.6-0.1-0.7c-0.1-0.1-0.3-0.2-0.7-0.2h-0.7v-1H66
-c2.5,0,4.2,0.5,5.3,1.5c1.1,1,1.6,2.2,1.6,3.7c0,1.1-0.3,2.1-1,3c-0.7,0.9-1.7,1.5-3,1.9c2,0.7,3.3,2.1,3.8,4.2
-c0.3,1.4,0.7,2.4,1.1,2.9C74.1,234.6,74.8,234.8,75.7,234.8 M62.9,226.6h2.2h0.1h0c1.3,0,2.3-0.3,2.9-0.9c0.6-0.6,0.9-1.8,0.9-3.4
-c0-1.6-0.3-2.7-0.9-3.3c-0.6-0.6-1.6-0.9-2.9-0.9h-2.3V226.6z" />
-            <path class="stroke-line" d="M110.6,216.8c2.7,0,4.9,0.9,6.6,2.7c1.7,1.8,2.5,4.1,2.5,6.9c0,2.9-0.8,5.2-2.5,7c-1.7,1.8-3.9,2.7-6.6,2.7
-c-2.8,0-5-0.9-6.6-2.7c-1.7-1.8-2.5-4.1-2.5-7c0-2.9,0.8-5.2,2.5-7C105.6,217.7,107.8,216.8,110.6,216.8 M114.5,220
-c-0.8-1.4-2.1-2.1-3.9-2.1c-1.8,0-3.2,0.7-4,2.1c-0.8,1.4-1.2,3.6-1.2,6.5c0,2.9,0.4,5.1,1.2,6.5c0.8,1.4,2.1,2.1,4,2.1
-c1.8,0,3.1-0.7,3.9-2.1c0.8-1.4,1.2-3.6,1.2-6.5C115.7,223.6,115.3,221.4,114.5,220" />
-            <path class="stroke-line" d="M165.1,217.1v1h-1c-0.3,0-0.6,0.1-0.7,0.2c-0.1,0.1-0.2,0.3-0.2,0.7v10.2c0,2.3-0.7,4-2,5.2
-c-1.3,1.2-3,1.8-5.2,1.8c-2.7,0-4.8-0.6-6.2-1.9c-1.5-1.2-2.2-3-2.2-5.4v-9.9c0-0.3,0-0.6-0.2-0.7c-0.1-0.1-0.3-0.2-0.7-0.2h-0.7v-1
-h6.9v1h-0.7c-0.3,0-0.6,0.1-0.7,0.2c-0.1,0.1-0.2,0.3-0.2,0.7v10c0,2.2,0.4,3.7,1.3,4.7c0.8,0.9,2.2,1.4,4,1.4
-c1.6,0,2.8-0.5,3.8-1.5c1-1,1.5-2.5,1.5-4.4v-10.2c0-0.3,0-0.6-0.1-0.7c-0.1-0.1-0.3-0.2-0.7-0.2h-1v-1H165.1z" />
-            <path class="stroke-line"
-                d="M200.3,217.1c2.4,0,4.2,0.5,5.3,1.6c1.1,1.1,1.6,2.4,1.6,3.9c0,0.7-0.1,1.4-0.3,2c-0.2,0.6-0.6,1.2-1.1,1.8
-c-0.5,0.6-1.2,1-2.2,1.3c-0.9,0.3-2,0.5-3.3,0.5h-3v5.8c0,0.3,0,0.6,0.1,0.7c0.1,0.1,0.3,0.2,0.7,0.2h1.5v1h-7.7v-1h0.7
-c0.4,0,0.6-0.1,0.7-0.2c0.1-0.1,0.1-0.3,0.1-0.7v-15.1c0-0.3,0-0.6-0.1-0.7c-0.1-0.1-0.3-0.2-0.7-0.2h-0.7v-1H200.3z M199.5,218.1
-h-2.2v9.2h2.2c1.3,0,2.3-0.4,2.9-1.1c0.6-0.7,0.9-1.9,0.9-3.6c0-1.6-0.3-2.8-0.9-3.5C201.8,218.4,200.8,218.1,199.5,218.1" />
-        </svg> -->
+
+        <img src="/images/logo.png" class="w-full h-auto rounded-full object-contain" />
+
+
     </div>
 
     <script>
@@ -188,8 +114,7 @@ h-2.2v9.2h2.2c1.3,0,2.3-0.4,2.9-1.1c0.6-0.7,0.9-1.9,0.9-3.6c0-1.6-0.3-2.8-0.9-3.
                                                 triển bất động sản hàng đầu Việt Nam – Khang Điền Home. The Privia được
                                                 tọa lạc ngay tại trái tim của  khu Tây Sài Gòn. Với việc sở hữu được
                                                 vị trí vô cùng đắc địa mặt tiền đường An Dươn</p>
-                                            <div class="wrap-view-details"><a
-                                                    href="/du-an/detail-du-an.php"
+                                            <div class="wrap-view-details"><a href="/du-an/detail-du-an.php"
                                                     class="view-details link-load" aria-label="link"><span
                                                         class="small-logo-ico"><svg>
                                                             <use xlink:href="#ico-view-details-logo"></use>
@@ -203,8 +128,7 @@ h-2.2v9.2h2.2c1.3,0,2.3-0.4,2.9-1.1c0.6-0.7,0.9-1.9,0.9-3.6c0-1.6-0.3-2.8-0.9-3.
                                     </div>
                                     <div class="bg slidebox-item">
                                         <div class="bg-cover"><img src="banner/1920x960.png"
-                                                data-src="banner/1920x960.png" alt="Picity Sky Park"
-                                                class="lazy"></div>
+                                                data-src="banner/1920x960.png" alt="Picity Sky Park" class="lazy"></div>
                                         <div class="text-banner">
                                             <div class="title-banner">
                                                 <h2>Picity Sky Park</h2>
@@ -227,9 +151,8 @@ h-2.2v9.2h2.2c1.3,0,2.3-0.4,2.9-1.1c0.6-0.7,0.9-1.9,0.9-3.6c0-1.6-0.3-2.8-0.9-3.
                                         </div>
                                     </div>
                                     <div class="bg slidebox-item">
-                                        <div class="bg-cover"><img src="/banner/TGC20.jpg"
-                                                data-src="/banner/TGC20.jpg" alt="THE GLOBAL CITY"
-                                                class="lazy"></div>
+                                        <div class="bg-cover"><img src="/banner/TGC20.jpg" data-src="/banner/TGC20.jpg"
+                                                alt="THE GLOBAL CITY" class="lazy"></div>
                                         <div class="text-banner">
                                             <div class="title-banner">
                                                 <h2>THE GLOBAL CITY</h2>
@@ -260,12 +183,14 @@ h-2.2v9.2h2.2c1.3,0,2.3-0.4,2.9-1.1c0.6-0.7,0.9-1.9,0.9-3.6c0-1.6-0.3-2.8-0.9-3.
                     <div class="pic-home-intro">
                         <div class="bg-cover bg-lazy"></div>
                     </div>
-                    <div class="scroll-text font-accent trans-x" data-speed="4"><span>LINGO GROUP LINGO GROUP LINGO GROUP LINGO GROUP</span> <span>LINGO GROUP LINGO GROUP LINGO GROUP LINGO GROUP</span></div>
+                    <div class="scroll-text font-accent trans-x" data-speed="4"><span>LINGO GROUP LINGO GROUP LINGO
+                            GROUP LINGO GROUP</span> <span>LINGO GROUP LINGO GROUP LINGO GROUP LINGO GROUP</span></div>
                     <div class="wrap-content">
                         <div class="text-home-intro">
                             <div class="title-main color-yellow text-left">
                                 <h2 class="text-ani-item"><strong>Triết Lý</strong></h2>
-                                <div class="home-intro-draw draw-vi"><svg class="nums-drawing"
+                                <div class="home-intro-draw draw-vi">
+                                    <svg class="nums-drawing"
                                         xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                                         x="0px" y="0px" viewBox="0 0 800 220" xml:space="preserve">
                                         <image xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -304,7 +229,9 @@ c4.4-2.9,10.9-11.7,10.9-11.7" />
 c3.4-2,8.8-6.1,12.6-6.9c1.7-0.4,6.3,1.6,7.4,2.9c2.3,2.9-1.7,11.1-3,14.6c-2.2,5.8-9.9,15.8-12.6,21.4c-2.4,5-7.1,15.1-8.3,20.5
 c-0.4,2.1-1.7,7.1-0.2,8.7c1,1,4.5,0.4,5.9,0c3.2-0.9,12.7-3.9,15.5-5.8c4.6-3.1,11.4-12.1,15.2-16.1c4-4.3,11.2-18.1,11.2-18.1" />
                                         </mask>
-                                    </svg></div>
+                                    </svg>
+
+                                </div>
                                 <div class="home-intro-draw draw-en"><svg class="nums-drawing"
                                         xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                                         x="0px" y="0px" viewBox="0 0 500 200" xml:space="preserve">
@@ -348,7 +275,8 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                         <div class="right-content">
                             <div class="business-home-list ani-item">
                                 <div class="business-home trigger-tab" data-name="business-02">
-                                    <div class="box-img"><svg xmlns="https://www.w3.org/2000/svg" class="svgMask"
+                                    <div class="box-img">
+                                        <svg xmlns="https://www.w3.org/2000/svg" class="svgMask"
                                             x="0px" y="0px" width="100" height="100" viewBox="0 0 100 100">
                                             <defs>
                                                 <clipPath id="maskID0">
@@ -360,15 +288,24 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                             <image clip-path="url(#maskID0)" width="100" height="100"
                                                 xlink:href="/pictures/catalog/home/home-business/01.jpg">
                                             </image>
-                                        </svg> <svg class="svg-stroke" xmlns="https://www.w3.org/2000/svg"
+                                        </svg>
+                                        <svg class="svg-stroke" xmlns="https://www.w3.org/2000/svg"
                                             viewBox="0 0 100 100">
                                             <path
                                                 d="M46.3,97.3L2.7,53.7c-2.1-2.1-2.1-5.4,0-7.5L46.3,2.7c2.1-2.1,5.4-2.1,7.5,0l43.5,43.5c2.1,2.1,2.1,5.4,0,7.5L53.7,97.3C51.7,99.3,48.3,99.3,46.3,97.3z">
-                                        </svg></div>
+                                        </svg>
+                                    </div>
                                     <a href="/cong-ty-thanh-vien/sen-healthcare.html" class="link-load"
-                                        aria-label="Chăm Sóc Sức Khoẻ"></a> <span class="logo-bus-home"><svg>
-                                            <use xlink:href="#ico-business-logo-02"></use>
-                                        </svg></span>
+                                        aria-label="Chăm Sóc Sức Khoẻ">
+                                    </a>
+                                    <span class="logo-bus-home">
+
+                                        <svg>
+                                            <use xlink:href="#ico-business-logo-02">
+
+                                            </use>
+                                        </svg>
+                                    </span>
                                 </div>
                                 <div class="business-home trigger-tab" data-name="business-05">
                                     <div class="box-img"><svg xmlns="https://www.w3.org/2000/svg" class="svgMask"
@@ -576,10 +513,9 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                             </div>
                                         </div>
                                         <div class="pic-project-home custom-cursor">
-                                            <div class="pic-img"><img
-                                                    src="/banner/1920x960.png"
-                                                    data-src="/banner/1920x960.png"
-                                                    alt="PICITY SKY PARK" class="lazy"></div>
+                                            <div class="pic-img"><img src="/banner/1920x960.png"
+                                                    data-src="/banner/1920x960.png" alt="PICITY SKY PARK" class="lazy">
+                                            </div>
                                             <a class="link-load"
                                                 href="/cong-ty-thanh-vien/sen-real/picity-sky-park.html"></a>
                                         </div>
@@ -602,8 +538,8 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                         </div>
                                         <div class="pic-project-home custom-cursor">
                                             <div class="pic-img"><img src="/banner/TGC20.jpg"
-                                                    data-src="/banner/TGC20.jpg" alt="The Global City"
-                                                    class="lazy"></div><a class="link-load"
+                                                    data-src="/banner/TGC20.jpg" alt="The Global City" class="lazy">
+                                            </div><a class="link-load"
                                                 href="/cong-ty-thanh-vien/sen-real/the-global-city.html"></a>
                                         </div>
                                     </div>
@@ -624,10 +560,8 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                             </div>
                                         </div>
                                         <div class="pic-project-home custom-cursor">
-                                            <div class="pic-img"><img
-                                                    src="/banner/TGC20.jpg"
-                                                    data-src="/banner/TGC20.jpg"
-                                                    alt="GLORY HEIGHTS" class="lazy"></div>
+                                            <div class="pic-img"><img src="/banner/TGC20.jpg"
+                                                    data-src="/banner/TGC20.jpg" alt="GLORY HEIGHTS" class="lazy"></div>
                                             <a class="link-load"
                                                 href="/cong-ty-thanh-vien/sen-real/glory-heights.html"></a>
                                         </div>
@@ -650,10 +584,9 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                             </div>
                                         </div>
                                         <div class="pic-project-home custom-cursor">
-                                            <div class="pic-img"><img
-                                                    src="/banner/1920x960.png"
-                                                    data-src="/banner/1920x960.png"
-                                                    alt="PHÚ ĐÔNG SKY GARDEN" class="lazy"></div><a class="link-load"
+                                            <div class="pic-img"><img src="/banner/1920x960.png"
+                                                    data-src="/banner/1920x960.png" alt="PHÚ ĐÔNG SKY GARDEN"
+                                                    class="lazy"></div><a class="link-load"
                                                 href="/cong-ty-thanh-vien/sen-real/phu-dong-sky-garden.html"></a>
                                         </div>
                                     </div>
@@ -676,8 +609,7 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                             <div class="news-list-home ani-item">
                                 <div class="item-news-home">
                                     <div class="pic-news-home">
-                                        <div class="pic-img"><img
-                                                src="/banner/1920x960.png"
+                                        <div class="pic-img"><img src="/banner/1920x960.png"
                                                 data-src="/banner/1920x960.png"
                                                 alt="“CHÀO HÈ RỰC RỠ - BỨT PHÁ THÀNH CÔNG” – HÀNH TRÌNH KHÔNG THỂ NÀO QUÊN CỦA SENGROUP TẠI PHAN THIẾT"
                                                 class="lazy"></div>
@@ -685,8 +617,7 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                     <div class="txt-news-home">
                                         <h3>“CHÀO HÈ RỰC RỠ - BỨT PHÁ THÀNH CÔNG” – HÀNH TRÌNH KHÔNG THỂ NÀO QUÊN CỦA
                                             SENGROUP TẠI PHAN THIẾT</h3>
-                                        <div class="wrap-view-details"><a
-                                                href="/tin-tuc/detail-tintuc.php"
+                                        <div class="wrap-view-details"><a href="/tin-tuc/detail-tintuc.php"
                                                 class="view-details dark link-load" aria-label="link"><span
                                                     class="small-logo-ico"><svg>
                                                         <use xlink:href="#ico-view-details-logo"></use>
@@ -699,8 +630,7 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                 </div>
                                 <div class="item-news-home">
                                     <div class="pic-news-home">
-                                        <div class="pic-img"><img
-                                                src="/banner/1920x960.png"
+                                        <div class="pic-img"><img src="/banner/1920x960.png"
                                                 data-src="/banner/1920x960.png"
                                                 alt="LỄ KÝ KẾT HỢP TÁC PHÂN PHỐI ĐỘC QUYỀN DỰ ÁN THE EMERALD GOLF VIEW"
                                                 class="lazy"></div>
@@ -724,7 +654,6 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                         <div class="pic-img"><img src="/catalog/view/images/bg_temp.jpg"
                                                 data-src="/catalog/view/images/bg_temp.jpg"
                                                 alt="CHÍNH THỨC KHAI TRƯƠNG VĂN PHÒNG BÁN HÀNG DỰ ÁN THE EMERALD GOLF VIEW – CHI NHÁNH BÌNH DƯƠNG THUỘC TẬP ĐOÀN LINGO GROUP"
-
                                                 class="lazy"></div>
                                     </div>
                                     <div class="txt-news-home">
@@ -744,8 +673,7 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                 </div>
                                 <div class="item-news-home">
                                     <div class="pic-news-home">
-                                        <div class="pic-img"><img
-                                                src="/banner/1920x960.png"
+                                        <div class="pic-img"><img src="/banner/1920x960.png"
                                                 data-src="/banner/1920x960.png"
                                                 alt="“DỊCH VỤ TỪ TÂM” SUN GROUP CHÌA KHÓA CHĂM SÓC KHÁCH HÀNG THÀNH CÔNG"
                                                 class="lazy"></div>

@@ -1141,7 +1141,8 @@
         transform: scale(.9)
     }
     .enter-site:hover::before {
-        background-color: rgba(0, 161, 254, .2);
+        /* background-color: rgba(0, 161, 254, .2); */
+        background-color: var(--coloractive);
         width: 70px;
         height: 70px;
         top: calc(50% - 35px);
