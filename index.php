@@ -114,16 +114,25 @@
                                                 triển bất động sản hàng đầu Việt Nam – Khang Điền Home. The Privia được
                                                 tọa lạc ngay tại trái tim của  khu Tây Sài Gòn. Với việc sở hữu được
                                                 vị trí vô cùng đắc địa mặt tiền đường An Dươn</p>
-                                            <div class="wrap-view-details"><a href="/du-an/detail-du-an.php"
-                                                    class="view-details link-load" aria-label="link"><span
-                                                        class="small-logo-ico"><svg>
-                                                            <use xlink:href="#ico-view-details-logo"></use>
-                                                        </svg> <span class="rotate-logo"><svg>
+                                            <div class="wrap-view-details">
+                                                <a href="/du-an/detail-du-an.php"
+                                                    class="view-details link-load" aria-label="link">
+                                                    <span
+                                                        class="small-logo-ico">
+                                                        <?php include "component/logoLoading.php" ?>
+                                                        <span class="rotate-logo">
+                                                            <svg>
                                                                 <use xlink:href="#ico-view-details-rotate"></use>
-                                                            </svg> </span></span> Xem dự án <svg
+                                                            </svg>
+                                                        </span>
+                                                    </span>
+                                                    Xem dự án
+                                                    <svg
                                                         class="viewdetails-svg">
                                                         <use xlink:href="#arrow"></use>
-                                                    </svg></a></div>
+                                                    </svg>
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="bg slidebox-item">
@@ -137,17 +146,25 @@
                                                 thành công vang dội dự án Picity High Park. Quan điểm của chủ đầu tư
                                                 luôn thiết kế căn hộ với nhiều mảng xanh, thoáng &amp; môi trường sống
                                                 trong lành cho cư dân. Tọa lạc trung tâm TP. </p>
-                                            <div class="wrap-view-details"><a
-                                                    href="/cong-ty-thanh-vien/sen-real/picity-sky-park.html"
-                                                    class="view-details link-load" aria-label="link"><span
-                                                        class="small-logo-ico"><svg>
-                                                            <use xlink:href="#ico-view-details-logo"></use>
-                                                        </svg> <span class="rotate-logo"><svg>
+                                            <div class="wrap-view-details">
+                                                <a href="/du-an/detail-du-an.php"
+                                                    class="view-details link-load" aria-label="link">
+                                                    <span
+                                                        class="small-logo-ico">
+                                                        <?php include "component/logoLoading.php" ?>
+                                                        <span class="rotate-logo">
+                                                            <svg>
                                                                 <use xlink:href="#ico-view-details-rotate"></use>
-                                                            </svg> </span></span> Xem dự án <svg
+                                                            </svg>
+                                                        </span>
+                                                    </span>
+                                                    Xem dự án
+                                                    <svg
                                                         class="viewdetails-svg">
                                                         <use xlink:href="#arrow"></use>
-                                                    </svg></a></div>
+                                                    </svg>
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="bg slidebox-item">
@@ -286,7 +303,7 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                                 </clipPath>
                                             </defs>
                                             <image clip-path="url(#maskID0)" width="100" height="100"
-                                                xlink:href="/pictures/catalog/home/home-business/01.jpg">
+                                                xlink:href="/pictures/catalog/home/home-business/03.jpg">
                                             </image>
                                         </svg>
                                         <svg class="svg-stroke" xmlns="https://www.w3.org/2000/svg"
@@ -300,11 +317,8 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                     </a>
                                     <span class="logo-bus-home">
 
-                                        <svg>
-                                            <use xlink:href="#ico-business-logo-02">
+                                        <img src="/images/logo2.png" class="w-[55px] h-auto rounded-full object-contain" />
 
-                                            </use>
-                                        </svg>
                                     </span>
                                 </div>
                                 <div class="business-home trigger-tab" data-name="business-05">
@@ -318,7 +332,7 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                                 </clipPath>
                                             </defs>
                                             <image clip-path="url(#maskID1)" width="100" height="100"
-                                                xlink:href="/pictures/catalog/home/home-business/05.jpg">
+                                                xlink:href="/pictures/catalog/home/home-business/03.jpg">
                                             </image>
                                         </svg> <svg class="svg-stroke" xmlns="https://www.w3.org/2000/svg"
                                             viewBox="0 0 100 100">
@@ -326,9 +340,13 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                                 d="M46.3,97.3L2.7,53.7c-2.1-2.1-2.1-5.4,0-7.5L46.3,2.7c2.1-2.1,5.4-2.1,7.5,0l43.5,43.5c2.1,2.1,2.1,5.4,0,7.5L53.7,97.3C51.7,99.3,48.3,99.3,46.3,97.3z">
                                         </svg></div>
                                     <a href="/cong-ty-thanh-vien/sen-mining.html" class="link-load"
-                                        aria-label="Khai Thác Khoảng Sản"></a> <span class="logo-bus-home"><svg>
-                                            <use xlink:href="#ico-business-logo-05"></use>
-                                        </svg></span>
+                                        aria-label="Khai Thác Khoảng Sản">
+                                    </a>
+                                    <span class="logo-bus-home">
+
+                                        <img src="/images/logo2.png" class="w-[55px] h-auto rounded-full object-contain" />
+
+                                    </span>
                                 </div>
                                 <div class="business-home trigger-tab" data-name="business-03">
                                     <div class="box-img"><svg xmlns="https://www.w3.org/2000/svg" class="svgMask"
@@ -349,9 +367,12 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                                 d="M46.3,97.3L2.7,53.7c-2.1-2.1-2.1-5.4,0-7.5L46.3,2.7c2.1-2.1,5.4-2.1,7.5,0l43.5,43.5c2.1,2.1,2.1,5.4,0,7.5L53.7,97.3C51.7,99.3,48.3,99.3,46.3,97.3z">
                                         </svg></div>
                                     <a href="/cong-ty-thanh-vien/sen-construction.html" class="link-load"
-                                        aria-label="Xây Dựng"></a> <span class="logo-bus-home"><svg>
-                                            <use xlink:href="#ico-business-logo-03"></use>
-                                        </svg></span>
+                                        aria-label="Xây Dựng"></a>
+                                    <span class="logo-bus-home">
+
+                                        <img src="/images/logo2.png" class="w-[55px] h-auto rounded-full object-contain" />
+
+                                    </span>
                                 </div>
                                 <div class="business-home trigger-tab" data-name="business-04">
                                     <div class="box-img"><svg xmlns="https://www.w3.org/2000/svg" class="svgMask"
@@ -372,9 +393,12 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                                 d="M46.3,97.3L2.7,53.7c-2.1-2.1-2.1-5.4,0-7.5L46.3,2.7c2.1-2.1,5.4-2.1,7.5,0l43.5,43.5c2.1,2.1,2.1,5.4,0,7.5L53.7,97.3C51.7,99.3,48.3,99.3,46.3,97.3z">
                                         </svg></div>
                                     <a href="/cong-ty-thanh-vien/sen-resort.html" class="link-load"
-                                        aria-label="Du lịch"></a> <span class="logo-bus-home"><svg>
-                                            <use xlink:href="#ico-business-logo-04"></use>
-                                        </svg></span>
+                                        aria-label="Du lịch"></a>
+                                    <span class="logo-bus-home">
+
+                                        <img src="/images/logo2.png" class="w-[55px] h-auto rounded-full object-contain" />
+
+                                    </span>
                                 </div>
                                 <div class="business-home trigger-tab" data-name="business-01">
                                     <div class="box-img"><svg xmlns="https://www.w3.org/2000/svg" class="svgMask"
@@ -395,15 +419,18 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                                 d="M46.3,97.3L2.7,53.7c-2.1-2.1-2.1-5.4,0-7.5L46.3,2.7c2.1-2.1,5.4-2.1,7.5,0l43.5,43.5c2.1,2.1,2.1,5.4,0,7.5L53.7,97.3C51.7,99.3,48.3,99.3,46.3,97.3z">
                                         </svg></div>
                                     <a href="/cong-ty-thanh-vien/sen-real.html" class="link-load"
-                                        aria-label="Bất động sản"></a> <span class="logo-bus-home"><svg>
-                                            <use xlink:href="#ico-business-logo-01"></use>
-                                        </svg></span>
+                                        aria-label="Bất động sản"></a>
+                                    <span class="logo-bus-home">
+
+                                        <img src="/images/logo2.png" class="w-[55px] h-auto rounded-full object-contain" />
+
+                                    </span>
                                 </div>
                             </div>
                             <div class="all-tab-content all-tab-bus">
                                 <div class="tab-content" data-tab="business-02">
                                     <div class="content-bus-tab-home">
-                                        <h3>Chăm Sóc Sức Khoẻ</h3>
+                                        <h3 class="!text-blue-500">Chăm Sóc Sức Khoẻ</h3>
                                         <div class="content color-white content-collapse">
                                             <p>Sứ mệnh &quot;Vì một Việt Nam khỏe đẹp&quot; SEN HEALTHCARE mong muốn góp
                                                 một phần vào chăm sóc sức khỏe cộng đồng và trở thành một hệ sinh thái
@@ -414,7 +441,7 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                 </div>
                                 <div class="tab-content" data-tab="business-05">
                                     <div class="content-bus-tab-home">
-                                        <h3>Khai Thác Khoảng Sản</h3>
+                                        <h3 class="!text-blue-500">Khai Thác Khoảng Sản</h3>
                                         <div class="content color-white content-collapse">
                                             <p>SEN MINING là lĩnh vực mũi nhọn nằm trong kế hoạch phát triển tương lai
                                                 gần của LINGO GROUP.</p>
@@ -424,7 +451,7 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                 </div>
                                 <div class="tab-content" data-tab="business-03">
                                     <div class="content-bus-tab-home">
-                                        <h3>Xây Dựng</h3>
+                                        <h3 class="!text-blue-500">Xây Dựng</h3>
                                         <div class="content color-white content-collapse">
                                             <p>SEN CONSTRUCTION tập trung lĩnh vực đầu tư, thiết kế và xây dựng công
                                                 trình là một mắt xích quan trọng trong hệ sinh thái của Tập đoàn SEN
@@ -435,7 +462,7 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                 </div>
                                 <div class="tab-content" data-tab="business-04">
                                     <div class="content-bus-tab-home">
-                                        <h3>Du lịch</h3>
+                                        <h3 class="!text-blue-500">Du lịch</h3>
                                         <div class="content color-white content-collapse">
                                             <p>SEN RESORT kết hợp cùng tập đoàn chuyên nghiệp nước ngoài để vận hành và
                                                 quản lý các chuỗi du lịch, chăm sóc sức khỏe.</p>
@@ -445,7 +472,7 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                 </div>
                                 <div class="tab-content" data-tab="business-01">
                                     <div class="content-bus-tab-home">
-                                        <h3>Bất động sản</h3>
+                                        <h3 class="!text-blue-500">Bất động sản</h3>
                                         <div class="content color-white content-collapse">
                                             <p>SEN REAL đã phát triển nhiều dự án BĐS nghỉ dưỡng cao cấp, gây tiếng vang
                                                 lớn.</p>
@@ -465,9 +492,12 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                         <div class="slide-project dark-pagi">
                             <div class="slidebox-track">
                                 <div class="slidebox-list">
-                                    <div class="item-project-home slidebox-item"><span class="logo-pro-home"><svg>
-                                                <use xlink:href="#ico-business-logo-01"></use>
-                                            </svg></span>
+                                    <div class="item-project-home slidebox-item">
+                                        <span class="logo-pro-home">
+
+                                            <img src="/images/logo2.png" class="w-[55px] h-auto rounded-full object-contain" />
+
+                                        </span>
                                         <div class="wrap-text-pro-home">
                                             <div class="text-project-home">
                                                 <div class="title-post">
@@ -492,9 +522,12 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                                 href="/du-an/detail-du-an.php"></a>
                                         </div>
                                     </div>
-                                    <div class="item-project-home slidebox-item"><span class="logo-pro-home"><svg>
-                                                <use xlink:href="#ico-business-logo-01"></use>
-                                            </svg></span>
+                                    <div class="item-project-home slidebox-item">
+                                        <span class="logo-pro-home">
+
+                                            <img src="/images/logo2.png" class="w-[55px] h-auto rounded-full object-contain" />
+
+                                        </span>
                                         <div class="wrap-text-pro-home">
                                             <div class="text-project-home">
                                                 <div class="title-post">
@@ -520,9 +553,12 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                                 href="/cong-ty-thanh-vien/sen-real/picity-sky-park.html"></a>
                                         </div>
                                     </div>
-                                    <div class="item-project-home slidebox-item"><span class="logo-pro-home"><svg>
-                                                <use xlink:href="#ico-business-logo-01"></use>
-                                            </svg></span>
+                                    <div class="item-project-home slidebox-item">
+                                        <span class="logo-pro-home">
+
+                                            <img src="/images/logo2.png" class="w-[55px] h-auto rounded-full object-contain" />
+
+                                        </span>
                                         <div class="wrap-text-pro-home">
                                             <div class="text-project-home">
                                                 <div class="title-post">
@@ -543,9 +579,12 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                                 href="/cong-ty-thanh-vien/sen-real/the-global-city.html"></a>
                                         </div>
                                     </div>
-                                    <div class="item-project-home slidebox-item"><span class="logo-pro-home"><svg>
-                                                <use xlink:href="#ico-business-logo-01"></use>
-                                            </svg></span>
+                                    <div class="item-project-home slidebox-item">
+                                        <span class="logo-pro-home">
+
+                                            <img src="/images/logo2.png" class="w-[55px] h-auto rounded-full object-contain" />
+
+                                        </span>
                                         <div class="wrap-text-pro-home">
                                             <div class="text-project-home">
                                                 <div class="title-post">
@@ -566,9 +605,12 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                                 href="/cong-ty-thanh-vien/sen-real/glory-heights.html"></a>
                                         </div>
                                     </div>
-                                    <div class="item-project-home slidebox-item"><span class="logo-pro-home"><svg>
-                                                <use xlink:href="#ico-business-logo-01"></use>
-                                            </svg></span>
+                                    <div class="item-project-home slidebox-item">
+                                        <span class="logo-pro-home">
+
+                                            <img src="/images/logo2.png" class="w-[55px] h-auto rounded-full object-contain" />
+
+                                        </span>
                                         <div class="wrap-text-pro-home">
                                             <div class="text-project-home">
                                                 <div class="title-post">
@@ -595,6 +637,7 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                         </div>
                     </div>
                 </section>
+
                 <section class="home-news">
                     <div class="pic-home-news ani-item">
                         <div class="bg-cover trans-y bg-lazy" data-speed="-2"></div>
@@ -617,15 +660,24 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                     <div class="txt-news-home">
                                         <h3>“CHÀO HÈ RỰC RỠ - BỨT PHÁ THÀNH CÔNG” – HÀNH TRÌNH KHÔNG THỂ NÀO QUÊN CỦA
                                             SENGROUP TẠI PHAN THIẾT</h3>
-                                        <div class="wrap-view-details"><a href="/tin-tuc/detail-tintuc.php"
-                                                class="view-details dark link-load" aria-label="link"><span
-                                                    class="small-logo-ico"><svg>
-                                                        <use xlink:href="#ico-view-details-logo"></use>
-                                                    </svg> <span class="rotate-logo"><svg>
+                                        <div class="wrap-view-details">
+                                            <a href="/tin-tuc/detail-tintuc.php"
+                                                class="view-details dark link-load" aria-label="link">
+                                                <span
+                                                    class="small-logo-ico">
+                                                    <?php include "component/logoLoading.php" ?>
+                                                    <span class="rotate-logo">
+                                                        <svg>
                                                             <use xlink:href="#ico-view-details-rotate"></use>
-                                                        </svg> </span></span> XEM TIN <svg class="viewdetails-svg">
+                                                        </svg>
+                                                    </span>
+                                                </span>
+                                                XEM TIN
+                                                <svg class="viewdetails-svg">
                                                     <use xlink:href="#arrow"></use>
-                                                </svg></a></div>
+                                                </svg>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="item-news-home">
@@ -637,16 +689,24 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                     </div>
                                     <div class="txt-news-home">
                                         <h3>LỄ KÝ KẾT HỢP TÁC PHÂN PHỐI ĐỘC QUYỀN DỰ ÁN THE EMERALD GOLF VIEW</h3>
-                                        <div class="wrap-view-details"><a
-                                                href="/truyen-thong/tin-cong-ty/le-ky-ket-hop-tac-phan-phoi-doc-quyen-du-an-the-emerald-golf-view.html"
-                                                class="view-details dark link-load" aria-label="link"><span
-                                                    class="small-logo-ico"><svg>
-                                                        <use xlink:href="#ico-view-details-logo"></use>
-                                                    </svg> <span class="rotate-logo"><svg>
+                                        <div class="wrap-view-details">
+                                            <a href="/tin-tuc/detail-tintuc.php"
+                                                class="view-details dark link-load" aria-label="link">
+                                                <span
+                                                    class="small-logo-ico">
+                                                    <?php include "component/logoLoading.php" ?>
+                                                    <span class="rotate-logo">
+                                                        <svg>
                                                             <use xlink:href="#ico-view-details-rotate"></use>
-                                                        </svg> </span></span> XEM TIN <svg class="viewdetails-svg">
+                                                        </svg>
+                                                    </span>
+                                                </span>
+                                                XEM TIN
+                                                <svg class="viewdetails-svg">
                                                     <use xlink:href="#arrow"></use>
-                                                </svg></a></div>
+                                                </svg>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="item-news-home">
@@ -659,16 +719,24 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                     <div class="txt-news-home">
                                         <h3>CHÍNH THỨC KHAI TRƯƠNG VĂN PHÒNG BÁN HÀNG DỰ ÁN THE EMERALD GOLF VIEW – CHI
                                             NHÁNH BÌNH DƯƠNG THUỘC TẬP ĐOÀN LINGO GROUP</h3>
-                                        <div class="wrap-view-details"><a
-                                                href="/truyen-thong/tin-cong-ty/chinh-thuc-khai-truong-van-phong-ban-hang-du-an-the-emerald-golf-view-chi-nhanh-binh-duong-thuoc-tap-doan-sen-group.html"
-                                                class="view-details dark link-load" aria-label="link"><span
-                                                    class="small-logo-ico"><svg>
-                                                        <use xlink:href="#ico-view-details-logo"></use>
-                                                    </svg> <span class="rotate-logo"><svg>
+                                            <div class="wrap-view-details">
+                                            <a href="/tin-tuc/detail-tintuc.php"
+                                                class="view-details dark link-load" aria-label="link">
+                                                <span
+                                                    class="small-logo-ico">
+                                                    <?php include "component/logoLoading.php" ?>
+                                                    <span class="rotate-logo">
+                                                        <svg>
                                                             <use xlink:href="#ico-view-details-rotate"></use>
-                                                        </svg> </span></span> XEM TIN <svg class="viewdetails-svg">
+                                                        </svg>
+                                                    </span>
+                                                </span>
+                                                XEM TIN
+                                                <svg class="viewdetails-svg">
                                                     <use xlink:href="#arrow"></use>
-                                                </svg></a></div>
+                                                </svg>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="item-news-home">
@@ -694,14 +762,23 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                 </div>
                             </div>
                         </div>
-                        <div class="wrap-view-details big-view"><a href="/truyen-thong.php"
-                                class="view-details dark link-load" aria-label="link"><span class="small-logo-ico"><svg>
-                                        <use xlink:href="#ico-view-details-logo"></use>
-                                    </svg> <span class="rotate-logo"><svg>
+                        <div class="wrap-view-details big-view">
+                            <a href="/truyen-thong.php"
+                                class="view-details dark link-load" aria-label="link">
+                                <span class="small-logo-ico">
+                                    <?php include "component/logoLoading.php" ?>
+                                    <span class="rotate-logo">
+                                        <svg>
                                             <use xlink:href="#ico-view-details-rotate"></use>
-                                        </svg> </span></span> XEM TIN KHÁC <svg class="viewdetails-svg">
+                                        </svg>
+                                    </span>
+                                </span>
+                                XEM TIN KHÁC
+                                <svg class="viewdetails-svg">
                                     <use xlink:href="#arrow"></use>
-                                </svg></a></div>
+                                </svg>
+                            </a>
+                        </div>
                     </div>
                 </section>
 
@@ -791,13 +868,21 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
     <div class="overlay-dark"></div>
     <div id="page-progress"></div>
     <div id="mouse-cursor"></div>
+
     <div id="cursor">
-        <div class="cursor-bg"><svg>
-                <use xlink:href="#ico-loading-logo"></use>
-            </svg> <span class="circle-rotate-cursor"><svg>
+        <div class="cursor-bg">
+
+            <?php include "component/logoLoading.php" ?>
+
+            <span class="circle-rotate-cursor">
+                <svg>
                     <use xlink:href="#ico-view-details-rotate"></use>
-                </svg></span></div>
+                </svg>
+            </span>
+
+        </div>
     </div>
+
     <div class="search-overlay"><span></span>
         <div class="search-form">
             <div class="form-row-search">

@@ -2043,7 +2043,8 @@ section {
         color: var(--color-white);
         left: 0;
         top: 0;
-        background: var(--coloractive);
+        /* background: var(--coloractive); */
+        background: #0397f3;
         border-radius: 100%;
         transform: translate(-50%, -50%) scale(0);
         z-index: -1
@@ -3288,8 +3289,10 @@ html[lang=vi] .draw-vi {
     height: 100%;
     top: 0;
     left: 0;
-    z-index: -1
+    z-index: -1;
+    
 }
+
 
 .business-home:nth-child(1) {
     top: 0;
@@ -3328,7 +3331,8 @@ html[lang=vi] .draw-vi {
 .home-business .svg-stroke {
     stroke: var(--coloractive);
     stroke-width: .4px;
-    fill: var(--coloractive);
+    /* fill: var(--coloractive); */
+    fill: rgb(38, 38, 249);
     fill-opacity: 0;
     z-index: 2
 }
@@ -3399,7 +3403,8 @@ html[lang=vi] .draw-vi {
     position: absolute;
     width: 1px;
     height: 100%;
-    background-color: var(--coloractive);
+    /* background-color: var(--coloractive); */
+    background-color: rgb(14, 134, 247);
     top: 0;
     left: 0;
     transform: scaleY(0);
