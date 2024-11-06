@@ -31,8 +31,8 @@
 }
 
 .loadicon>span {
-    -webkit-mask-image: url(../images/logo.svg);
-    mask-image: url(../images/logo.svg);
+    -webkit-mask-image: url(/images/logo.png);
+    mask-image: url(/images/logo.png);
     -webkit-mask-position: center center;
     mask-position: center center;
     -webkit-mask-repeat: no-repeat;

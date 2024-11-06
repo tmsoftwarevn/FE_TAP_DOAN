@@ -3,34 +3,32 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="google" content="notranslate">
+
     <meta name="language" content="vi">
     <meta name="robots" content="index, follow">
-    <meta name="author" content="SEN GROUP">
+    <meta name="author" content="LINGO GROUP">
     <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="format-detection" content="telephone=no">
-    <meta name="theme-color" content="#004a8f">
+
     <title id="hdtitle">Trang chủ</title>
-    <meta name="description" content="SEN GROUP">
-    <meta name="keywords" content="SEN GROUP">
+    <meta name="description" content="LINGO GROUP">
+    <meta name="keywords" content="LINGO GROUP">
     <meta property="og:title" content="Trang chủ">
-    <meta property="og:description" content="SEN GROUP">
+    <meta property="og:description" content="LINGO GROUP">
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="SEN GROUP">
+    <meta property="og:site_name" content="LINGO GROUP">
     <!-- <meta property="og:image" content="/catalog/view/images/social-share.jpg"> -->
     <meta property="og:locale" content="vi">
-    <meta name="DC.title" content="SEN GROUP">
-    <meta name="geo.region" content="VN-HCM">
-    <meta name="geo.placename" content="3 District, Ho Chi Minh City">
-    <meta name="geo.position" content="10.7828786;106.6932583">
-    <meta name="ICBM" content="10.7828786, 106.6932583">
+
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="SEN GROUP">
-    <!-- <link rel="shortcut icon" href="/catalog/view/images/favicon.svg" type="image/x-icon"> -->
-    <!-- <link rel="icon" sizes="512x512" href="/catalog/view/images/icon-512.png"> -->
+    <meta name="apple-mobile-web-app-title" content="LINGO GROUP">
+
+    <link rel="icon" href="/images/logo.png" type="image/x-icon" />
+    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.png" />
+
     <!-- <link rel="apple-touch-icon" sizes="180x180" href="/catalog/view/images/apple-touch-icon.png"> -->
     <!-- <link rel="manifest" href="/manifest.json"> -->
     <!-- <link rel="alternate" href="/" hreflang="vi-vn"> -->
@@ -58,7 +56,9 @@
         </div>
     </div>
 
-    <div class="loadicon" style="display:none"><span></span> <svg xmlns="http://www.w3.org/2000/svg"
+    <div class="loadicon" style="display:none"><span></span>
+    <img src="/images/logo.png" class="w-full h-auto" />
+        <!-- <svg xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 220 250">
             <path class="stroke-line" d="M181.5,40.8c0-0.2-0.1-0.3-0.3-0.4c-0.1,0-0.2,0-0.3,0c-7.1,0.7-21.1,2.4-35.7,6.5c-2,0.6-4,1.2-5.9,1.8
 c-1.6-2.6-3.4-5.2-5.4-7.8c-8.9-12.1-18.8-22-23.9-26.8c-0.2-0.2-0.4-0.2-0.6,0c-5.1,4.8-15,14.7-23.9,26.8
@@ -134,7 +134,9 @@ c1.6,0,2.8-0.5,3.8-1.5c1-1,1.5-2.5,1.5-4.4v-10.2c0-0.3,0-0.6-0.1-0.7c-0.1-0.1-0.
 c-0.5,0.6-1.2,1-2.2,1.3c-0.9,0.3-2,0.5-3.3,0.5h-3v5.8c0,0.3,0,0.6,0.1,0.7c0.1,0.1,0.3,0.2,0.7,0.2h1.5v1h-7.7v-1h0.7
 c0.4,0,0.6-0.1,0.7-0.2c0.1-0.1,0.1-0.3,0.1-0.7v-15.1c0-0.3,0-0.6-0.1-0.7c-0.1-0.1-0.3-0.2-0.7-0.2h-0.7v-1H200.3z M199.5,218.1
 h-2.2v9.2h2.2c1.3,0,2.3-0.4,2.9-1.1c0.6-0.7,0.9-1.9,0.9-3.6c0-1.6-0.3-2.8-0.9-3.5C201.8,218.4,200.8,218.1,199.5,218.1" />
-        </svg></div>
+        </svg> -->
+    </div>
+
     <script>
         var loadDeferredStyles = function() {
             var addStylesNode = document.getElementById("deferred-styles");
@@ -165,7 +167,7 @@ h-2.2v9.2h2.2c1.3,0,2.3-0.4,2.9-1.1c0.6-0.7,0.9-1.9,0.9-3.6c0-1.6-0.3-2.8-0.9-3.
                     }
                 </script>
                 <div class="title-page">
-                    <h1>SEN GROUP</h1>
+                    <h1>LINGO GROUP</h1>
                 </div>
                 <section class="home-banner">
                     <div class="background">
@@ -468,7 +470,7 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                         <div class="content color-white content-collapse">
                                             <p>Sứ mệnh &quot;Vì một Việt Nam khỏe đẹp&quot; SEN HEALTHCARE mong muốn góp
                                                 một phần vào chăm sóc sức khỏe cộng đồng và trở thành một hệ sinh thái
-                                                toàn diện của Tập đoàn SEN GROUP.</p>
+                                                toàn diện của Tập đoàn LINGO GROUP.</p>
                                         </div>
                                         <div class="nav-drop"></div>
                                     </div>
@@ -478,7 +480,7 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                         <h3>Khai Thác Khoảng Sản</h3>
                                         <div class="content color-white content-collapse">
                                             <p>SEN MINING là lĩnh vực mũi nhọn nằm trong kế hoạch phát triển tương lai
-                                                gần của SEN GROUP.</p>
+                                                gần của LINGO GROUP.</p>
                                         </div>
                                         <div class="nav-drop"></div>
                                     </div>
@@ -721,13 +723,13 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                     <div class="pic-news-home">
                                         <div class="pic-img"><img src="/catalog/view/images/bg_temp.jpg"
                                                 data-src="/catalog/view/images/bg_temp.jpg"
-                                                alt="CHÍNH THỨC KHAI TRƯƠNG VĂN PHÒNG BÁN HÀNG DỰ ÁN THE EMERALD GOLF VIEW – CHI NHÁNH BÌNH DƯƠNG THUỘC TẬP ĐOÀN SEN GROUP"
+                                                alt="CHÍNH THỨC KHAI TRƯƠNG VĂN PHÒNG BÁN HÀNG DỰ ÁN THE EMERALD GOLF VIEW – CHI NHÁNH BÌNH DƯƠNG THUỘC TẬP ĐOÀN LINGO GROUP"
 
                                                 class="lazy"></div>
                                     </div>
                                     <div class="txt-news-home">
                                         <h3>CHÍNH THỨC KHAI TRƯƠNG VĂN PHÒNG BÁN HÀNG DỰ ÁN THE EMERALD GOLF VIEW – CHI
-                                            NHÁNH BÌNH DƯƠNG THUỘC TẬP ĐOÀN SEN GROUP</h3>
+                                            NHÁNH BÌNH DƯƠNG THUỘC TẬP ĐOÀN LINGO GROUP</h3>
                                         <div class="wrap-view-details"><a
                                                 href="/truyen-thong/tin-cong-ty/chinh-thuc-khai-truong-van-phong-ban-hang-du-an-the-emerald-golf-view-chi-nhanh-binh-duong-thuoc-tap-doan-sen-group.html"
                                                 class="view-details dark link-load" aria-label="link"><span
