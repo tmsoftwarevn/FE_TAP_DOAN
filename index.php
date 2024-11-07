@@ -1,3 +1,7 @@
+<?php
+    $list_blog = $blog::get_all_blog();
+?>
+
 <!DOCTYPE HTML>
 <html lang="vi">
 
@@ -37,6 +41,8 @@
     <!-- <meta property="og:url" content="/"> -->
 
     <!-- //tailwind css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.0.0/css/flag-icons.min.css" />
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="/css/main.css">
 
@@ -286,7 +292,7 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                     <div class="wrap-content">
                         <div class="left-content">
                             <div class="title-main text-left color-white">
-                                <h2 class="text-ani-item">Lĩnh Vực <br /><strong>Hoạt Động</strong></h2>
+                                <h2 class="text-ani-item"><?= __('Lĩnh Vực') ?>  <br /><strong><?= __('Hoạt Động') ?></strong></h2>
                             </div>
                         </div>
                         <div class="right-content">

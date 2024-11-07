@@ -1,3 +1,8 @@
+<?php
+require_once "setting-all-file.php";
+
+?>
+
 <header class="header">
     <div class="logo">
         <img src="/images/logo.png" class="w-[80px] h-auto object-cover" />
@@ -88,7 +93,7 @@ C57.9,89.7,53.8,90.3,49.6,90.3z" />
         </svg>
         <!-- <img src="/images/logo.png" class="w-[40px] h-auto object-cover" /> -->
     </div>
-    
+
     <div class="navigation"><span></span>
         <nav class="main-menu">
             <ul>
@@ -148,18 +153,31 @@ C57.9,89.7,53.8,90.3,49.6,90.3z" />
             </svg> <span class="line-toggle toggle-1"></span> <span class="line-toggle toggle-2"></span></div>
     </div>
     <div class="right-header">
-        <div class="search-top"><button class="search-but" aria-label="search"><svg>
+        <div class="search-top">
+            <button class="search-but" aria-label="search">
+                <svg>
                     <use xlink:href="#ico-search"></use>
-                </svg> Search </button></div>
+                </svg>
+                <!-- Tìm kiếm  -->
+                <?= __('Tìm kiếm') ?>
+            </button>
+        </div>
+
         <div class="language">
-            <form id="change_lang" enctype="multipart/form-data" method="post" onsubmit="return false;">
-                <ul>
-                    <li class="active"><button class="vi" aria-label="vi" onclick="onClick('vi','/vi/');">tiếng
-                            việt</button></li>
-                    <li><button class="en" aria-label="en" onclick="onClick('en','/en/');">english</button></li>
-                </ul><input type="hidden" value="" name="language_code" id="language_code" aria-label="input">
-                <input id="changlanguage_redirect" type="hidden" value="/" name="redirect" aria-label="input">
-            </form>
+            <ul>
+                <li>
+
+                    <a href="?lang=en">
+                        <span style="font-size: 20px; margin-right: 5px;" class="fi fi-gb"></span>
+                    </a>
+                </li>
+                <li>
+
+                    <a href="?lang=vn">
+                        <span style="font-size: 20px;" class="fi fi-vn"></span>
+                    </a>
+                </li>
+            </ul>
         </div>
     </div>
     <div class="social">
