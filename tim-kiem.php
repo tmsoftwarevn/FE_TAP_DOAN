@@ -11,10 +11,10 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="format-detection" content="telephone=no">
 
-    <title id="hdtitle">Truyền thông</title>
+    <title id="hdtitle">Tìm kiếm</title>
     <meta name="description" content="LINGO GROUP">
     <meta name="keywords" content="LINGO GROUP">
-    <meta property="og:title" content="Truyền thông">
+    <meta property="og:title" content="Tìm kiếm">
     <meta property="og:description" content="LINGO GROUP">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="LINGO GROUP">
@@ -28,9 +28,6 @@
 
     <link rel="icon" href="/images/logo.png" type="image/x-icon" />
     <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.png" />
-
-    <link href="/truyen-thong.php" rel="canonical">
-    <meta property="og:url" content="/truyen-thong.php">
 
     <link rel="stylesheet" href="/css/main.css">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -47,9 +44,11 @@
             <div class="flower-right"><span></span> <span></span> <span></span></div>
             <div class="flower-left"><span></span> <span></span></div>
         </div>
-        <div class="wrap-enter-site"><button class="enter-site" aria-label="click"><span>Enter site</span></button></div>
+        <div class="wrap-enter-site"><button class="enter-site" aria-label="click"><span>Enter site</span></button>
+        </div>
     </div>
-    <div class="loadicon" style="display:none"><span></span> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 250">
+    <div class="loadicon" style="display:none"><span></span> <svg xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 220 250">
             <path class="stroke-line" d="M181.5,40.8c0-0.2-0.1-0.3-0.3-0.4c-0.1,0-0.2,0-0.3,0c-7.1,0.7-21.1,2.4-35.7,6.5c-2,0.6-4,1.2-5.9,1.8
 c-1.6-2.6-3.4-5.2-5.4-7.8c-8.9-12.1-18.8-22-23.9-26.8c-0.2-0.2-0.4-0.2-0.6,0c-5.1,4.8-15,14.7-23.9,26.8
 c-1.9,2.6-3.7,5.2-5.4,7.8c-1.8-0.6-3.8-1.2-5.9-1.8c-14.6-4.1-28.6-5.8-35.6-6.5c-0.1,0-0.2,0-0.3,0c-0.2,0.1-0.3,0.2-0.3,0.4
@@ -119,7 +118,8 @@ c1.8,0,3.1-0.7,3.9-2.1c0.8-1.4,1.2-3.6,1.2-6.5C115.7,223.6,115.3,221.4,114.5,220
 c-1.3,1.2-3,1.8-5.2,1.8c-2.7,0-4.8-0.6-6.2-1.9c-1.5-1.2-2.2-3-2.2-5.4v-9.9c0-0.3,0-0.6-0.2-0.7c-0.1-0.1-0.3-0.2-0.7-0.2h-0.7v-1
 h6.9v1h-0.7c-0.3,0-0.6,0.1-0.7,0.2c-0.1,0.1-0.2,0.3-0.2,0.7v10c0,2.2,0.4,3.7,1.3,4.7c0.8,0.9,2.2,1.4,4,1.4
 c1.6,0,2.8-0.5,3.8-1.5c1-1,1.5-2.5,1.5-4.4v-10.2c0-0.3,0-0.6-0.1-0.7c-0.1-0.1-0.3-0.2-0.7-0.2h-1v-1H165.1z" />
-            <path class="stroke-line" d="M200.3,217.1c2.4,0,4.2,0.5,5.3,1.6c1.1,1.1,1.6,2.4,1.6,3.9c0,0.7-0.1,1.4-0.3,2c-0.2,0.6-0.6,1.2-1.1,1.8
+            <path class="stroke-line"
+                d="M200.3,217.1c2.4,0,4.2,0.5,5.3,1.6c1.1,1.1,1.6,2.4,1.6,3.9c0,0.7-0.1,1.4-0.3,2c-0.2,0.6-0.6,1.2-1.1,1.8
 c-0.5,0.6-1.2,1-2.2,1.3c-0.9,0.3-2,0.5-3.3,0.5h-3v5.8c0,0.3,0,0.6,0.1,0.7c0.1,0.1,0.3,0.2,0.7,0.2h1.5v1h-7.7v-1h0.7
 c0.4,0,0.6-0.1,0.7-0.2c0.1-0.1,0.1-0.3,0.1-0.7v-15.1c0-0.3,0-0.6-0.1-0.7c-0.1-0.1-0.3-0.2-0.7-0.2h-0.7v-1H200.3z M199.5,218.1
 h-2.2v9.2h2.2c1.3,0,2.3-0.4,2.9-1.1c0.6-0.7,0.9-1.9,0.9-3.6c0-1.6-0.3-2.8-0.9-3.5C201.8,218.4,200.8,218.1,199.5,218.1" />
@@ -139,12 +139,11 @@ h-2.2v9.2h2.2c1.3,0,2.3-0.4,2.9-1.1c0.6-0.7,0.9-1.9,0.9-3.6c0-1.6-0.3-2.8-0.9-3.
         });
         else window.addEventListener('load', loadDeferredStyles);
     </script>
-
     <?php require "header.php" ?>
 
     <main class="main">
         <div class="smooth-scroll">
-            <div class="container" id="news-page">
+            <div class="container" id="search-page">
                 <script>
                     if (document.querySelector('#home-page')) {
                         Array.from(document.querySelectorAll('.mask, .loadicon'), function(element) {
@@ -154,107 +153,69 @@ h-2.2v9.2h2.2c1.3,0,2.3-0.4,2.9-1.1c0.6-0.7,0.9-1.9,0.9-3.6c0-1.6-0.3-2.8-0.9-3.
                     }
                 </script>
                 <div class="tile-reveal"></div>
-                <section class="banner-inner">
-                    <div class="title-page">
-                        <h1>Truyền thông</h1>
-                    </div>
-                    <div class="bg-inner"><img src="/banner/TGC20.jpg" data-src="/banner/TGC20.jpg" alt="Truyền thông" class="lazy"></div>
-                    <div class="wrap-wheel">
-                        <div class="wheel"><span>Scroll down</span></div>
-                    </div>
-                </section>
-                <section class="section-outernav">
-                    <div class="outer-nav release ani-item sub-ajax">
-                        <div class="sub-nav">
-                            <ul>
-                                <li><a class="sub-nav-a current" data-name="news-373" href="/truyen-thong/tin-cong-ty.php" aria-label="TIN CÔNG TY">TIN CÔNG TY</a>
-                                    <div class="class-hidden link-change-url" data-title="Hình ảnh" data-description="SEN GROUP"
-                                        data-keyword="SEN GROUP" data-hrefen="/truyen-thong/tin-cong-ty.php" data-hrefvi="/truyen-thong/tin-cong-ty.php" aria-label="link-change-url"></div>
-                                </li>
-                                <!-- <li><a class="sub-nav-a" data-name="news-374" href="/truyen-thong/tin-thi-truong.html" aria-label="TIN THỊ TRƯỜNG">TIN THỊ TRƯỜNG</a>
+                <section class="search-result" id="sticky">
+                    <div class="scroll-text font-accent trans-x" data-speed="4"><span>LINGO GROUP LINGO GROUP LINGO GROUP LINGO GROUP</span> <span>LINGO GROUP LINGO GROUP LINGO GROUP LINGO GROUP</span></div>
 
-                                </li> -->
-                                <li><a class="sub-nav-a" data-name="news-375" href="/truyen-thong/videos.php" aria-label="Videos">Videos</a>
-                                    <div class="class-hidden link-change-url" data-title="Hình ảnh" data-description="SEN GROUP"
-                                        data-keyword="SEN GROUP" data-hrefen="/truyen-thong/videos.php" data-hrefvi="/truyen-thong/videos.php" aria-label="link-change-url"></div>
-                                </li>
-                                <li><a class="sub-nav-a" data-name="news-342" href="/truyen-thong/image.php" aria-label="Hình ảnh">Hình ảnh</a>
-                                    <div class="class-hidden link-change-url" data-title="Hình ảnh" data-description="SEN GROUP"
-                                        data-keyword="SEN GROUP" data-hrefen="/truyen-thong/image.php" data-hrefvi="/truyen-thong/image.php" aria-label="link-change-url"></div>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="wheel-submit wheel-next"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-                                <path fill="currentColor" d="M5.5,2.7L10.9,8l-5.3,5.4l-0.7-0.7L9.4,8L4.8,3.4L5.5,2.7z" />
-                            </svg></div>
-                        <div class="wheel-submit hide wheel-prev"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-                                <path fill="currentColor" d="M10.1,13.4L4.8,8l5.3-5.3l0.7,0.7L6.2,8l4.7,4.6L10.1,13.4z" />
-                            </svg></div>
+                    <div class="pic-search-bg">
+                        <div class="bg-cover bg-fixed"></div>
                     </div>
-                </section>
-                <section class="news-list-section">
                     <div class="wrap-content">
-                        <div class="load-news-list">
-
-
+                        <div class="title-main text-left color-white title-underline">
+                            <h1 class="text-ani-item"><strong>69</strong> Kết quả</h1>
                         </div>
-
-                    </div>
-                </section>
-                <footer class="footer">
-                    <div class="flower-footer ani-item"><span></span> <span></span> <span></span> <span></span> <span></span></div>
-                    <div class="box-footer">
-                        <div class="go-top"><svg>
-                                <use xlink:href="#ico-go-top"></use>
-                            </svg></div>
-                        <div class="wrap-box-footer">
-                            <div class="company-text">
-                                <div class="title-main color-white text-left">
-                                    <h2 class="text-ani-item">CÔNG TY CỔ PHẦN TẬP ĐOÀN <strong>SEN GROUP</strong></h2>
-                                </div>
-                                <div class="company-info ani-item">
-                                    <div class="title-small color-white">
-                                        <div class="title-sp">Trụ sở chính</div>
+                        <div class="search-box ani-item">
+                            <div class="list-result">
+                                <div class="item-search ani-item">
+                                    <div class="pic-search"><img class="lazy"
+                                            src="/banner/1920x960.png"
+                                            data-src="/banner/1920x960.png"
+                                            alt="THE EMERALD GOLF VIEW"></div>
+                                    <div class="title-search">
+                                        <h3>THE EMERALD GOLF VIEW</h3><a class="link-load"
+                                            href="/cong-ty-thanh-vien/sen-real/the-emerald-golf-view.html"
+                                            aria-label="link">cong-ty-thanh-vien/sen-real/the-emerald-golf-view.html</a>
                                     </div>
-                                    <ul>
-                                        <li class="company-address"><span class="address"><svg>
-                                                    <use xlink:href="#ico-company-address"></use>
-                                                </svg></span>
-                                            <p><a href="https://www.google.com/maps/place/11+%C4%90.+Nguy%E1%BB%85n+C%C3%B4ng+Tr%E1%BB%A9,+Ph%C6%B0%E1%BB%9Dng+Nguy%E1%BB%85n+Th%C3%A1i+B%C3%ACnh,+Qu%E1%BA%ADn+1,+Th%C3%A0nh+ph%E1%BB%91+H%E1%BB%93+Ch%C3%AD+Minh,+Vi%E1%BB%87t+Nam/@10.7700544,106.7018674,17z/data=!3m1!4b1!4m6!3m5!1s0x31752f4174c47f21:0x184d28bc63cf70ea!8m2!3d10.7700544!4d106.7044423!16s%2Fg%2F11bw3y54pl?entry=ttu"
-                                                    target="_blank" rel="noopener">11 Nguyễn Công Trứ, Phường Nguyễn Thái Bình, Quận 1, TP. HCM</a></p>
-                                        </li>
-                                        <li><span class="call"><svg>
-                                                    <use xlink:href="#ico-phone"></use>
-                                                </svg></span>
-                                            <p><a href="tel:028-7305-6839">(028) 7305 6839</a> - <a href="tel:0932-92-94-96">0932 92 94 96</a></p>
-                                        </li>
-                                        <li><span class="email"><svg>
-                                                    <use xlink:href="#ico-email"></use>
-                                                </svg></span>
-                                            <p><a href="mailto:info@sengroup.net">info@sengroup.net</a></p>
-                                        </li>
-                                    </ul>
                                 </div>
-                            </div>
-                            <div class="subscribe subscribe-footer ani-item">
-                                <div class="title-small">
-                                    <div class="title-sp">Đăng ký nhận tin</div>
+                                <div class="item-search ani-item">
+                                    <div class="pic-search"><img class="lazy"
+                                            src="/banner/1920x960.png"
+                                            data-src="/banner/1920x960.png"
+                                            alt="THE EMERALD GOLF VIEW"></div>
+                                    <div class="title-search">
+                                        <h3>THE PRIVIA</h3><a class="link-load"
+                                            href="/cong-ty-thanh-vien/sen-real/the-privia.html"
+                                            aria-label="link">cong-ty-thanh-vien/sen-real/the-privia.html</a>
+                                    </div>
                                 </div>
-                                <form onsubmit="return false;" id="subscribe" name="subscribe" method="post">
-                                    <div class="input-text"><span class="holder">Email</span><input type="text" data-default="Email" value="" id="emailsubscribe" name="emailsubscribe" data-error="Email không hợp lệ!" aria-label="Email"> <button class="sub-but" type="button"
-                                            aria-label="send" id="btn-subscribe-submit" data-page="/thank-you-.html">Gửi</button></div>
-                                </form>
+                                <div class="item-search ani-item">
+                                    <div class="pic-search"><img class="lazy"
+                                            src="/banner/1920x960.png"
+                                            data-src="/banner/1920x960.png"
+                                            alt="THE EMERALD GOLF VIEW"></div>
+                                    <div class="title-search">
+                                        <h3>PICITY SKY PARK</h3><a class="link-load"
+                                            href="/cong-ty-thanh-vien/sen-real/picity-sky-park.html"
+                                            aria-label="link">cong-ty-thanh-vien/sen-real/picity-sky-park.html</a>
+                                    </div>
+                                </div>
+                                <div class="item-search ani-item">
+                                    <div class="pic-search"><img class="lazy"
+                                            src="/banner/1920x960.png"
+                                            data-src="/banner/1920x960.png"
+                                            alt="THE EMERALD GOLF VIEW"></div>
+                                    <div class="title-search">
+                                        <h3>The Global City</h3><a class="link-load"
+                                            href="/cong-ty-thanh-vien/sen-real/the-global-city.html"
+                                            aria-label="link">cong-ty-thanh-vien/sen-real/the-global-city.html</a>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
-                    </div>
-                    <div class="bottom">
-                        <div class="left-footer">
-                            <div class="copyright footer-copyright detect-copry name-of-copyright footer-strong footer-company-strong footer-company-copyright color-white a-w a-s x-y z-y abc-c h-eck d-fl q-u r-t s-e i-o">
-                                <p>2024 © <strong>SEN GROUP</strong>. <span>All Rights Reserved.</span></p><a href="https://www.btq.vn" target="_blank" rel="noreferrer">DEVELOPED BY 3GRAPHIC</a>
-                            </div>
-                        </div>
-                    </div>
-                </footer>
+                    </div><span class="line-bottom ani-item"></span>
+                </section>
+
+                <?php require "footer.php" ?>
             </div>
         </div>
     </main>
@@ -267,13 +228,23 @@ h-2.2v9.2h2.2c1.3,0,2.3-0.4,2.9-1.1c0.6-0.7,0.9-1.9,0.9-3.6c0-1.6-0.3-2.8-0.9-3.
                     <div class="require-col color-blue">
                         <div class="title-small color-blue text-left">
                             <div class="title-sp">Đăng ký nhận tin</div>
-                            <p>Để biết thêm chi tiết về các dự án, vui lòng để lại thông tin liên hệ, bộ phận kinh doanh của chúng tôi sẽ chủ động liên hệ trực tiếp tới Quý khách. Trân trọng.</p>
+                            <p>Để biết thêm chi tiết về các dự án, vui lòng để lại thông tin liên hệ, bộ phận kinh doanh
+                                của chúng tôi sẽ chủ động liên hệ trực tiếp tới Quý khách. Trân trọng.</p>
                         </div>
-                        <div class="input-text"><span class="holder">Họ tên<small class="red-star">*</small></span> <input id="nameregister" name="nameregister" value="" type="text" data-error="Vui lòng nhập tên!" data-default="Họ tên" aria-label="fullname"></div>
-                        <div class="input-text"><span class="holder">Email<small class="red-star">*</small></span> <input id="emailregister" name="emailregister" value="" type="text" data-error="Email không hợp lệ!" data-default="Email" aria-label="email"></div>
-                        <div class="input-text"><span class="holder">Điện thoại<small class="red-star">*</small></span> <input id="phoneregister" name="phoneregister" value="" type="text" data-error="Điện thoại không hợp lệ!" data-default="Điện thoại" aria-label="phone"></div>
-                        <div
-                            class="wrap-view-details big-view"><button class="view-details dark" aria-label="submit" id="btn-register-submit" data-page="/thank-you-.html"><span class="small-logo-ico"><svg>
+                        <div class="input-text"><span class="holder">Họ tên<small class="red-star">*</small></span>
+                            <input id="nameregister" name="nameregister" value="" type="text"
+                                data-error="Vui lòng nhập tên!" data-default="Họ tên" aria-label="fullname">
+                        </div>
+                        <div class="input-text"><span class="holder">Email<small class="red-star">*</small></span>
+                            <input id="emailregister" name="emailregister" value="" type="text"
+                                data-error="Email không hợp lệ!" data-default="Email" aria-label="email">
+                        </div>
+                        <div class="input-text"><span class="holder">Điện thoại<small class="red-star">*</small></span>
+                            <input id="phoneregister" name="phoneregister" value="" type="text"
+                                data-error="Điện thoại không hợp lệ!" data-default="Điện thoại" aria-label="phone">
+                        </div>
+                        <div class="wrap-view-details big-view"><button class="view-details dark" aria-label="submit"
+                                id="btn-register-submit" data-page="/thank-you-.html"><span class="small-logo-ico"><svg>
                                         <use xlink:href="#ico-view-details-logo"></use>
                                     </svg> <span class="rotate-logo"><svg>
                                             <use xlink:href="#ico-view-details-rotate-send"></use>
@@ -291,7 +262,8 @@ h-2.2v9.2h2.2c1.3,0,2.3-0.4,2.9-1.1c0.6-0.7,0.9-1.9,0.9-3.6c0-1.6-0.3-2.8-0.9-3.
                     <li><span class="call"><svg>
                                 <use xlink:href="#ico-phone"></use>
                             </svg></span>
-                        <p><a href="tel:028-7305-6839">(028) 7305 6839</a> - <a href="tel:0932-92-94-96">0932 92 94 96</a></p>
+                        <p><a href="tel:028-7305-6839">(028) 7305 6839</a> - <a href="tel:0932-92-94-96">0932 92 94
+                                96</a></p>
                     </li>
                     <li><span class="email"><svg>
                                 <use xlink:href="#ico-email"></use>
@@ -302,15 +274,18 @@ h-2.2v9.2h2.2c1.3,0,2.3-0.4,2.9-1.1c0.6-0.7,0.9-1.9,0.9-3.6c0-1.6-0.3-2.8-0.9-3.
                                 <use xlink:href="#ico-company-address"></use>
                             </svg></span>
                         <p><a href="https://www.google.com/maps/place/11+%C4%90.+Nguy%E1%BB%85n+C%C3%B4ng+Tr%E1%BB%A9,+Ph%C6%B0%E1%BB%9Dng+Nguy%E1%BB%85n+Th%C3%A1i+B%C3%ACnh,+Qu%E1%BA%ADn+1,+Th%C3%A0nh+ph%E1%BB%91+H%E1%BB%93+Ch%C3%AD+Minh,+Vi%E1%BB%87t+Nam/@10.7700544,106.7018674,17z/data=!3m1!4b1!4m6!3m5!1s0x31752f4174c47f21:0x184d28bc63cf70ea!8m2!3d10.7700544!4d106.7044423!16s%2Fg%2F11bw3y54pl?entry=ttu"
-                                target="_blank" rel="noopener">11 Nguyễn Công Trứ, Phường Nguyễn Thái Bình, Quận 1, TP. HCM</a></p>
+                                target="_blank" rel="noopener">11 Nguyễn Công Trứ, Phường Nguyễn Thái Bình, Quận 1, TP.
+                                HCM</a></p>
                     </li>
                 </ul>
                 <div class="social-regis">
                     <ul>
-                        <li><a class="facebook" href="https://www.facebook.com/SenGroup.vn" target="_blank" rel="noopener" aria-label="facebook"><svg>
+                        <li><a class="facebook" href="https://www.facebook.com/SenGroup.vn" target="_blank"
+                                rel="noopener" aria-label="facebook"><svg>
                                     <use xlink:href="#ico-facebook"></use>
                                 </svg></a></li>
-                        <li><a class="youtube" href="https://www.youtube.com/channel/UCImEWP7omdaGVCeN_T5G57A" target="_blank" rel="noopener" aria-label="youtube"><svg>
+                        <li><a class="youtube" href="https://www.youtube.com/channel/UCImEWP7omdaGVCeN_T5G57A"
+                                target="_blank" rel="noopener" aria-label="youtube"><svg>
                                     <use xlink:href="#ico-youtube"></use>
                                 </svg></a></li>
                     </ul>
@@ -320,10 +295,7 @@ h-2.2v9.2h2.2c1.3,0,2.3-0.4,2.9-1.1c0.6-0.7,0.9-1.9,0.9-3.6c0-1.6-0.3-2.8-0.9-3.
     </div>
     <div class="all-pics"></div>
     <div class="all-album"></div>
-    <div class="allvideo">
-
-    </div>
-
+    <div class="allvideo"></div>
     <div class="overlay-dark"></div>
     <div id="page-progress"></div>
     <div id="mouse-cursor"></div>
@@ -339,17 +311,24 @@ h-2.2v9.2h2.2c1.3,0,2.3-0.4,2.9-1.1c0.6-0.7,0.9-1.9,0.9-3.6c0-1.6-0.3-2.8-0.9-3.
             <div class="form-row-search">
                 <form onsubmit="return false;" id="search" method="get">
                     <div class="search-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
-                            <path fill="currentColor" d="M33.3,31.9c-0.6,0.6-1.3,1-2,1.4l5.9,5.9c1,0.9,2.5,0.9,3.4,0c0.9-1,0.9-2.5,0-3.4l-5.9-5.9C34.4,30.6,33.9,31.3,33.3,31.9z" />
+                            <path fill="currentColor"
+                                d="M33.3,31.9c-0.6,0.6-1.3,1-2,1.4l5.9,5.9c1,0.9,2.5,0.9,3.4,0c0.9-1,0.9-2.5,0-3.4l-5.9-5.9C34.4,30.6,33.9,31.3,33.3,31.9z" />
                             <path fill="currentColor" d="M14.9,30.8c4.8,4.8,12.7,4.8,17.5,0s4.8-12.6,0-17.4s-12.7-4.8-17.5,0S10.1,25.9,14.9,30.8z M17.1,15.5
 c3.7-3.7,9.6-3.7,13.3,0s3.7,9.5,0,13.2s-9.6,3.7-13.3,0S13.4,19,17.1,15.5z" />
                         </svg></div>
-                    <div class="input-text"><span class="holder">Tìm kiếm ...</span><input type="text" id="quicksearch" name="quicksearch" data-default="Tìm kiếm ..." value="" aria-label="field-search">
+                    <div class="input-text"><span class="holder">Tìm kiếm ...</span><input type="text" id="quicksearch"
+                            name="quicksearch" data-default="Tìm kiếm ..." value="" aria-label="field-search">
                         <div class="search-error" id="errorsearch">
-                            <div class="search-error-content">Từ khóa không được dưới 3 kí tự, vui lòng nhập lại từ khóa tìm kiếm!</div>
-                        </div><button class="display-none link-search-load-typing" data-href="/tim-kiem.php" aria-label="search"></button>
+                            <div class="search-error-content">Từ khóa không được dưới 3 kí tự, vui lòng nhập lại từ khóa
+                                tìm kiếm!</div>
+                        </div><button class="display-none link-search-load-typing" data-href="/tim-kiem.php"
+                            aria-label="search"></button>
                     </div>
-                    <div class="close-search"></div><input type="hidden" id="defaultvalue" name="defaultvalue" value="Tìm kiếm ..." aria-label="default value"> <input type="hidden" id="errorsearchcode" name="errorsearch" value="Từ khóa không được dưới 3 kí tự, vui lòng nhập lại từ khóa tìm kiếm!"
-                        aria-label="errorsearch"> <input type="hidden" id="href_search" name="href_search" value="/tim-kiem.php" aria-label="href search">
+                    <div class="close-search"></div><input type="hidden" id="defaultvalue" name="defaultvalue"
+                        value="Tìm kiếm ..." aria-label="default value"> <input type="hidden" id="errorsearchcode"
+                        name="errorsearch" value="Từ khóa không được dưới 3 kí tự, vui lòng nhập lại từ khóa tìm kiếm!"
+                        aria-label="errorsearch"> <input type="hidden" id="href_search" name="href_search"
+                        value="/tim-kiem.php" aria-label="href search">
                 </form>
             </div>
         </div>
@@ -361,13 +340,4 @@ c3.7-3.7,9.6-3.7,13.3,0s3.7,9.5,0,13.2s-9.6,3.7-13.3,0S13.4,19,17.1,15.5z" />
     <div class="httpserver class-hidden">/</div>
     <div class="httptemplate class-hidden">/catalog/view/</div>
     <script type="text/javascript" src="/catalog/view/js/gsap.js"></script>
-    <script src="https://sp.zalo.me/plugins/sdk.js"></script>
     <script src="/catalog/view/js/app.js?ver=1.0.8" type="text/javascript"></script>
-
-    <script>
-        window.addEventListener("pageshow", function(event) {
-            if (event.persisted) {
-                window.location.reload();
-            }
-        });
-    </script>

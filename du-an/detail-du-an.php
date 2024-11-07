@@ -136,7 +136,7 @@ c0.4,0,0.6-0.1,0.7-0.2c0.1-0.1,0.1-0.3,0.1-0.7v-15.1c0-0.3,0-0.6-0.1-0.7c-0.1-0.
 h-2.2v9.2h2.2c1.3,0,2.3-0.4,2.9-1.1c0.6-0.7,0.9-1.9,0.9-3.6c0-1.6-0.3-2.8-0.9-3.5C201.8,218.4,200.8,218.1,199.5,218.1" />
         </svg></div>
     <script>
-        var loadDeferredStyles = function () {
+        var loadDeferredStyles = function() {
             var addStylesNode = document.getElementById("deferred-styles");
             var replacement = document.getElementById("render-styles");
             replacement.innerHTML = addStylesNode.textContent;
@@ -145,7 +145,7 @@ h-2.2v9.2h2.2c1.3,0,2.3-0.4,2.9-1.1c0.6-0.7,0.9-1.9,0.9-3.6c0-1.6-0.3-2.8-0.9-3.
         };
         var raf = requestAnimationFrame || mozRequestAnimationFrame ||
             webkitRequestAnimationFrame || msRequestAnimationFrame;
-        if (raf) raf(function () {
+        if (raf) raf(function() {
             window.setTimeout(loadDeferredStyles, 0);
         });
         else window.addEventListener('load', loadDeferredStyles);
@@ -158,7 +158,7 @@ h-2.2v9.2h2.2c1.3,0,2.3-0.4,2.9-1.1c0.6-0.7,0.9-1.9,0.9-3.6c0-1.6-0.3-2.8-0.9-3.
             <div class="container" id="project-details-page">
                 <script>
                     if (document.querySelector('#home-page')) {
-                        Array.from(document.querySelectorAll('.mask, .loadicon'), function (element) {
+                        Array.from(document.querySelectorAll('.mask, .loadicon'), function(element) {
                             if (element) element.style.display = "block";
                         });
                         document.querySelector('.header').style.visibility = "visible";
@@ -861,7 +861,7 @@ C77.5,30.76,77.5,33.53,76.19,35.13z"></path>
                     </div>
                 </section> -->
                 <?php require "../footer.php" ?>
-                
+
             </div>
         </div>
     </main>
@@ -967,14 +967,14 @@ c3.7-3.7,9.6-3.7,13.3,0s3.7,9.5,0,13.2s-9.6,3.7-13.3,0S13.4,19,17.1,15.5z" />
                         <div class="search-error" id="errorsearch">
                             <div class="search-error-content">Từ khóa không được dưới 3 kí tự, vui lòng nhập lại từ khóa
                                 tìm kiếm!</div>
-                        </div><button class="display-none link-search-load-typing" data-href="/tim-kiem.html"
+                        </div><button class="display-none link-search-load-typing" data-href="/tim-kiem.php"
                             aria-label="search"></button>
                     </div>
                     <div class="close-search"></div><input type="hidden" id="defaultvalue" name="defaultvalue"
                         value="Tìm kiếm ..." aria-label="default value"> <input type="hidden" id="errorsearchcode"
                         name="errorsearch" value="Từ khóa không được dưới 3 kí tự, vui lòng nhập lại từ khóa tìm kiếm!"
                         aria-label="errorsearch"> <input type="hidden" id="href_search" name="href_search"
-                        value="/tim-kiem.html" aria-label="href search">
+                        value="/tim-kiem.php" aria-label="href search">
                 </form>
             </div>
         </div>

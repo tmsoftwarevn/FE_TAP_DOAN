@@ -719,7 +719,7 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                     <div class="txt-news-home">
                                         <h3>CHÍNH THỨC KHAI TRƯƠNG VĂN PHÒNG BÁN HÀNG DỰ ÁN THE EMERALD GOLF VIEW – CHI
                                             NHÁNH BÌNH DƯƠNG THUỘC TẬP ĐOÀN LINGO GROUP</h3>
-                                            <div class="wrap-view-details">
+                                        <div class="wrap-view-details">
                                             <a href="/tin-tuc/detail-tintuc.php"
                                                 class="view-details dark link-load" aria-label="link">
                                                 <span
@@ -898,14 +898,14 @@ c3.7-3.7,9.6-3.7,13.3,0s3.7,9.5,0,13.2s-9.6,3.7-13.3,0S13.4,19,17.1,15.5z" />
                         <div class="search-error" id="errorsearch">
                             <div class="search-error-content">Từ khóa không được dưới 3 kí tự, vui lòng nhập lại từ khóa
                                 tìm kiếm!</div>
-                        </div><button class="display-none link-search-load-typing" data-href="/tim-kiem.html"
+                        </div><button class="display-none link-search-load-typing" data-href="/tim-kiem.php"
                             aria-label="search"></button>
                     </div>
                     <div class="close-search"></div><input type="hidden" id="defaultvalue" name="defaultvalue"
                         value="Tìm kiếm ..." aria-label="default value"> <input type="hidden" id="errorsearchcode"
                         name="errorsearch" value="Từ khóa không được dưới 3 kí tự, vui lòng nhập lại từ khóa tìm kiếm!"
                         aria-label="errorsearch"> <input type="hidden" id="href_search" name="href_search"
-                        value="/tim-kiem.html" aria-label="href search">
+                        value="/tim-kiem.php" aria-label="href search">
                 </form>
             </div>
         </div>

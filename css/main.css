@@ -460,9 +460,9 @@ body {
     --coloractive: #ddbd48;
     --coloractive50: rgba(244, 196, 24, 0.5);
 
-    --bgactive: #f1c31a;
+    --bgactive: #ddbd48;
     
-    --bgactive-02: #ddbd48;
+    --bgactive-02: #e8cc65;
     --bgactive-02-90: rgba(241, 197, 20, 0.9);
     --bglight: rgba(244, 208, 63, 0.9);
     --bgactive05: rgba(251, 181, 6, 0.05);

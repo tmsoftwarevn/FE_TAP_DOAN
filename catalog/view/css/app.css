@@ -1662,9 +1662,11 @@
         transition: all .6s ease-in-out
     }
     .item-search:hover {
-        background-color: var(--coloractive);
+        /* background-color: var(--coloractive); */
+        background-color: #0077bf;
         box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .08);
-        border-color: var(--color-light)
+        /* border-color: var(--color-light) */
+        border-color: #2086c6;
     }
     .item-search img {
         filter: grayscale(.8);
