@@ -1,0 +1,20 @@
+# RewriteEngine On
+
+# RewriteRule ^trang-chu index.php [QSA]
+# RewriteRule ^gioi-thieu gioi-thieu.php [QSA]
+# RewriteRule ^truyen-thong truyen-thong.php [QSA]
+# RewriteRule ^truyen-thong/tin-cong-ty truyen-thong/tin-cong-ty.php [QSA]
+# RewriteRule ^truyen-thong/videos truyen-thong/videos.php [QSA]
+# RewriteRule ^truyen-thong/image truyen-thong/image.php [QSA]
+
+# RewriteRule ^phat-trien-nguon-nhan-luc phat-trien-nguon-nhan-luc.php [QSA]
+# RewriteRule ^du-an-tieu-bieu du-an-tieu-bieu.php [QSA]
+# RewriteRule ^linh-vuc-hoat-dong linh-vuc-hoat-dong.php [QSA]
+# RewriteRule ^lien-he lien-he.php [QSA]
+
+RewriteEngine On
+
+# Rewrite rules to remove .php extension from URLs
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php [L]

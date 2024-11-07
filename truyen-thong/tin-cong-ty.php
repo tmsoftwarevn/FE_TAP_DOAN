@@ -2,7 +2,7 @@
     // Check if the page was loaded due to a refresh
     if (performance.navigation.type === performance.navigation.TYPE_RELOAD) {
         // Redirect to /truyen-thong.php on refresh
-        window.location.href = "/truyen-thong.php";
+        window.location.href = "/truyen-thong";
     }
 </script>
 <div class="title-main color-blue text-center title-underline bold-medium">

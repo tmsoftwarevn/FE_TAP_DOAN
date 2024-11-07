@@ -94,50 +94,50 @@ C57.9,89.7,53.8,90.3,49.6,90.3z" />
             <ul>
                 <li class="nav-item current"><a class="link-home link-load nav-item-a" href="/" data-name="home-page"
                         aria-label="nav">Trang chủ</a>
-                    <div class="class-hidden link-change-url" data-hrefen="/home-page.html"
-                        data-hrefvi="/trang-chu.html" data-title="Trang chủ" data-description="SEN GROUP"
-                        data-keyword="SEN GROUP" aria-label="link-change-url"></div>
+                    <div class="class-hidden link-change-url" data-hrefen="/trang-chu"
+                        data-hrefvi="/trang-chu" data-title="Trang chủ" data-description="LINGO GROUP"
+                        data-keyword="LINGO GROUP" aria-label="link-change-url"></div>
                 </li>
-                <li class="nav-item"><a class="link-load nav-item-a" href="/gioi-thieu.php" data-name="about-page"
+                <li class="nav-item"><a class="link-load nav-item-a" href="/gioi-thieu" data-name="about-page"
                         aria-label="nav">Giới thiệu</a>
-                    <div class="class-hidden link-change-url" data-hrefen="/gioi-thieu.php"
-                        data-hrefvi="/gioi-thieu.php" data-title="Giới thiệu" data-description="SEN GROUP"
-                        data-keyword="SEN GROUP" aria-label="link-change-url"></div>
+                    <div class="class-hidden link-change-url" data-hrefen="/gioi-thieu"
+                        data-hrefvi="/gioi-thieu" data-title="Giới thiệu" data-description="LINGO GROUP"
+                        data-keyword="LINGO GROUP" aria-label="link-change-url"></div>
                 </li>
-                <li class="nav-item"><a class="link-load nav-item-a" href="/linh-vuc-hoat-dong.php"
+                <li class="nav-item"><a class="link-load nav-item-a" href="/linh-vuc-hoat-dong"
                         data-name="business-page" aria-label="nav">Lĩnh vực hoạt động</a>
-                    <div class="class-hidden link-change-url" data-hrefen="/linh-vuc-hoat-dong.php"
-                        data-hrefvi="/linh-vuc-hoat-dong.php" data-title="Lĩnh vực hoạt động"
-                        data-description="SEN GROUP" data-keyword="SEN GROUP" aria-label="link-change-url"></div>
+                    <div class="class-hidden link-change-url" data-hrefen="/linh-vuc-hoat-dong"
+                        data-hrefvi="/linh-vuc-hoat-dong" data-title="Lĩnh vực hoạt động"
+                        data-description="LINGO GROUP" data-keyword="LINGO GROUP" aria-label="link-change-url"></div>
                 </li>
                 <!-- <li class="nav-item"><a class="link-load nav-item-a" href="/cong-ty-thanh-vien.html"
                         data-name="project-page" aria-label="nav">Công ty thành viên</a>
                     <div class="class-hidden link-change-url" data-hrefen="/members.html"
                         data-hrefvi="/cong-ty-thanh-vien.html" data-title="Công ty thành viên"
-                        data-description="SEN GROUP" data-keyword="SEN GROUP" aria-label="link-change-url"></div>
+                        data-description="LINGO GROUP" data-keyword="LINGO GROUP" aria-label="link-change-url"></div>
                 </li> -->
-                <li class="nav-item"><a class="link-load nav-item-a" href="/du-an-tieu-bieu.php"
+                <li class="nav-item"><a class="link-load nav-item-a" href="/du-an-tieu-bieu"
                         data-name="activities-page" aria-label="nav">Dự án tiêu biểu</a>
-                    <div class="class-hidden link-change-url" data-hrefen="/du-an-tieu-bieu.php"
-                        data-hrefvi="/du-an-tieu-bieu.php" data-title="Hoạt động tiêu biểu"
-                        data-description="SEN GROUP" data-keyword="SEN GROUP" aria-label="link-change-url"></div>
+                    <div class="class-hidden link-change-url" data-hrefen="/du-an-tieu-bieu"
+                        data-hrefvi="/du-an-tieu-bieu" data-title="Hoạt động tiêu biểu"
+                        data-description="LINGO GROUP" data-keyword="LINGO GROUP" aria-label="link-change-url"></div>
                 </li>
-                <li class="nav-item"><a class="link-load nav-item-a" href="/phat-trien-nguon-nhan-luc.php"
+                <li class="nav-item"><a class="link-load nav-item-a" href="/phat-trien-nguon-nhan-luc"
                         data-name="recruitment-page" aria-label="nav">Phát triển nguồn nhân lực</a>
-                    <div class="class-hidden link-change-url" data-hrefen="/phat-trien-nguon-nhan-luc.php"
-                        data-hrefvi="/phat-trien-nguon-nhan-luc.php" data-title="Phát triển nguồn nhân lực"
-                        data-description="SEN GROUP" data-keyword="SEN GROUP" aria-label="link-change-url"></div>
+                    <div class="class-hidden link-change-url" data-hrefen="/phat-trien-nguon-nhan-luc"
+                        data-hrefvi="/phat-trien-nguon-nhan-luc" data-title="Phát triển nguồn nhân lực"
+                        data-description="LINGO GROUP" data-keyword="LINGO GROUP" aria-label="link-change-url"></div>
                 </li>
-                <li class="nav-item"><a class="link-load nav-item-a" href="/truyen-thong.php" data-name="news-page"
+                <li class="nav-item"><a class="link-load nav-item-a" href="/truyen-thong" data-name="news-page"
                         aria-label="nav">Truyền thông</a>
-                    <div class="class-hidden link-change-url" data-hrefen="/truyen-thong.php" data-hrefvi="/truyen-thong.php"
-                        data-title="Truyền thông" data-description="SEN GROUP" data-keyword="SEN GROUP"
+                    <div class="class-hidden link-change-url" data-hrefen="/truyen-thong" data-hrefvi="/truyen-thong"
+                        data-title="Truyền thông" data-description="LINGO GROUP" data-keyword="LINGO GROUP"
                         aria-label="link-change-url"></div>
                 </li>
-                <li class="nav-item"><a class="link-load nav-item-a" href="/lien-he.php" data-name="contact-page"
+                <li class="nav-item"><a class="link-load nav-item-a" href="/lien-he" data-name="contact-page"
                         aria-label="nav">Liên hệ</a>
-                    <div class="class-hidden link-change-url" data-hrefen="/lien-he.php" data-hrefvi="/lien-he.php"
-                        data-title="Liên hệ" data-description="SEN GROUP" data-keyword="SEN GROUP"
+                    <div class="class-hidden link-change-url" data-hrefen="/lien-he" data-hrefvi="/lien-he"
+                        data-title="Liên hệ" data-description="LINGO GROUP" data-keyword="LINGO GROUP"
                         aria-label="link-change-url"></div>
                 </li>
             </ul>

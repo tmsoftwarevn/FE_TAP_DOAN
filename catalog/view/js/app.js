@@ -10412,22 +10412,22 @@ window.addEventListener("keydown", function (e) {
         e.href == t && e.click();
       });
   }),
-  "serviceWorker" in navigator &&
-    window.addEventListener("load", function () {
-      setTimeout(function () {
-        navigator.serviceWorker.register(httpserver + "sw.js").then(
-          function (e) {
-            console.log(
-              "ServiceWorker registration successful with scope: ",
-              e.scope
-            );
-          },
-          function (e) {
-            console.log("ServiceWorker registration failed: ", e);
-          }
-        );
-      }, 5e3);
-    });
+  // "serviceWorker" in navigator &&
+  //   window.addEventListener("load", function () {
+  //     setTimeout(function () {
+  //       navigator.serviceWorker.register(httpserver + "sw.js").then(
+  //         function (e) {
+  //           console.log(
+  //             "ServiceWorker registration successful with scope: ",
+  //             e.scope
+  //           );
+  //         },
+  //         function (e) {
+  //           console.log("ServiceWorker registration failed: ", e);
+  //         }
+  //       );
+  //     }, 5e3);
+  //   });
 
 function onChange(e) {
   document.querySelector(".file-name").innerHTML = e.files[0]

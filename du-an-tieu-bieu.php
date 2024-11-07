@@ -164,9 +164,9 @@ h-2.2v9.2h2.2c1.3,0,2.3-0.4,2.9-1.1c0.6-0.7,0.9-1.9,0.9-3.6c0-1.6-0.3-2.8-0.9-3.
                     <div class="outer-nav release ani-item sub-ajax">
                         <div class="sub-nav" style="display: none;">
                             <ul>
-                                <li><a class="sub-nav-a current" data-name="news-373" href="/du-an-tieu-bieu/data.php" aria-label="TIN CÔNG TY">DỰ ÁN TIÊU BIỂU</a>
+                                <li><a class="sub-nav-a current" data-name="news-373" href="/data-du-an-tieu-bieu/data.php" aria-label="TIN CÔNG TY">DỰ ÁN TIÊU BIỂU</a>
                                     <div class="class-hidden link-change-url" data-title="Hình ảnh" data-description="SEN GROUP"
-                                        data-keyword="SEN GROUP" data-hrefen="/du-an-tieu-bieu/data.php" data-hrefvi="/du-an-tieu-bieu/data.php" aria-label="link-change-url"></div>
+                                        data-keyword="SEN GROUP" data-hrefen="/data-du-an-tieu-bieu/data.php" data-hrefvi="/data-du-an-tieu-bieu/data.php" aria-label="link-change-url"></div>
                                 </li>
 
                             </ul>
@@ -328,10 +328,10 @@ c3.7-3.7,9.6-3.7,13.3,0s3.7,9.5,0,13.2s-9.6,3.7-13.3,0S13.4,19,17.1,15.5z" />
                     <div class="input-text"><span class="holder">Tìm kiếm ...</span><input type="text" id="quicksearch" name="quicksearch" data-default="Tìm kiếm ..." value="" aria-label="field-search">
                         <div class="search-error" id="errorsearch">
                             <div class="search-error-content">Từ khóa không được dưới 3 kí tự, vui lòng nhập lại từ khóa tìm kiếm!</div>
-                        </div><button class="display-none link-search-load-typing" data-href="/tim-kiem.php" aria-label="search"></button>
+                        </div><button class="display-none link-search-load-typing" data-href="/tim-kiem" aria-label="search"></button>
                     </div>
                     <div class="close-search"></div><input type="hidden" id="defaultvalue" name="defaultvalue" value="Tìm kiếm ..." aria-label="default value"> <input type="hidden" id="errorsearchcode" name="errorsearch" value="Từ khóa không được dưới 3 kí tự, vui lòng nhập lại từ khóa tìm kiếm!"
-                        aria-label="errorsearch"> <input type="hidden" id="href_search" name="href_search" value="/tim-kiem.php" aria-label="href search">
+                        aria-label="errorsearch"> <input type="hidden" id="href_search" name="href_search" value="/tim-kiem" aria-label="href search">
                 </form>
             </div>
         </div>
