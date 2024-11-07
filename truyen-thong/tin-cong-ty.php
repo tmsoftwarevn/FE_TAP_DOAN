@@ -2,7 +2,7 @@
     // Check if the page was loaded due to a refresh
     if (performance.navigation.type === performance.navigation.TYPE_RELOAD) {
         // Redirect to /truyen-thong.php on refresh
-        window.location.href = "/truyen-thong";
+        window.location.href = "/tin-truyen-thong";
     }
 </script>
 <div class="title-main color-blue text-center title-underline bold-medium">
@@ -213,9 +213,10 @@
 
 <!-- // load theo page, vậy cho limit nhiều -->
 
+
 <div class="list-viewmore-news">
     <div class="wrap-more-project">
-        <a href="#foo" data-href="/truyen-thong/videos.php?page=1" class="more-project"
+        <a href="#foo" data-href="/data-du-an-tieu-bieu/data.php" class="more-project"
             aria-label="news">
         </a>
     </div>

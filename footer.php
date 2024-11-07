@@ -9,7 +9,7 @@
         <div class="wrap-box-footer">
             <div class="company-text">
                 <div class="title-main color-white text-left">
-                    <h2 class="text-ani-item"> CÔNG TY TNHH  <strong>LINGO GROUP</strong></h2>
+                    <h2 class="text-ani-item"> CÔNG TY TNHH <strong>LINGO GROUP</strong></h2>
                 </div>
                 <div class="company-info ani-item">
                     <div class="title-small color-white">
@@ -19,19 +19,21 @@
                         <li class="company-address"><span class="address !text-blue-500"><svg>
                                     <use xlink:href="#ico-company-address"></use>
                                 </svg></span>
-                            <p><a href="https://www.google.com/maps/place/11+%C4%90.+Nguy%E1%BB%85n+C%C3%B4ng+Tr%E1%BB%A9,+Ph%C6%B0%E1%BB%9Dng+Nguy%E1%BB%85n+Th%C3%A1i+B%C3%ACnh,+Qu%E1%BA%ADn+1,+Th%C3%A0nh+ph%E1%BB%91+H%E1%BB%93+Ch%C3%AD+Minh,+Vi%E1%BB%87t+Nam/@10.7700544,106.7018674,17z/data=!3m1!4b1!4m6!3m5!1s0x31752f4174c47f21:0x184d28bc63cf70ea!8m2!3d10.7700544!4d106.7044423!16s%2Fg%2F11bw3y54pl?entry=ttu"
-                                    target="_blank" rel="noopener">25/12 Cống Quỳnh, Phường Nguyễn Cư Trinh, Quận 1, Thành phố Hồ Chí Minh</a></p>
+                            <p>
+                                25/12 Cống Quỳnh, Phường Nguyễn Cư Trinh, Quận 1, Thành phố Hồ Chí Minh
+                            </p>
                         </li>
                         <li><span class="call !text-blue-500"><svg>
                                     <use xlink:href="#ico-phone"></use>
                                 </svg></span>
-                            <p><a href="tel:028-7305-6839">0318 048 557</a> - <a
-                                    href="tel:0932-92-94-96">0933 848 596</a></p>
+                            <p>
+                                0318 048 557 - 0933 848 596
+                            </p>
                         </li>
                         <li><span class="email !text-blue-500"><svg>
                                     <use xlink:href="#ico-email"></use>
                                 </svg></span>
-                            <p><a href="mailto:info@sengroup.net">Info@lingoconnector.edu.vn</a></p>
+                            <p>Info@lingoconnector.edu.vn</p>
                         </li>
                     </ul>
                 </div>

@@ -128,9 +128,9 @@ C57.9,89.7,53.8,90.3,49.6,90.3z" />
                         data-hrefvi="/phat-trien-nguon-nhan-luc" data-title="Phát triển nguồn nhân lực"
                         data-description="LINGO GROUP" data-keyword="LINGO GROUP" aria-label="link-change-url"></div>
                 </li>
-                <li class="nav-item"><a class="link-load nav-item-a" href="/truyen-thong" data-name="news-page"
+                <li class="nav-item"><a class="link-load nav-item-a" href="/tin-truyen-thong" data-name="news-page"
                         aria-label="nav">Truyền thông</a>
-                    <div class="class-hidden link-change-url" data-hrefen="/truyen-thong" data-hrefvi="/truyen-thong"
+                    <div class="class-hidden link-change-url" data-hrefen="/tin-truyen-thong" data-hrefvi="/tin-truyen-thong"
                         data-title="Truyền thông" data-description="LINGO GROUP" data-keyword="LINGO GROUP"
                         aria-label="link-change-url"></div>
                 </li>
