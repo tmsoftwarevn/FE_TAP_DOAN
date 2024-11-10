@@ -12,6 +12,7 @@
 # RewriteRule ^linh-vuc-hoat-dong linh-vuc-hoat-dong.php [QSA]
 # RewriteRule ^lien-he lien-he.php [QSA]
 
+# // save
 # RewriteEngine On
 
 # RewriteCond %{REQUEST_FILENAME} !-d

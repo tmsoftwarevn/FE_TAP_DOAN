@@ -154,7 +154,7 @@ C57.9,89.7,53.8,90.3,49.6,90.3z" />
     </div>
     <div class="right-header">
         <div class="search-top">
-            <button class="search-but" aria-label="search">
+            <button class="search-but !text-blue-600" aria-label="search">
                 <svg>
                     <use xlink:href="#ico-search"></use>
                 </svg>
@@ -183,9 +183,9 @@ C57.9,89.7,53.8,90.3,49.6,90.3z" />
     <div class="social">
         <ul>
 
-            <li><a class="facebook" href="https://www.facebook.com/SenGroup.vn" target="_blank" rel="noopener"
+            <li><a class="facebook !text-blue-600" href="https://www.facebook.com/SenGroup.vn" target="_blank" rel="noopener"
                     aria-label="Facebook">Facebook</a></li>
-            <li><a class="youtube" href="https://www.youtube.com/channel/UCImEWP7omdaGVCeN_T5G57A" target="_blank"
+            <li><a class="youtube !text-blue-600" href="https://www.youtube.com/channel/UCImEWP7omdaGVCeN_T5G57A" target="_blank"
                     rel="noopener" aria-label="Youtube">Youtube</a></li>
         </ul>
     </div>

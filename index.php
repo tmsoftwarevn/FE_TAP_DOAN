@@ -3,18 +3,46 @@ require_once "setting-all-file.php";
 
 $list_blog = [];
 $data_banner = [];
+$data_project = [];
+$data_blog = [];
 
-$apiUrl = "https://belingo.tmsoftware.vn/api/project/getlistcategory?api_key=8AF1apnMW2A39Ip7LUFtNstE5RjYleghk";
+$url_be = 'https://belingo.tmsoftware.vn';
 
-// Fetch data from the API
-$response = file_get_contents($apiUrl);
-$data = json_decode($response, true); // Decode the JSON data
+// call banner
+$apiUrl_banner = $url_be . '/api/project/getlistcategory?api_key=8AF1apnMW2A39Ip7LUFtNstE5RjYleghk';
+$response_banner = file_get_contents($apiUrl_banner);
+$data = json_decode($response_banner, true); // Decode the JSON data
 
-// Check if data was retrieved successfully
 if ($data && $data['status'] === true && isset($data['data'])) {
     $data_banner = $data['data'];
     // echo 'llllll';
-    // print_r($list_blog);
+    // print_r($data_banner);
+} else {
+    echo "Error fetching data or no data available.";
+}
+
+// call project
+$apiUrl_project = $url_be . '/api/project/getlistproject?api_key=8AF1apnMW2A39Ip7LUFtNstE5RjYleghk';
+$response_project = file_get_contents($apiUrl_project);
+$data = json_decode($response_project, true); // Decode the JSON data
+
+if ($data && $data['status'] === true && isset($data['data'])) {
+    $data_project = $data['data'];
+    // echo 'llllll';
+    // print_r($data_banner);
+} else {
+    echo "Error fetching data or no data available.";
+}
+
+// call blog
+$apiUrl_blog = $url_be . '/api/blog/getlistblog?api_key=8AF1apnMW2A39Ip7LUFtNstE5RjYleghk';
+$response_blog = file_get_contents($apiUrl_blog);
+$data = json_decode($response_blog, true); // Decode the JSON data
+
+if ($data && $data['status'] === true && isset($data['data'])) {
+    $data_blog = $data['data'];
+    // echo 'llllll';
+    // print_r($data_banner);
 } else {
     echo "Error fetching data or no data available.";
 }
@@ -165,18 +193,35 @@ if ($data && $data['status'] === true && isset($data['data'])) {
                                     ?>
                                         <div class="bg slidebox-item">
                                             <div class="bg-cover">
-                                                <img src="banner/du-an-the-privia-khang-dien-binh-tan.jpg"
-                                                    data-src="banner/du-an-the-privia-khang-dien-binh-tan.jpg"
-                                                    alt="THE PRIVIA" class="lazy" />
+                                                <img src="
+                                                <?php
+                                                echo $url_be, $value['image'];
+                                                ?>
+                                                "
+                                                    data-src="
+                                                <?php
+                                                echo $url_be, $value['image'];
+                                                ?>
+                                                "
+
+                                                    alt="
+                                                    <?php
+                                                    echo $value['name'];
+                                                    ?>
+                                                "
+                                                    class="lazy" />
                                             </div>
                                             <div class="text-banner">
                                                 <div class="title-banner">
-                                                    <h2>THE PRIVIA</h2>
+                                                    <h2>
+                                                        <?php
+                                                        echo $value['name'];
+                                                        ?>
+                                                    </h2>
                                                 </div>
-                                                <p>The Privia là dự án căn hộ chung cư cao cấp được đầu tư bởi nhà phát
-                                                    triển LINGO GROUP hàng đầu Việt Nam – Khang Điền Home. The Privia được
-                                                    tọa lạc ngay tại trái tim của  khu Tây Sài Gòn. Với việc sở hữu được
-                                                    vị trí vô cùng đắc địa mặt tiền đường An Dươn</p>
+                                                <?php
+                                                echo $value['description'];
+                                                ?>
                                                 <div class="wrap-view-details">
                                                     <a href="/du-an/detail-du-an.php"
                                                         class="view-details link-load" aria-label="link">
@@ -533,7 +578,7 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                     </div> -->
 
                                     <?php
-                                    foreach ($list_blog as $key => $value) {
+                                    foreach ($data_project as $key => $value) {
                                     ?>
                                         <div class="item-project-home slidebox-item">
                                             <span class="logo-pro-home">
@@ -545,28 +590,37 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                                 <div class="text-project-home">
                                                     <div class="title-post">
                                                         <h3>
-                                                            <?php echo $value['tieude_blog'] ?>
+                                                            <?php echo $value['headline'] ?>
                                                         </h3>
-                                                        <p>
-                                                            The Privia là dự án căn hộ chung cư cao cấp được đầu tư bởi nhà
-                                                            phát triển LINGO GROUP hàng đầu Việt Nam – Khang Điền Home. The
-                                                            Privia được tọa lạc ngay tại trái tim của  khu Tây Sài Gòn. Với
-                                                            việc sở
-                                                            hữu được vị trí vô cùng đắc địa mặt tiền đường An Dương Vương,
-                                                            An Lạc, Bình Tân, Thành phố Hồ Chí Minh. The Privia Khang Điền
-                                                            hiện đang được đánh giá là dự án LINGO GROUP cao cấp nhất tại
-                                                            khu vực
-                                                            phía Tây Sài Gòn.
-                                                        </p>
+                                                        <?php echo $value['description'] ?>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="pic-project-home custom-cursor">
-                                                <div class="pic-img"><img
-                                                        src="/banner/du-an-the-privia-khang-dien-binh-tan.jpg"
-                                                        data-src="/banner/du-an-the-privia-khang-dien-binh-tan.jpg"
-                                                        alt="THE PRIVIA" class="lazy"></div><a class="link-load"
-                                                    href="/du-an/detail-du-an.php"></a>
+                                                <div class="pic-img">
+                                                    <img src="
+                                                <?php
+                                                echo $url_be, $value['banner'];
+                                                ?>
+                                                "
+                                                        data-src="
+                                                <?php
+                                                echo $url_be, $value['banner'];
+                                                ?>
+                                                "
+
+                                                        alt="
+                                                    <?php
+                                                    echo $value['headline'];
+                                                    ?>
+                                                "
+                                                        class="lazy" />
+                                                </div>
+
+                                                <a class="link-load"
+                                                    href="/du-an/detail-du-an.php">
+                                                </a>
+
                                             </div>
                                         </div>
                                     <?php } ?>
@@ -619,18 +673,33 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                     </div>
                                 </div> -->
                                 <?php
-                                foreach ($list_blog as $key => $value) {
+                                foreach ($data_blog as $key => $value) {
                                 ?>
                                     <div class="item-news-home">
                                         <div class="pic-news-home">
-                                            <div class="pic-img"><img src="/banner/1920x960.png"
-                                                    data-src="/banner/1920x960.png"
-                                                    alt="“CHÀO HÈ RỰC RỠ - BỨT PHÁ THÀNH CÔNG” – HÀNH TRÌNH KHÔNG THỂ NÀO QUÊN CỦA SENGROUP TẠI PHAN THIẾT"
-                                                    class="lazy"></div>
+                                            <div class="pic-img">
+                                                <img src="
+                                                <?php
+                                                echo $url_be, $value['image'];
+                                                ?>
+                                                "
+                                                    data-src="
+                                                <?php
+                                                echo $url_be, $value['image'];
+                                                ?>
+                                                "
+
+                                                    alt="
+                                                    <?php
+                                                    echo $value['headline'];
+                                                    ?>
+                                                "
+                                                    class="lazy" />
+                                            </div>
                                         </div>
                                         <div class="txt-news-home">
                                             <h3>
-                                                <?php echo $value['tieude_blog'] ?>
+                                                <?php echo $value['headline'] ?>
                                             </h3>
                                             <div class="wrap-view-details">
                                                 <a href="/tin-tuc/detail-tintuc.php"

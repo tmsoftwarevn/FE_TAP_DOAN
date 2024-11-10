@@ -1391,9 +1391,11 @@
     }
     .go-top:hover {
         color: var(--color-white)
+        
     }
     .go-top:hover::after {
-        background-color: var(--coloractive);
+        /* background-color: var(--coloractive); */
+        background-color: rgb(235, 191, 34);
         border-radius: 7px
     }
     .sub-but::after {
