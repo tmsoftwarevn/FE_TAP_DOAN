@@ -1194,8 +1194,12 @@ li::marker {
 
 .nav-item.active-color a,
 .nav-item.current a {
-    color: var(--coloractive);
+    /* color: var(--coloractive); */
+    color: #0077bf;
     font-weight: 600
+}
+.nav-item a:hover{
+    color: #0077bf !important;
 }
 
 .navigation.show {
