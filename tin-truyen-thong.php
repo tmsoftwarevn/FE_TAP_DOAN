@@ -1,3 +1,10 @@
+<?php
+require_once "setting-all-file.php";
+
+
+
+?>
+
 <!DOCTYPE HTML>
 <html lang="vi">
 
@@ -31,6 +38,8 @@
 
     <link href="/truyen-thong.php" rel="canonical">
     <meta property="og:url" content="/truyen-thong.php">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.0.0/css/flag-icons.min.css" />
 
     <link rel="stylesheet" href="/css/main.css">
     <script src="https://cdn.tailwindcss.com"></script>

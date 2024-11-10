@@ -1,5 +1,24 @@
 <?php
-    $list_blog = $blog::get_all_blog();
+require_once "setting-all-file.php";
+
+$list_blog = [];
+$data_banner = [];
+
+$apiUrl = "https://belingo.tmsoftware.vn/api/project/getlistcategory?api_key=8AF1apnMW2A39Ip7LUFtNstE5RjYleghk";
+
+// Fetch data from the API
+$response = file_get_contents($apiUrl);
+$data = json_decode($response, true); // Decode the JSON data
+
+// Check if data was retrieved successfully
+if ($data && $data['status'] === true && isset($data['data'])) {
+    $data_banner = $data['data'];
+    // echo 'llllll';
+    // print_r($list_blog);
+} else {
+    echo "Error fetching data or no data available.";
+}
+
 ?>
 
 <!DOCTYPE HTML>
@@ -106,7 +125,7 @@
                         <div class="slide-background" data-time="10000">
                             <div class="slidebox-track"><span class="color-overlay"></span>
                                 <div class="slidebox-list">
-                                    <div class="bg slidebox-item">
+                                    <!-- <div class="bg slidebox-item">
                                         <div class="bg-cover">
                                             <img src="banner/du-an-the-privia-khang-dien-binh-tan.jpg"
                                                 data-src="banner/du-an-the-privia-khang-dien-binh-tan.jpg"
@@ -117,7 +136,7 @@
                                                 <h2>THE PRIVIA</h2>
                                             </div>
                                             <p>The Privia là dự án căn hộ chung cư cao cấp được đầu tư bởi nhà phát
-                                                triển bất động sản hàng đầu Việt Nam – Khang Điền Home. The Privia được
+                                                triển LINGO GROUP hàng đầu Việt Nam – Khang Điền Home. The Privia được
                                                 tọa lạc ngay tại trái tim của  khu Tây Sài Gòn. Với việc sở hữu được
                                                 vị trí vô cùng đắc địa mặt tiền đường An Dươn</p>
                                             <div class="wrap-view-details">
@@ -140,62 +159,46 @@
                                                 </a>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="bg slidebox-item">
-                                        <div class="bg-cover"><img src="banner/1920x960.png"
-                                                data-src="banner/1920x960.png" alt="Picity Sky Park" class="lazy"></div>
-                                        <div class="text-banner">
-                                            <div class="title-banner">
-                                                <h2>Picity Sky Park</h2>
+                                    </div> -->
+                                    <?php
+                                    foreach ($data_banner as $key => $value) {
+                                    ?>
+                                        <div class="bg slidebox-item">
+                                            <div class="bg-cover">
+                                                <img src="banner/du-an-the-privia-khang-dien-binh-tan.jpg"
+                                                    data-src="banner/du-an-the-privia-khang-dien-binh-tan.jpg"
+                                                    alt="THE PRIVIA" class="lazy" />
                                             </div>
-                                            <p>Picity Sky Park là sản phẩm tiếp theo của chủ đầu tư Pi Group sau khi
-                                                thành công vang dội dự án Picity High Park. Quan điểm của chủ đầu tư
-                                                luôn thiết kế căn hộ với nhiều mảng xanh, thoáng &amp; môi trường sống
-                                                trong lành cho cư dân. Tọa lạc trung tâm TP. </p>
-                                            <div class="wrap-view-details">
-                                                <a href="/du-an/detail-du-an.php"
-                                                    class="view-details link-load" aria-label="link">
-                                                    <span
-                                                        class="small-logo-ico">
-                                                        <?php include "component/logoLoading.php" ?>
-                                                        <span class="rotate-logo">
-                                                            <svg>
-                                                                <use xlink:href="#ico-view-details-rotate"></use>
-                                                            </svg>
+                                            <div class="text-banner">
+                                                <div class="title-banner">
+                                                    <h2>THE PRIVIA</h2>
+                                                </div>
+                                                <p>The Privia là dự án căn hộ chung cư cao cấp được đầu tư bởi nhà phát
+                                                    triển LINGO GROUP hàng đầu Việt Nam – Khang Điền Home. The Privia được
+                                                    tọa lạc ngay tại trái tim của  khu Tây Sài Gòn. Với việc sở hữu được
+                                                    vị trí vô cùng đắc địa mặt tiền đường An Dươn</p>
+                                                <div class="wrap-view-details">
+                                                    <a href="/du-an/detail-du-an.php"
+                                                        class="view-details link-load" aria-label="link">
+                                                        <span
+                                                            class="small-logo-ico">
+                                                            <?php include "component/logoLoading.php" ?>
+                                                            <span class="rotate-logo">
+                                                                <svg>
+                                                                    <use xlink:href="#ico-view-details-rotate"></use>
+                                                                </svg>
+                                                            </span>
                                                         </span>
-                                                    </span>
-                                                    Xem dự án
-                                                    <svg
-                                                        class="viewdetails-svg">
-                                                        <use xlink:href="#arrow"></use>
-                                                    </svg>
-                                                </a>
+                                                        Xem dự án
+                                                        <svg
+                                                            class="viewdetails-svg">
+                                                            <use xlink:href="#arrow"></use>
+                                                        </svg>
+                                                    </a>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="bg slidebox-item">
-                                        <div class="bg-cover"><img src="/banner/TGC20.jpg" data-src="/banner/TGC20.jpg"
-                                                alt="THE GLOBAL CITY" class="lazy"></div>
-                                        <div class="text-banner">
-                                            <div class="title-banner">
-                                                <h2>THE GLOBAL CITY</h2>
-                                            </div>
-                                            <p>The Global City là dự án khu đô thị do Masterise Homes phát triển có quy
-                                                mô 117,4ha tọa lạc tại đường Đỗ Xuân Hợp, phường An Phú, TP Thủ Đức, TP
-                                                HCM.</p>
-                                            <div class="wrap-view-details"><a
-                                                    href="/cong-ty-thanh-vien/sen-real/the-global-city.html"
-                                                    class="view-details link-load" aria-label="link"><span
-                                                        class="small-logo-ico"><svg>
-                                                            <use xlink:href="#ico-view-details-logo"></use>
-                                                        </svg> <span class="rotate-logo"><svg>
-                                                                <use xlink:href="#ico-view-details-rotate"></use>
-                                                            </svg> </span></span> Xem dự án <svg
-                                                        class="viewdetails-svg">
-                                                        <use xlink:href="#arrow"></use>
-                                                    </svg></a></div>
-                                        </div>
-                                    </div>
+                                    <?php } ?>
 
                                 </div>
                             </div>
@@ -319,7 +322,7 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                         </svg>
                                     </div>
                                     <a href="/cong-ty-thanh-vien/sen-healthcare.html" class="link-load"
-                                        aria-label="Chăm Sóc Sức Khoẻ">
+                                        aria-label="ĐÀO TẠO NGÔN NGỮ">
                                     </a>
                                     <span class="logo-bus-home">
 
@@ -346,7 +349,7 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                                 d="M46.3,97.3L2.7,53.7c-2.1-2.1-2.1-5.4,0-7.5L46.3,2.7c2.1-2.1,5.4-2.1,7.5,0l43.5,43.5c2.1,2.1,2.1,5.4,0,7.5L53.7,97.3C51.7,99.3,48.3,99.3,46.3,97.3z">
                                         </svg></div>
                                     <a href="/cong-ty-thanh-vien/sen-mining.html" class="link-load"
-                                        aria-label="Khai Thác Khoảng Sản">
+                                        aria-label="DU HỌC">
                                     </a>
                                     <span class="logo-bus-home">
 
@@ -373,7 +376,7 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                                 d="M46.3,97.3L2.7,53.7c-2.1-2.1-2.1-5.4,0-7.5L46.3,2.7c2.1-2.1,5.4-2.1,7.5,0l43.5,43.5c2.1,2.1,2.1,5.4,0,7.5L53.7,97.3C51.7,99.3,48.3,99.3,46.3,97.3z">
                                         </svg></div>
                                     <a href="/cong-ty-thanh-vien/sen-construction.html" class="link-load"
-                                        aria-label="Xây Dựng"></a>
+                                        aria-label="XUẤT KHẨU LAO ĐỘNG"></a>
                                     <span class="logo-bus-home">
 
                                         <img src="/images/logo2.png" class="w-[55px] h-auto rounded-full object-contain" />
@@ -399,7 +402,7 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                                 d="M46.3,97.3L2.7,53.7c-2.1-2.1-2.1-5.4,0-7.5L46.3,2.7c2.1-2.1,5.4-2.1,7.5,0l43.5,43.5c2.1,2.1,2.1,5.4,0,7.5L53.7,97.3C51.7,99.3,48.3,99.3,46.3,97.3z">
                                         </svg></div>
                                     <a href="/cong-ty-thanh-vien/sen-resort.html" class="link-load"
-                                        aria-label="Du lịch"></a>
+                                        aria-label="KỸ NĂNG SỐNG"></a>
                                     <span class="logo-bus-home">
 
                                         <img src="/images/logo2.png" class="w-[55px] h-auto rounded-full object-contain" />
@@ -425,7 +428,7 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                                 d="M46.3,97.3L2.7,53.7c-2.1-2.1-2.1-5.4,0-7.5L46.3,2.7c2.1-2.1,5.4-2.1,7.5,0l43.5,43.5c2.1,2.1,2.1,5.4,0,7.5L53.7,97.3C51.7,99.3,48.3,99.3,46.3,97.3z">
                                         </svg></div>
                                     <a href="/cong-ty-thanh-vien/sen-real.html" class="link-load"
-                                        aria-label="Bất động sản"></a>
+                                        aria-label="LINGO GROUP"></a>
                                     <span class="logo-bus-home">
 
                                         <img src="/images/logo2.png" class="w-[55px] h-auto rounded-full object-contain" />
@@ -436,7 +439,7 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                             <div class="all-tab-content all-tab-bus">
                                 <div class="tab-content" data-tab="business-02">
                                     <div class="content-bus-tab-home">
-                                        <h3 class="!text-blue-500">Chăm Sóc Sức Khoẻ</h3>
+                                        <h3 class="!text-blue-500">ĐÀO TẠO NGÔN NGỮ</h3>
                                         <div class="content color-white content-collapse">
                                             <p>Sứ mệnh &quot;Vì một Việt Nam khỏe đẹp&quot; SEN HEALTHCARE mong muốn góp
                                                 một phần vào chăm sóc sức khỏe cộng đồng và trở thành một hệ sinh thái
@@ -447,7 +450,7 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                 </div>
                                 <div class="tab-content" data-tab="business-05">
                                     <div class="content-bus-tab-home">
-                                        <h3 class="!text-blue-500">Khai Thác Khoảng Sản</h3>
+                                        <h3 class="!text-blue-500">DU HỌC</h3>
                                         <div class="content color-white content-collapse">
                                             <p>SEN MINING là lĩnh vực mũi nhọn nằm trong kế hoạch phát triển tương lai
                                                 gần của LINGO GROUP.</p>
@@ -457,9 +460,9 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                 </div>
                                 <div class="tab-content" data-tab="business-03">
                                     <div class="content-bus-tab-home">
-                                        <h3 class="!text-blue-500">Xây Dựng</h3>
+                                        <h3 class="!text-blue-500">XUẤT KHẨU LAO ĐỘNG</h3>
                                         <div class="content color-white content-collapse">
-                                            <p>SEN CONSTRUCTION tập trung lĩnh vực đầu tư, thiết kế và xây dựng công
+                                            <p>SEN CONSTRUCTION tập trung lĩnh vực đầu tư, thiết kế và XUẤT KHẨU LAO ĐỘNG công
                                                 trình là một mắt xích quan trọng trong hệ sinh thái của Tập đoàn SEN
                                                 GROUP.</p>
                                         </div>
@@ -468,17 +471,17 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                 </div>
                                 <div class="tab-content" data-tab="business-04">
                                     <div class="content-bus-tab-home">
-                                        <h3 class="!text-blue-500">Du lịch</h3>
+                                        <h3 class="!text-blue-500">KỸ NĂNG SỐNG</h3>
                                         <div class="content color-white content-collapse">
                                             <p>SEN RESORT kết hợp cùng tập đoàn chuyên nghiệp nước ngoài để vận hành và
-                                                quản lý các chuỗi du lịch, chăm sóc sức khỏe.</p>
+                                                quản lý các chuỗi KỸ NĂNG SỐNG, chăm sóc sức khỏe.</p>
                                         </div>
                                         <div class="nav-drop"></div>
                                     </div>
                                 </div>
                                 <div class="tab-content" data-tab="business-01">
                                     <div class="content-bus-tab-home">
-                                        <h3 class="!text-blue-500">Bất động sản</h3>
+                                        <h3 class="!text-blue-500">LINGO GROUP</h3>
                                         <div class="content color-white content-collapse">
                                             <p>SEN REAL đã phát triển nhiều dự án BĐS nghỉ dưỡng cao cấp, gây tiếng vang
                                                 lớn.</p>
@@ -498,7 +501,7 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                         <div class="slide-project dark-pagi">
                             <div class="slidebox-track">
                                 <div class="slidebox-list">
-                                    <div class="item-project-home slidebox-item">
+                                    <!-- <div class="item-project-home slidebox-item">
                                         <span class="logo-pro-home">
 
                                             <img src="/images/logo2.png" class="w-[55px] h-auto rounded-full object-contain" />
@@ -509,12 +512,12 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                                 <div class="title-post">
                                                     <h3>THE PRIVIA</h3>
                                                     <p>The Privia là dự án căn hộ chung cư cao cấp được đầu tư bởi nhà
-                                                        phát triển bất động sản hàng đầu Việt Nam – Khang Điền Home. The
+                                                        phát triển LINGO GROUP hàng đầu Việt Nam – Khang Điền Home. The
                                                         Privia được tọa lạc ngay tại trái tim của  khu Tây Sài Gòn. Với
                                                         việc sở
                                                         hữu được vị trí vô cùng đắc địa mặt tiền đường An Dương Vương,
                                                         An Lạc, Bình Tân, Thành phố Hồ Chí Minh. The Privia Khang Điền
-                                                        hiện đang được đánh giá là dự án bất động sản cao cấp nhất tại
+                                                        hiện đang được đánh giá là dự án LINGO GROUP cao cấp nhất tại
                                                         khu vực
                                                         phía Tây Sài Gòn.</p>
                                                 </div>
@@ -527,117 +530,46 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                                     alt="THE PRIVIA" class="lazy"></div><a class="link-load"
                                                 href="/du-an/detail-du-an.php"></a>
                                         </div>
-                                    </div>
-                                    <div class="item-project-home slidebox-item">
-                                        <span class="logo-pro-home">
+                                    </div> -->
 
-                                            <img src="/images/logo2.png" class="w-[55px] h-auto rounded-full object-contain" />
+                                    <?php
+                                    foreach ($list_blog as $key => $value) {
+                                    ?>
+                                        <div class="item-project-home slidebox-item">
+                                            <span class="logo-pro-home">
 
-                                        </span>
-                                        <div class="wrap-text-pro-home">
-                                            <div class="text-project-home">
-                                                <div class="title-post">
-                                                    <h3>PICITY SKY PARK</h3>
-                                                    <p>Picity Sky Park là sản phẩm tiếp theo của chủ đầu tư Pi Group sau
-                                                        khi thành công vang dội dự án Picity High Park. Quan điểm của
-                                                        chủ đầu tư luôn thiết kế căn hộ với nhiều mảng xanh, thoáng
-                                                        &amp; môi trường
-                                                        sống trong lành cho cư dân. Tọa lạc trung tâm TP. Dĩ An kết nối
-                                                        thuận tiện với trục Phạm Văn Đồng dự án sẽ thu hút nhiều khách
-                                                        hàng đầu tư khi tung ra thị trường. Dự án có mật độ xây dựng chỉ
-                                                        52%
-                                                        còn lại 47% là tiện ích lại gần trục Phạm Văn Đồng thu hút cực
-                                                        lớn lượng khách đầu tư đến dự án.</p>
+                                                <img src="/images/logo2.png" class="w-[55px] h-auto rounded-full object-contain" />
+
+                                            </span>
+                                            <div class="wrap-text-pro-home">
+                                                <div class="text-project-home">
+                                                    <div class="title-post">
+                                                        <h3>
+                                                            <?php echo $value['tieude_blog'] ?>
+                                                        </h3>
+                                                        <p>
+                                                            The Privia là dự án căn hộ chung cư cao cấp được đầu tư bởi nhà
+                                                            phát triển LINGO GROUP hàng đầu Việt Nam – Khang Điền Home. The
+                                                            Privia được tọa lạc ngay tại trái tim của  khu Tây Sài Gòn. Với
+                                                            việc sở
+                                                            hữu được vị trí vô cùng đắc địa mặt tiền đường An Dương Vương,
+                                                            An Lạc, Bình Tân, Thành phố Hồ Chí Minh. The Privia Khang Điền
+                                                            hiện đang được đánh giá là dự án LINGO GROUP cao cấp nhất tại
+                                                            khu vực
+                                                            phía Tây Sài Gòn.
+                                                        </p>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="pic-project-home custom-cursor">
-                                            <div class="pic-img"><img src="/banner/1920x960.png"
-                                                    data-src="/banner/1920x960.png" alt="PICITY SKY PARK" class="lazy">
-                                            </div>
-                                            <a class="link-load"
-                                                href="/cong-ty-thanh-vien/sen-real/picity-sky-park.html"></a>
-                                        </div>
-                                    </div>
-                                    <div class="item-project-home slidebox-item">
-                                        <span class="logo-pro-home">
-
-                                            <img src="/images/logo2.png" class="w-[55px] h-auto rounded-full object-contain" />
-
-                                        </span>
-                                        <div class="wrap-text-pro-home">
-                                            <div class="text-project-home">
-                                                <div class="title-post">
-                                                    <h3>The Global City</h3>
-                                                    <p>KHU ĐÔ THỊ PHỨC HỢP CHUẨN QUỐC TẾ <br /> &quot;DOWNTOWN&quot; MỚI
-                                                        CỦA TP. HỒ CHÍ MINH<br />
-                                                        <br /> THE GLOBAL CITY là Khu đô thị phức hợp chuẩn quốc tế đầu
-                                                        tiên tại Việt Nam được thiết kế và quy hoạch bởi Công ty kiến
-                                                        trúc hàng đầu thế giới đến từ Anh Quốc Foster + Partners.
-                                                    </p>
-                                                </div>
+                                            <div class="pic-project-home custom-cursor">
+                                                <div class="pic-img"><img
+                                                        src="/banner/du-an-the-privia-khang-dien-binh-tan.jpg"
+                                                        data-src="/banner/du-an-the-privia-khang-dien-binh-tan.jpg"
+                                                        alt="THE PRIVIA" class="lazy"></div><a class="link-load"
+                                                    href="/du-an/detail-du-an.php"></a>
                                             </div>
                                         </div>
-                                        <div class="pic-project-home custom-cursor">
-                                            <div class="pic-img"><img src="/banner/TGC20.jpg"
-                                                    data-src="/banner/TGC20.jpg" alt="The Global City" class="lazy">
-                                            </div><a class="link-load"
-                                                href="/cong-ty-thanh-vien/sen-real/the-global-city.html"></a>
-                                        </div>
-                                    </div>
-                                    <div class="item-project-home slidebox-item">
-                                        <span class="logo-pro-home">
-
-                                            <img src="/images/logo2.png" class="w-[55px] h-auto rounded-full object-contain" />
-
-                                        </span>
-                                        <div class="wrap-text-pro-home">
-                                            <div class="text-project-home">
-                                                <div class="title-post">
-                                                    <h3>GLORY HEIGHTS</h3>
-                                                    <p>Dự án Glory Heights Vinhomes sát ngay Vincom Mega Mall là phân
-                                                        khu trung tâm đại đô thị Vinhome Grand Park chính thức mở bán,
-                                                        sở hữu vị trí trung tâm, tiện ích cao cấp 5 sao, chính sách hỗ
-                                                        trợ 0% lãi
-                                                        suất lên đến 7 năm, dự án đã và đang đón nhận nhiều sự quan tâm
-                                                        của quý khách hàng.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="pic-project-home custom-cursor">
-                                            <div class="pic-img"><img src="/banner/TGC20.jpg"
-                                                    data-src="/banner/TGC20.jpg" alt="GLORY HEIGHTS" class="lazy"></div>
-                                            <a class="link-load"
-                                                href="/cong-ty-thanh-vien/sen-real/glory-heights.html"></a>
-                                        </div>
-                                    </div>
-                                    <div class="item-project-home slidebox-item">
-                                        <span class="logo-pro-home">
-
-                                            <img src="/images/logo2.png" class="w-[55px] h-auto rounded-full object-contain" />
-
-                                        </span>
-                                        <div class="wrap-text-pro-home">
-                                            <div class="text-project-home">
-                                                <div class="title-post">
-                                                    <h3>PHÚ ĐÔNG SKY GARDEN</h3>
-                                                    <p>Phú Đông Sky Garden Dĩ An là dự án căn hộ chung cư cao cấp, có hệ
-                                                        thống tiện ích siêu thị, dịch vụ, giải trí đầy đủ cho cư dân căn
-                                                        hộ chung cư chỉ cách 100m với đường Phạm Văn Đồng, Thủ Đức,
-                                                        chung cư đã
-                                                        triển khai bán hàng. Hiện tại giá bán căn hộ Phú Đông Sky
-                                                        Garden tháng 01/2023 từ 38 – 40 triệu/m2. Pháp lý dự án đac có
-                                                        GPXD và nghiệm thu móng.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="pic-project-home custom-cursor">
-                                            <div class="pic-img"><img src="/banner/1920x960.png"
-                                                    data-src="/banner/1920x960.png" alt="PHÚ ĐÔNG SKY GARDEN"
-                                                    class="lazy"></div><a class="link-load"
-                                                href="/cong-ty-thanh-vien/sen-real/phu-dong-sky-garden.html"></a>
-                                        </div>
-                                    </div>
+                                    <?php } ?>
                                 </div>
                             </div>
                         </div>
@@ -656,7 +588,7 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                         </div>
                         <div class="right-content">
                             <div class="news-list-home ani-item">
-                                <div class="item-news-home">
+                                <!-- <div class="item-news-home">
                                     <div class="pic-news-home">
                                         <div class="pic-img"><img src="/banner/1920x960.png"
                                                 data-src="/banner/1920x960.png"
@@ -685,87 +617,42 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                             </a>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="item-news-home">
-                                    <div class="pic-news-home">
-                                        <div class="pic-img"><img src="/banner/1920x960.png"
-                                                data-src="/banner/1920x960.png"
-                                                alt="LỄ KÝ KẾT HỢP TÁC PHÂN PHỐI ĐỘC QUYỀN DỰ ÁN THE EMERALD GOLF VIEW"
-                                                class="lazy"></div>
-                                    </div>
-                                    <div class="txt-news-home">
-                                        <h3>LỄ KÝ KẾT HỢP TÁC PHÂN PHỐI ĐỘC QUYỀN DỰ ÁN THE EMERALD GOLF VIEW</h3>
-                                        <div class="wrap-view-details">
-                                            <a href="/tin-tuc/detail-tintuc.php"
-                                                class="view-details dark link-load" aria-label="link">
-                                                <span
-                                                    class="small-logo-ico">
-                                                    <?php include "component/logoLoading.php" ?>
-                                                    <span class="rotate-logo">
-                                                        <svg>
-                                                            <use xlink:href="#ico-view-details-rotate"></use>
-                                                        </svg>
+                                </div> -->
+                                <?php
+                                foreach ($list_blog as $key => $value) {
+                                ?>
+                                    <div class="item-news-home">
+                                        <div class="pic-news-home">
+                                            <div class="pic-img"><img src="/banner/1920x960.png"
+                                                    data-src="/banner/1920x960.png"
+                                                    alt="“CHÀO HÈ RỰC RỠ - BỨT PHÁ THÀNH CÔNG” – HÀNH TRÌNH KHÔNG THỂ NÀO QUÊN CỦA SENGROUP TẠI PHAN THIẾT"
+                                                    class="lazy"></div>
+                                        </div>
+                                        <div class="txt-news-home">
+                                            <h3>
+                                                <?php echo $value['tieude_blog'] ?>
+                                            </h3>
+                                            <div class="wrap-view-details">
+                                                <a href="/tin-tuc/detail-tintuc.php"
+                                                    class="view-details dark link-load" aria-label="link">
+                                                    <span
+                                                        class="small-logo-ico">
+                                                        <?php include "component/logoLoading.php" ?>
+                                                        <span class="rotate-logo">
+                                                            <svg>
+                                                                <use xlink:href="#ico-view-details-rotate"></use>
+                                                            </svg>
+                                                        </span>
                                                     </span>
-                                                </span>
-                                                XEM TIN
-                                                <svg class="viewdetails-svg">
-                                                    <use xlink:href="#arrow"></use>
-                                                </svg>
-                                            </a>
+                                                    XEM TIN
+                                                    <svg class="viewdetails-svg">
+                                                        <use xlink:href="#arrow"></use>
+                                                    </svg>
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="item-news-home">
-                                    <div class="pic-news-home">
-                                        <div class="pic-img"><img src="/catalog/view/images/bg_temp.jpg"
-                                                data-src="/catalog/view/images/bg_temp.jpg"
-                                                alt="CHÍNH THỨC KHAI TRƯƠNG VĂN PHÒNG BÁN HÀNG DỰ ÁN THE EMERALD GOLF VIEW – CHI NHÁNH BÌNH DƯƠNG THUỘC TẬP ĐOÀN LINGO GROUP"
-                                                class="lazy"></div>
-                                    </div>
-                                    <div class="txt-news-home">
-                                        <h3>CHÍNH THỨC KHAI TRƯƠNG VĂN PHÒNG BÁN HÀNG DỰ ÁN THE EMERALD GOLF VIEW – CHI
-                                            NHÁNH BÌNH DƯƠNG THUỘC TẬP ĐOÀN LINGO GROUP</h3>
-                                        <div class="wrap-view-details">
-                                            <a href="/tin-tuc/detail-tintuc.php"
-                                                class="view-details dark link-load" aria-label="link">
-                                                <span
-                                                    class="small-logo-ico">
-                                                    <?php include "component/logoLoading.php" ?>
-                                                    <span class="rotate-logo">
-                                                        <svg>
-                                                            <use xlink:href="#ico-view-details-rotate"></use>
-                                                        </svg>
-                                                    </span>
-                                                </span>
-                                                XEM TIN
-                                                <svg class="viewdetails-svg">
-                                                    <use xlink:href="#arrow"></use>
-                                                </svg>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item-news-home">
-                                    <div class="pic-news-home">
-                                        <div class="pic-img"><img src="/banner/1920x960.png"
-                                                data-src="/banner/1920x960.png"
-                                                alt="“DỊCH VỤ TỪ TÂM” SUN GROUP CHÌA KHÓA CHĂM SÓC KHÁCH HÀNG THÀNH CÔNG"
-                                                class="lazy"></div>
-                                    </div>
-                                    <div class="txt-news-home">
-                                        <h3>“DỊCH VỤ TỪ TÂM” SUN GROUP CHÌA KHÓA CHĂM SÓC KHÁCH HÀNG THÀNH CÔNG</h3>
-                                        <div class="wrap-view-details"><a
-                                                href="/hoat-dong-tieu-bieu/sen-real/dich-vu-tu-tam-sun-group-chia-khoa-cham-soc-khach-hang-thanh-cong.html"
-                                                class="view-details dark link-load" aria-label="link"><span
-                                                    class="small-logo-ico"><svg>
-                                                        <use xlink:href="#ico-view-details-logo"></use>
-                                                    </svg> <span class="rotate-logo"><svg>
-                                                            <use xlink:href="#ico-view-details-rotate"></use>
-                                                        </svg> </span></span> XEM TIN <svg class="viewdetails-svg">
-                                                    <use xlink:href="#arrow"></use>
-                                                </svg></a></div>
-                                    </div>
-                                </div>
+                                <?php } ?>
                             </div>
                         </div>
                         <div class="wrap-view-details big-view">

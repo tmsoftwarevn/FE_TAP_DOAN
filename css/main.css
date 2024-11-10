@@ -3332,7 +3332,7 @@ html[lang=vi] .draw-vi {
     stroke: var(--coloractive);
     stroke-width: .4px;
     /* fill: var(--coloractive); */
-    fill: rgb(38, 38, 249);
+    fill: #0077bf;
     fill-opacity: 0;
     z-index: 2
 }
