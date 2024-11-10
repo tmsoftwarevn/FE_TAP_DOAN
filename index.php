@@ -312,7 +312,7 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                                 </clipPath>
                                             </defs>
                                             <image clip-path="url(#maskID0)" width="100" height="100"
-                                                xlink:href="/pictures/catalog/home/home-business/03.jpg">
+                                                xlink:href="/pictures/catalog/home/home-business/Dao-Tao-Ngon-ngu.jpg">
                                             </image>
                                         </svg>
                                         <svg class="svg-stroke" xmlns="https://www.w3.org/2000/svg"
@@ -341,7 +341,7 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                                 </clipPath>
                                             </defs>
                                             <image clip-path="url(#maskID1)" width="100" height="100"
-                                                xlink:href="/pictures/catalog/home/home-business/03.jpg">
+                                                xlink:href="/pictures/catalog/home/home-business/du-hoc.jpg">
                                             </image>
                                         </svg> <svg class="svg-stroke" xmlns="https://www.w3.org/2000/svg"
                                             viewBox="0 0 100 100">
@@ -368,7 +368,7 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                                 </clipPath>
                                             </defs>
                                             <image clip-path="url(#maskID2)" width="100" height="100"
-                                                xlink:href="/pictures/catalog/home/home-business/03.jpg">
+                                                xlink:href="/pictures/catalog/home/home-business/xuat-khau-lao-dong.jpg">
                                             </image>
                                         </svg> <svg class="svg-stroke" xmlns="https://www.w3.org/2000/svg"
                                             viewBox="0 0 100 100">
@@ -394,7 +394,7 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                                 </clipPath>
                                             </defs>
                                             <image clip-path="url(#maskID3)" width="100" height="100"
-                                                xlink:href="/pictures/catalog/home/home-business/04.jpg">
+                                                xlink:href="/pictures/catalog/home/home-business/ky-nang-song.jpg">
                                             </image>
                                         </svg> <svg class="svg-stroke" xmlns="https://www.w3.org/2000/svg"
                                             viewBox="0 0 100 100">
@@ -420,7 +420,7 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                                 </clipPath>
                                             </defs>
                                             <image clip-path="url(#maskID4)" width="100" height="100"
-                                                xlink:href="/pictures/catalog/home/home-business/02.jpg">
+                                                xlink:href="/pictures/catalog/home/home-business/lingo-connecto.jpg">
                                             </image>
                                         </svg> <svg class="svg-stroke" xmlns="https://www.w3.org/2000/svg"
                                             viewBox="0 0 100 100">

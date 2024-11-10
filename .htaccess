@@ -12,9 +12,8 @@
 # RewriteRule ^linh-vuc-hoat-dong linh-vuc-hoat-dong.php [QSA]
 # RewriteRule ^lien-he lien-he.php [QSA]
 
-RewriteEngine On
+# RewriteEngine On
 
-# Rewrite rules to remove .php extension from URLs
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME}.php -f
-RewriteRule ^(.*)$ $1.php [L]
+# RewriteCond %{REQUEST_FILENAME} !-d
+# RewriteCond %{REQUEST_FILENAME}.php -f
+# RewriteRule ^(.*)$ $1.php [L]
