@@ -1,4 +1,5 @@
 <?php
+require_once "../setting-all-file.php";
 
 $data_project = [];
 
@@ -27,7 +28,7 @@ if ($data && $data['status'] === true && isset($data['data'])) {
     }
 </script>
 <div class="title-main color-blue text-center title-underline bold-medium">
-    <h2 class="text-ani-item">TIN TỨC</h2>
+    <h2 class="text-ani-item"><?= __('Tin tức') ?></h2>
 </div>
 <div class="news-list">
     <?php

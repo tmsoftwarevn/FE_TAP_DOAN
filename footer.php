@@ -13,7 +13,7 @@
                 </div>
                 <div class="company-info ani-item">
                     <div class="title-small color-white">
-                        <div class="title-sp">Trụ sở chính</div>
+                        <div class="title-sp"><?= __('Trụ sở chính') ?></div>
                     </div>
                     <ul>
                         <li class="company-address"><span class="address !text-blue-500"><svg>
@@ -40,7 +40,7 @@
             </div>
             <div class="subscribe subscribe-footer ani-item">
                 <div class="title-small">
-                    <div class="title-sp">Đăng ký nhận tin</div>
+                    <div class="title-sp"><?= __('Đăng ký nhận tin') ?></div>
                 </div>
                 <form onsubmit="return false;" id="subscribe" name="subscribe" method="post">
                     <div class="input-text"><span class="holder">Email</span><input type="text"

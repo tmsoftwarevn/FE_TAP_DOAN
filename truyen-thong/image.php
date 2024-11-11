@@ -1,3 +1,25 @@
+<?php
+require_once "../setting-all-file.php";
+
+$data_project = [];
+
+$url_be = 'https://belingo.tmsoftware.vn';
+// call project
+$apiUrl_project = $url_be . '/api/gallery/getlistgallery?api_key=8AF1apnMW2A39Ip7LUFtNstE5RjYleghk';
+$response_project = file_get_contents($apiUrl_project);
+$data = json_decode($response_project, true); // Decode the JSON data
+
+if ($data && $data['status'] === true && isset($data['data'])) {
+    $data_project = $data['data'];
+    // echo 'llllll';
+    // print_r($data_project);
+} else {
+    echo "Error fetching data or no data available.";
+}
+
+?>
+
+
 <script>
     // Check if the page was loaded due to a refresh
     if (performance.navigation.type === performance.navigation.TYPE_RELOAD) {
@@ -7,14 +29,14 @@
 </script>
 
 <div class="title-main color-blue text-center title-underline bold-medium">
-    <h2 class="text-ani-item">HÌNH ẢNH</h2>
+    <h2 class="text-ani-item"><?= __('Hình ảnh') ?></h2>
 </div>
 
 <div class="news-list">
     <div class="slide-report slide-three slide-library-report arrow-outside ani-item dot-dark">
         <div class="slidebox-track">
             <div class="slidebox-list">
-                <div class="bg-item-album slidebox-item">
+                <!-- <div class="bg-item-album slidebox-item">
                     <div class="item-album">
                         <div class="pic-library">
                             <div class="pic-img"><img src="../banner/du-an-the-privia-khang-dien-binh-tan.jpg"
@@ -25,79 +47,37 @@
                             <h3> Chương trình “Kết nối yêu thương” tại Trường Khiếm Thính Hy Vọng – Bình Thạnh.</h3>
                         </div>
                     </div>
-                </div>
-                <div class="bg-item-album slidebox-item">
-                    <div class="item-album">
-                        <div class="pic-library">
-                            <div class="pic-img"><img src="../banner/du-an-the-privia-khang-dien-binh-tan.jpg"
-                                    alt=" Chương trình “Kết nối yêu thương” tại Trường Khiếm Thính Hy Vọng – Bình Thạnh.">
-                            </div><a class="view-album" href="#foo" data-href="view-image.php" aria-label="album"></a>
-                        </div>
-                        <div class="title-pic">
-                            <h3> Chương trình “Kết nối yêu thương” tại Trường Khiếm Thính Hy Vọng – Bình Thạnh.</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-item-album slidebox-item">
-                    <div class="item-album">
-                        <div class="pic-library">
-                            <div class="pic-img"><img src="../banner/du-an-the-privia-khang-dien-binh-tan.jpg"
-                                    alt=" Chương trình “Kết nối yêu thương” tại Trường Khiếm Thính Hy Vọng – Bình Thạnh.">
-                            </div><a class="view-album" href="#foo" data-href="view-image.php" aria-label="album"></a>
-                        </div>
-                        <div class="title-pic">
-                            <h3> Chương trình “Kết nối yêu thương” tại Trường Khiếm Thính Hy Vọng – Bình Thạnh.</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-item-album slidebox-item">
-                    <div class="item-album">
-                        <div class="pic-library">
-                            <div class="pic-img"><img src="../banner/du-an-the-privia-khang-dien-binh-tan.jpg"
-                                    alt=" Chương trình “Kết nối yêu thương” tại Trường Khiếm Thính Hy Vọng – Bình Thạnh.">
-                            </div><a class="view-album" href="#foo" data-href="view-image.php" aria-label="album"></a>
-                        </div>
-                        <div class="title-pic">
-                            <h3> Chương trình “Kết nối yêu thương” tại Trường Khiếm Thính Hy Vọng – Bình Thạnh.</h3>
+                </div> -->
+                <?php
+                foreach ($data_project as $key => $value) {
+                ?>
+                    <div class="bg-item-album slidebox-item">
+                        <div class="item-album">
+                            <div class="pic-library">
+                                <div class="pic-img">
+                                    <img src="
+                                                <?php
+                                                echo $url_be, $value['image'];
+                                                ?>
+                                                " data-src="
+                                                <?php
+                                                echo $url_be, $value['image'];
+                                                ?>
+                                                " alt="
+                                                    <?php
+                                                    echo $value['headline'];
+                                                    ?>
+                                                " class="lazy" />
+                                </div>
+                                <a class="view-album" href="#foo" data-href="view-image.php?id=<?php echo $value['id'] ?>" aria-label="album"></a>
+                            </div>
+                            <div class="title-pic">
+                                <h3> <?php echo $value['headline'] ?></h3>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="bg-item-album slidebox-item">
-                    <div class="item-album">
-                        <div class="pic-library">
-                            <div class="pic-img"><img src="../banner/du-an-the-privia-khang-dien-binh-tan.jpg"
-                                    alt=" Chương trình “Kết nối yêu thương” tại Trường Khiếm Thính Hy Vọng – Bình Thạnh.">
-                            </div><a class="view-album" href="#foo" data-href="view-image.php" aria-label="album"></a>
-                        </div>
-                        <div class="title-pic">
-                            <h3> Chương trình “Kết nối yêu thương” tại Trường Khiếm Thính Hy Vọng – Bình Thạnh.</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-item-album slidebox-item">
-                    <div class="item-album">
-                        <div class="pic-library">
-                            <div class="pic-img"><img src="../banner/du-an-the-privia-khang-dien-binh-tan.jpg"
-                                    alt=" Chương trình “Kết nối yêu thương” tại Trường Khiếm Thính Hy Vọng – Bình Thạnh.">
-                            </div><a class="view-album" href="#foo" data-href="view-image.php" aria-label="album"></a>
-                        </div>
-                        <div class="title-pic">
-                            <h3> Chương trình “Kết nối yêu thương” tại Trường Khiếm Thính Hy Vọng – Bình Thạnh.</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-item-album slidebox-item">
-                    <div class="item-album">
-                        <div class="pic-library">
-                            <div class="pic-img"><img src="../banner/du-an-the-privia-khang-dien-binh-tan.jpg"
-                                    alt=" Chương trình “Kết nối yêu thương” tại Trường Khiếm Thính Hy Vọng – Bình Thạnh.">
-                            </div><a class="view-album" href="#foo" data-href="view-image.php" aria-label="album"></a>
-                        </div>
-                        <div class="title-pic">
-                            <h3> Chương trình “Kết nối yêu thương” tại Trường Khiếm Thính Hy Vọng – Bình Thạnh.</h3>
-                        </div>
-                    </div>
-                </div>
+                <?php } ?>
+
             </div>
         </div>
     </div>

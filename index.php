@@ -1,3 +1,4 @@
+
 <?php
 require_once "setting-all-file.php";
 
@@ -7,47 +8,60 @@ $data_project = [];
 $data_blog = [];
 
 $url_be = 'https://belingo.tmsoftware.vn';
+$api_key = '8AF1apnMW2A39Ip7LUFtNstE5RjYleghk';
 
-// call banner
-$apiUrl_banner = $url_be . '/api/project/getlistcategory?api_key=8AF1apnMW2A39Ip7LUFtNstE5RjYleghk';
-$response_banner = file_get_contents($apiUrl_banner);
-$data = json_decode($response_banner, true); // Decode the JSON data
+// Function to make API requests using cURL
+function fetch_api_data($url) {
+    $ch = curl_init($url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_TIMEOUT, 10); // Set timeout in seconds
+    $response = curl_exec($ch);
+
+    // Check for cURL errors
+    if (curl_errno($ch)) {
+        echo 'Error: ' . curl_error($ch);
+        curl_close($ch);
+        return null;
+    }
+
+    curl_close($ch);
+    return json_decode($response, true);
+}
+
+// Call banner API
+$apiUrl_banner = $url_be . '/api/project/getlistcategory?api_key=' . $api_key;
+$data = fetch_api_data($apiUrl_banner);
 
 if ($data && $data['status'] === true && isset($data['data'])) {
     $data_banner = $data['data'];
-    // echo 'llllll';
-    // print_r($data_banner);
 } else {
-    echo "Error fetching data or no data available.";
+    echo "Error fetching banner data or no data available.";
 }
 
-// call project
-$apiUrl_project = $url_be . '/api/project/getlistproject?api_key=8AF1apnMW2A39Ip7LUFtNstE5RjYleghk';
-$response_project = file_get_contents($apiUrl_project);
-$data = json_decode($response_project, true); // Decode the JSON data
+// Call project API
+$apiUrl_project = $url_be . '/api/project/getlistproject?api_key=' . $api_key;
+$data = fetch_api_data($apiUrl_project);
 
 if ($data && $data['status'] === true && isset($data['data'])) {
     $data_project = $data['data'];
-    // echo 'llllll';
-    // print_r($data_banner);
 } else {
-    echo "Error fetching data or no data available.";
+    echo "Error fetching project data or no data available.";
 }
 
-// call blog
-$apiUrl_blog = $url_be . '/api/blog/getlistblog?api_key=8AF1apnMW2A39Ip7LUFtNstE5RjYleghk';
-$response_blog = file_get_contents($apiUrl_blog);
-$data = json_decode($response_blog, true); // Decode the JSON data
+// Call blog API
+$apiUrl_blog = $url_be . '/api/blog/getlistblog?api_key=' . $api_key;
+$data = fetch_api_data($apiUrl_blog);
 
 if ($data && $data['status'] === true && isset($data['data'])) {
     $data_blog = $data['data'];
-    // echo 'llllll';
-    // print_r($data_banner);
 } else {
-    echo "Error fetching data or no data available.";
+    echo "Error fetching blog data or no data available.";
 }
 
 ?>
+
+
+
 
 <!DOCTYPE HTML>
 <html lang="vi">
@@ -483,7 +497,7 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                             <div class="all-tab-content all-tab-bus">
                                 <div class="tab-content" data-tab="business-02">
                                     <div class="content-bus-tab-home">
-                                        <h3 class="!text-blue-500">ĐÀO TẠO NGÔN NGỮ</h3>
+                                        <h3 class="!text-blue-500"><?= __('ĐÀO TẠO NGÔN NGỮ') ?></h3>
                                         <div class="content color-white content-collapse">
                                             <p>Sứ mệnh &quot;Vì một Việt Nam khỏe đẹp&quot; SEN HEALTHCARE mong muốn góp
                                                 một phần vào chăm sóc sức khỏe cộng đồng và trở thành một hệ sinh thái
@@ -494,7 +508,7 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                 </div>
                                 <div class="tab-content" data-tab="business-05">
                                     <div class="content-bus-tab-home">
-                                        <h3 class="!text-blue-500">DU HỌC</h3>
+                                        <h3 class="!text-blue-500"><?= __('DU HỌC') ?></h3>
                                         <div class="content color-white content-collapse">
                                             <p>SEN MINING là lĩnh vực mũi nhọn nằm trong kế hoạch phát triển tương lai
                                                 gần của LINGO GROUP.</p>
@@ -504,7 +518,7 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                 </div>
                                 <div class="tab-content" data-tab="business-03">
                                     <div class="content-bus-tab-home">
-                                        <h3 class="!text-blue-500">XUẤT KHẨU LAO ĐỘNG</h3>
+                                        <h3 class="!text-blue-500"><?= __('XUẤT KHẨU LAO ĐỘNG') ?></h3>
                                         <div class="content color-white content-collapse">
                                             <p>SEN CONSTRUCTION tập trung lĩnh vực đầu tư, thiết kế và XUẤT KHẨU LAO
                                                 ĐỘNG công
@@ -516,7 +530,7 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                 </div>
                                 <div class="tab-content" data-tab="business-04">
                                     <div class="content-bus-tab-home">
-                                        <h3 class="!text-blue-500">KỸ NĂNG SỐNG</h3>
+                                        <h3 class="!text-blue-500"><?= __('KỸ NĂNG SỐNG') ?></h3>
                                         <div class="content color-white content-collapse">
                                             <p>SEN RESORT kết hợp cùng tập đoàn chuyên nghiệp nước ngoài để vận hành và
                                                 quản lý các chuỗi KỸ NĂNG SỐNG, chăm sóc sức khỏe.</p>
@@ -541,7 +555,7 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                 <section class="home-project">
                     <div class="wrap-content"><span class="color-stripe"></span>
                         <div class="title-main color-blue text-left">
-                            <h2 class="text-ani-item">Dự án <strong>tiêu biểu</strong></h2>
+                            <h2 class="text-ani-item"><?= __('Dự án') ?> <strong><?= __('tiêu biểu') ?></strong></h2>
                         </div>
                         <div class="slide-project dark-pagi">
                             <div class="slidebox-track">
@@ -634,7 +648,7 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                     <div class="wrap-content">
                         <div class="left-content">
                             <div class="title-main color-blue text-left">
-                                <h2 class="text-ani-item">Tin tức &amp; <strong>sự kiện</strong></h2>
+                                <h2 class="text-ani-item"><?= __('Tin tức') ?> &amp; <strong><?= __('sự kiện') ?></strong></h2>
                             </div>
                         </div>
                         <div class="right-content">
@@ -708,7 +722,8 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                                             </svg>
                                                         </span>
                                                     </span>
-                                                    XEM TIN
+                                                    <?= __('XEM TIN') ?>
+                                                    
                                                     <svg class="viewdetails-svg">
                                                         <use xlink:href="#arrow"></use>
                                                     </svg>
@@ -729,7 +744,8 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                         </svg>
                                     </span>
                                 </span>
-                                XEM TIN KHÁC
+                                <?= __('XEM TIN KHÁC') ?>
+                               
                                 <svg class="viewdetails-svg">
                                     <use xlink:href="#arrow"></use>
                                 </svg>
