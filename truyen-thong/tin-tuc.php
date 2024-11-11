@@ -31,8 +31,8 @@ if ($data && $data['status'] === true && isset($data['data'])) {
 </div>
 <div class="news-list">
     <?php
-     $firstBlogs = array_slice($data_blog, 0,8);
-    foreach ($firstBlogs as $key => $value) {
+     
+    foreach ($data_project as $key => $value) {
     ?>
         <div class="item-news ani-item">
             <div class="pic-news">

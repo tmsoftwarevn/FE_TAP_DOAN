@@ -259,7 +259,7 @@ C77.5,30.76,77.5,33.53,76.19,35.13z"></path>
                     </div>
                 </section>
                 <section class="news-relative mb-10">
-                    <div class="wrap-content">
+                    <div class="wrap-content !p-0">
                         <div class="title-post text-center color-blue title-underline">
                             <h2 class="text-ani-item">Các tin khác</h2>
                         </div>
@@ -295,23 +295,24 @@ C77.5,30.76,77.5,33.53,76.19,35.13z"></path>
                                         </div>
                                     </div> -->
                                     <?php
-                                    foreach ($data_project as $key => $value) {
+                                    shuffle($data_project);
+                                    $firstBlogs = array_slice($data_project, 0,8);
+                                    foreach ($firstBlogs as $key => $value) {
                                     ?>
 
                                         <div class="item-news slidebox-item ">
-                                            <div class="pic-news">
-                                                <a href="<?php echo '/' . 'tin-tuc/' . $value['slug'] ?>-<?php echo $value['id'] ?>.html">
-                                                    <?php
-                                                    $date = new DateTime($value['created_at']);
-                                                    $day = $date->format('d');
-                                                    $monthYear = $date->format('m-Y');
-                                                    ?>
-                                                    <div class="date">
-                                                        <?php echo $day; ?>
-                                                        <span><?php echo $monthYear; ?></span>
-                                                    </div>
-                                                    <div class="pic-img">
-                                                        <img src="
+                                            <div class="pic-news" onclick="location.reload();">
+                                                <?php
+                                                $date = new DateTime($value['created_at']);
+                                                $day = $date->format('d');
+                                                $monthYear = $date->format('m-Y');
+                                                ?>
+                                                <div class="date">
+                                                    <?php echo $day; ?>
+                                                    <span><?php echo $monthYear; ?></span>
+                                                </div>
+                                                <div class="pic-img">
+                                                    <img src="
                                                 <?php
                                                 echo $url_be, $value['image'];
                                                 ?>
@@ -324,16 +325,17 @@ C77.5,30.76,77.5,33.53,76.19,35.13z"></path>
                                                     echo $value['headline'];
                                                     ?>
                                                 " class="lazy" />
-                                                    </div>
-                                                </a>
+                                                </div>
 
                                             </div>
-                                            <div class="txt-news">
+
+                                            <div class="txt-news" onclick="location.reload();">
                                                 <h3> <?php
                                                         echo $value['headline'];
                                                         ?>
                                                 </h3>
                                             </div>
+
                                             <div class="wrap-view-details">
                                                 <a
                                                     href="<?php echo '/' . 'tin-tuc/' . $value['slug'] ?>-<?php echo $value['id'] ?>.html"
@@ -352,11 +354,28 @@ C77.5,30.76,77.5,33.53,76.19,35.13z"></path>
                                                         <use xlink:href="#arrow"></use>
                                                     </svg>
                                                 </a>
-                                                <div class="class-hidden link-change-url"
-                                                data-title="LỄ KÝ KẾT HỢP TÁC PHÂN PHỐI ĐỘC QUYỀN DỰ ÁN THE EMERALD GOLF VIEW"
-                                                data-description="" data-keyword="" aria-label="link-change-url"></div>
+
                                             </div>
+
+                                            <!-- <div class="wrap-view-details"><a
+                                                    href="<?php echo '/' . 'tin-tuc/' . $value['slug'] ?>-<?php echo $value['id'] ?>.html"
+                                                    class="view-details dark" data-details="news-398"
+                                                    aria-label="link"><span class="small-logo-ico"><svg>
+                                                            <use xlink:href="#ico-view-details-logo"></use>
+                                                        </svg> <span class="rotate-logo"><svg>
+                                                                <use xlink:href="#ico-view-details-rotate"></use>
+                                                            </svg> </span></span> XEM TIN <svg class="viewdetails-svg">
+                                                        <use xlink:href="#arrow"></use>
+                                                    </svg></a>
+                                                <div class="class-hidden link-change-url"
+                                                    data-title="<?php
+                                                                echo $value['headline'];
+                                                                ?>"
+                                                    data-description="" data-keyword="" aria-label="link-change-url"></div>
+                                            </div> -->
+
                                         </div>
+
                                     <?php } ?>
                                 </div>
                             </div>

@@ -24,7 +24,22 @@ if ($data && $data['status'] === true && isset($data['data'])) {
     echo "Error fetching data or no data available.";
 }
 
+/////////////
+$data_project = [];
 
+$url_be = 'https://belingo.tmsoftware.vn';
+// call project
+$apiUrl_project = $url_be . '/api/project/getlistproject?api_key=8AF1apnMW2A39Ip7LUFtNstE5RjYleghk';
+$response_project = file_get_contents($apiUrl_project);
+$data = json_decode($response_project, true); // Decode the JSON data
+
+if ($data && $data['status'] === true && isset($data['data'])) {
+    $data_project = $data['data'];
+    // echo 'llllll';
+    // print_r($data_project);
+} else {
+    echo "Error fetching data or no data available.";
+}
 
 ?>
 
@@ -157,19 +172,19 @@ c0.4,0,0.6-0.1,0.7-0.2c0.1-0.1,0.1-0.3,0.1-0.7v-15.1c0-0.3,0-0.6-0.1-0.7c-0.1-0.
 h-2.2v9.2h2.2c1.3,0,2.3-0.4,2.9-1.1c0.6-0.7,0.9-1.9,0.9-3.6c0-1.6-0.3-2.8-0.9-3.5C201.8,218.4,200.8,218.1,199.5,218.1" />
         </svg></div>
     <script>
-    var loadDeferredStyles = function() {
-        var addStylesNode = document.getElementById("deferred-styles");
-        var replacement = document.getElementById("render-styles");
-        replacement.innerHTML = addStylesNode.textContent;
-        document.body.appendChild(replacement)
-        addStylesNode.parentElement.removeChild(addStylesNode);
-    };
-    var raf = requestAnimationFrame || mozRequestAnimationFrame ||
-        webkitRequestAnimationFrame || msRequestAnimationFrame;
-    if (raf) raf(function() {
-        window.setTimeout(loadDeferredStyles, 0);
-    });
-    else window.addEventListener('load', loadDeferredStyles);
+        var loadDeferredStyles = function() {
+            var addStylesNode = document.getElementById("deferred-styles");
+            var replacement = document.getElementById("render-styles");
+            replacement.innerHTML = addStylesNode.textContent;
+            document.body.appendChild(replacement)
+            addStylesNode.parentElement.removeChild(addStylesNode);
+        };
+        var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+            webkitRequestAnimationFrame || msRequestAnimationFrame;
+        if (raf) raf(function() {
+            window.setTimeout(loadDeferredStyles, 0);
+        });
+        else window.addEventListener('load', loadDeferredStyles);
     </script>
 
     <?php require "header.php" ?>
@@ -178,12 +193,12 @@ h-2.2v9.2h2.2c1.3,0,2.3-0.4,2.9-1.1c0.6-0.7,0.9-1.9,0.9-3.6c0-1.6-0.3-2.8-0.9-3.
         <div class="smooth-scroll">
             <div class="container" id="project-details-page">
                 <script>
-                if (document.querySelector('#home-page')) {
-                    Array.from(document.querySelectorAll('.mask, .loadicon'), function(element) {
-                        if (element) element.style.display = "block";
-                    });
-                    document.querySelector('.header').style.visibility = "visible";
-                }
+                    if (document.querySelector('#home-page')) {
+                        Array.from(document.querySelectorAll('.mask, .loadicon'), function(element) {
+                            if (element) element.style.display = "block";
+                        });
+                        document.querySelector('.header').style.visibility = "visible";
+                    }
                 </script>
                 <div class="tile-reveal"></div>
                 <section class="banner-inner">
@@ -253,451 +268,117 @@ C77.5,30.76,77.5,33.53,76.19,35.13z"></path>
 
                     </div>
                 </section>
-                
-                <section class="project-relative mb-10">
-                    <div class="wrap-content">
-                        <div class="title-main text-center color-blue title-underline bold-medium">
+
+                <section class="news-relative mb-10">
+                    <div class="wrap-content !p-0">
+                        <div class="title-post text-center color-blue title-underline">
                             <h2 class="text-ani-item">Dự án khác</h2>
                         </div>
-                        <div class="slide-project-relative ani-item arrow-outside dot-dark">
+                        <div class="slide-news-relative ani-item arrow-outside dot-dark">
                             <div class="slidebox-track">
                                 <div class="slidebox-list">
-                                    <div class="item-news slidebox-item">
+
+                                    <!-- <div class="item-news slidebox-item ">
                                         <div class="pic-news">
+                                            <div class="date">26<span>10-2024 </span></div>
                                             <div class="pic-img"><img
-                                                    src="/pictures/catalog/the-emerald-golf-view/hinh-dang-muc-du-an/DJI0259mo-rongfinal.jpg"
-                                                    alt="THE EMERALD GOLF VIEW"></div>
+                                                    src="/pictures/mobile/catalog/the-emerald-golf-view/ky-ket-hop-tac/IMG1105-Edit-copy.jpg"
+                                                    data-src="/pictures/catalog/the-emerald-golf-view/ky-ket-hop-tac/IMG1105-Edit-copy.jpg"
+                                                    alt="LỄ KÝ KẾT HỢP TÁC PHÂN PHỐI ĐỘC QUYỀN DỰ ÁN THE EMERALD GOLF VIEW"
+                                                    class="lazy"></div>
                                         </div>
                                         <div class="txt-news">
-                                            <p>DỰ ÁN CĂN HỘ BẤT ĐỘNG SẢN</p>
-                                            <h3>THE EMERALD GOLF VIEW</h3>
+                                            <h3>LỄ KÝ KẾT HỢP TÁC PHÂN PHỐI ĐỘC QUYỀN DỰ ÁN THE EMERALD GOLF VIEW</h3>
                                         </div>
                                         <div class="wrap-view-details"><a
-                                                href="https://www.sengroup.vn/cong-ty-thanh-vien/sen-real/the-emerald-golf-view.html"
-                                                class="view-details link-load dark" aria-label="link"><span
-                                                    class="small-logo-ico"><svg>
+                                                href="/truyen-thong/tin-tuc/le-ky-ket-hop-tac-phan-phoi-doc-quyen-du-an-the-emerald-golf-view.html"
+                                                class="view-details dark" data-details="news-398"
+                                                aria-label="link"><span class="small-logo-ico"><svg>
                                                         <use xlink:href="#ico-view-details-logo"></use>
                                                     </svg> <span class="rotate-logo"><svg>
                                                             <use xlink:href="#ico-view-details-rotate"></use>
-                                                        </svg> </span></span> XEM DỰ ÁN <svg class="viewdetails-svg">
+                                                        </svg> </span></span> XEM TIN <svg class="viewdetails-svg">
                                                     <use xlink:href="#arrow"></use>
-                                                </svg></a></div>
-                                    </div>
-                                    <div class="item-news slidebox-item">
-                                        <div class="pic-news">
-                                            <div class="pic-img"><img
-                                                    src="/pictures/catalog/the-privia/du-an-the-privia-khang-dien-binh-tan.jpg"
-                                                    alt="THE PRIVIA"></div>
+                                                </svg></a>
+                                            <div class="class-hidden link-change-url"
+                                                data-title="LỄ KÝ KẾT HỢP TÁC PHÂN PHỐI ĐỘC QUYỀN DỰ ÁN THE EMERALD GOLF VIEW"
+                                                data-description="" data-keyword="" aria-label="link-change-url"></div>
                                         </div>
-                                        <div class="txt-news">
-                                            <p>DỰ ÁN CĂN HỘ BẤT ĐỘNG SẢN</p>
-                                            <h3>THE PRIVIA</h3>
+                                    </div> -->
+                                    <?php
+                                    shuffle($data_project);
+                                    $firstBlogs = array_slice($data_project, 0, 8);
+                                    foreach ($firstBlogs as $key => $value) {
+                                    ?>
+
+                                        <div class="item-news slidebox-item ">
+                                            <div class="pic-news" onclick="location.reload();">
+                                                <?php
+                                                $date = new DateTime($value['created_at']);
+                                                $day = $date->format('d');
+                                                $monthYear = $date->format('m-Y');
+                                                ?>
+                                                <div class="date">
+                                                    <?php echo $day; ?>
+                                                    <span><?php echo $monthYear; ?></span>
+                                                </div>
+                                                <div class="pic-img">
+                                                    <img src="
+                                                <?php
+                                                echo $url_be, $value['avatar'];
+                                                ?>
+                                                " data-src="
+                                                <?php
+                                                echo $url_be, $value['avatar'];
+                                                ?>
+                                                " alt="
+                                                    <?php
+                                                    echo $value['headline'];
+                                                    ?>
+                                                " class="lazy" />
+                                                </div>
+
+                                            </div>
+
+                                            <div class="txt-news" onclick="location.reload();">
+                                                <h3> <?php
+                                                        echo $value['headline'];
+                                                        ?>
+                                                </h3>
+                                            </div>
+
+                                            <div class="wrap-view-details">
+                                                <a
+                                                    href="<?php echo '/' . 'du-an/' . $value['slug'] ?>-<?php echo $value['id'] ?>.html"
+                                                    class="view-details dark link-load"
+                                                    aria-label=" SỰ KIỆN ĐÀO TẠO NỘI BỘ PHONG CÁCH BÁN HÀNG CHUẨN SEN GROUP &amp; ĐÀO TẠO DỰ ÁN THE EMERALD GOLF VIEW ️">
+                                                    <span class="small-logo-ico">
+                                                        <?php include "component/logoLoading.php" ?>
+                                                        <span class="rotate-logo">
+                                                            <svg>
+                                                                <use xlink:href="#ico-view-details-rotate"></use>
+                                                            </svg>
+                                                        </span>
+                                                    </span>
+                                                    XEM TIN
+                                                    <svg class="viewdetails-svg">
+                                                        <use xlink:href="#arrow"></use>
+                                                    </svg>
+                                                </a>
+
+                                            </div>
+
+
+
                                         </div>
-                                        <div class="wrap-view-details"><a
-                                                href="https://www.sengroup.vn/cong-ty-thanh-vien/sen-real/the-privia.html"
-                                                class="view-details link-load dark" aria-label="link"><span
-                                                    class="small-logo-ico"><svg>
-                                                        <use xlink:href="#ico-view-details-logo"></use>
-                                                    </svg> <span class="rotate-logo"><svg>
-                                                            <use xlink:href="#ico-view-details-rotate"></use>
-                                                        </svg> </span></span> XEM DỰ ÁN <svg class="viewdetails-svg">
-                                                    <use xlink:href="#arrow"></use>
-                                                </svg></a></div>
-                                    </div>
-                                    <div class="item-news slidebox-item">
-                                        <div class="pic-news">
-                                            <div class="pic-img"><img src="/pictures/catalog/banner/tgc1.jpg"
-                                                    alt="The Global City"></div>
-                                        </div>
-                                        <div class="txt-news">
-                                            <p>DỰ ÁN BẤT ĐỘNG SẢN</p>
-                                            <h3>The Global City</h3>
-                                        </div>
-                                        <div class="wrap-view-details"><a
-                                                href="https://www.sengroup.vn/cong-ty-thanh-vien/sen-real/the-global-city.html"
-                                                class="view-details link-load dark" aria-label="link"><span
-                                                    class="small-logo-ico"><svg>
-                                                        <use xlink:href="#ico-view-details-logo"></use>
-                                                    </svg> <span class="rotate-logo"><svg>
-                                                            <use xlink:href="#ico-view-details-rotate"></use>
-                                                        </svg> </span></span> XEM DỰ ÁN <svg class="viewdetails-svg">
-                                                    <use xlink:href="#arrow"></use>
-                                                </svg></a></div>
-                                    </div>
-                                    <div class="item-news slidebox-item">
-                                        <div class="pic-news">
-                                            <div class="pic-img"><img
-                                                    src="/pictures/catalog/vinhomes-glory/glory-heights-2-2.jpg"
-                                                    alt="GLORY HEIGHTS"></div>
-                                        </div>
-                                        <div class="txt-news">
-                                            <p>DỰ ÁN CĂN HỘ BẤT ĐỘNG SẢN</p>
-                                            <h3>GLORY HEIGHTS</h3>
-                                        </div>
-                                        <div class="wrap-view-details"><a
-                                                href="https://www.sengroup.vn/cong-ty-thanh-vien/sen-real/glory-heights.html"
-                                                class="view-details link-load dark" aria-label="link"><span
-                                                    class="small-logo-ico"><svg>
-                                                        <use xlink:href="#ico-view-details-logo"></use>
-                                                    </svg> <span class="rotate-logo"><svg>
-                                                            <use xlink:href="#ico-view-details-rotate"></use>
-                                                        </svg> </span></span> XEM DỰ ÁN <svg class="viewdetails-svg">
-                                                    <use xlink:href="#arrow"></use>
-                                                </svg></a></div>
-                                    </div>
-                                    <div class="item-news slidebox-item">
-                                        <div class="pic-news">
-                                            <div class="pic-img"><img
-                                                    src="/pictures/catalog/phu-dong-sky-garden/PDGSky-Garden-9.jpg"
-                                                    alt="PHÚ ĐÔNG SKY GARDEN"></div>
-                                        </div>
-                                        <div class="txt-news">
-                                            <p>DỰ ÁN CĂN HỘ BẤT ĐỘNG SẢN</p>
-                                            <h3>PHÚ ĐÔNG SKY GARDEN</h3>
-                                        </div>
-                                        <div class="wrap-view-details"><a
-                                                href="https://www.sengroup.vn/cong-ty-thanh-vien/sen-real/phu-dong-sky-garden.html"
-                                                class="view-details link-load dark" aria-label="link"><span
-                                                    class="small-logo-ico"><svg>
-                                                        <use xlink:href="#ico-view-details-logo"></use>
-                                                    </svg> <span class="rotate-logo"><svg>
-                                                            <use xlink:href="#ico-view-details-rotate"></use>
-                                                        </svg> </span></span> XEM DỰ ÁN <svg class="viewdetails-svg">
-                                                    <use xlink:href="#arrow"></use>
-                                                </svg></a></div>
-                                    </div>
-                                    <div class="item-news slidebox-item">
-                                        <div class="pic-news">
-                                            <div class="pic-img"><img src="/pictures/catalog/banner/lmb/LMB1.jpg"
-                                                    alt="LUMIÈRE Boulevard"></div>
-                                        </div>
-                                        <div class="txt-news">
-                                            <p>DỰ ÁN BẤT ĐỘNG SẢN</p>
-                                            <h3>LUMIÈRE Boulevard</h3>
-                                        </div>
-                                        <div class="wrap-view-details"><a
-                                                href="https://www.sengroup.vn/cong-ty-thanh-vien/sen-real/lumiere-boulevard.html"
-                                                class="view-details link-load dark" aria-label="link"><span
-                                                    class="small-logo-ico"><svg>
-                                                        <use xlink:href="#ico-view-details-logo"></use>
-                                                    </svg> <span class="rotate-logo"><svg>
-                                                            <use xlink:href="#ico-view-details-rotate"></use>
-                                                        </svg> </span></span> XEM DỰ ÁN <svg class="viewdetails-svg">
-                                                    <use xlink:href="#arrow"></use>
-                                                </svg></a></div>
-                                    </div>
-                                    <div class="item-news slidebox-item">
-                                        <div class="pic-news">
-                                            <div class="pic-img"><img src="/pictures/catalog/banner/hon-thom/ht1.jpg"
-                                                    alt="Hon Thom Paradise Island"></div>
-                                        </div>
-                                        <div class="txt-news">
-                                            <p>DỰ ÁN BẤT ĐỘNG SẢN</p>
-                                            <h3>Hon Thom Paradise Island</h3>
-                                        </div>
-                                        <div class="wrap-view-details"><a
-                                                href="https://www.sengroup.vn/cong-ty-thanh-vien/sen-real/hon-thom-paradise-island.html"
-                                                class="view-details link-load dark" aria-label="link"><span
-                                                    class="small-logo-ico"><svg>
-                                                        <use xlink:href="#ico-view-details-logo"></use>
-                                                    </svg> <span class="rotate-logo"><svg>
-                                                            <use xlink:href="#ico-view-details-rotate"></use>
-                                                        </svg> </span></span> XEM DỰ ÁN <svg class="viewdetails-svg">
-                                                    <use xlink:href="#arrow"></use>
-                                                </svg></a></div>
-                                    </div>
-                                    <div class="item-news slidebox-item">
-                                        <div class="pic-news">
-                                            <div class="pic-img"><img src="/pictures/catalog/project/5.jpg"
-                                                    alt="Sun Grand City Hillside Residence Phú Quốc"></div>
-                                        </div>
-                                        <div class="txt-news">
-                                            <p>DỰ ÁN BẤT ĐỘNG SẢN</p>
-                                            <h3>Sun Grand City Hillside Residence Phú Quốc</h3>
-                                        </div>
-                                        <div class="wrap-view-details"><a
-                                                href="https://www.sengroup.vn/cong-ty-thanh-vien/sen-real/sun-grand-city-hillside-residence-phu-quoc.html"
-                                                class="view-details link-load dark" aria-label="link"><span
-                                                    class="small-logo-ico"><svg>
-                                                        <use xlink:href="#ico-view-details-logo"></use>
-                                                    </svg> <span class="rotate-logo"><svg>
-                                                            <use xlink:href="#ico-view-details-rotate"></use>
-                                                        </svg> </span></span> XEM DỰ ÁN <svg class="viewdetails-svg">
-                                                    <use xlink:href="#arrow"></use>
-                                                </svg></a></div>
-                                    </div>
-                                    <div class="item-news slidebox-item">
-                                        <div class="pic-news">
-                                            <div class="pic-img"><img src="/pictures/catalog/project/6.jpg"
-                                                    alt="Selavia Phú Quốc"></div>
-                                        </div>
-                                        <div class="txt-news">
-                                            <p>DỰ ÁN BẤT ĐỘNG SẢN</p>
-                                            <h3>Selavia Phú Quốc</h3>
-                                        </div>
-                                        <div class="wrap-view-details"><a
-                                                href="https://www.sengroup.vn/cong-ty-thanh-vien/sen-real/selavia-phu-quoc.html"
-                                                class="view-details link-load dark" aria-label="link"><span
-                                                    class="small-logo-ico"><svg>
-                                                        <use xlink:href="#ico-view-details-logo"></use>
-                                                    </svg> <span class="rotate-logo"><svg>
-                                                            <use xlink:href="#ico-view-details-rotate"></use>
-                                                        </svg> </span></span> XEM DỰ ÁN <svg class="viewdetails-svg">
-                                                    <use xlink:href="#arrow"></use>
-                                                </svg></a></div>
-                                    </div>
-                                    <div class="item-news slidebox-item">
-                                        <div class="pic-news">
-                                            <div class="pic-img"><img
-                                                    src="/pictures/catalog/project/novotel-villas.jpeg"
-                                                    alt="NOVOTEL VILLAS"></div>
-                                        </div>
-                                        <div class="txt-news">
-                                            <p>DỰ ÁN BẤT ĐỘNG SẢN</p>
-                                            <h3>NOVOTEL VILLAS</h3>
-                                        </div>
-                                        <div class="wrap-view-details"><a
-                                                href="https://www.sengroup.vn/cong-ty-thanh-vien/sen-real/novotel-villas.html"
-                                                class="view-details link-load dark" aria-label="link"><span
-                                                    class="small-logo-ico"><svg>
-                                                        <use xlink:href="#ico-view-details-logo"></use>
-                                                    </svg> <span class="rotate-logo"><svg>
-                                                            <use xlink:href="#ico-view-details-rotate"></use>
-                                                        </svg> </span></span> XEM DỰ ÁN <svg class="viewdetails-svg">
-                                                    <use xlink:href="#arrow"></use>
-                                                </svg></a></div>
-                                    </div>
-                                    <div class="item-news slidebox-item">
-                                        <div class="pic-news">
-                                            <div class="pic-img"><img
-                                                    src="/pictures/catalog/project/1179224431341346750363846568110940762756669o.jpeg"
-                                                    alt="Coconut Island Phú Quốc"></div>
-                                        </div>
-                                        <div class="txt-news">
-                                            <p>DỰ ÁN BẤT ĐỘNG SẢN</p>
-                                            <h3>Coconut Island Phú Quốc</h3>
-                                        </div>
-                                        <div class="wrap-view-details"><a
-                                                href="https://www.sengroup.vn/cong-ty-thanh-vien/sen-real/coconut-island-phu-quoc.html"
-                                                class="view-details link-load dark" aria-label="link"><span
-                                                    class="small-logo-ico"><svg>
-                                                        <use xlink:href="#ico-view-details-logo"></use>
-                                                    </svg> <span class="rotate-logo"><svg>
-                                                            <use xlink:href="#ico-view-details-rotate"></use>
-                                                        </svg> </span></span> XEM DỰ ÁN <svg class="viewdetails-svg">
-                                                    <use xlink:href="#arrow"></use>
-                                                </svg></a></div>
-                                    </div>
-                                    <div class="item-news slidebox-item">
-                                        <div class="pic-news">
-                                            <div class="pic-img"><img
-                                                    src="/pictures/catalog/project/Best-Western-Premier-Sonasea-Phu-Quoc.jpeg"
-                                                    alt="Best Western Premier Sonasea Phú Quốc"></div>
-                                        </div>
-                                        <div class="txt-news">
-                                            <p>DỰ ÁN BẤT ĐỘNG SẢN</p>
-                                            <h3>Best Western Premier Sonasea Phú Quốc</h3>
-                                        </div>
-                                        <div class="wrap-view-details"><a
-                                                href="https://www.sengroup.vn/cong-ty-thanh-vien/sen-real/best-western-premier-sonasea-phu-quoc.html"
-                                                class="view-details link-load dark" aria-label="link"><span
-                                                    class="small-logo-ico"><svg>
-                                                        <use xlink:href="#ico-view-details-logo"></use>
-                                                    </svg> <span class="rotate-logo"><svg>
-                                                            <use xlink:href="#ico-view-details-rotate"></use>
-                                                        </svg> </span></span> XEM DỰ ÁN <svg class="viewdetails-svg">
-                                                    <use xlink:href="#arrow"></use>
-                                                </svg></a></div>
-                                    </div>
-                                    <div class="item-news slidebox-item">
-                                        <div class="pic-news">
-                                            <div class="pic-img"><img
-                                                    src="/pictures/catalog/project/tong-quan-grand-world.jpeg"
-                                                    alt="Grand World Phú Quốc"></div>
-                                        </div>
-                                        <div class="txt-news">
-                                            <p>DỰ ÁN BẤT ĐỘNG SẢN</p>
-                                            <h3>Grand World Phú Quốc</h3>
-                                        </div>
-                                        <div class="wrap-view-details"><a
-                                                href="https://www.sengroup.vn/cong-ty-thanh-vien/sen-real/grand-world-phu-quoc.html"
-                                                class="view-details link-load dark" aria-label="link"><span
-                                                    class="small-logo-ico"><svg>
-                                                        <use xlink:href="#ico-view-details-logo"></use>
-                                                    </svg> <span class="rotate-logo"><svg>
-                                                            <use xlink:href="#ico-view-details-rotate"></use>
-                                                        </svg> </span></span> XEM DỰ ÁN <svg class="viewdetails-svg">
-                                                    <use xlink:href="#arrow"></use>
-                                                </svg></a></div>
-                                    </div>
-                                    <div class="item-news slidebox-item">
-                                        <div class="pic-news">
-                                            <div class="pic-img"><img
-                                                    src="/pictures/catalog/project/selavila-phu-quoc-10optimized.jpeg"
-                                                    alt="Sun Tropical Village"></div>
-                                        </div>
-                                        <div class="txt-news">
-                                            <p>DỰ ÁN BẤT ĐỘNG SẢN</p>
-                                            <h3>Sun Tropical Village</h3>
-                                        </div>
-                                        <div class="wrap-view-details"><a
-                                                href="https://www.sengroup.vn/cong-ty-thanh-vien/sen-real/sun-tropical-village.html"
-                                                class="view-details link-load dark" aria-label="link"><span
-                                                    class="small-logo-ico"><svg>
-                                                        <use xlink:href="#ico-view-details-logo"></use>
-                                                    </svg> <span class="rotate-logo"><svg>
-                                                            <use xlink:href="#ico-view-details-rotate"></use>
-                                                        </svg> </span></span> XEM DỰ ÁN <svg class="viewdetails-svg">
-                                                    <use xlink:href="#arrow"></use>
-                                                </svg></a></div>
-                                    </div>
-                                    <div class="item-news slidebox-item">
-                                        <div class="pic-news">
-                                            <div class="pic-img"><img
-                                                    src="/pictures/catalog/project/sonasea-phu-quoc.jpeg"
-                                                    alt="Sonasea Phú Quốc"></div>
-                                        </div>
-                                        <div class="txt-news">
-                                            <p>DỰ ÁN BẤT ĐỘNG SẢN</p>
-                                            <h3>Sonasea Phú Quốc</h3>
-                                        </div>
-                                        <div class="wrap-view-details"><a
-                                                href="https://www.sengroup.vn/cong-ty-thanh-vien/sen-real/sonasea-phu-quoc.html"
-                                                class="view-details link-load dark" aria-label="link"><span
-                                                    class="small-logo-ico"><svg>
-                                                        <use xlink:href="#ico-view-details-logo"></use>
-                                                    </svg> <span class="rotate-logo"><svg>
-                                                            <use xlink:href="#ico-view-details-rotate"></use>
-                                                        </svg> </span></span> XEM DỰ ÁN <svg class="viewdetails-svg">
-                                                    <use xlink:href="#arrow"></use>
-                                                </svg></a></div>
-                                    </div>
-                                    <div class="item-news slidebox-item">
-                                        <div class="pic-news">
-                                            <div class="pic-img"><img src="/pictures/catalog/banner/ssv/SSV.jpg"
-                                                    alt="SUN SECRET VALLEY"></div>
-                                        </div>
-                                        <div class="txt-news">
-                                            <p>DỰ ÁN BẤT ĐỘNG SẢN</p>
-                                            <h3>SUN SECRET VALLEY</h3>
-                                        </div>
-                                        <div class="wrap-view-details"><a
-                                                href="https://www.sengroup.vn/cong-ty-thanh-vien/sen-real/sun-secret-valley.html"
-                                                class="view-details link-load dark" aria-label="link"><span
-                                                    class="small-logo-ico"><svg>
-                                                        <use xlink:href="#ico-view-details-logo"></use>
-                                                    </svg> <span class="rotate-logo"><svg>
-                                                            <use xlink:href="#ico-view-details-rotate"></use>
-                                                        </svg> </span></span> XEM DỰ ÁN <svg class="viewdetails-svg">
-                                                    <use xlink:href="#arrow"></use>
-                                                </svg></a></div>
-                                    </div>
-                                    <div class="item-news slidebox-item">
-                                        <div class="pic-news">
-                                            <div class="pic-img"><img
-                                                    src="/pictures/catalog/project/du-an-sun-grand-city-new-an-thoi-nam-phu-quoc.jpeg"
-                                                    alt="Sun Grand City New An Thới"></div>
-                                        </div>
-                                        <div class="txt-news">
-                                            <p>DỰ ÁN BẤT ĐỘNG SẢN</p>
-                                            <h3>Sun Grand City New An Thới</h3>
-                                        </div>
-                                        <div class="wrap-view-details"><a
-                                                href="https://www.sengroup.vn/cong-ty-thanh-vien/sen-real/sun-grand-city-new-an-thoi.html"
-                                                class="view-details link-load dark" aria-label="link"><span
-                                                    class="small-logo-ico"><svg>
-                                                        <use xlink:href="#ico-view-details-logo"></use>
-                                                    </svg> <span class="rotate-logo"><svg>
-                                                            <use xlink:href="#ico-view-details-rotate"></use>
-                                                        </svg> </span></span> XEM DỰ ÁN <svg class="viewdetails-svg">
-                                                    <use xlink:href="#arrow"></use>
-                                                </svg></a></div>
-                                    </div>
-                                    <div class="item-news slidebox-item">
-                                        <div class="pic-news">
-                                            <div class="pic-img"><img
-                                                    src="/pictures/catalog/project/Lalyana-Senses-World.jpeg"
-                                                    alt="L'Alyana Senses World"></div>
-                                        </div>
-                                        <div class="txt-news">
-                                            <p>DỰ ÁN BẤT ĐỘNG SẢN</p>
-                                            <h3>L'Alyana Senses World</h3>
-                                        </div>
-                                        <div class="wrap-view-details"><a
-                                                href="https://www.sengroup.vn/cong-ty-thanh-vien/sen-real/lalyana-senses-world.html"
-                                                class="view-details link-load dark" aria-label="link"><span
-                                                    class="small-logo-ico"><svg>
-                                                        <use xlink:href="#ico-view-details-logo"></use>
-                                                    </svg> <span class="rotate-logo"><svg>
-                                                            <use xlink:href="#ico-view-details-rotate"></use>
-                                                        </svg> </span></span> XEM DỰ ÁN <svg class="viewdetails-svg">
-                                                    <use xlink:href="#arrow"></use>
-                                                </svg></a></div>
-                                    </div>
-                                    <div class="item-news slidebox-item">
-                                        <div class="pic-news">
-                                            <div class="pic-img"><img
-                                                    src="/pictures/catalog/project/park-hyatt-phu-quoc-anh-cat.jpeg"
-                                                    alt="Park Hyatt Phú Quốc Residences"></div>
-                                        </div>
-                                        <div class="txt-news">
-                                            <p>DỰ ÁN BẤT ĐỘNG SẢN</p>
-                                            <h3>Park Hyatt Phú Quốc Residences</h3>
-                                        </div>
-                                        <div class="wrap-view-details"><a
-                                                href="https://www.sengroup.vn/cong-ty-thanh-vien/sen-real/park-hyatt-phu-quoc-residences.html"
-                                                class="view-details link-load dark" aria-label="link"><span
-                                                    class="small-logo-ico"><svg>
-                                                        <use xlink:href="#ico-view-details-logo"></use>
-                                                    </svg> <span class="rotate-logo"><svg>
-                                                            <use xlink:href="#ico-view-details-rotate"></use>
-                                                        </svg> </span></span> XEM DỰ ÁN <svg class="viewdetails-svg">
-                                                    <use xlink:href="#arrow"></use>
-                                                </svg></a></div>
-                                    </div>
+
+                                    <?php } ?>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
-                <!-- <section class="section-company">
-                    <div class="outer-company ani-item">
-                        <div class="sub-company">
-                            <ul>
-                                <li><a class="sub-company-a link-load  active-color" aria-label="SEN REAL"
-                                        href="/cong-ty-thanh-vien/sen-real.html" data-name="company-376"><svg>
-                                            <use xlink:href="#ico-business-logo-01"></use>
-                                        </svg></a></li>
-                                <li><a class="sub-company-a link-load " aria-label="SEN HEALTHCARE"
-                                        href="/cong-ty-thanh-vien/sen-healthcare.html" data-name="company-370"><svg>
-                                            <use xlink:href="#ico-business-logo-02"></use>
-                                        </svg></a></li>
-                                <li><a class="sub-company-a link-load " aria-label="SEN CONSTRUCTION"
-                                        href="/cong-ty-thanh-vien/sen-construction.html" data-name="company-385"><svg>
-                                            <use xlink:href="#ico-business-logo-03"></use>
-                                        </svg></a></li>
-                                <li><a class="sub-company-a link-load " aria-label="SEN RESORT"
-                                        href="/cong-ty-thanh-vien/sen-resort.html" data-name="company-386"><svg>
-                                            <use xlink:href="#ico-business-logo-04"></use>
-                                        </svg></a></li>
-                                <li><a class="sub-company-a link-load " aria-label="SEN MINING"
-                                        href="/cong-ty-thanh-vien/sen-mining.html" data-name="company-387"><svg>
-                                            <use xlink:href="#ico-business-logo-05"></use>
-                                        </svg></a></li>
-                            </ul>
-                        </div>
-                        <div class="wheel-submit wheel-next"><svg xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 16 16">
-                                <path fill="currentColor"
-                                    d="M5.5,2.7L10.9,8l-5.3,5.4l-0.7-0.7L9.4,8L4.8,3.4L5.5,2.7z" />
-                            </svg></div>
-                        <div class="wheel-submit hide wheel-prev"><svg xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 16 16">
-                                <path fill="currentColor"
-                                    d="M10.1,13.4L4.8,8l5.3-5.3l0.7,0.7L6.2,8l4.7,4.6L10.1,13.4z" />
-                            </svg></div>
-                    </div>
-                </section> -->
+
                 <?php require "footer.php" ?>
 
             </div>
