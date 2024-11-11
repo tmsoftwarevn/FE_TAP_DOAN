@@ -49,62 +49,63 @@ if ($data && $data['status'] === true && isset($data['data'])) {
             </a>
         </div>
     </div> -->
-    
+
     <?php
     foreach ($data_project as $key => $value) {
     ?>
-        <div class="item-news ani-item">
-            <div class="pic-news">
-                <!-- <div class="date">31<span>10-2024 </span></div> -->
-                <?php
+    <div class="item-news ani-item">
+        <div class="pic-news">
+            <!-- <div class="date">31<span>10-2024 </span></div> -->
+            <?php
                 $date = new DateTime($value['created_at']);
                 $day = $date->format('d');
                 $monthYear = $date->format('m-Y');
                 ?>
-                <div class="date">
-                    <?php echo $day; ?>
-                    <span><?php echo $monthYear; ?></span>
-                </div>
-                <div class="pic-img">
-                    <img src="
+            <div class="date">
+                <?php echo $day; ?>
+                <span><?php echo $monthYear; ?></span>
+            </div>
+            <div class="pic-img">
+                <img src="
                                                 <?php
-                                                echo $url_be, $value['banner'];
+                                                echo $url_be, $value['avatar'];
                                                 ?>
                                                 " data-src="
                                                 <?php
-                                                echo $url_be, $value['banner'];
+                                                echo $url_be, $value['avatar'];
                                                 ?>
                                                 " alt="
                                                     <?php
                                                     echo $value['headline'];
                                                     ?>
                                                 " class="lazy" />
-                </div>
-            </div>
-            <div class="txt-news">
-                <h3> <?php
-                        echo $value['headline'];
-                        ?>
-                </h3>
-            </div>
-            <div class="wrap-view-details">
-                <a href="<?php echo 'du-an/' . $value['slug'] ?>-<?php echo $value['id'] ?>.html" class="view-details dark link-load"
-                    aria-label=" SỰ KIỆN ĐÀO TẠO NỘI BỘ PHONG CÁCH BÁN HÀNG CHUẨN SEN GROUP &amp; ĐÀO TẠO DỰ ÁN THE EMERALD GOLF VIEW ️">
-                    <span class="small-logo-ico">
-                        <?php include "../component/logoLoading.php" ?>
-                        <span class="rotate-logo">
-                            <svg>
-                                <use xlink:href="#ico-view-details-rotate"></use>
-                            </svg>
-                        </span>
-                    </span>
-                    XEM TIN
-                    <svg class="viewdetails-svg">
-                        <use xlink:href="#arrow"></use>
-                    </svg>
-                </a>
             </div>
         </div>
+        <div class="txt-news">
+            <h3> <?php
+                        echo $value['headline'];
+                        ?>
+            </h3>
+        </div>
+        <div class="wrap-view-details">
+            <a href="<?php echo 'du-an/' . $value['slug'] ?>-<?php echo $value['id'] ?>.html"
+                class="view-details dark link-load"
+                aria-label=" SỰ KIỆN ĐÀO TẠO NỘI BỘ PHONG CÁCH BÁN HÀNG CHUẨN SEN GROUP &amp; ĐÀO TẠO DỰ ÁN THE EMERALD GOLF VIEW ️">
+                <span class="small-logo-ico">
+                    <?php include "../component/logoLoading.php" ?>
+                    <span class="rotate-logo">
+                        <svg>
+                            <use xlink:href="#ico-view-details-rotate"></use>
+                        </svg>
+                    </span>
+                </span>
+                XEM TIN
+                <svg class="viewdetails-svg">
+                    <use xlink:href="#arrow"></use>
+                </svg>
+            </a>
+        </div>
+    </div>
     <?php } ?>
 
 
@@ -113,8 +114,7 @@ if ($data && $data['status'] === true && isset($data['data'])) {
 <!-- // load theo page, vậy cho limit nhiều -->
 <div class="list-viewmore-news">
 
-    <a href="#foo" data-href="/truyen-thong/fake_loading.php" class="more-project"
-        aria-label="news">
+    <a href="#foo" data-href="/truyen-thong/fake_loading.php" class="more-project" aria-label="news">
     </a>
 
     <div class="loading">

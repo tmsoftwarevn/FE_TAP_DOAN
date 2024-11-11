@@ -4,10 +4,27 @@ require_once "setting-all-file.php";
 $id = 1;
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
-    echo 'id blog la:'.$id;
+    // echo 'id blog la:' . $id;
 } else {
     echo "Khong nhan duoc ID";
 }
+
+$url_be = 'https://belingo.tmsoftware.vn';
+$detail = '';
+
+$apiUrl = "{$url_be}/api/project/getprojectdetail?api_key=8AF1apnMW2A39Ip7LUFtNstE5RjYleghk&id={$id}";
+$response = file_get_contents($apiUrl);
+$data = json_decode($response, true); // Decode the JSON data
+
+if ($data && $data['status'] === true && isset($data['data'])) {
+    $detail = $data['data'];
+    // echo 'llllll';
+    // print_r($detail);
+} else {
+    echo "Error fetching data or no data available.";
+}
+
+
 
 ?>
 
@@ -16,45 +33,34 @@ if (isset($_GET['id'])) {
 
 <head>
     <meta charset="utf-8">
-    <meta name="google" content="notranslate">
+
     <meta name="language" content="vi">
     <meta name="robots" content="index, follow">
-    <meta name="author" content="SEN GROUP">
+    <meta name="author" content="LINGO GROUP">
     <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="format-detection" content="telephone=no">
-    <meta name="theme-color" content="#004a8f">
-    <title id="hdtitle">PICITY SKY PARK</title>
-    <meta name="description"
-        content="Picity Sky Park là sản phẩm tiếp theo của chủ đầu tư Pi Group sau khi thành công vang dội dự án Picity High Park. Quan điểm của chủ đầu tư luôn thiết kế căn hộ với nhiều mảng xanh, thoáng &amp; môi trường sống trong lành cho cư dân. Tọa lạc trung tâm TP. ">
-    <meta name="keywords" content="SEN GROUP">
-    <meta property="og:title" content="PICITY SKY PARK">
-    <meta property="og:description"
-        content="Picity Sky Park là sản phẩm tiếp theo của chủ đầu tư Pi Group sau khi thành công vang dội dự án Picity High Park. Quan điểm của chủ đầu tư luôn thiết kế căn hộ với nhiều mảng xanh, thoáng &amp; môi trường sống trong lành cho cư dân. Tọa lạc trung tâm TP. ">
+
+    <title id="hdtitle"><?php echo $detail['headline'] ?></title>
+    <meta name="description" content="<?php echo $detail['description'] ?>">
+    <meta name="keywords" content="<?php echo $detail['keywords'] ?>">
+
+    <meta property="og:title" content="<?php echo $detail['headline'] ?>">
+    <meta property="og:description" content="<?php echo $detail['description'] ?>">
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="SEN GROUP">
-    <meta property="og:image" content="/pictures/catalog/Picity/picity-sky-park-di-an21.jpg">
+    <meta property="og:site_name" content="LINGO GROUP">
+    <meta property="og:image" content="<?php echo $url_be . $detail['avatar'] ?>">
     <meta property="og:locale" content="vi">
-    <meta name="DC.title" content="SEN GROUP">
-    <meta name="geo.region" content="VN-HCM">
-    <meta name="geo.placename" content="3 District, Ho Chi Minh City">
-    <meta name="geo.position" content="10.7828786;106.6932583">
-    <meta name="ICBM" content="10.7828786, 106.6932583">
+
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <!-- <meta name="apple-mobile-web-app-title" content="SEN GROUP">
-    <link rel="shortcut icon" href="/catalog/view/images/favicon.svg" type="image/x-icon">
-    <link rel="icon" sizes="512x512" href="/catalog/view/images/icon-512.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/catalog/view/images/apple-touch-icon.png">
-    <link rel="manifest" href="/manifest.json">
-    <link rel="alternate" href="/cong-ty-thanh-vien/sen-real/picity-sky-park.html" hreflang="vi-vn">
-    <link rel="alternate" href="/members/sen-real-1/picity-sky-park-1.html" hreflang="en-vn">
-    <link href="/cong-ty-thanh-vien/sen-real/picity-sky-park.html" rel="canonical">
-    <meta property="og:url" content="/cong-ty-thanh-vien/sen-real/picity-sky-park.html"> -->
+    <meta name="apple-mobile-web-app-title" content="LINGO GROUP">
+
+    <link rel="icon" href="/images/logo.png" type="image/x-icon" />
+    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.png" />
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.0.0/css/flag-icons.min.css" />
-
     <link rel="stylesheet" href="/css/main.css">
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -151,19 +157,19 @@ c0.4,0,0.6-0.1,0.7-0.2c0.1-0.1,0.1-0.3,0.1-0.7v-15.1c0-0.3,0-0.6-0.1-0.7c-0.1-0.
 h-2.2v9.2h2.2c1.3,0,2.3-0.4,2.9-1.1c0.6-0.7,0.9-1.9,0.9-3.6c0-1.6-0.3-2.8-0.9-3.5C201.8,218.4,200.8,218.1,199.5,218.1" />
         </svg></div>
     <script>
-        var loadDeferredStyles = function() {
-            var addStylesNode = document.getElementById("deferred-styles");
-            var replacement = document.getElementById("render-styles");
-            replacement.innerHTML = addStylesNode.textContent;
-            document.body.appendChild(replacement)
-            addStylesNode.parentElement.removeChild(addStylesNode);
-        };
-        var raf = requestAnimationFrame || mozRequestAnimationFrame ||
-            webkitRequestAnimationFrame || msRequestAnimationFrame;
-        if (raf) raf(function() {
-            window.setTimeout(loadDeferredStyles, 0);
-        });
-        else window.addEventListener('load', loadDeferredStyles);
+    var loadDeferredStyles = function() {
+        var addStylesNode = document.getElementById("deferred-styles");
+        var replacement = document.getElementById("render-styles");
+        replacement.innerHTML = addStylesNode.textContent;
+        document.body.appendChild(replacement)
+        addStylesNode.parentElement.removeChild(addStylesNode);
+    };
+    var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+        webkitRequestAnimationFrame || msRequestAnimationFrame;
+    if (raf) raf(function() {
+        window.setTimeout(loadDeferredStyles, 0);
+    });
+    else window.addEventListener('load', loadDeferredStyles);
     </script>
 
     <?php require "header.php" ?>
@@ -172,17 +178,30 @@ h-2.2v9.2h2.2c1.3,0,2.3-0.4,2.9-1.1c0.6-0.7,0.9-1.9,0.9-3.6c0-1.6-0.3-2.8-0.9-3.
         <div class="smooth-scroll">
             <div class="container" id="project-details-page">
                 <script>
-                    if (document.querySelector('#home-page')) {
-                        Array.from(document.querySelectorAll('.mask, .loadicon'), function(element) {
-                            if (element) element.style.display = "block";
-                        });
-                        document.querySelector('.header').style.visibility = "visible";
-                    }
+                if (document.querySelector('#home-page')) {
+                    Array.from(document.querySelectorAll('.mask, .loadicon'), function(element) {
+                        if (element) element.style.display = "block";
+                    });
+                    document.querySelector('.header').style.visibility = "visible";
+                }
                 </script>
                 <div class="tile-reveal"></div>
                 <section class="banner-inner">
-                    <div class="bg-inner"><img src="/banner/1920x960.png" data-src="/banner/1920x960.png"
-                            alt="PICITY SKY PARK" class="lazy"></div>
+                    <div class="bg-inner">
+                        <img src="
+                                                <?php
+                                                echo $url_be, $detail['banner'];
+                                                ?>
+                                                " data-src="
+                                                <?php
+                                                echo $url_be, $detail['banner'];
+                                                ?>
+                                                " alt="
+                                                    <?php
+                                                    echo $detail['headline'];
+                                                    ?>
+                                                " class="lazy" />
+                    </div>
                     <div class="wrap-wheel">
                         <div class="wheel"><span>Scroll down</span></div>
                     </div>
@@ -191,25 +210,23 @@ h-2.2v9.2h2.2c1.3,0,2.3-0.4,2.9-1.1c0.6-0.7,0.9-1.9,0.9-3.6c0-1.6-0.3-2.8-0.9-3.
                     <div class="wrap-content">
                         <div class="breadcrumb">
                             <ul>
-                                <li><a class="link-load" href="/cong-ty-thanh-vien.html">Công ty thành viên</a></li>
-                                <li><a class="link-load" href="/cong-ty-thanh-vien/sen-real.html">SEN REAL</a></li>
-                                <li>PICITY SKY PARK</li>
+                                <li><a class="link-load" href="/">Trang chủ</a></li>
+                                <li><a class="link-load" href="/du-an-tieu-bieu">Dự án tiêu biểu</a></li>
+
                             </ul>
                         </div>
                         <div class="left-content">
                             <div class="title-main title-underline color-blue title-underline text-left bold-medium">
-                                <h1 class="text-ani-item">PICITY SKY PARK</h1>
+                                <h1 class="text-ani-item"><?php echo $detail['headline'] ?></h1>
                             </div>
                             <div class="share"><span>Share</span>
                                 <ul>
-                                    <li><a class="facebook"
-                                            href="http://www.facebook.com/sharer.php?u=/cong-ty-thanh-vien/sen-real/picity-sky-park.html"
-                                            target="_blank" rel="noreferrer"><svg viewBox="0 0 60 60">
+                                    <li><a class="facebook" href="#" target="_blank" rel="noreferrer"><svg
+                                                viewBox="0 0 60 60">
                                                 <path fill="currentColor" d="M36.7,25.1h-4.5c-0.25-4.86,0.18-4.22,4.3-4.2V16c-8.4-0.67-10.99,1.62-10.4,9.2h-2.8v5h2.8c0,6.4,0,14.2,0,14.2H32
 c0,0,0-7.8,0-14.2h3.9L36.7,25.1z"></path>
                                             </svg></a></li>
-                                    <li><button class="zalo zalo-share-button"
-                                            data-href="/cong-ty-thanh-vien/sen-real/picity-sky-park.html"
+                                    <li><button class="zalo zalo-share-button" data-href="#"
                                             data-oaid="579745863508352884" data-layout="icon-text" data-customize="true"
                                             aria-label="zalo"><svg viewBox="0 0 100 60">
                                                 <path fill="currentColor" d="M25.82,35.86h9.03c1.6,0,2.62,0.73,2.76,2.03c0.14,1.6-0.73,2.77-2.62,2.77h-13.1c-1.16,0-2.48-0.29-3.06-1.6
@@ -231,207 +248,13 @@ C77.5,30.76,77.5,33.53,76.19,35.13z"></path>
                             </div>
                         </div>
                         <div class="right-content">
-                            <div class="box-text text-fixed ani-item two-column">
-                                <p><span style="color: #000000;"><strong>PICITY SKY PARK </strong>Tiếp tục khẳng định
-                                        tầm nhìn chiến lược của Tập đoàn, Picity Sky Park tiếp nối sứ mệnh định hình
-                                        phong cách sống của thời đại số, mang đến trải nghiệm sống hứng khởi cho cư dân
-                                        “thế hệ mới”: xây dựng khu đô thị số văn minh - vững bền ngay tại cửa ngõ Thành
-                                        phố Thủ Đức.</span>.</p>
-                                <div id="GROUP2403" class="ladi-element">
-                                    <div class="ladi-group">
-                                        <div id="HEADLINE2404" class="ladi-element"></div>
-                                    </div>
-                                </div>
-                                <div id="LIST_PARAGRAPH2406" class="ladi-element">
-                                    <div class="ladi-list-paragraph">
-                                        <h2><strong>THÔNG TIN DỰ ÁN</strong></h2>
-                                    </div>
-                                </div>
-                                <ul>
-                                    <li class="">Tên dự án: <span style="color: #000000;"><strong>Picity Sky
-                                                Park</strong></span></li>
-                                    <li class="">Chủ đầu tư: Công Ty Cổ Phần Đầu Tư Kim Sơm</li>
-                                    <li class="">Phát triển dự án: Tập Đoàn Pi Group</li>
-                                    <li class="">Mật độ xây dựng: 52.91%</li>
-                                    <li class="">Số Block: 3 Block</li>
-                                    <li class="">Khối đế: 6 tầng</li>
-                                    <li class="">Tầng hầm: 2 tầng</li>
-                                    <li class="">Diện tích xây dựng: 5,660m2</li>
-                                    <li class="">Tổng số lượng sản phẩm: 1.568 sản phẩm</li>
-                                    <li class="">Thời gian bàn giao dự kiến: Tháng 3/2027</li>
-                                    <li class="">Tính pháp lý: Sổ hồng, sở hữu lâu dài</li>
-                                </ul>
-                                <p> </p>
-                            </div>
+                            <?php echo $detail['content'] ?>
                         </div>
-                        <div class="slide-library slide-two arrow-outside dot-dark ani-item">
-                            <div class="slidebox-track">
-                                <div class="slidebox-list">
-                                    <div class="bg-item-album slidebox-item">
-                                        <div class="item-album">
-                                            <div class="pic-library">
-                                                <div class="pic-img"><img
-                                                        src="/pictures/catalog/picity-sky-park-phoi-canh-moi-07-2023.jpg"
-                                                        alt="Tiện Ích Nội Khu"></div><a class="view-album" href="#foo"
-                                                    data-href="/view-gallery-project.html?id=173&language=vi"
-                                                    aria-label="album"></a>
-                                            </div>
-                                            <div class="text-pro-slide-intro">
-                                                <h3>Tiện Ích Nội Khu</h3>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="box-text text-fixed ani-item">
-                            <h2 class="ladi-headline"><strong>VỊ TRÍ HUYẾT MẠCH </strong>KẾT NỐI GIAO THƯƠNG - TP. THỦ
-                                ĐỨC</h2>
-                            <div id="IMAGE2780" class="ladi-element">
-                                <div class="ladi-image">
-                                    <ul>
-                                        <li class="">Vị trí căn hộ <strong>Picity Sky Park</strong> nằm tọa lạc tại số
-                                            15/9 KP Bình Đường 2, Phường An Bình, TP. Dĩ An, Bình Dương. Vị trí này giúp
-                                            cư dân có tuyến giao thông cực kỳ thuận tiện về trung tâm khi liền kề trục
-                                            Phạm Văn Đồng.</li>
-                                        <li class="">Từ đây, bạn dễ dàng đến khu vực trọng yếu của TP Thủ Đức thông qua
-                                            các tuyến đường huyết mạch hiện hữu như Quốc lộ 1A, Quốc lộ 1K. Nơi đây cũng
-                                            là cửa ngõ giao thương quan trọng nhờ sở hữu hệ thống nhà ga, kho bãi,
-                                            cảng,… phục vụ ngành sản xuất.</li>
-                                        <li class="">Một hệ sinh thái hoàn hảo mang đến mọi tiện nghi cao cấp nổi bật
-                                            của khu vực chỉ trong bán kính từ 1 đến 5 km.</li>
-                                        <li>Di chuyển về TP. HCM theo trục Phạm Văn Đồng chỉ 5 phút là về đến TP. Thủ
-                                            Đức, từ đó dễ dàng di chuyển về sân bay Tân Sơn Nhất, Bình Thạnh, Tân Bình,
-                                            Phú Nhuận…</li>
-                                        <li>Mặt tiền đường quốc lộ 1A giúp cư dân di chuyển nhanh về Đồng Nai, kết nối
-                                            trục DT743 đi về Thủ Dầu Một, Thuận An nhanh chóng &amp; tiện lợi.</li>
-                                        <li>Kết nối nhanh về làng đại học Thủ Đức</li>
-                                        <li>Di chuyển về trung tâm Gò Vấp theo đường Phạm Văn Đồng dễ dàng</li>
-                                        <li>Kết nối nhanh về bệnh viện Hoàn Mỹ Thủ Đức trong 5 phút</li>
-                                        <li>Trung tâm hành chính Thủ Đức kết nối thuận tiện theo nhiều tuyến giao thông
-                                            huyết mạch.</li>
-                                    </ul>
-                                    <div id="GROUP2417" class="ladi-element">
-                                        <div class="ladi-group">
-                                            <div id="HEADLINE2418" class="ladi-element">
-                                                <h2 class="ladi-headline"><strong>VỊ TRÍ DỰ ÁN PICITY SKY PARK</strong>
-                                                </h2>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div id="LIST_PARAGRAPH2421" class="ladi-element">
-                                        <div class="ladi-list-paragraph">
-                                            <ul>
-                                                <li><strong>Dự án Căn hộ Picity Sky Park</strong> nằm ngay trung tâm
-                                                    thành phố Dĩ An – khu vực giao thoa với thành phố Thủ Đức, tiếp giáp
-                                                    TP HCM và Đồng Nai. </li>
-                                                <li class=""><strong>Cư dân tương lai Picity Sky Park</strong> di chuyển
-                                                    dễ dàng đến các điểm như:  Chợ Dĩ An, Bệnh viện Hạnh Phúc, Vincom Dĩ
-                                                    An, Aeon Dĩ An, Bệnh viện Hoàn Mỹ, bến xe Miền Đông mới, nhà ga
-                                                    Metro tuyến số
-                                                    1, Bệnh viện Ung Bướu 2,… Bằng cắc tuyến đường như: Quốc lộ 1A, Quốc
-                                                    lộ 1K, Phạm Văn Đồng, Quốc lộ 13, Xa Lộ Hà Nội,…</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div id="GROUP2434" class="ladi-element">
-                                        <div class="ladi-group">
-                                            <div id="HEADLINE2435" class="ladi-element">
-                                                <h2 class="ladi-headline"><strong>MẶT BẰNG TẦNG ĐIỂN
-                                                        HÌNH </strong><strong>PICITY SKY PARK</strong></h2>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div id="LIST_PARAGRAPH2629" class="ladi-element">
-                                        <div class="ladi-list-paragraph">
-                                            <p>Với thiết kế chuẩn xanh &amp; sang tại <strong>dự án căn hộ Picity Sky
-                                                    Park</strong>. Dự án mang đến cho khách hàng một tổ ấp đa tiện ích,
-                                                là món quà nhiều giá trị, chinh phục những khách hàng khó tính nhất, hứa
-                                                hẹn mang đến cho <strong>thị trường bất động sản Bình Dương</strong> một
-                                                làn gió mới.</p>
-                                            <p><strong>Mặt bằng Dự án Chung cư Picity Sky Park</strong> được 2 đơn vị
-                                                thầu xây dựng có tiếng hàng đầu Việt Nam là <strong>Hòa
-                                                    Bình</strong> và <strong>Unicons </strong>công ty thành
-                                                viên<strong> Tập đoàn Coteccons</strong>. </p>
-                                            <p> </p>
-                                            <p><img style="display: block; margin-left: auto; margin-right: auto;"
-                                                    src="/pictures/catalog/FINALTMB-2.jpg"
-                                                    alt="PICITY SKY PARK FINALTMB-2.jpg" /></p>
-                                            <p><img src="/pictures/catalog/02-H1-1.jpg"
-                                                    alt="PICITY SKY PARK 02-H1-1.jpg" /></p>
-                                            <p><img style="display: block; margin-left: auto; margin-right: auto;"
-                                                    src="/pictures/catalog/06-T3.jpg" alt="PICITY SKY PARK 06-T3.jpg" />
-                                            </p>
-                                            <p><img style="display: block; margin-left: auto; margin-right: auto;"
-                                                    src="/pictures/catalog/13-T1020.png"
-                                                    alt="PICITY SKY PARK 13-T1020.png" /></p>
-                                            <p><img style="display: block; margin-left: auto; margin-right: auto;"
-                                                    src="/pictures/catalog/OFT04.png" alt="PICITY SKY PARK OFT04.png" />
-                                            </p>
-                                            <p><img style="display: block; margin-left: auto; margin-right: auto;"
-                                                    src="/pictures/catalog/2PN.2WC.png"
-                                                    alt="PICITY SKY PARK 2PN.2WC.png" /></p>
-                                            <p><img style="display: block; margin-left: auto; margin-right: auto;"
-                                                    src="/pictures/catalog/SH10.png" alt="PICITY SKY PARK SH10.png" />
-                                            </p>
-                                            <p> </p>
-                                            <p> </p>
-                                            <p> </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+
                     </div>
                 </section>
-                <section class="contact-form-section contact-form-project">
-                    <div class="pic-contact-form ani-item">
-                        <div class="bg-cover trans-y bg-lazy" data-speed="-2"></div>
-                    </div>
-                    <div class="wrap-content">
-                        <div class="left-content">
-                            <div class="title-main text-left color-white title-underline">
-                                <h2 class="text-ani-item">Đăng ký <strong>nhận thông tin</strong></h2>
-                            </div>
-                        </div>
-                        <div class="right-content">
-                            <div class="contact-form">
-                                <form id="registerproject_form" onsubmit="return false;" name="registerproject_form"
-                                    method="post"><input type="hidden" name="project_id" value="246">
-                                    <div class="input-text ani-item"><span class="holder">HỌ VÀ TÊN<small
-                                                class="red-star">*</small></span> <input class="o2o-name"
-                                            id="nameregisterproject" name="nameregisterproject" value="" type="text"
-                                            data-error="Vui lòng nhập tên!" data-default="HỌ VÀ TÊN"
-                                            aria-label="fullname"></div>
-                                    <div class="input-text ani-item"><span class="holder">ĐIỆN THOẠI<small
-                                                class="red-star">*</small></span> <input id="phoneregisterproject"
-                                            class="o2o-phone" type="text" name="phoneregisterproject" value=""
-                                            data-error="Điện thoại không hợp lệ!" data-default="ĐIỆN THOẠI"
-                                            aria-label="phone"></div>
-                                    <div class="input-text ani-item"><span class="holder">EMAIL<small
-                                                class="red-star">*</small></span> <input class="o2o-email"
-                                            id="emailregisterproject" name="emailregisterproject" value="" type="text"
-                                            data-error="Email không hợp lệ!" data-default="EMAIL" aria-label="email">
-                                    </div>
-                                    <div class="input-area ani-item"><span class="holder">NỘI DUNG CẦN LIÊN
-                                            HỆ</span><textarea class="o2o-note" name="commentregisterproject"
-                                            id="commentregisterproject" data-error="Vui lòng nhập nội dung!"
-                                            data-default="NỘI DUNG CẦN LIÊN HỆ" aria-label="comment"></textarea></div>
-                                    <div class="wrap-view-details big-view ani-item"><button class="view-details"
-                                            aria-label="link" id="btn-registerproject-submit"
-                                            data-page="/thank-you-.html"><span class="small-logo-ico"><svg>
-                                                    <use xlink:href="#ico-view-details-logo"></use>
-                                                </svg> <span class="rotate-logo"><svg>
-                                                        <use xlink:href="#ico-view-details-rotate-send"></use>
-                                                    </svg> </span></span> GỬI THÔNG TIN <svg class="viewdetails-svg">
-                                                <use xlink:href="#arrow"></use>
-                                            </svg></button></div>
-                                </form>
-                            </div>
-                        </div>
-                    </div><span class="line-bottom ani-item"></span>
-                </section>
-                <section class="project-relative">
+                
+                <section class="project-relative mb-10">
                     <div class="wrap-content">
                         <div class="title-main text-center color-blue title-underline bold-medium">
                             <h2 class="text-ani-item">Dự án khác</h2>

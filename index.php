@@ -197,19 +197,15 @@ if ($data && $data['status'] === true && isset($data['data'])) {
                                                 <?php
                                                 echo $url_be, $value['image'];
                                                 ?>
-                                                "
-                                                    data-src="
+                                                " data-src="
                                                 <?php
                                                 echo $url_be, $value['image'];
                                                 ?>
-                                                "
-
-                                                    alt="
+                                                " alt="
                                                     <?php
                                                     echo $value['name'];
                                                     ?>
-                                                "
-                                                    class="lazy" />
+                                                " class="lazy" />
                                             </div>
                                             <div class="text-banner">
                                                 <div class="title-banner">
@@ -223,10 +219,9 @@ if ($data && $data['status'] === true && isset($data['data'])) {
                                                 echo $value['description'];
                                                 ?>
                                                 <div class="wrap-view-details">
-                                                    <a href="/du-an/detail-du-an.php"
-                                                        class="view-details link-load" aria-label="link">
-                                                        <span
-                                                            class="small-logo-ico">
+                                                    <a href="/du-an/detail-du-an.php" class="view-details link-load"
+                                                        aria-label="link">
+                                                        <span class="small-logo-ico">
                                                             <?php include "component/logoLoading.php" ?>
                                                             <span class="rotate-logo">
                                                                 <svg>
@@ -235,8 +230,7 @@ if ($data && $data['status'] === true && isset($data['data'])) {
                                                             </span>
                                                         </span>
                                                         Xem dự án
-                                                        <svg
-                                                            class="viewdetails-svg">
+                                                        <svg class="viewdetails-svg">
                                                             <use xlink:href="#arrow"></use>
                                                         </svg>
                                                     </a>
@@ -261,9 +255,9 @@ if ($data && $data['status'] === true && isset($data['data'])) {
                             <div class="title-main color-yellow text-left">
                                 <h2 class="text-ani-item"><strong>Triết Lý</strong></h2>
                                 <div class="home-intro-draw draw-vi">
-                                    <svg class="nums-drawing"
-                                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                        x="0px" y="0px" viewBox="0 0 800 220" xml:space="preserve">
+                                    <svg class="nums-drawing" xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 800 220"
+                                        xml:space="preserve">
                                         <image xmlns:xlink="http://www.w3.org/1999/xlink"
                                             xlink:href="/catalog/view/images/home/lotus-vi.svg" width="100%"
                                             height="100%" mask="url(#clipmask01)"></image>
@@ -340,15 +334,16 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                     <div class="wrap-content">
                         <div class="left-content">
                             <div class="title-main text-left color-white">
-                                <h2 class="text-ani-item"><?= __('Lĩnh Vực') ?>  <br /><strong><?= __('Hoạt Động') ?></strong></h2>
+                                <h2 class="text-ani-item"><?= __('Lĩnh Vực') ?>
+                                     <br /><strong><?= __('Hoạt Động') ?></strong></h2>
                             </div>
                         </div>
                         <div class="right-content">
                             <div class="business-home-list ani-item">
                                 <div class="business-home trigger-tab" data-name="business-02">
                                     <div class="box-img">
-                                        <svg xmlns="https://www.w3.org/2000/svg" class="svgMask"
-                                            x="0px" y="0px" width="100" height="100" viewBox="0 0 100 100">
+                                        <svg xmlns="https://www.w3.org/2000/svg" class="svgMask" x="0px" y="0px"
+                                            width="100" height="100" viewBox="0 0 100 100">
                                             <defs>
                                                 <clipPath id="maskID0">
                                                     <path
@@ -371,7 +366,8 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                     </a>
                                     <span class="logo-bus-home">
 
-                                        <img src="/images/logo2.png" class="w-[55px] h-auto rounded-full object-contain" />
+                                        <img src="/images/logo2.png"
+                                            class="w-[55px] h-auto rounded-full object-contain" />
 
                                     </span>
                                 </div>
@@ -393,12 +389,12 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                             <path
                                                 d="M46.3,97.3L2.7,53.7c-2.1-2.1-2.1-5.4,0-7.5L46.3,2.7c2.1-2.1,5.4-2.1,7.5,0l43.5,43.5c2.1,2.1,2.1,5.4,0,7.5L53.7,97.3C51.7,99.3,48.3,99.3,46.3,97.3z">
                                         </svg></div>
-                                    <a href="/cong-ty-thanh-vien/sen-mining.html" class="link-load"
-                                        aria-label="DU HỌC">
+                                    <a href="/cong-ty-thanh-vien/sen-mining.html" class="link-load" aria-label="DU HỌC">
                                     </a>
                                     <span class="logo-bus-home">
 
-                                        <img src="/images/logo2.png" class="w-[55px] h-auto rounded-full object-contain" />
+                                        <img src="/images/logo2.png"
+                                            class="w-[55px] h-auto rounded-full object-contain" />
 
                                     </span>
                                 </div>
@@ -424,7 +420,8 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                         aria-label="XUẤT KHẨU LAO ĐỘNG"></a>
                                     <span class="logo-bus-home">
 
-                                        <img src="/images/logo2.png" class="w-[55px] h-auto rounded-full object-contain" />
+                                        <img src="/images/logo2.png"
+                                            class="w-[55px] h-auto rounded-full object-contain" />
 
                                     </span>
                                 </div>
@@ -450,7 +447,8 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                         aria-label="KỸ NĂNG SỐNG"></a>
                                     <span class="logo-bus-home">
 
-                                        <img src="/images/logo2.png" class="w-[55px] h-auto rounded-full object-contain" />
+                                        <img src="/images/logo2.png"
+                                            class="w-[55px] h-auto rounded-full object-contain" />
 
                                     </span>
                                 </div>
@@ -476,7 +474,8 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                         aria-label="LINGO GROUP"></a>
                                     <span class="logo-bus-home">
 
-                                        <img src="/images/logo2.png" class="w-[55px] h-auto rounded-full object-contain" />
+                                        <img src="/images/logo2.png"
+                                            class="w-[55px] h-auto rounded-full object-contain" />
 
                                     </span>
                                 </div>
@@ -507,7 +506,8 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                     <div class="content-bus-tab-home">
                                         <h3 class="!text-blue-500">XUẤT KHẨU LAO ĐỘNG</h3>
                                         <div class="content color-white content-collapse">
-                                            <p>SEN CONSTRUCTION tập trung lĩnh vực đầu tư, thiết kế và XUẤT KHẨU LAO ĐỘNG công
+                                            <p>SEN CONSTRUCTION tập trung lĩnh vực đầu tư, thiết kế và XUẤT KHẨU LAO
+                                                ĐỘNG công
                                                 trình là một mắt xích quan trọng trong hệ sinh thái của Tập đoàn SEN
                                                 GROUP.</p>
                                         </div>
@@ -583,7 +583,8 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                         <div class="item-project-home slidebox-item">
                                             <span class="logo-pro-home">
 
-                                                <img src="/images/logo2.png" class="w-[55px] h-auto rounded-full object-contain" />
+                                                <img src="/images/logo2.png"
+                                                    class="w-[55px] h-auto rounded-full object-contain" />
 
                                             </span>
                                             <div class="wrap-text-pro-home">
@@ -600,25 +601,21 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                                 <div class="pic-img">
                                                     <img src="
                                                 <?php
-                                                echo $url_be, $value['banner'];
+                                                echo $url_be, $value['avatar'];
                                                 ?>
-                                                "
-                                                        data-src="
+                                                " data-src="
                                                 <?php
-                                                echo $url_be, $value['banner'];
+                                                echo $url_be, $value['avatar'];
                                                 ?>
-                                                "
-
-                                                        alt="
+                                                " alt="
                                                     <?php
                                                     echo $value['headline'];
                                                     ?>
-                                                "
-                                                        class="lazy" />
+                                                " class="lazy" />
                                                 </div>
 
                                                 <a class="link-load"
-                                                    href="/du-an/detail-du-an.php">
+                                                    href="<?php echo 'du-an/' . $value['slug'] ?>-<?php echo $value['id'] ?>.html">
                                                 </a>
 
                                             </div>
@@ -673,7 +670,8 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                     </div>
                                 </div> -->
                                 <?php
-                                foreach ($data_blog as $key => $value) {
+                                $firstBlogs = array_slice($data_blog, 0,4);
+                                foreach ($firstBlogs as $key => $value) {
                                 ?>
                                     <div class="item-news-home">
                                         <div class="pic-news-home">
@@ -682,19 +680,15 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                                 <?php
                                                 echo $url_be, $value['image'];
                                                 ?>
-                                                "
-                                                    data-src="
+                                                " data-src="
                                                 <?php
                                                 echo $url_be, $value['image'];
                                                 ?>
-                                                "
-
-                                                    alt="
+                                                " alt="
                                                     <?php
                                                     echo $value['headline'];
                                                     ?>
-                                                "
-                                                    class="lazy" />
+                                                " class="lazy" />
                                             </div>
                                         </div>
                                         <div class="txt-news-home">
@@ -702,10 +696,11 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                                 <?php echo $value['headline'] ?>
                                             </h3>
                                             <div class="wrap-view-details">
-                                                <a href="/tin-tuc/detail-tintuc.php"
-                                                    class="view-details dark link-load" aria-label="link">
-                                                    <span
-                                                        class="small-logo-ico">
+                                                <a
+                                                    href="<?php echo 'tin-tuc/' . $value['slug'] ?>-<?php echo $value['id'] ?>.html"
+                                                    class="view-details dark link-load"
+                                                    aria-label="link">
+                                                    <span class="small-logo-ico">
                                                         <?php include "component/logoLoading.php" ?>
                                                         <span class="rotate-logo">
                                                             <svg>
@@ -725,8 +720,7 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                             </div>
                         </div>
                         <div class="wrap-view-details big-view">
-                            <a href="/tin-truyen-thong"
-                                class="view-details dark link-load" aria-label="link">
+                            <a href="/tin-truyen-thong" class="view-details dark link-load" aria-label="link">
                                 <span class="small-logo-ico">
                                     <?php include "component/logoLoading.php" ?>
                                     <span class="rotate-logo">

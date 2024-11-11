@@ -125,7 +125,7 @@ C57.9,89.7,53.8,90.3,49.6,90.3z" />
                         data-hrefvi="/cong-ty-thanh-vien.html" data-title="Công ty thành viên"
                         data-description="LINGO GROUP" data-keyword="LINGO GROUP" aria-label="link-change-url"></div>
                 </li> -->
-                <li class="nav-item <?php if ($currentPath == '/du-an-tieu-bieu') echo 'current'; ?>">
+                <li class="nav-item <?php if ($currentPath == '/du-an-tieu-bieu' ||strpos($currentPath, '/du-an') === 0) echo 'current'; ?>">
                     <a class="link-load nav-item-a" href="/du-an-tieu-bieu"
                         data-name="activities-page" aria-label="nav">Dự án tiêu biểu</a>
                     <div class="class-hidden link-change-url" data-hrefen="/du-an-tieu-bieu"
@@ -139,7 +139,7 @@ C57.9,89.7,53.8,90.3,49.6,90.3z" />
                         data-hrefvi="/phat-trien-nguon-nhan-luc" data-title="Phát triển nguồn nhân lực"
                         data-description="LINGO GROUP" data-keyword="LINGO GROUP" aria-label="link-change-url"></div>
                 </li>
-                <li class="nav-item <?php if ($currentPath == '/tin-truyen-thong') echo 'current'; ?>">
+                <li class="nav-item <?php if ($currentPath == '/tin-truyen-thong' || strpos($currentPath, '/tin-tuc') === 0) echo 'current'; ?>">
                     <a class="link-load nav-item-a" href="/tin-truyen-thong" data-name="news-page"
                         aria-label="nav">Truyền thông</a>
                     <div class="class-hidden link-change-url" data-hrefen="/tin-truyen-thong" data-hrefvi="/tin-truyen-thong"

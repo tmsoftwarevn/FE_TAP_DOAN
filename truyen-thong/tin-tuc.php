@@ -31,7 +31,8 @@ if ($data && $data['status'] === true && isset($data['data'])) {
 </div>
 <div class="news-list">
     <?php
-    foreach ($data_project as $key => $value) {
+     $firstBlogs = array_slice($data_blog, 0,8);
+    foreach ($firstBlogs as $key => $value) {
     ?>
         <div class="item-news ani-item">
             <div class="pic-news">
@@ -67,7 +68,9 @@ if ($data && $data['status'] === true && isset($data['data'])) {
                 </h3>
             </div>
             <div class="wrap-view-details">
-                <a href="../tin-tuc/detail-tintuc.php" class="view-details dark link-load"
+                <a 
+                href="<?php echo 'tin-tuc/' . $value['slug'] ?>-<?php echo $value['id'] ?>.html"
+                class="view-details dark link-load"
                     aria-label=" SỰ KIỆN ĐÀO TẠO NỘI BỘ PHONG CÁCH BÁN HÀNG CHUẨN SEN GROUP &amp; ĐÀO TẠO DỰ ÁN THE EMERALD GOLF VIEW ️">
                     <span class="small-logo-ico">
                         <?php include "../component/logoLoading.php" ?>

@@ -20,3 +20,4 @@ RewriteCond %{REQUEST_FILENAME}.php -f
 RewriteRule ^(.*)$ $1.php [L]
 
 RewriteRule du-an/(.*)-([0-9]+)\.html$ detail-du-an.php?id=$2 [QSA,L]
+RewriteRule tin-tuc/(.*)-([0-9]+)\.html$ detail-tintuc.php?id=$2 [QSA,L]
