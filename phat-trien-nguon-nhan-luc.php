@@ -1,3 +1,10 @@
+<?php
+    require_once "setting-all-file.php";
+
+
+
+?>
+
 <!DOCTYPE HTML>
 <html lang="vi">
 
@@ -226,7 +233,7 @@ h-2.2v9.2h2.2c1.3,0,2.3-0.4,2.9-1.1c0.6-0.7,0.9-1.9,0.9-3.6c0-1.6-0.3-2.8-0.9-3.
                         <div class="bg-cover trans-y bg-lazy" data-speed="-2"></div>
                     </div>
                 </section>
-                <section class="recruitment-career">
+                <!-- <section class="recruitment-career">
                     <div class="pic-member-intro-01 ani-item">
                         <div class="bg-cover trans-y bg-lazy" data-speed="-2"></div>
                     </div>
@@ -313,7 +320,7 @@ h-2.2v9.2h2.2c1.3,0,2.3-0.4,2.9-1.1c0.6-0.7,0.9-1.9,0.9-3.6c0-1.6-0.3-2.8-0.9-3.
                             </div>
                         </div>
                     </div><span class="line-bottom ani-item"></span><iframe id="upload_target" name="upload_target" class="upload_target"></iframe>
-                </section>
+                </section> -->
                 <?php require "footer.php" ?>
             </div>
         </div>

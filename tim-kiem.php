@@ -1,3 +1,9 @@
+<?php
+    require_once "setting-all-file.php";
+
+
+?>
+
 <!DOCTYPE HTML>
 <html lang="vi">
 

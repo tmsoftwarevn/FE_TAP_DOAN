@@ -176,16 +176,16 @@ h-2.2v9.2h2.2c1.3,0,2.3-0.4,2.9-1.1c0.6-0.7,0.9-1.9,0.9-3.6c0-1.6-0.3-2.8-0.9-3.
                     <div class="outer-nav release ani-item sub-ajax">
                         <div class="sub-nav">
                             <ul>
-                                <li><a class="sub-nav-a current" data-name="news-373" href="/truyen-thong/tin-cong-ty.php" aria-label="TIN CÔNG TY">TIN CÔNG TY</a>
+                                <li><a class="sub-nav-a current" data-name="news-373" href="/truyen-thong/tin-cong-ty" aria-label="TIN CÔNG TY">TIN CÔNG TY</a>
                                     <div class="class-hidden link-change-url" data-title="Hình ảnh" data-description="SEN GROUP"
                                         data-keyword="SEN GROUP" data-hrefen="/truyen-thong/tin-cong-ty" data-hrefvi="/truyen-thong/tin-cong-ty" aria-label="link-change-url"></div>
                                 </li>
 
-                                <li><a class="sub-nav-a" data-name="news-375" href="/truyen-thong/videos.php" aria-label="Videos">Videos</a>
+                                <li><a class="sub-nav-a" data-name="news-375" href="/truyen-thong/videos" aria-label="Videos">Videos</a>
                                     <div class="class-hidden link-change-url" data-title="Hình ảnh" data-description="SEN GROUP"
                                         data-keyword="SEN GROUP" data-hrefen="/truyen-thong/videos" data-hrefvi="/truyen-thong/videos" aria-label="link-change-url"></div>
                                 </li>
-                                <li><a class="sub-nav-a" data-name="news-342" href="/truyen-thong/image.php" aria-label="Hình ảnh">Hình ảnh</a>
+                                <li><a class="sub-nav-a" data-name="news-342" href="/truyen-thong/image" aria-label="Hình ảnh">Hình ảnh</a>
                                     <div class="class-hidden link-change-url" data-title="Hình ảnh" data-description="SEN GROUP"
                                         data-keyword="SEN GROUP" data-hrefen="/truyen-thong/image" data-hrefvi="/truyen-thong/image" aria-label="link-change-url"></div>
                                 </li>
