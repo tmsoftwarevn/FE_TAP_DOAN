@@ -1,7 +1,25 @@
+<?php
+
+$data_project = [];
+
+$url_be = 'https://belingo.tmsoftware.vn';
+// call project
+$apiUrl_project = $url_be . '/api/gallery/getlistvideo?api_key=8AF1apnMW2A39Ip7LUFtNstE5RjYleghk';
+$response_project = file_get_contents($apiUrl_project);
+$data = json_decode($response_project, true); // Decode the JSON data
+
+if ($data && $data['status'] === true && isset($data['data'])) {
+    $data_project = $data['data'];
+    // echo 'llllll';
+    // print_r($data_project);
+} else {
+    echo "Error fetching data or no data available.";
+}
+
+?>
+
 <script>
-    // Check if the page was loaded due to a refresh
     if (performance.navigation.type === performance.navigation.TYPE_RELOAD) {
-        // Redirect to /truyen-thong.php on refresh
         window.location.href = "/tin-truyen-thong";
     }
 </script>
@@ -14,7 +32,7 @@
     <div class="slide-report slide-three slide-library-report arrow-outside ani-item dot-dark">
         <div class="slidebox-track">
             <div class="slidebox-list">
-                <div class="bg-item-album slidebox-item">
+                <!-- <div class="bg-item-album slidebox-item">
                     <div class="item-album">
 
                         <div class="pic-library">
@@ -33,136 +51,44 @@
                         </div>
 
                     </div>
-                </div>
+                </div> -->
 
-                <div class="bg-item-album slidebox-item">
-                    <div class="item-album">
-                        <div class="pic-library">
-                            <div class="pic-img"><img src="../banner/1920x960.png"
-                                    alt="Cùng Sen Group Tìm Hiểu Cuốn Sách QUỐC GIA KHỞI NGHIỆP"></div><button
-                                data-href="view-video.php" class="view-video"
-                                data-embed="https://www.youtube.com/watch?v=f0hgLB8kiLo&t=1830s"
-                                aria-label="Cùng Sen Group Tìm Hiểu Cuốn Sách QUỐC GIA KHỞI NGHIỆP"></button>
-                        </div>
-                        <div class="title-pic">
-                            <h3>Cùng Sen Group Tìm Hiểu Cuốn Sách QUỐC GIA KHỞI NGHIỆP</h3>
-                        </div>
-                    </div>
-                </div>
+                <?php
+                foreach ($data_project as $key => $value) {
+                ?>
+                    <div class="bg-item-album slidebox-item">
+                        <div class="item-album">
 
+                            <div class="pic-library">
+                                <div class="pic-img">
+                                    <img src="
+                                                <?php
+                                                echo $url_be, $value['image'];
+                                                ?>
+                                                " data-src="
+                                                <?php
+                                                echo $url_be, $value['image'];
+                                                ?>
+                                                " alt="
+                                                    <?php
+                                                    echo $value['name'];
+                                                    ?>
+                                                " class="lazy" />
+                                </div>
+                                <button data-href="view-video.php" class="view-video"
+                                    data-embed="<?php echo $value['url'] ?>"
+                                    aria-label="<?php echo $value['name'] ?>">
+                                </button>
+                            </div>
 
-                <div class="bg-item-album slidebox-item">
-                    <div class="item-album">
-                        <div class="pic-library">
-                            <div class="pic-img"><img src="../banner/1920x960.png"
-                                    alt="Cùng Sen Group Tìm Hiểu Cuốn Sách QUỐC GIA KHỞI NGHIỆP"></div><button
-                                data-href="view-video.php" class="view-video"
-                                data-embed="https://www.youtube.com/watch?v=f0hgLB8kiLo&t=1830s"
-                                aria-label="Cùng Sen Group Tìm Hiểu Cuốn Sách QUỐC GIA KHỞI NGHIỆP"></button>
-                        </div>
-                        <div class="title-pic">
-                            <h3>Cùng Sen Group Tìm Hiểu Cuốn Sách QUỐC GIA KHỞI NGHIỆP</h3>
+                            <div class="title-pic">
+                                <h3><?php echo $value['name'] ?></h3>
+                            </div>
+
                         </div>
                     </div>
-                </div>
-                <div class="bg-item-album slidebox-item">
-                    <div class="item-album">
-                        <div class="pic-library">
-                            <div class="pic-img"><img src="../banner/1920x960.png"
-                                    alt="Cùng Sen Group Tìm Hiểu Cuốn Sách QUỐC GIA KHỞI NGHIỆP"></div><button
-                                data-href="view-video.php" class="view-video"
-                                data-embed="https://www.youtube.com/watch?v=f0hgLB8kiLo&t=1830s"
-                                aria-label="Cùng Sen Group Tìm Hiểu Cuốn Sách QUỐC GIA KHỞI NGHIỆP"></button>
-                        </div>
-                        <div class="title-pic">
-                            <h3>Cùng Sen Group Tìm Hiểu Cuốn Sách QUỐC GIA KHỞI NGHIỆP</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-item-album slidebox-item">
-                    <div class="item-album">
-                        <div class="pic-library">
-                            <div class="pic-img"><img src="../banner/1920x960.png"
-                                    alt="Cùng Sen Group Tìm Hiểu Cuốn Sách QUỐC GIA KHỞI NGHIỆP"></div><button
-                                data-href="view-video.php" class="view-video"
-                                data-embed="https://www.youtube.com/watch?v=f0hgLB8kiLo&t=1830s"
-                                aria-label="Cùng Sen Group Tìm Hiểu Cuốn Sách QUỐC GIA KHỞI NGHIỆP"></button>
-                        </div>
-                        <div class="title-pic">
-                            <h3>Cùng Sen Group Tìm Hiểu Cuốn Sách QUỐC GIA KHỞI NGHIỆP</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-item-album slidebox-item">
-                    <div class="item-album">
-                        <div class="pic-library">
-                            <div class="pic-img"><img src="../banner/1920x960.png"
-                                    alt="Cùng Sen Group Tìm Hiểu Cuốn Sách QUỐC GIA KHỞI NGHIỆP"></div><button
-                                data-href="view-video.php" class="view-video"
-                                data-embed="https://www.youtube.com/watch?v=f0hgLB8kiLo&t=1830s"
-                                aria-label="Cùng Sen Group Tìm Hiểu Cuốn Sách QUỐC GIA KHỞI NGHIỆP"></button>
-                        </div>
-                        <div class="title-pic">
-                            <h3>Cùng Sen Group Tìm Hiểu Cuốn Sách QUỐC GIA KHỞI NGHIỆP</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-item-album slidebox-item">
-                    <div class="item-album">
-                        <div class="pic-library">
-                            <div class="pic-img"><img src="../banner/1920x960.png"
-                                    alt="Cùng Sen Group Tìm Hiểu Cuốn Sách QUỐC GIA KHỞI NGHIỆP"></div><button
-                                data-href="view-video.php" class="view-video"
-                                data-embed="https://www.youtube.com/watch?v=f0hgLB8kiLo&t=1830s"
-                                aria-label="Cùng Sen Group Tìm Hiểu Cuốn Sách QUỐC GIA KHỞI NGHIỆP"></button>
-                        </div>
-                        <div class="title-pic">
-                            <h3>Cùng Sen Group Tìm Hiểu Cuốn Sách QUỐC GIA KHỞI NGHIỆP</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-item-album slidebox-item">
-                    <div class="item-album">
-                        <div class="pic-library">
-                            <div class="pic-img"><img src="../banner/1920x960.png"
-                                    alt="Cùng Sen Group Tìm Hiểu Cuốn Sách QUỐC GIA KHỞI NGHIỆP"></div><button
-                                data-href="view-video.php" class="view-video"
-                                data-embed="https://www.youtube.com/watch?v=f0hgLB8kiLo&t=1830s"
-                                aria-label="Cùng Sen Group Tìm Hiểu Cuốn Sách QUỐC GIA KHỞI NGHIỆP"></button>
-                        </div>
-                        <div class="title-pic">
-                            <h3>Cùng Sen Group Tìm Hiểu Cuốn Sách QUỐC GIA KHỞI NGHIỆP</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-item-album slidebox-item">
-                    <div class="item-album">
-                        <div class="pic-library">
-                            <div class="pic-img"><img src="../banner/1920x960.png"
-                                    alt="Cùng Sen Group Tìm Hiểu Cuốn Sách QUỐC GIA KHỞI NGHIỆP"></div><button
-                                data-href="view-video.php" class="view-video"
-                                data-embed="https://www.youtube.com/watch?v=f0hgLB8kiLo&t=1830s"
-                                aria-label="Cùng Sen Group Tìm Hiểu Cuốn Sách QUỐC GIA KHỞI NGHIỆP"></button>
-                        </div>
-                        <div class="title-pic">
-                            <h3>Cùng Sen Group Tìm Hiểu Cuốn Sách QUỐC GIA KHỞI NGHIỆP</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-item-album slidebox-item">
-                    <div class="item-album">
-                        <div class="pic-library">
-                            <div class="pic-img"><img src="../banner/1920x960.png"
-                                    alt="Cùng Sen Group Tìm Hiểu Cuốn Sách QUỐC GIA KHỞI NGHIỆP"></div><button
-                                data-href="view-video.php" class="view-video"
-                                data-embed="https://www.youtube.com/watch?v=f0hgLB8kiLo&t=1830s"
-                                aria-label="Cùng Sen Group Tìm Hiểu Cuốn Sách QUỐC GIA KHỞI NGHIỆP"></button>
-                        </div>
-                        <div class="title-pic">
-                            <h3>Cùng Sen Group Tìm Hiểu Cuốn Sách QUỐC GIA KHỞI NGHIỆP</h3>
-                        </div>
-                    </div>
-                </div>
+                <?php } ?>
+
             </div>
         </div>
     </div>
@@ -182,4 +108,3 @@
         <div></div>
     </div>
 </div>
-
