@@ -97,23 +97,27 @@ C57.9,89.7,53.8,90.3,49.6,90.3z" />
     <div class="navigation"><span></span>
         <nav class="main-menu">
             <ul>
-                <li class="nav-item current"><a class="link-home link-load nav-item-a" href="/" data-name="home-page"
-                        aria-label="nav">Trang chủ</a>
+                <?php
+                // Get the current URL path
+                $currentPath = $_SERVER['REQUEST_URI'];
+                ?>
+                <li class="nav-item <?php if ($currentPath == '/') echo 'current'; ?>">
+                    <a class="link-home link-load nav-item-a" href="/" data-name="home-page" aria-label="nav">Trang chủ</a>
                     <div class="class-hidden link-change-url" data-hrefen="/trang-chu"
                         data-hrefvi="/trang-chu" data-title="Trang chủ" data-description="LINGO GROUP"
                         data-keyword="LINGO GROUP" aria-label="link-change-url"></div>
                 </li>
-                <li class="nav-item"><a class="link-load nav-item-a" href="/gioi-thieu" data-name="about-page"
-                        aria-label="nav">Giới thiệu</a>
+                <li class="nav-item <?php if ($currentPath == '/gioi-thieu') echo 'current'; ?>">
+                    <a class="link-load nav-item-a" href="/gioi-thieu" data-name="about-page" aria-label="nav">Giới thiệu</a>
                     <div class="class-hidden link-change-url" data-hrefen="/gioi-thieu"
                         data-hrefvi="/gioi-thieu" data-title="Giới thiệu" data-description="LINGO GROUP"
                         data-keyword="LINGO GROUP" aria-label="link-change-url"></div>
                 </li>
-                <li class="nav-item"><a class="link-load nav-item-a" href="/linh-vuc-hoat-dong"
-                        data-name="business-page" aria-label="nav">Lĩnh vực hoạt động</a>
+                <li class="nav-item <?php if ($currentPath == '/linh-vuc-hoat-dong') echo 'current'; ?>">
+                    <a class="link-load nav-item-a" href="/linh-vuc-hoat-dong" data-name="business-page" aria-label="nav">Lĩnh vực hoạt động</a>
                     <div class="class-hidden link-change-url" data-hrefen="/linh-vuc-hoat-dong"
-                        data-hrefvi="/linh-vuc-hoat-dong" data-title="Lĩnh vực hoạt động"
-                        data-description="LINGO GROUP" data-keyword="LINGO GROUP" aria-label="link-change-url"></div>
+                        data-hrefvi="/linh-vuc-hoat-dong" data-title="Lĩnh vực hoạt động" data-description="LINGO GROUP"
+                        data-keyword="LINGO GROUP" aria-label="link-change-url"></div>
                 </li>
                 <!-- <li class="nav-item"><a class="link-load nav-item-a" href="/cong-ty-thanh-vien.html"
                         data-name="project-page" aria-label="nav">Công ty thành viên</a>
@@ -121,25 +125,29 @@ C57.9,89.7,53.8,90.3,49.6,90.3z" />
                         data-hrefvi="/cong-ty-thanh-vien.html" data-title="Công ty thành viên"
                         data-description="LINGO GROUP" data-keyword="LINGO GROUP" aria-label="link-change-url"></div>
                 </li> -->
-                <li class="nav-item"><a class="link-load nav-item-a" href="/du-an-tieu-bieu"
+                <li class="nav-item <?php if ($currentPath == '/du-an-tieu-bieu') echo 'current'; ?>">
+                    <a class="link-load nav-item-a" href="/du-an-tieu-bieu"
                         data-name="activities-page" aria-label="nav">Dự án tiêu biểu</a>
                     <div class="class-hidden link-change-url" data-hrefen="/du-an-tieu-bieu"
                         data-hrefvi="/du-an-tieu-bieu" data-title="Hoạt động tiêu biểu"
                         data-description="LINGO GROUP" data-keyword="LINGO GROUP" aria-label="link-change-url"></div>
                 </li>
-                <li class="nav-item"><a class="link-load nav-item-a" href="/phat-trien-nguon-nhan-luc"
+                <li class="nav-item <?php if ($currentPath == '/phat-trien-nguon-nhan-luc') echo 'current'; ?>">
+                    <a class="link-load nav-item-a" href="/phat-trien-nguon-nhan-luc"
                         data-name="recruitment-page" aria-label="nav">Phát triển nguồn nhân lực</a>
                     <div class="class-hidden link-change-url" data-hrefen="/phat-trien-nguon-nhan-luc"
                         data-hrefvi="/phat-trien-nguon-nhan-luc" data-title="Phát triển nguồn nhân lực"
                         data-description="LINGO GROUP" data-keyword="LINGO GROUP" aria-label="link-change-url"></div>
                 </li>
-                <li class="nav-item"><a class="link-load nav-item-a" href="/tin-truyen-thong" data-name="news-page"
+                <li class="nav-item <?php if ($currentPath == '/tin-truyen-thong') echo 'current'; ?>">
+                    <a class="link-load nav-item-a" href="/tin-truyen-thong" data-name="news-page"
                         aria-label="nav">Truyền thông</a>
                     <div class="class-hidden link-change-url" data-hrefen="/tin-truyen-thong" data-hrefvi="/tin-truyen-thong"
                         data-title="Truyền thông" data-description="LINGO GROUP" data-keyword="LINGO GROUP"
                         aria-label="link-change-url"></div>
                 </li>
-                <li class="nav-item"><a class="link-load nav-item-a" href="/lien-he" data-name="contact-page"
+                <li class="nav-item <?php if ($currentPath == '/lien-he') echo 'current'; ?>">
+                    <a class="link-load nav-item-a" href="/lien-he" data-name="contact-page"
                         aria-label="nav">Liên hệ</a>
                     <div class="class-hidden link-change-url" data-hrefen="/lien-he" data-hrefvi="/lien-he"
                         data-title="Liên hệ" data-description="LINGO GROUP" data-keyword="LINGO GROUP"

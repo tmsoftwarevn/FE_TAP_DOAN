@@ -4,7 +4,7 @@ $data_project = [];
 
 $url_be = 'https://belingo.tmsoftware.vn';
 // call project
-$apiUrl_project = $url_be . '/api/project/getlistproject?api_key=8AF1apnMW2A39Ip7LUFtNstE5RjYleghk';
+$apiUrl_project = $url_be . '/api/blog/getlistblog?api_key=8AF1apnMW2A39Ip7LUFtNstE5RjYleghk';
 $response_project = file_get_contents($apiUrl_project);
 $data = json_decode($response_project, true); // Decode the JSON data
 
@@ -19,44 +19,23 @@ if ($data && $data['status'] === true && isset($data['data'])) {
 ?>
 
 
+<script>
+    // Check if the page was loaded due to a refresh
+    if (performance.navigation.type === performance.navigation.TYPE_RELOAD) {
+        // Redirect to /truyen-thong.php on refresh
+        window.location.href = "/tin-truyen-thong";
+    }
+</script>
 <div class="title-main color-blue text-center title-underline bold-medium">
-    <h2 class="text-ani-item">DỰ ÁN TIÊU BIỂU</h2>
+    <h2 class="text-ani-item">TIN TỨC</h2>
 </div>
 <div class="news-list">
-    <!-- <div class="item-news ani-item">
-        <div class="pic-news">
-            <div class="date">31<span>10-2024 </span></div>
-            <div class="pic-img"><img src="../banner/1920x960.png" data-src="../banner/1920x960.png" alt=" SỰ KIỆN ĐÀO TẠO NỘI BỘ PHONG CÁCH BÁN HÀNG CHUẨN SEN GROUP &amp; ĐÀO TẠO DỰ ÁN THE EMERALD GOLF VIEW ️"
-                    class="lazy"></div>
-        </div>
-        <div class="txt-news">
-            <h3> SỰ KIỆN ĐÀO TẠO NỘI BỘ PHONG CÁCH BÁN HÀNG CHUẨN SEN GROUP &amp; ĐÀO TẠO DỰ ÁN THE EMERALD GOLF VIEW ️</h3>
-        </div>
-        <div class="wrap-view-details">
-            <a href="../tin-tuc/detail-tintuc.php" class="view-details dark link-load" aria-label=" SỰ KIỆN ĐÀO TẠO NỘI BỘ PHONG CÁCH BÁN HÀNG CHUẨN SEN GROUP &amp; ĐÀO TẠO DỰ ÁN THE EMERALD GOLF VIEW ️">
-                <span class="small-logo-ico">
-                    <?php include "../component/logoLoading.php" ?>
-                    <span class="rotate-logo">
-                        <svg>
-                            <use xlink:href="#ico-view-details-rotate"></use>
-                        </svg>
-                    </span>
-                </span>
-                XEM TIN
-                <svg class="viewdetails-svg">
-                    <use xlink:href="#arrow"></use>
-                </svg>
-            </a>
-        </div>
-    </div> -->
-    
     <?php
     foreach ($data_project as $key => $value) {
     ?>
         <div class="item-news ani-item">
             <div class="pic-news">
-                <!-- <div class="date">31<span>10-2024 </span></div> -->
-                <?php
+            <?php
                 $date = new DateTime($value['created_at']);
                 $day = $date->format('d');
                 $monthYear = $date->format('m-Y');
@@ -68,11 +47,11 @@ if ($data && $data['status'] === true && isset($data['data'])) {
                 <div class="pic-img">
                     <img src="
                                                 <?php
-                                                echo $url_be, $value['banner'];
+                                                echo $url_be, $value['image'];
                                                 ?>
                                                 " data-src="
                                                 <?php
-                                                echo $url_be, $value['banner'];
+                                                echo $url_be, $value['image'];
                                                 ?>
                                                 " alt="
                                                     <?php
@@ -88,7 +67,7 @@ if ($data && $data['status'] === true && isset($data['data'])) {
                 </h3>
             </div>
             <div class="wrap-view-details">
-                <a href="<?php echo 'du-an/' . $value['slug'] ?>-<?php echo $value['id'] ?>.html" class="view-details dark link-load"
+                <a href="../tin-tuc/detail-tintuc.php" class="view-details dark link-load"
                     aria-label=" SỰ KIỆN ĐÀO TẠO NỘI BỘ PHONG CÁCH BÁN HÀNG CHUẨN SEN GROUP &amp; ĐÀO TẠO DỰ ÁN THE EMERALD GOLF VIEW ️">
                     <span class="small-logo-ico">
                         <?php include "../component/logoLoading.php" ?>
@@ -106,17 +85,21 @@ if ($data && $data['status'] === true && isset($data['data'])) {
             </div>
         </div>
     <?php } ?>
-
+    
 
 </div>
 
 <!-- // load theo page, vậy cho limit nhiều -->
+
+
 <div class="list-viewmore-news">
-
-    <a href="#foo" data-href="/truyen-thong/fake_loading.php" class="more-project"
-        aria-label="news">
-    </a>
-
+    <div class="wrap-more-project">
+    
+        <a href="#foo" data-href="/truyen-thong/fake_loading.php" class="more-project"
+            aria-label="news">
+        </a>
+        
+    </div>
     <div class="loading">
         <div></div>
         <div></div>

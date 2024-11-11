@@ -3,7 +3,7 @@
 # RewriteRule ^trang-chu index.php [QSA]
 # RewriteRule ^gioi-thieu gioi-thieu.php [QSA]
 # RewriteRule ^truyen-thong truyen-thong.php [QSA]
-# RewriteRule ^truyen-thong/tin-cong-ty truyen-thong/tin-cong-ty.php [QSA]
+# RewriteRule ^truyen-thong/tin-tuc truyen-thong/tin-tuc.php [QSA]
 # RewriteRule ^truyen-thong/videos truyen-thong/videos.php [QSA]
 # RewriteRule ^truyen-thong/image truyen-thong/image.php [QSA]
 
@@ -18,3 +18,5 @@ RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}.php -f
 RewriteRule ^(.*)$ $1.php [L]
+
+RewriteRule du-an/(.*)-([0-9]+)\.html$ detail-du-an.php?id=$2 [QSA,L]

@@ -1,3 +1,16 @@
+<?php
+require_once "setting-all-file.php";
+
+$id = 1;
+if (isset($_GET['id'])) {
+    $id = $_GET['id'];
+    echo 'id blog la:'.$id;
+} else {
+    echo "Khong nhan duoc ID";
+}
+
+?>
+
 <!DOCTYPE HTML>
 <html lang="vi">
 
@@ -39,6 +52,8 @@
     <link rel="alternate" href="/members/sen-real-1/picity-sky-park-1.html" hreflang="en-vn">
     <link href="/cong-ty-thanh-vien/sen-real/picity-sky-park.html" rel="canonical">
     <meta property="og:url" content="/cong-ty-thanh-vien/sen-real/picity-sky-park.html"> -->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.0.0/css/flag-icons.min.css" />
 
     <link rel="stylesheet" href="/css/main.css">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -151,7 +166,7 @@ h-2.2v9.2h2.2c1.3,0,2.3-0.4,2.9-1.1c0.6-0.7,0.9-1.9,0.9-3.6c0-1.6-0.3-2.8-0.9-3.
         else window.addEventListener('load', loadDeferredStyles);
     </script>
 
-    <?php require "../header.php" ?>
+    <?php require "header.php" ?>
 
     <main class="main">
         <div class="smooth-scroll">
@@ -860,7 +875,7 @@ C77.5,30.76,77.5,33.53,76.19,35.13z"></path>
                             </svg></div>
                     </div>
                 </section> -->
-                <?php require "../footer.php" ?>
+                <?php require "footer.php" ?>
 
             </div>
         </div>

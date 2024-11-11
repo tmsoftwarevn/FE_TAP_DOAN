@@ -1,3 +1,10 @@
+<?php
+require_once "../setting-all-file.php";
+
+
+
+?>
+
 <!DOCTYPE HTML>
 <html lang="vi">
 
@@ -33,10 +40,10 @@
     <link rel="icon" sizes="512x512" href="/catalog/view/images/icon-512.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/catalog/view/images/apple-touch-icon.png">
     <link rel="manifest" href="/manifest.json">
-    <link rel="alternate" href="/truyen-thong/tin-cong-ty/su-kien-dao-tao-noi-bo-phong-cach-ban-hang-chuan-sen-group-dao-tao-du-an-the-emerald-golf-view.html" hreflang="vi-vn">
+    <link rel="alternate" href="/truyen-thong/tin-tuc/su-kien-dao-tao-noi-bo-phong-cach-ban-hang-chuan-sen-group-dao-tao-du-an-the-emerald-golf-view.html" hreflang="vi-vn">
     <link rel="alternate" href="/media/sen-group-activities/-10.html" hreflang="en-vn">
-    <link href="/truyen-thong/tin-cong-ty/su-kien-dao-tao-noi-bo-phong-cach-ban-hang-chuan-sen-group-dao-tao-du-an-the-emerald-golf-view.html" rel="canonical">
-    <meta property="og:url" content="/truyen-thong/tin-cong-ty/su-kien-dao-tao-noi-bo-phong-cach-ban-hang-chuan-sen-group-dao-tao-du-an-the-emerald-golf-view.html"> -->
+    <link href="/truyen-thong/tin-tuc/su-kien-dao-tao-noi-bo-phong-cach-ban-hang-chuan-sen-group-dao-tao-du-an-the-emerald-golf-view.html" rel="canonical">
+    <meta property="og:url" content="/truyen-thong/tin-tuc/su-kien-dao-tao-noi-bo-phong-cach-ban-hang-chuan-sen-group-dao-tao-du-an-the-emerald-golf-view.html"> -->
     <link rel="stylesheet" href="/css/main.css">
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -381,7 +388,7 @@ C77.5,30.76,77.5,33.53,76.19,35.13z"></path>
                                         <div class="txt-news">
                                             <h3> SỰ KIỆN ĐÀO TẠO NỘI BỘ PHONG CÁCH BÁN HÀNG CHUẨN SEN GROUP & ĐÀO TẠO DỰ ÁN THE EMERALD GOLF VIEW ️</h3>
                                         </div>
-                                        <div class="wrap-view-details"><a href="/truyen-thong/tin-cong-ty/su-kien-dao-tao-noi-bo-phong-cach-ban-hang-chuan-sen-group-dao-tao-du-an-the-emerald-golf-view.html" class="view-details dark" data-details="news-399" aria-label="link"><span class="small-logo-ico"><svg>
+                                        <div class="wrap-view-details"><a href="/truyen-thong/tin-tuc/su-kien-dao-tao-noi-bo-phong-cach-ban-hang-chuan-sen-group-dao-tao-du-an-the-emerald-golf-view.html" class="view-details dark" data-details="news-399" aria-label="link"><span class="small-logo-ico"><svg>
                                                         <use xlink:href="#ico-view-details-logo"></use>
                                                     </svg> <span class="rotate-logo"><svg>
                                                             <use xlink:href="#ico-view-details-rotate"></use>
@@ -401,7 +408,7 @@ C77.5,30.76,77.5,33.53,76.19,35.13z"></path>
                                         <div class="txt-news">
                                             <h3>LỄ KÝ KẾT HỢP TÁC PHÂN PHỐI ĐỘC QUYỀN DỰ ÁN THE EMERALD GOLF VIEW</h3>
                                         </div>
-                                        <div class="wrap-view-details"><a href="/truyen-thong/tin-cong-ty/le-ky-ket-hop-tac-phan-phoi-doc-quyen-du-an-the-emerald-golf-view.html" class="view-details dark" data-details="news-398" aria-label="link"><span class="small-logo-ico"><svg>
+                                        <div class="wrap-view-details"><a href="/truyen-thong/tin-tuc/le-ky-ket-hop-tac-phan-phoi-doc-quyen-du-an-the-emerald-golf-view.html" class="view-details dark" data-details="news-398" aria-label="link"><span class="small-logo-ico"><svg>
                                                         <use xlink:href="#ico-view-details-logo"></use>
                                                     </svg> <span class="rotate-logo"><svg>
                                                             <use xlink:href="#ico-view-details-rotate"></use>
@@ -421,7 +428,7 @@ C77.5,30.76,77.5,33.53,76.19,35.13z"></path>
                                         <div class="txt-news">
                                             <h3>CHÍNH THỨC KHAI TRƯƠNG VĂN PHÒNG BÁN HÀNG DỰ ÁN THE EMERALD GOLF VIEW – CHI NHÁNH BÌNH DƯƠNG THUỘC TẬP ĐOÀN SEN GROUP</h3>
                                         </div>
-                                        <div class="wrap-view-details"><a href="/truyen-thong/tin-cong-ty/chinh-thuc-khai-truong-van-phong-ban-hang-du-an-the-emerald-golf-view-chi-nhanh-binh-duong-thuoc-tap-doan-sen-group.html" class="view-details dark" data-details="news-397"
+                                        <div class="wrap-view-details"><a href="/truyen-thong/tin-tuc/chinh-thuc-khai-truong-van-phong-ban-hang-du-an-the-emerald-golf-view-chi-nhanh-binh-duong-thuoc-tap-doan-sen-group.html" class="view-details dark" data-details="news-397"
                                                 aria-label="link"><span class="small-logo-ico"><svg>
                                                         <use xlink:href="#ico-view-details-logo"></use>
                                                     </svg> <span class="rotate-logo"><svg>
@@ -442,7 +449,7 @@ C77.5,30.76,77.5,33.53,76.19,35.13z"></path>
                                         <div class="txt-news">
                                             <h3>TẬP ĐOÀN SENGROUP TỔNG KẾT HOẠT ĐỘNG KINH DOANH VÀ TRIỂN KHAI KẾ HOẠCH NHIỆM VỤ 6 THÁNG CUỐI NĂM 2024 KHÁT VỌNG ĐOÀN KẾT – DẪN ĐẦU KHU ĐÔNG</h3>
                                         </div>
-                                        <div class="wrap-view-details"><a href="/truyen-thong/tin-cong-ty/tap-doan-sengroup-tong-ket-hoat-dong-kinh-doanh-va-trien-khai-ke-hoach-nhiem-vu-6-thang-cuoi-nam-2024-khat-vong-doan-ket-dan-dau-khu-dong.html" class="view-details dark"
+                                        <div class="wrap-view-details"><a href="/truyen-thong/tin-tuc/tap-doan-sengroup-tong-ket-hoat-dong-kinh-doanh-va-trien-khai-ke-hoach-nhiem-vu-6-thang-cuoi-nam-2024-khat-vong-doan-ket-dan-dau-khu-dong.html" class="view-details dark"
                                                 data-details="news-396" aria-label="link"><span class="small-logo-ico"><svg>
                                                         <use xlink:href="#ico-view-details-logo"></use>
                                                     </svg> <span class="rotate-logo"><svg>
@@ -464,7 +471,7 @@ C77.5,30.76,77.5,33.53,76.19,35.13z"></path>
                                         <div class="txt-news">
                                             <h3>TẬP ĐOÀN SEN GROUP ĐẾN THĂM VÀ TẶNG QUÀ CHO CÁC EM TRƯỜNG CHUYÊN BIỆT KHIẾM THÍNH HY VỌNG BÌNH THẠNH</h3>
                                         </div>
-                                        <div class="wrap-view-details"><a href="/truyen-thong/tin-cong-ty/tap-doan-sen-group-den-tham-va-tang-qua-cho-cac-em-truong-chuyen-biet-khiem-thinh-hy-vong-binh-thanh.html" class="view-details dark" data-details="news-395" aria-label="link"><span class="small-logo-ico"><svg>
+                                        <div class="wrap-view-details"><a href="/truyen-thong/tin-tuc/tap-doan-sen-group-den-tham-va-tang-qua-cho-cac-em-truong-chuyen-biet-khiem-thinh-hy-vong-binh-thanh.html" class="view-details dark" data-details="news-395" aria-label="link"><span class="small-logo-ico"><svg>
                                                         <use xlink:href="#ico-view-details-logo"></use>
                                                     </svg> <span class="rotate-logo"><svg>
                                                             <use xlink:href="#ico-view-details-rotate"></use>
@@ -484,7 +491,7 @@ C77.5,30.76,77.5,33.53,76.19,35.13z"></path>
                                         <div class="txt-news">
                                             <h3>SEN LAND RA MẮT HỆ THỐNG KINH DOANH DRAGON EASTERN</h3>
                                         </div>
-                                        <div class="wrap-view-details"><a href="/truyen-thong/tin-cong-ty/sen-land-ra-mat-he-thong-kinh-doanh-dragon-eastern.html" class="view-details dark" data-details="news-394" aria-label="link"><span class="small-logo-ico"><svg>
+                                        <div class="wrap-view-details"><a href="/truyen-thong/tin-tuc/sen-land-ra-mat-he-thong-kinh-doanh-dragon-eastern.html" class="view-details dark" data-details="news-394" aria-label="link"><span class="small-logo-ico"><svg>
                                                         <use xlink:href="#ico-view-details-logo"></use>
                                                     </svg> <span class="rotate-logo"><svg>
                                                             <use xlink:href="#ico-view-details-rotate"></use>
@@ -504,7 +511,7 @@ C77.5,30.76,77.5,33.53,76.19,35.13z"></path>
                                         <div class="txt-news">
                                             <h3>SEN GROUP BỔ NHIỆM CỐ VẤN NHÂN SỰ CẤP CAO HỘI ĐỒNG QUẢN TRỊ</h3>
                                         </div>
-                                        <div class="wrap-view-details"><a href="/truyen-thong/tin-cong-ty/sen-group-bo-nhiem-co-van-nhan-su-cap-cao-hoi-dong-quan-tri.html" class="view-details dark" data-details="news-390" aria-label="link"><span class="small-logo-ico"><svg>
+                                        <div class="wrap-view-details"><a href="/truyen-thong/tin-tuc/sen-group-bo-nhiem-co-van-nhan-su-cap-cao-hoi-dong-quan-tri.html" class="view-details dark" data-details="news-390" aria-label="link"><span class="small-logo-ico"><svg>
                                                         <use xlink:href="#ico-view-details-logo"></use>
                                                     </svg> <span class="rotate-logo"><svg>
                                                             <use xlink:href="#ico-view-details-rotate"></use>
@@ -524,7 +531,7 @@ C77.5,30.76,77.5,33.53,76.19,35.13z"></path>
                                         <div class="txt-news">
                                             <h3>LỄ KÝ KẾT ĐỐI TÁC CHIẾN LƯỢC DỰ ÁN VENTOSO TOWER</h3>
                                         </div>
-                                        <div class="wrap-view-details"><a href="/truyen-thong/tin-cong-ty/le-ky-ket-doi-tac-chien-luoc-du-an-ventoso-tower.html" class="view-details dark" data-details="news-383" aria-label="link"><span class="small-logo-ico"><svg>
+                                        <div class="wrap-view-details"><a href="/truyen-thong/tin-tuc/le-ky-ket-doi-tac-chien-luoc-du-an-ventoso-tower.html" class="view-details dark" data-details="news-383" aria-label="link"><span class="small-logo-ico"><svg>
                                                         <use xlink:href="#ico-view-details-logo"></use>
                                                     </svg> <span class="rotate-logo"><svg>
                                                             <use xlink:href="#ico-view-details-rotate"></use>
@@ -544,7 +551,7 @@ C77.5,30.76,77.5,33.53,76.19,35.13z"></path>
                                         <div class="txt-news">
                                             <h3>SEN GROUP TRAO TẶNG 200 PHẦN QUÀ CHO TRẺ EM MỒ CÔI VÌ COVID NHÂN DỊP XUÂN QUÝ MÃO</h3>
                                         </div>
-                                        <div class="wrap-view-details"><a href="/truyen-thong/tin-cong-ty/sen-group-trao-tang-200-phan-qua-cho-tre-em-mo-coi-vi-covid-nhan-dip-xuan-quy-mao.html" class="view-details dark" data-details="news-382" aria-label="link"><span class="small-logo-ico"><svg>
+                                        <div class="wrap-view-details"><a href="/truyen-thong/tin-tuc/sen-group-trao-tang-200-phan-qua-cho-tre-em-mo-coi-vi-covid-nhan-dip-xuan-quy-mao.html" class="view-details dark" data-details="news-382" aria-label="link"><span class="small-logo-ico"><svg>
                                                         <use xlink:href="#ico-view-details-logo"></use>
                                                     </svg> <span class="rotate-logo"><svg>
                                                             <use xlink:href="#ico-view-details-rotate"></use>
@@ -563,7 +570,7 @@ C77.5,30.76,77.5,33.53,76.19,35.13z"></path>
                                         <div class="txt-news">
                                             <h3>GIỮA TÂM BÃO CẮT GIẢM NHÂN SỰ, SEN GROUP ĐẨY MẠNH CHIÊU MỘ NHÂN TÀI</h3>
                                         </div>
-                                        <div class="wrap-view-details"><a href="/truyen-thong/tin-cong-ty/giua-tam-bao-cat-giam-nhan-su-sen-group-day-manh-chieu-mo-nhan-tai.html" class="view-details dark" data-details="news-380" aria-label="link"><span class="small-logo-ico"><svg>
+                                        <div class="wrap-view-details"><a href="/truyen-thong/tin-tuc/giua-tam-bao-cat-giam-nhan-su-sen-group-day-manh-chieu-mo-nhan-tai.html" class="view-details dark" data-details="news-380" aria-label="link"><span class="small-logo-ico"><svg>
                                                         <use xlink:href="#ico-view-details-logo"></use>
                                                     </svg> <span class="rotate-logo"><svg>
                                                             <use xlink:href="#ico-view-details-rotate"></use>
@@ -583,7 +590,7 @@ C77.5,30.76,77.5,33.53,76.19,35.13z"></path>
                                         <div class="txt-news">
                                             <h3>SEN GROUP HỢP TÁC PHÁT TRIỂN DỰ ÁN VENTOSO TOWER BÌNH DƯƠNG</h3>
                                         </div>
-                                        <div class="wrap-view-details"><a href="/truyen-thong/tin-cong-ty/sen-group-hop-tac-phat-trien-du-an-ventoso-tower-binh-duong.html" class="view-details dark" data-details="news-373" aria-label="link"><span class="small-logo-ico"><svg>
+                                        <div class="wrap-view-details"><a href="/truyen-thong/tin-tuc/sen-group-hop-tac-phat-trien-du-an-ventoso-tower-binh-duong.html" class="view-details dark" data-details="news-373" aria-label="link"><span class="small-logo-ico"><svg>
                                                         <use xlink:href="#ico-view-details-logo"></use>
                                                     </svg> <span class="rotate-logo"><svg>
                                                             <use xlink:href="#ico-view-details-rotate"></use>
@@ -603,7 +610,7 @@ C77.5,30.76,77.5,33.53,76.19,35.13z"></path>
                                         <div class="txt-news">
                                             <h3>SEN GROUP TIẾP SỨC CÁC CHIẾN SĨ ĐỘI QUY TẬP MỘ LIỆT SĨ K72 TỈNH BÌNH PHƯỚC</h3>
                                         </div>
-                                        <div class="wrap-view-details"><a href="/truyen-thong/tin-cong-ty/sen-group-tiep-suc-cac-chien-si-doi-quy-tap-mo-liet-si-k72-tinh-binh-phuoc.html" class="view-details dark" data-details="news-371" aria-label="link"><span class="small-logo-ico"><svg>
+                                        <div class="wrap-view-details"><a href="/truyen-thong/tin-tuc/sen-group-tiep-suc-cac-chien-si-doi-quy-tap-mo-liet-si-k72-tinh-binh-phuoc.html" class="view-details dark" data-details="news-371" aria-label="link"><span class="small-logo-ico"><svg>
                                                         <use xlink:href="#ico-view-details-logo"></use>
                                                     </svg> <span class="rotate-logo"><svg>
                                                             <use xlink:href="#ico-view-details-rotate"></use>
@@ -617,13 +624,13 @@ C77.5,30.76,77.5,33.53,76.19,35.13z"></path>
                                     <div class="item-news slidebox-item ">
                                         <div class="pic-news">
                                             <div class="date">19<span>08-2022 </span></div>
-                                            <div class="pic-img"><img src="/pictures/mobile/catalog/news/tin-cong-ty/2995156585541622498355625394971806325896194n.jpg" data-src="/pictures/catalog/news/tin-cong-ty/2995156585541622498355625394971806325896194n.jpg"
+                                            <div class="pic-img"><img src="/pictures/mobile/catalog/news/tin-tuc/2995156585541622498355625394971806325896194n.jpg" data-src="/pictures/catalog/news/tin-tuc/2995156585541622498355625394971806325896194n.jpg"
                                                     alt="ĐỒNG NAI THÀNH LẬP 9 NGÔI NHÀ TRÍ TUỆ" class="lazy"></div>
                                         </div>
                                         <div class="txt-news">
                                             <h3>ĐỒNG NAI THÀNH LẬP 9 NGÔI NHÀ TRÍ TUỆ</h3>
                                         </div>
-                                        <div class="wrap-view-details"><a href="/truyen-thong/tin-cong-ty/dong-nai-thanh-lap-9-ngoi-nha-tri-tue.html" class="view-details dark" data-details="news-369" aria-label="link"><span class="small-logo-ico"><svg>
+                                        <div class="wrap-view-details"><a href="/truyen-thong/tin-tuc/dong-nai-thanh-lap-9-ngoi-nha-tri-tue.html" class="view-details dark" data-details="news-369" aria-label="link"><span class="small-logo-ico"><svg>
                                                         <use xlink:href="#ico-view-details-logo"></use>
                                                     </svg> <span class="rotate-logo"><svg>
                                                             <use xlink:href="#ico-view-details-rotate"></use>
@@ -637,13 +644,13 @@ C77.5,30.76,77.5,33.53,76.19,35.13z"></path>
                                     <div class="item-news slidebox-item ">
                                         <div class="pic-news">
                                             <div class="date">27<span>07-2022 </span></div>
-                                            <div class="pic-img"><img src="/pictures/mobile/catalog/news/tin-cong-ty/khai-truong-vp-thanh-hoa/29549946133410306427955621655264088357114489n.jpg" data-src="/pictures/catalog/news/tin-cong-ty/khai-truong-vp-thanh-hoa/29549946133410306427955621655264088357114489n.jpg"
+                                            <div class="pic-img"><img src="/pictures/mobile/catalog/news/tin-tuc/khai-truong-vp-thanh-hoa/29549946133410306427955621655264088357114489n.jpg" data-src="/pictures/catalog/news/tin-tuc/khai-truong-vp-thanh-hoa/29549946133410306427955621655264088357114489n.jpg"
                                                     alt="TƯNG BỪNG KHAI TRƯƠNG CHI NHÁNH SEN GROUP TẠI THANH HÓA " class="lazy"></div>
                                         </div>
                                         <div class="txt-news">
                                             <h3>TƯNG BỪNG KHAI TRƯƠNG CHI NHÁNH SEN GROUP TẠI THANH HÓA </h3>
                                         </div>
-                                        <div class="wrap-view-details"><a href="/truyen-thong/tin-cong-ty/tung-bung-khai-truong-chi-nhanh-sen-group-tai-thanh-hoa.html" class="view-details dark" data-details="news-370" aria-label="link"><span class="small-logo-ico"><svg>
+                                        <div class="wrap-view-details"><a href="/truyen-thong/tin-tuc/tung-bung-khai-truong-chi-nhanh-sen-group-tai-thanh-hoa.html" class="view-details dark" data-details="news-370" aria-label="link"><span class="small-logo-ico"><svg>
                                                         <use xlink:href="#ico-view-details-logo"></use>
                                                     </svg> <span class="rotate-logo"><svg>
                                                             <use xlink:href="#ico-view-details-rotate"></use>
@@ -663,9 +670,9 @@ C77.5,30.76,77.5,33.53,76.19,35.13z"></path>
                     <div class="outer-nav release ani-item sub-ajax">
                         <div class="sub-nav">
                             <ul>
-                                <li><a class="sub-nav-a link-load active-color" data-name="news-373" href="/truyen-thong/tin-cong-ty.html" aria-label="TIN CÔNG TY">TIN CÔNG TY</a>
+                                <li><a class="sub-nav-a link-load active-color" data-name="news-373" href="/truyen-thong/tin-tuc.html" aria-label="TIN CÔNG TY">TIN CÔNG TY</a>
                                     <div class="class-hidden link-change-url" data-title="TIN CÔNG TY"
-                                        data-description="SEN GROUP" data-keyword="SEN GROUP" data-hrefen="/media/sen-group-activities.html" data-hrefvi="/truyen-thong/tin-cong-ty.html" aria-label="link-change-url"></div>
+                                        data-description="SEN GROUP" data-keyword="SEN GROUP" data-hrefen="/media/sen-group-activities.html" data-hrefvi="/truyen-thong/tin-tuc.html" aria-label="link-change-url"></div>
                                 </li>
                                 <li><a class="sub-nav-a link-load" data-name="news-374" href="/truyen-thong/tin-thi-truong.html" aria-label="TIN THỊ TRƯỜNG">TIN THỊ TRƯỜNG</a>
                                     <div class="class-hidden link-change-url" data-title="TIN THỊ TRƯỜNG"

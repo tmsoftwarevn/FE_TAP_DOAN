@@ -106,7 +106,7 @@
 
 <div class="list-viewmore-news">
     <div class="wrap-more-project">
-        <a href="#foo" data-href="/truyen-thong/videos.php?page=1" class="more-project"
+        <a href="#foo" data-href="/truyen-thong/fake_loading.php" class="more-project"
             aria-label="news">
         </a>
     </div>
