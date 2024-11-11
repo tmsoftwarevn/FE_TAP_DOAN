@@ -75,7 +75,7 @@
 }
 
 .navigation>span {
-    background: url(../images/menu/flower-menu.png) no-repeat center center/contain
+    background: url(../images/menu/register-bg.png) no-repeat center center/contain
 }
 
 .regis-info::after {
@@ -101,7 +101,7 @@
 .pic-home-business .bg-cover.bg-lazy::after {
     background: url(../images/home/home-business.png) no-repeat center center/cover;
     mix-blend-mode: multiply;
-    opacity: .2
+    /* opacity: .2 */
 }
 
 .box-txt-home-intro::before {

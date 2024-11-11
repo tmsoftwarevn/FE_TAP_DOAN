@@ -163,10 +163,11 @@ if ($data && $data['status'] === true && isset($data['data'])) {
 
 <div class="list-viewmore-news">
     <div class="wrap-more-project">
-    <!-- /data-du-an-tieu-bieu/data.php?page=1 -->
-        <a href="#foo" data-href="/truyen-thong/videos.php?page=1" class="more-project"
+    
+        <a href="#foo" data-href="/truyen-thong/fake_loading.php" class="more-project"
             aria-label="news">
         </a>
+        
     </div>
     <div class="loading">
         <div></div>

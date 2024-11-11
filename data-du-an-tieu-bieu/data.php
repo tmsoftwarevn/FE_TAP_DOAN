@@ -102,7 +102,11 @@ if ($data && $data['status'] === true && isset($data['data'])) {
 
 <!-- // load theo page, vậy cho limit nhiều -->
 <div class="list-viewmore-news">
-    <!-- <div class="wrap-more-project"> <a href="#foo" data-href="/du-an-tieu-bieu/data.php?page=1" class="more-project" aria-label="news"></a> <a href="#foo" data-href="/du-an-tieu-bieu/data.php?page=2" class="more-project" aria-label="news"></a>        <a href="#foo" data-href="/du-an-tieu-bieu/data.php?page=3" class="more-project" aria-label="news"></a> <a href="#foo" data-href="/truyen-thong/tin-cong-ty.html?page=4" class="more-project" aria-label="news"></a>        </div> -->
+
+    <a href="#foo" data-href="/truyen-thong/fake_loading.php" class="more-project"
+        aria-label="news">
+    </a>
+    
     <div class="loading">
         <div></div>
         <div></div>

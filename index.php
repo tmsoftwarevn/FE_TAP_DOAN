@@ -725,7 +725,7 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                             </div>
                         </div>
                         <div class="wrap-view-details big-view">
-                            <a href="/truyen-thong.php"
+                            <a href="/tin-truyen-thong"
                                 class="view-details dark link-load" aria-label="link">
                                 <span class="small-logo-ico">
                                     <?php include "component/logoLoading.php" ?>
