@@ -737,8 +737,8 @@ li::marker {
 
 .mask-color::after {
     content: '';
-    box-shadow: inset 0 0 10vw 6vw var(--color-black40);
-    background-color: var(--color-black10);
+    /* box-shadow: inset 0 0 10vw 6vw var(--color-black40);
+    background-color: var(--color-black10); */
     opacity: 0;
     mix-blend-mode: multiply;
     animation-name: fadeIn;

@@ -33,6 +33,8 @@
 
     <link rel="icon" href="/images/logo.png" type="image/x-icon" />
     <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.png" />
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.0.0/css/flag-icons.min.css" />
 
     <link rel="stylesheet" href="/css/main.css">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -158,7 +160,7 @@ h-2.2v9.2h2.2c1.3,0,2.3-0.4,2.9-1.1c0.6-0.7,0.9-1.9,0.9-3.6c0-1.6-0.3-2.8-0.9-3.
                     <div class="title-page">
                         <h1><?= __('Liên hệ') ?></h1>
                     </div>
-                    <div class="bg-inner"> <img src="/banner/1920x960.png" data-src="/banner/1920x960.png" alt="Liên hệ" class="lazy"> </div>
+                    <div class="bg-inner"> <img src="/images/bg.png" data-src="/images/bg.png" alt="Liên hệ" class="lazy"> </div>
                     <div class="wrap-wheel">
                         <div class="wheel"><span>Scroll down</span></div>
                     </div>

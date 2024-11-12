@@ -76,10 +76,10 @@ if ($data && $data['status'] === true && isset($data['data'])) {
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="format-detection" content="telephone=no">
 
-    <title id="hdtitle">Trang chủ</title>
+    <title id="hdtitle">LINGO GROUP</title>
     <meta name="description" content="LINGO GROUP">
     <meta name="keywords" content="LINGO GROUP">
-    <meta property="og:title" content="Trang chủ">
+    <meta property="og:title" content="LINGO GROUP">
     <meta property="og:description" content="LINGO GROUP">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="LINGO GROUP">
@@ -114,12 +114,12 @@ if ($data && $data['status'] === true && isset($data['data'])) {
         <link rel="stylesheet" href="/catalog/view/css/app.css?ver=1.0.8">
     </noscript>
 
-    <div class="mask" style="display:none" data-timeout-loading="7000"><span class="mask-color"></span>
+    <div class="mask" style="display:none" data-timeout-loading="5000"><span class="mask-color"></span>
         <div class="flower-mask">
             <div class="flower-right"><span></span> <span></span> <span></span></div>
             <div class="flower-left"><span></span> <span></span></div>
         </div>
-        <div class="wrap-enter-site"><button class="enter-site" aria-label="click"><span>Enter site</span></button>
+        <div class="wrap-enter-site"><button class="enter-site" aria-label="click"><span>Enter</span></button>
         </div>
     </div>
 
@@ -235,7 +235,7 @@ if ($data && $data['status'] === true && isset($data['data'])) {
                                                 <?php
                                                 echo $value['description'];
                                                 ?>
-                                                <div class="wrap-view-details">
+                                                <!-- <div class="wrap-view-details">
                                                     <a href="/du-an/detail-du-an.php" class="view-details link-load"
                                                         aria-label="link">
                                                         <span class="small-logo-ico">
@@ -251,7 +251,8 @@ if ($data && $data['status'] === true && isset($data['data'])) {
                                                             <use xlink:href="#arrow"></use>
                                                         </svg>
                                                     </a>
-                                                </div>
+                                                </div> -->
+
                                             </div>
                                         </div>
                                     <?php } ?>
