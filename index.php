@@ -14,7 +14,7 @@ $api_key = '8AF1apnMW2A39Ip7LUFtNstE5RjYleghk';
 function fetch_api_data($url) {
     $ch = curl_init($url);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($ch, CURLOPT_TIMEOUT, 10); // Set timeout in seconds
+    curl_setopt($ch, CURLOPT_TIMEOUT, 2); // Set timeout in seconds
     $response = curl_exec($ch);
 
     // Check for cURL errors
