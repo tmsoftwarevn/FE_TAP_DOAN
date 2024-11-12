@@ -35,6 +35,8 @@ require_once "setting-all-file.php";
 
     <link rel="icon" href="/images/logo.png" type="image/x-icon" />
     <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.png" />
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.0.0/css/flag-icons.min.css" />
 
     <link rel="stylesheet" href="/css/main.css">
     <script src="https://cdn.tailwindcss.com"></script>

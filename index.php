@@ -1,4 +1,3 @@
-
 <?php
 require_once "setting-all-file.php";
 
@@ -11,10 +10,11 @@ $url_be = 'https://belingo.tmsoftware.vn';
 $api_key = '8AF1apnMW2A39Ip7LUFtNstE5RjYleghk';
 
 // Function to make API requests using cURL
-function fetch_api_data($url) {
+function fetch_api_data($url)
+{
     $ch = curl_init($url);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($ch, CURLOPT_TIMEOUT, 1); // Set timeout in seconds
+    curl_setopt($ch, CURLOPT_TIMEOUT, 2); // Set timeout in seconds
     $response = curl_exec($ch);
 
     // Check for cURL errors
@@ -125,7 +125,7 @@ if ($data && $data['status'] === true && isset($data['data'])) {
 
     <div class="loadicon" style="display:none"><span></span>
 
-        <img src="/images/logo.png" class="w-full h-auto rounded-full object-contain" />
+        <img src="/images/logo-intro.png" class="w-full h-auto object-contain" />
 
 
     </div>
@@ -221,8 +221,8 @@ if ($data && $data['status'] === true && isset($data['data'])) {
                                                     ?>
                                                 " class="lazy" /> -->
                                                 <img src="banner/bg.jpg"
-                                                data-src="banner/bg.jpg"
-                                                alt="THE PRIVIA" class="lazy" />
+                                                    data-src="banner/bg.jpg"
+                                                    alt="THE PRIVIA" class="lazy" />
                                             </div>
                                             <div class="text-banner">
                                                 <div class="title-banner">
@@ -382,11 +382,9 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                         aria-label="ĐÀO TẠO NGÔN NGỮ">
                                     </a> -->
                                     <span class="logo-bus-home">
-                                    <!-- class="w-[70px] h-auto rounded-full object-contain" -->
-
+                                        <!-- hover:bg-white hover:rounded-full duration-300 -->
                                         <img src="/images/ngon ngu.png"
-                                            class="w-[50px] lg:w-[90px] h-auto object-cover mb-10"
-                                             />
+                                            class="w-[50px] lg:w-[90px] h-auto object-cover mb-10 " />
 
                                     </span>
                                 </div>
@@ -412,9 +410,8 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                     </a> -->
                                     <span class="logo-bus-home">
 
-                                    <img src="/images/du hoc.png"
-                                            class="w-[50px] lg:w-[90px] h-auto object-cover mr-10"
-                                             />
+                                        <img src="/images/du hoc.png"
+                                            class="w-[50px] lg:w-[90px] h-auto object-cover mr-10 " />
 
                                     </span>
                                 </div>
@@ -441,9 +438,8 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                     </a> -->
                                     <span class="logo-bus-home">
 
-                                    <img src="/images/xuat khau.png"
-                                            class="w-[50px] lg:w-[90px] h-auto object-cover ml-10"
-                                             />
+                                        <img src="/images/xuat khau.png"
+                                            class="w-[50px] lg:w-[90px] h-auto object-cover ml-10 " />
 
                                     </span>
                                 </div>
@@ -470,9 +466,8 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                     </a> -->
                                     <span class="logo-bus-home">
 
-                                    <img src="/images/ky nang.png"
-                                            class="w-[50px] lg:w-[90px] h-auto object-cover mt-10"
-                                             />
+                                        <img src="/images/ky nang.png"
+                                            class="w-[50px] lg:w-[90px] h-auto object-cover mt-10 " />
 
                                     </span>
                                 </div>
@@ -499,9 +494,9 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                     </a> -->
                                     <span class="logo-bus-home">
 
-                                    <img src="/images/lingo.png"
-                                            class="w-[50px] lg:w-[90px] h-auto object-cover hover:bg-orange-500 rounded-full"
-                                             />
+                                        <img src="/images/lingo.png"
+
+                                            class="w-[50px] lg:w-[90px] h-auto object-cover " />
 
                                     </span>
                                 </div>
@@ -696,7 +691,7 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                     </div>
                                 </div> -->
                                 <?php
-                                $firstBlogs = array_slice($data_blog, 0,4);
+                                $firstBlogs = array_slice($data_blog, 0, 4);
                                 foreach ($firstBlogs as $key => $value) {
                                 ?>
                                     <div class="item-news-home">
@@ -735,7 +730,7 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                                         </span>
                                                     </span>
                                                     <?= __('XEM TIN') ?>
-                                                    
+
                                                     <svg class="viewdetails-svg">
                                                         <use xlink:href="#arrow"></use>
                                                     </svg>
@@ -757,7 +752,7 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                     </span>
                                 </span>
                                 <?= __('XEM TIN KHÁC') ?>
-                               
+
                                 <svg class="viewdetails-svg">
                                     <use xlink:href="#arrow"></use>
                                 </svg>
