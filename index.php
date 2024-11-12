@@ -207,7 +207,7 @@ if ($data && $data['status'] === true && isset($data['data'])) {
                                     ?>
                                         <div class="bg slidebox-item">
                                             <div class="bg-cover">
-                                                <img src="
+                                                <!-- <img src="
                                                 <?php
                                                 echo $url_be, $value['image'];
                                                 ?>
@@ -219,7 +219,10 @@ if ($data && $data['status'] === true && isset($data['data'])) {
                                                     <?php
                                                     echo $value['name'];
                                                     ?>
-                                                " class="lazy" />
+                                                " class="lazy" /> -->
+                                                <img src="banner/bg.jpg"
+                                                data-src="banner/bg.jpg"
+                                                alt="THE PRIVIA" class="lazy" />
                                             </div>
                                             <div class="text-banner">
                                                 <div class="title-banner">
