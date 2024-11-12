@@ -14,7 +14,7 @@ $api_key = '8AF1apnMW2A39Ip7LUFtNstE5RjYleghk';
 function fetch_api_data($url) {
     $ch = curl_init($url);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($ch, CURLOPT_TIMEOUT, 2); // Set timeout in seconds
+    curl_setopt($ch, CURLOPT_TIMEOUT, 1); // Set timeout in seconds
     $response = curl_exec($ch);
 
     // Check for cURL errors
@@ -378,13 +378,15 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                                 d="M46.3,97.3L2.7,53.7c-2.1-2.1-2.1-5.4,0-7.5L46.3,2.7c2.1-2.1,5.4-2.1,7.5,0l43.5,43.5c2.1,2.1,2.1,5.4,0,7.5L53.7,97.3C51.7,99.3,48.3,99.3,46.3,97.3z">
                                         </svg>
                                     </div>
-                                    <a href="/cong-ty-thanh-vien/sen-healthcare.html" class="link-load"
+                                    <!-- <a href="/cong-ty-thanh-vien/sen-healthcare.html" class="link-load"
                                         aria-label="ĐÀO TẠO NGÔN NGỮ">
-                                    </a>
+                                    </a> -->
                                     <span class="logo-bus-home">
+                                    <!-- class="w-[70px] h-auto rounded-full object-contain" -->
 
-                                        <img src="/images/logo2.png"
-                                            class="w-[55px] h-auto rounded-full object-contain" />
+                                        <img src="/images/ngon ngu.png"
+                                            class="w-[50px] lg:w-[90px] h-auto object-cover mb-10"
+                                             />
 
                                     </span>
                                 </div>
@@ -406,12 +408,13 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                             <path
                                                 d="M46.3,97.3L2.7,53.7c-2.1-2.1-2.1-5.4,0-7.5L46.3,2.7c2.1-2.1,5.4-2.1,7.5,0l43.5,43.5c2.1,2.1,2.1,5.4,0,7.5L53.7,97.3C51.7,99.3,48.3,99.3,46.3,97.3z">
                                         </svg></div>
-                                    <a href="/cong-ty-thanh-vien/sen-mining.html" class="link-load" aria-label="DU HỌC">
-                                    </a>
+                                    <!-- <a href="/cong-ty-thanh-vien/sen-mining.html" class="link-load" aria-label="DU HỌC">
+                                    </a> -->
                                     <span class="logo-bus-home">
 
-                                        <img src="/images/logo2.png"
-                                            class="w-[55px] h-auto rounded-full object-contain" />
+                                    <img src="/images/du hoc.png"
+                                            class="w-[50px] lg:w-[90px] h-auto object-cover mr-10"
+                                             />
 
                                     </span>
                                 </div>
@@ -433,12 +436,14 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                             <path
                                                 d="M46.3,97.3L2.7,53.7c-2.1-2.1-2.1-5.4,0-7.5L46.3,2.7c2.1-2.1,5.4-2.1,7.5,0l43.5,43.5c2.1,2.1,2.1,5.4,0,7.5L53.7,97.3C51.7,99.3,48.3,99.3,46.3,97.3z">
                                         </svg></div>
-                                    <a href="/cong-ty-thanh-vien/sen-construction.html" class="link-load"
-                                        aria-label="XUẤT KHẨU LAO ĐỘNG"></a>
+                                    <!-- <a href="/cong-ty-thanh-vien/sen-construction.html" class="link-load"
+                                        aria-label="XUẤT KHẨU LAO ĐỘNG">
+                                    </a> -->
                                     <span class="logo-bus-home">
 
-                                        <img src="/images/logo2.png"
-                                            class="w-[55px] h-auto rounded-full object-contain" />
+                                    <img src="/images/xuat khau.png"
+                                            class="w-[50px] lg:w-[90px] h-auto object-cover ml-10"
+                                             />
 
                                     </span>
                                 </div>
@@ -460,12 +465,14 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                             <path
                                                 d="M46.3,97.3L2.7,53.7c-2.1-2.1-2.1-5.4,0-7.5L46.3,2.7c2.1-2.1,5.4-2.1,7.5,0l43.5,43.5c2.1,2.1,2.1,5.4,0,7.5L53.7,97.3C51.7,99.3,48.3,99.3,46.3,97.3z">
                                         </svg></div>
-                                    <a href="/cong-ty-thanh-vien/sen-resort.html" class="link-load"
-                                        aria-label="KỸ NĂNG SỐNG"></a>
+                                    <!-- <a href="/cong-ty-thanh-vien/sen-resort.html" class="link-load"
+                                        aria-label="KỸ NĂNG SỐNG">
+                                    </a> -->
                                     <span class="logo-bus-home">
 
-                                        <img src="/images/logo2.png"
-                                            class="w-[55px] h-auto rounded-full object-contain" />
+                                    <img src="/images/ky nang.png"
+                                            class="w-[50px] lg:w-[90px] h-auto object-cover mt-10"
+                                             />
 
                                     </span>
                                 </div>
@@ -487,12 +494,14 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                             <path
                                                 d="M46.3,97.3L2.7,53.7c-2.1-2.1-2.1-5.4,0-7.5L46.3,2.7c2.1-2.1,5.4-2.1,7.5,0l43.5,43.5c2.1,2.1,2.1,5.4,0,7.5L53.7,97.3C51.7,99.3,48.3,99.3,46.3,97.3z">
                                         </svg></div>
-                                    <a href="/cong-ty-thanh-vien/sen-real.html" class="link-load"
-                                        aria-label="LINGO GROUP"></a>
+                                    <!-- <a href="/cong-ty-thanh-vien/sen-real.html" class="link-load"
+                                        aria-label="LINGO GROUP">
+                                    </a> -->
                                     <span class="logo-bus-home">
 
-                                        <img src="/images/logo2.png"
-                                            class="w-[55px] h-auto rounded-full object-contain" />
+                                    <img src="/images/lingo.png"
+                                            class="w-[50px] lg:w-[90px] h-auto object-cover hover:bg-orange-500 rounded-full"
+                                             />
 
                                     </span>
                                 </div>
