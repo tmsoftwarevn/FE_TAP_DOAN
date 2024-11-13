@@ -10,35 +10,47 @@ if (isset($_GET['id'])) {
 }
 
 $url_be = 'https://belingo.tmsoftware.vn';
-$detail = '';
+$api_key = '8AF1apnMW2A39Ip7LUFtNstE5RjYleghk';
 
-$apiUrl = "{$url_be}/api/project/getprojectdetail?api_key=8AF1apnMW2A39Ip7LUFtNstE5RjYleghk&id={$id}";
-$response = file_get_contents($apiUrl);
-$data = json_decode($response, true); // Decode the JSON data
+function fetchApiData($url) {
+    $ch = curl_init($url);
+
+    // Set cURL options
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_TIMEOUT, 30); // Set timeout to 30 seconds
+
+    $response = curl_exec($ch);
+
+    // Check for cURL errors
+    if (curl_errno($ch)) {
+        echo 'cURL Error: ' . curl_error($ch);
+        curl_close($ch);
+        return null;
+    }
+
+    curl_close($ch);
+    return json_decode($response, true);
+}
+
+$apiUrl = "{$url_be}/api/project/getprojectdetail?api_key={$api_key}&id={$id}";
+$data = fetchApiData($apiUrl);
+$detail = '';
 
 if ($data && $data['status'] === true && isset($data['data'])) {
     $detail = $data['data'];
-    // echo 'llllll';
-    // print_r($detail);
 } else {
-    echo "Error fetching data or no data available.";
+    echo "Error fetching project details or no data available.";
 }
 
-/////////////
+// Fetch list of projects
+$apiUrl_project = "{$url_be}/api/project/getlistproject?api_key={$api_key}";
 $data_project = [];
-
-$url_be = 'https://belingo.tmsoftware.vn';
-// call project
-$apiUrl_project = $url_be . '/api/project/getlistproject?api_key=8AF1apnMW2A39Ip7LUFtNstE5RjYleghk';
-$response_project = file_get_contents($apiUrl_project);
-$data = json_decode($response_project, true); // Decode the JSON data
+$data = fetchApiData($apiUrl_project);
 
 if ($data && $data['status'] === true && isset($data['data'])) {
     $data_project = $data['data'];
-    // echo 'llllll';
-    // print_r($data_project);
 } else {
-    echo "Error fetching data or no data available.";
+    echo "Error fetching project list or no data available.";
 }
 
 ?>
@@ -270,7 +282,7 @@ C77.5,30.76,77.5,33.53,76.19,35.13z"></path>
                 </section>
 
                 <section class="news-relative mb-10">
-                    <div class="wrap-content !p-0">
+                    <div class="wrap-content md:!p-0">
                         <div class="title-post text-center color-blue title-underline">
                             <h2 class="text-ani-item">Dự án khác</h2>
                         </div>
@@ -306,6 +318,7 @@ C77.5,30.76,77.5,33.53,76.19,35.13z"></path>
                                         </div>
                                     </div> -->
                                     <?php
+                                    // trộn để lấy ngẫu nhiên
                                     shuffle($data_project);
                                     $firstBlogs = array_slice($data_project, 0, 8);
                                     foreach ($firstBlogs as $key => $value) {

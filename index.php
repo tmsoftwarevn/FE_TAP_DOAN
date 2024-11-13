@@ -369,9 +369,13 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                                     </path>
                                                 </clipPath>
                                             </defs>
-                                            <image clip-path="url(#maskID0)" width="100" height="100"
+                                            <!-- <image clip-path="url(#maskID0)" width="100" height="100"
                                                 xlink:href="/pictures/catalog/home/home-business/Dao-Tao-Ngon-ngu.jpg">
+                                            </image> -->
+                                            <image clip-path="url(#maskID0)" width="100" height="100"
+                                                xlink:href="<?php echo $url_be . $data_banner[0]['image'] ?>">
                                             </image>
+
                                         </svg>
                                         <svg class="svg-stroke" xmlns="https://www.w3.org/2000/svg"
                                             viewBox="0 0 100 100">
@@ -399,8 +403,11 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                                     </path>
                                                 </clipPath>
                                             </defs>
-                                            <image clip-path="url(#maskID1)" width="100" height="100"
+                                            <!-- <image clip-path="url(#maskID1)" width="100" height="100"
                                                 xlink:href="/pictures/catalog/home/home-business/du-hoc.jpg">
+                                            </image> -->
+                                            <image clip-path="url(#maskID0)" width="100" height="100"
+                                                xlink:href="<?php echo $url_be . $data_banner[1]['image'] ?>">
                                             </image>
                                         </svg> <svg class="svg-stroke" xmlns="https://www.w3.org/2000/svg"
                                             viewBox="0 0 100 100">
@@ -426,8 +433,11 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                                     </path>
                                                 </clipPath>
                                             </defs>
-                                            <image clip-path="url(#maskID2)" width="100" height="100"
+                                            <!-- <image clip-path="url(#maskID2)" width="100" height="100"
                                                 xlink:href="/pictures/catalog/home/home-business/xuat-khau-lao-dong.jpg">
+                                            </image> -->
+                                            <image clip-path="url(#maskID0)" width="100" height="100"
+                                                xlink:href="<?php echo $url_be . $data_banner[2]['image'] ?>">
                                             </image>
                                         </svg> <svg class="svg-stroke" xmlns="https://www.w3.org/2000/svg"
                                             viewBox="0 0 100 100">
@@ -454,8 +464,11 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                                     </path>
                                                 </clipPath>
                                             </defs>
-                                            <image clip-path="url(#maskID3)" width="100" height="100"
+                                            <!-- <image clip-path="url(#maskID3)" width="100" height="100"
                                                 xlink:href="/pictures/catalog/home/home-business/ky-nang-song.jpg">
+                                            </image> -->
+                                            <image clip-path="url(#maskID0)" width="100" height="100"
+                                                xlink:href="<?php echo $url_be . $data_banner[3]['image'] ?>">
                                             </image>
                                         </svg> <svg class="svg-stroke" xmlns="https://www.w3.org/2000/svg"
                                             viewBox="0 0 100 100">
@@ -482,8 +495,11 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                                     </path>
                                                 </clipPath>
                                             </defs>
-                                            <image clip-path="url(#maskID4)" width="100" height="100"
+                                            <!-- <image clip-path="url(#maskID4)" width="100" height="100"
                                                 xlink:href="/pictures/catalog/home/home-business/lingo-connecto.jpg">
+                                            </image> -->
+                                            <image clip-path="url(#maskID0)" width="100" height="100"
+                                                xlink:href="<?php echo $url_be . $data_banner[4]['image'] ?>">
                                             </image>
                                         </svg> <svg class="svg-stroke" xmlns="https://www.w3.org/2000/svg"
                                             viewBox="0 0 100 100">
@@ -505,43 +521,61 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                             <div class="all-tab-content all-tab-bus">
                                 <div class="tab-content" data-tab="business-02">
                                     <div class="content-bus-tab-home">
-                                        <h3 class="!text-blue-500"><?= __('ĐÀO TẠO NGÔN NGỮ') ?></h3>
+                                        <h3 class="!text-blue-500">
+                                            <?php echo $data_banner[0]['name'] ?>
+                                        </h3>
                                         <div id="content-1" class="content color-white content-collapse">
-                                            <p>Sứ mệnh &quot;Vì một Việt Nam khỏe đẹp&quot; SEN HEALTHCARE mong muốn góp
+                                            <!-- <p>Sứ mệnh &quot;Vì một Việt Nam khỏe đẹp&quot; SEN HEALTHCARE mong muốn góp
                                                 một phần vào chăm sóc sức khỏe cộng đồng và trở thành một hệ sinh thái
-                                                toàn diện của Tập đoàn LINGO GROUP.</p>
+                                                toàn diện của Tập đoàn LINGO GROUP.</p> -->
+                                            <?php echo $data_banner[0]['description'] ?>
+
                                         </div>
                                         <div class="nav-drop" onclick="toggleFullHeightById('content-1')"></div>
                                     </div>
                                 </div>
                                 <div class="tab-content" data-tab="business-05">
                                     <div class="content-bus-tab-home">
-                                        <h3 class="!text-blue-500"><?= __('DU HỌC') ?></h3>
+                                        <h3 class="!text-blue-500">
+                                        <?php echo $data_banner[1]['name'] ?>
+                                        </h3>
                                         <div id="content-2" class="content color-white content-collapse">
-                                            <p>SEN MINING là lĩnh vực mũi nhọn nằm trong kế hoạch phát triển tương lai
-                                                gần của LINGO GROUP.</p>
+                                            <!-- <p>SEN MINING là lĩnh vực mũi nhọn nằm trong kế hoạch phát triển tương lai
+                                                gần của LINGO GROUP.</p> -->
+
+                                            <?php echo $data_banner[1]['description'] ?>
+
                                         </div>
                                         <div class="nav-drop" onclick="toggleFullHeightById('content-2')"></div>
                                     </div>
                                 </div>
                                 <div class="tab-content" data-tab="business-03">
                                     <div class="content-bus-tab-home">
-                                        <h3 class="!text-blue-500"><?= __('XUẤT KHẨU LAO ĐỘNG') ?></h3>
+                                        <h3 class="!text-blue-500">
+                                        <?php echo $data_banner[2]['name'] ?>
+                                        </h3>
                                         <div id="content-3" class="content color-white content-collapse">
-                                            <p>SEN CONSTRUCTION tập trung lĩnh vực đầu tư, thiết kế và XUẤT KHẨU LAO
+                                            <!-- <p>SEN CONSTRUCTION tập trung lĩnh vực đầu tư, thiết kế và XUẤT KHẨU LAO
                                                 ĐỘNG công
                                                 trình là một mắt xích quan trọng trong hệ sinh thái của Tập đoàn SEN
-                                                GROUP.</p>
+                                                GROUP.</p> -->
+                                            <?php echo $data_banner[2]['description'] ?>
+
                                         </div>
                                         <div class="nav-drop" onclick="toggleFullHeightById('content-3')"></div>
                                     </div>
                                 </div>
                                 <div class="tab-content" data-tab="business-04">
                                     <div class="content-bus-tab-home">
-                                        <h3 class="!text-blue-500"><?= __('KỸ NĂNG SỐNG') ?></h3>
+                                        <h3 class="!text-blue-500">
+                                        <?php echo $data_banner[3]['name'] ?>
+                                        </h3>
                                         <div id="content-4" class="content color-white content-collapse">
-                                            <p>SEN RESORT kết hợp cùng tập đoàn chuyên nghiệp nước ngoài để vận hành và
-                                                quản lý các chuỗi KỸ NĂNG SỐNG, chăm sóc sức khỏe.</p>
+                                            <!-- <p>SEN RESORT kết hợp cùng tập đoàn chuyên nghiệp nước ngoài để vận hành và
+                                                quản lý các chuỗi KỸ NĂNG SỐNG, chăm sóc sức khỏe.
+                                            </p> -->
+                                            <?php echo $data_banner[3]['description'] ?>
+
                                         </div>
                                         <div class="nav-drop" onclick="toggleFullHeightById('content-4')"></div>
                                     </div>
@@ -550,8 +584,9 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                     <div class="content-bus-tab-home">
                                         <h3 class="!text-blue-500">LINGO GROUP</h3>
                                         <div id="content-5" class="content color-white content-collapse">
-                                            <p>SEN REAL đã phát triển nhiều dự án BĐS nghỉ dưỡng cao cấp, gây tiếng vang
-                                                lớn.</p>
+                                            <p>
+                                                Lingo Group 
+                                            </p>
                                         </div>
                                         <div class="nav-drop" onclick="toggleFullHeightById('content-5')"></div>
                                     </div>

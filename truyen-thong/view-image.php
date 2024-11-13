@@ -11,18 +11,33 @@ if (isset($_GET['id'])) {
 $url_be = 'https://belingo.tmsoftware.vn';
 $detail = '';
 
-$apiUrl = "{$url_be}/api/gallery/getlistimage?api_key=8AF1apnMW2A39Ip7LUFtNstE5RjYleghk&id={$id}";
-$response = file_get_contents($apiUrl);
-$data = json_decode($response, true); // Decode the JSON data
+
+$apiUrl_project = "{$url_be}/api/gallery/getlistimage?api_key=8AF1apnMW2A39Ip7LUFtNstE5RjYleghk&id={$id}";
+
+$ch = curl_init($apiUrl_project);
+
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); // Return response as a string
+curl_setopt($ch, CURLOPT_TIMEOUT, 30); // Set timeout to 30 seconds
+
+$response_project = curl_exec($ch);
+
+if (curl_errno($ch)) {
+    echo 'Error: ' . curl_error($ch);
+    curl_close($ch);
+    return null;
+}
+
+curl_close($ch);
+
+$data = json_decode($response_project, true);
 
 if ($data && $data['status'] === true && isset($data['data'])) {
     $detail = $data['data'];
-    // echo 'llllll';
-    // print_r($detail);
+    // Optionally print the data for debugging
+    // print_r($data_project);
 } else {
     echo "Error fetching data or no data available.";
 }
-
 
 ?>
 

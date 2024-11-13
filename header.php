@@ -5,7 +5,7 @@ require_once "setting-all-file.php";
 
 <header class="header">
     <div class="logo">
-        <img src="/images/logo.png" class="w-[80px] h-auto object-cover" />
+        <img src="/images/logo.png" class="w-[70px] sm:w-[80px] h-auto object-cover" />
 
     </div>
     <div class="nav-click">
@@ -97,7 +97,7 @@ require_once "setting-all-file.php";
         </div>
 
         <div class="language">
-            <ul>
+            <!-- <ul>
                 <li>
 
                     <a href="?lang=en">
@@ -110,7 +110,29 @@ require_once "setting-all-file.php";
                         <span style="font-size: 20px;" class="fi fi-vn"></span>
                     </a>
                 </li>
+            </ul> -->
+            <ul>
+                <?php if ($_SESSION['lang'] == 'vn'): ?>
+                    
+                    <li>
+                        <a href="?lang=en" >
+                            <!-- <span style="font-size: 20px;" class="fi fi-vn"></span> -->
+                            <button>English</button> 
+                            
+                        </a>
+                    </li>
+                <?php else: ?>
+                   
+                    <li>
+                        <a href="?lang=vn">
+                            <!-- <span style="font-size: 20px; margin-right: 5px;" class="fi fi-gb"></span> -->
+                            <button>Tiếng Việt</button>
+                            
+                        </a>
+                    </li>
+                <?php endif; ?>
             </ul>
+
         </div>
     </div>
     <div class="social">
