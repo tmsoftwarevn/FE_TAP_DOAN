@@ -7324,7 +7324,7 @@ function OpenTab() {
           for (var t = 0, l = 0; l < e.childNodes.length; l++)
             e.childNodes[l].clientHeight &&
               (t = t + e.childNodes[l].clientHeight + 1);
-          e.style.height = t + "px";
+          e.style.height = t + "px";        
         }
       }
     }),

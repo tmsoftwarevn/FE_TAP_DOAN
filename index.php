@@ -14,7 +14,7 @@ function fetch_api_data($url)
 {
     $ch = curl_init($url);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($ch, CURLOPT_TIMEOUT, 2); // Set timeout in seconds
+    curl_setopt($ch, CURLOPT_TIMEOUT, 20); // Set timeout in seconds
     $response = curl_exec($ch);
 
     // Check for cURL errors
@@ -506,54 +506,54 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                 <div class="tab-content" data-tab="business-02">
                                     <div class="content-bus-tab-home">
                                         <h3 class="!text-blue-500"><?= __('ĐÀO TẠO NGÔN NGỮ') ?></h3>
-                                        <div class="content color-white content-collapse">
+                                        <div id="content-1" class="content color-white content-collapse">
                                             <p>Sứ mệnh &quot;Vì một Việt Nam khỏe đẹp&quot; SEN HEALTHCARE mong muốn góp
                                                 một phần vào chăm sóc sức khỏe cộng đồng và trở thành một hệ sinh thái
                                                 toàn diện của Tập đoàn LINGO GROUP.</p>
                                         </div>
-                                        <div class="nav-drop"></div>
+                                        <div class="nav-drop" onclick="toggleFullHeightById('content-1')"></div>
                                     </div>
                                 </div>
                                 <div class="tab-content" data-tab="business-05">
                                     <div class="content-bus-tab-home">
                                         <h3 class="!text-blue-500"><?= __('DU HỌC') ?></h3>
-                                        <div class="content color-white content-collapse">
+                                        <div id="content-2" class="content color-white content-collapse">
                                             <p>SEN MINING là lĩnh vực mũi nhọn nằm trong kế hoạch phát triển tương lai
                                                 gần của LINGO GROUP.</p>
                                         </div>
-                                        <div class="nav-drop"></div>
+                                        <div class="nav-drop" onclick="toggleFullHeightById('content-2')"></div>
                                     </div>
                                 </div>
                                 <div class="tab-content" data-tab="business-03">
                                     <div class="content-bus-tab-home">
                                         <h3 class="!text-blue-500"><?= __('XUẤT KHẨU LAO ĐỘNG') ?></h3>
-                                        <div class="content color-white content-collapse">
+                                        <div id="content-3" class="content color-white content-collapse">
                                             <p>SEN CONSTRUCTION tập trung lĩnh vực đầu tư, thiết kế và XUẤT KHẨU LAO
                                                 ĐỘNG công
                                                 trình là một mắt xích quan trọng trong hệ sinh thái của Tập đoàn SEN
                                                 GROUP.</p>
                                         </div>
-                                        <div class="nav-drop"></div>
+                                        <div class="nav-drop" onclick="toggleFullHeightById('content-3')"></div>
                                     </div>
                                 </div>
                                 <div class="tab-content" data-tab="business-04">
                                     <div class="content-bus-tab-home">
                                         <h3 class="!text-blue-500"><?= __('KỸ NĂNG SỐNG') ?></h3>
-                                        <div class="content color-white content-collapse">
+                                        <div id="content-4" class="content color-white content-collapse">
                                             <p>SEN RESORT kết hợp cùng tập đoàn chuyên nghiệp nước ngoài để vận hành và
                                                 quản lý các chuỗi KỸ NĂNG SỐNG, chăm sóc sức khỏe.</p>
                                         </div>
-                                        <div class="nav-drop"></div>
+                                        <div class="nav-drop" onclick="toggleFullHeightById('content-4')"></div>
                                     </div>
                                 </div>
                                 <div class="tab-content" data-tab="business-01">
                                     <div class="content-bus-tab-home">
                                         <h3 class="!text-blue-500">LINGO GROUP</h3>
-                                        <div class="content color-white content-collapse">
+                                        <div id="content-5" class="content color-white content-collapse">
                                             <p>SEN REAL đã phát triển nhiều dự án BĐS nghỉ dưỡng cao cấp, gây tiếng vang
                                                 lớn.</p>
                                         </div>
-                                        <div class="nav-drop"></div>
+                                        <div class="nav-drop" onclick="toggleFullHeightById('content-5')"></div>
                                     </div>
                                 </div>
                             </div>
@@ -907,4 +907,18 @@ c3.7-3.7,9.6-3.7,13.3,0s3.7,9.5,0,13.2s-9.6,3.7-13.3,0S13.4,19,17.1,15.5z" />
                 window.location.reload();
             }
         });
+    </script>
+
+    <script>
+        function toggleFullHeightById(contentId) {
+            // Find the content div by its ID
+            const contentDiv = document.getElementById(contentId);
+
+            // Check if the 'h-full' class exists and toggle it
+            if (contentDiv.classList.contains('!h-full')) {
+                contentDiv.classList.remove('!h-full');
+            } else {
+                contentDiv.classList.add('!h-full');
+            }
+        }
     </script>

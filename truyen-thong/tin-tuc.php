@@ -1,17 +1,39 @@
 <?php
 require_once "../setting-all-file.php";
 
+
 $data_project = [];
 
 $url_be = 'https://belingo.tmsoftware.vn';
-// call project
+// Call project
 $apiUrl_project = $url_be . '/api/blog/getlistblog?api_key=8AF1apnMW2A39Ip7LUFtNstE5RjYleghk';
-$response_project = file_get_contents($apiUrl_project);
-$data = json_decode($response_project, true); // Decode the JSON data
+
+// Initialize cURL session
+$ch = curl_init($apiUrl_project);
+
+// Set cURL options
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); // Return response as a string
+curl_setopt($ch, CURLOPT_TIMEOUT, 30); // Set timeout to 30 seconds
+
+// Execute cURL request
+$response_project = curl_exec($ch);
+
+// Check for cURL errors
+if (curl_errno($ch)) {
+    echo 'Error: ' . curl_error($ch);
+    curl_close($ch);
+    return null;
+}
+
+// Close cURL session
+curl_close($ch);
+
+// Decode the JSON data
+$data = json_decode($response_project, true);
 
 if ($data && $data['status'] === true && isset($data['data'])) {
     $data_project = $data['data'];
-    // echo 'llllll';
+    // Optionally print the data for debugging
     // print_r($data_project);
 } else {
     echo "Error fetching data or no data available.";
@@ -32,12 +54,12 @@ if ($data && $data['status'] === true && isset($data['data'])) {
 </div>
 <div class="news-list">
     <?php
-     
+
     foreach ($data_project as $key => $value) {
     ?>
         <div class="item-news ani-item">
             <div class="pic-news">
-            <?php
+                <?php
                 $date = new DateTime($value['created_at']);
                 $day = $date->format('d');
                 $monthYear = $date->format('m-Y');
@@ -69,9 +91,9 @@ if ($data && $data['status'] === true && isset($data['data'])) {
                 </h3>
             </div>
             <div class="wrap-view-details">
-                <a 
-                href="<?php echo 'tin-tuc/' . $value['slug'] ?>-<?php echo $value['id'] ?>.html"
-                class="view-details dark link-load"
+                <a
+                    href="<?php echo 'tin-tuc/' . $value['slug'] ?>-<?php echo $value['id'] ?>.html"
+                    class="view-details dark link-load"
                     aria-label=" Lingo group ️">
                     <span class="small-logo-ico">
                         <?php include "../component/logoLoading.php" ?>
@@ -89,7 +111,7 @@ if ($data && $data['status'] === true && isset($data['data'])) {
             </div>
         </div>
     <?php } ?>
-    
+
 
 </div>
 
@@ -98,11 +120,11 @@ if ($data && $data['status'] === true && isset($data['data'])) {
 
 <div class="list-viewmore-news">
     <div class="wrap-more-project">
-    
+
         <a href="#foo" data-href="/truyen-thong/fake_loading.php" class="more-project"
             aria-label="news">
         </a>
-        
+
     </div>
     <div class="loading">
         <div></div>
