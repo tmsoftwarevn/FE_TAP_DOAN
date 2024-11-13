@@ -1,7 +1,42 @@
 <?php
-    require_once "setting-all-file.php";
+require_once "setting-all-file.php";
 
+$data_project = [];
 
+$url_be = 'https://belingo.tmsoftware.vn';
+// Call project
+$apiUrl_project = $url_be . '/api/project/getlistcategory?api_key=8AF1apnMW2A39Ip7LUFtNstE5RjYleghk';
+
+// Initialize cURL session
+$ch = curl_init($apiUrl_project);
+
+// Set cURL options
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); // Return response as a string
+curl_setopt($ch, CURLOPT_TIMEOUT, 30); // Set timeout to 30 seconds
+
+// Execute cURL request
+$response_project = curl_exec($ch);
+
+// Check for cURL errors
+if (curl_errno($ch)) {
+    echo 'Error: ' . curl_error($ch);
+    curl_close($ch);
+    return null;
+}
+
+// Close cURL session
+curl_close($ch);
+
+// Decode the JSON data
+$data = json_decode($response_project, true);
+
+if ($data && $data['status'] === true && isset($data['data'])) {
+    $data_project = $data['data'];
+    // Optionally print the data for debugging
+    // print_r($data_project);
+} else {
+    echo "Error fetching data or no data available.";
+}
 
 ?>
 
@@ -18,11 +53,11 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="format-detection" content="telephone=no">
 
-    <title id="hdtitle">Trang chủ</title>
-    <meta name="description" content="LINGO GROUP">
+    <title id="hdtitle">Lĩnh vực hoạt động</title>
+    <meta name="description" content="Lĩnh vực hoạt động">
     <meta name="keywords" content="LINGO GROUP">
-    <meta property="og:title" content="Trang chủ">
-    <meta property="og:description" content="LINGO GROUP">
+    <meta property="og:title" content="Lĩnh vực hoạt động">
+    <meta property="og:description" content="Lĩnh vực hoạt động">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="LINGO GROUP">
     <meta property="og:image" content="/images/logo.png">
@@ -174,7 +209,7 @@ h-2.2v9.2h2.2c1.3,0,2.3-0.4,2.9-1.1c0.6-0.7,0.9-1.9,0.9-3.6c0-1.6-0.3-2.8-0.9-3.
                     <div class="pic-business-02 ani-item">
                         <div class="bg-cover trans-y bg-lazy" data-speed="-2"></div>
                     </div>
-                    <div class="list-business">
+                    <!-- <div class="list-business">
                         <div class="content-business-page"><span class="circle-stroke ani-item"></span>
                             <div class="pic-business-page ani-item">
                                 <div class="bg-cover"><img class="trans-y lazy" data-speed="-1" src="/banner/1920x960.png" data-src="/banner/1920x960.png" alt="Bất động sản"></div>
@@ -238,6 +273,28 @@ h-2.2v9.2h2.2c1.3,0,2.3-0.4,2.9-1.1c0.6-0.7,0.9-1.9,0.9-3.6c0-1.6-0.3-2.8-0.9-3.
                                     trường quốc tế, đem lại giá trị gia tăng tối đa cho nguồn tài nguyên của Quốc Gia. SEN MINING, mở ra cơ hội mới, củng cố, gia tăng sức mạnh cho tập đoàn</p>
                             </div>
                         </div>
+                    </div> -->
+                    <div class="list-business">
+                        <?php
+                        foreach ($data_project as $key => $value) {
+                        ?>
+                            <div class="content-business-page"><span class="circle-stroke ani-item"></span>
+                                <div class="pic-business-page ani-item">
+                                    <div class="bg-cover">
+                                        <img class="trans-y lazy" data-speed="-1" 
+                                        src="<?php echo $url_be . $value['image'] ?>" 
+                                        data-src="<?php echo $url_be . $value['image'] ?>" 
+                                        alt="<?php echo $value['name'] ?>"></div>
+                                </div>
+                                <div class="text-business-page">
+                                    <div class="title-post color-blue">
+                                        <h2 class="text-ani-item"><?php echo $value['name'] ?></h2>
+                                    </div>
+                                    <?php echo $value['content'] ?>
+                                </div>
+                            </div>
+                        <?php } ?>
+
                     </div>
                 </section>
                 <?php require "footer.php" ?>
