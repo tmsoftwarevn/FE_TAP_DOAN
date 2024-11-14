@@ -339,14 +339,23 @@ h-2.2v9.2h2.2c1.3,0,2.3-0.4,2.9-1.1c0.6-0.7,0.9-1.9,0.9-3.6c0-1.6-0.3-2.8-0.9-3.
                                         class="input-text ani-item"><span class="holder"><?= __('ĐIỆN THOẠI') ?><small class="red-star">*</small></span> <input id="phone" class="o2o-phone" type="text" name="phone" value="" data-error="Điện thoại không hợp lệ!" data-default="ĐIỆN THOẠI" aria-label="phone"></div>
                                     <div
                                         class="input-text ani-item"><span class="holder"><?= __('EMAIL') ?><small class="red-star">*</small></span> <input class="o2o-email" id="email" name="email" value="" type="text" data-error="Email không hợp lệ!" data-default="EMAIL" aria-label="email"></div>
-                                    <div class="input-area ani-item"><span class="holder"><?= __('NỘI DUNG CẦN LIÊN HỆ') ?></span><textarea class="o2o-note" name="comments" id="comments" data-error="Vui lòng nhập nội dung!" data-default="NỘI DUNG CẦN LIÊN HỆ" aria-label="comment"></textarea></div>
-                                    <div class="wrap-view-details big-view ani-item"><button class="view-details" aria-label="link" id="btn-contact-submit" data-page="/thank-you-.html"><span class="small-logo-ico"><svg>
-                                                    <use xlink:href="#ico-view-details-logo"></use>
-                                                </svg> <span class="rotate-logo"><svg>
+                                    <div class="input-area ani-item"><span class="holder"><?= __('NỘI DUNG CẦN LIÊN HỆ') ?></span><textarea class="o2o-note" name="content" id="comments" data-error="Vui lòng nhập nội dung!" data-default="NỘI DUNG CẦN LIÊN HỆ" aria-label="content"></textarea></div>
+                                    <div class="wrap-view-details big-view ani-item">
+                                        <button class="view-details" aria-label="link" id="btn-contact-submit2" data-page="/thank.html">
+                                            <span class="small-logo-ico">
+                                                <?php include "component/logoLoading.php" ?>
+                                                <span class="rotate-logo">
+                                                    <svg>
                                                         <use xlink:href="#ico-view-details-rotate-send"></use>
-                                                    </svg> </span></span> <?= __('Gửi') ?> <svg class="viewdetails-svg">
+                                                    </svg>
+                                                </span>
+                                            </span>
+                                            <?= __('Gửi') ?>
+                                            <svg class="viewdetails-svg">
                                                 <use xlink:href="#arrow"></use>
-                                            </svg></button></div>
+                                            </svg>
+                                        </button>
+                                    </div>
                                 </form>
                             </div>
                         </div>
@@ -473,3 +482,85 @@ c3.7-3.7,9.6-3.7,13.3,0s3.7,9.5,0,13.2s-9.6,3.7-13.3,0S13.4,19,17.1,15.5z" />
     <div class="httptemplate class-hidden">/catalog/view/</div>
     <script type="text/javascript" src="/catalog/view/js/gsap.js"></script>
     <script src="/catalog/view/js/app.js?ver=1.0.8" type="text/javascript"></script>
+
+    <script>
+        document.getElementById("btn-contact-submit2").addEventListener("click", function(e) {
+            e.preventDefault();
+
+            // Validate the form
+            if (validatecontact()) {
+                // Disable the submit button to prevent repeated clicks
+                const submitButton = document.getElementById("btn-contact-submit2");
+                submitButton.setAttribute("disabled", "disabled");
+                submitButton.style.pointerEvents = "none";
+
+                // Show loading indicator
+                const loadingDiv = document.createElement("div");
+                loadingDiv.className = "loadx";
+                loadingDiv.style.display = "block";
+                loadingDiv.style.opacity = 1;
+                document.body.after(loadingDiv);
+
+                // Prepare form data for submission
+                const formData = new URLSearchParams(new FormData(document.forms.contact_form));
+
+                // Send data to the API endpoint
+                fetch("https://belingo.tmsoftware.vn/api/contact/storecontact?api_key=8AF1apnMW2A39Ip7LUFtNstE5RjYleghk", {
+                        method: "POST",
+                        headers: {
+                            "Content-type": "application/x-www-form-urlencoded",
+                            "X-Requested-With": "XMLHttpRequest"
+                        },
+                        body: formData
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        // Remove loading indicator
+                        document.querySelector(".loadx").remove();
+
+                        if (data.status === "200") {
+                            // If successful, display success message
+                            ShowMessage(data.message, "color-yellow", "mess-success");
+
+                            // Reset the form
+                            document.getElementById("contact_form").reset();
+                            document.querySelectorAll(".holder").forEach(holder => {
+                                holder.classList.remove("hide");
+                            });
+
+                            // Redirect if data-page attribute is set
+                            const redirectPage = submitButton.getAttribute("data-page");
+                            if (redirectPage) {
+                                window.location = redirectPage;
+                            }
+                        } else {
+                            // Display error message if the response status is not "200"
+                            ShowMessage(data.message, "color-yellow", "mess-alert");
+                        }
+
+                        // Re-enable the submit button
+                        submitButton.removeAttribute("disabled");
+                        submitButton.style.pointerEvents = "auto";
+
+                        // Hide message after 5 seconds
+                        setTimeout(hidemsg, 5000);
+                    })
+                    .catch(error => {
+                        console.error("Error:", error);
+                        ShowMessage("An error occurred. Please try again.", "color-yellow", "mess-alert");
+
+                        // Remove loading indicator and re-enable the submit button
+                        document.querySelector(".loadx").remove();
+                        submitButton.removeAttribute("disabled");
+                        submitButton.style.pointerEvents = "auto";
+                    });
+            } else {
+                // Handle validation errors by removing error messages on click
+                document.querySelectorAll(".formError").forEach(errorElement => {
+                    errorElement.addEventListener("click", function() {
+                        this.remove();
+                    });
+                });
+            }
+        });
+    </script>

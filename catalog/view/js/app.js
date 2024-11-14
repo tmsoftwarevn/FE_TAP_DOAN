@@ -6864,7 +6864,7 @@ function Option() {
             i.addEventListener("click", function (c) {
               this.classList.contains("pic-background") &&
                 s.classList.add("has-background");
-                // d();
+              // d();
               var e = i.querySelector("img") || i,
                 t =
                   (WinScroll.stop(),
@@ -7324,7 +7324,7 @@ function OpenTab() {
           for (var t = 0, l = 0; l < e.childNodes.length; l++)
             e.childNodes[l].clientHeight &&
               (t = t + e.childNodes[l].clientHeight + 1);
-          e.style.height = t + "px";        
+          e.style.height = t + "px";
         }
       }
     }),
@@ -10429,11 +10429,11 @@ window.addEventListener("keydown", function (e) {
   //     }, 5e3);
   //   });
 
-function onChange(e) {
-  document.querySelector(".file-name").innerHTML = e.files[0]
-    ? e.files[0].name
-    : document.querySelector(".file-name").getAttribute("data-default");
-}
+  function onChange(e) {
+    document.querySelector(".file-name").innerHTML = e.files[0]
+      ? e.files[0].name
+      : document.querySelector(".file-name").getAttribute("data-default");
+  };
 
 function ShowMessage(e, t, n) {
   (n = n || "mess-alert"),
@@ -11248,7 +11248,7 @@ null != document.getElementById("contact_form") &&
               : new ActiveXObject("Microsoft.XMLHTTP")).open(
               "POST",
               httpserver +
-                "send-contact.html&language=" +
+                "submit_contact.php&language=" +
                 document.querySelector("html").getAttribute("lang"),
               !0
             ),

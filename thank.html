@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <style>
+        /* Basic styling for the form */
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .input-text, .input-area { margin-bottom: 15px; }
+        .holder { display: block; font-weight: bold; margin-bottom: 5px; }
+        input, textarea { width: 100%; padding: 8px; }
+        #form-message { margin-top: 15px; font-size: 16px; }
+    </style>
+</head>
+<body>
+
+    <h1>Contact Us</h1>
+    
+    <!-- Contact Form -->
+    <form id="contact_form" name="contact_form" method="post">
+        <div class="input-text">
+            <label class="holder" for="name">Full Name <small class="red-star">*</small></label>
+            <input id="name" name="name" type="text" aria-label="fullname" required>
+        </div>
+        <div class="input-text">
+            <label class="holder" for="phone">Phone <small class="red-star">*</small></label>
+            <input id="phone" name="phone" type="text" aria-label="phone" required>
+        </div>
+        <div class="input-text">
+            <label class="holder" for="email">Email <small class="red-star">*</small></label>
+            <input id="email" name="email" type="text" aria-label="email" required>
+        </div>
+        <div class="input-area">
+            <label class="holder" for="comments">Message</label>
+            <textarea id="comments" name="comments" aria-label="comment"></textarea>
+        </div>
+        <button type="button" id="btn-contact-submit">Submit</button>
+        <div id="form-message"></div> <!-- Message display area -->
+    </form>
+
+    <script>
+        document.getElementById('btn-contact-submit').addEventListener('click', function() {
+            const formData = new FormData(document.getElementById('contact_form'));
+            fetch('submit_contact.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Display success or error message
+                const messageDiv = document.getElementById('form-message');
+                messageDiv.innerHTML = data.message;
+                messageDiv.style.color = data.success ? 'green' : 'red';
+            })
+            .catch(error => {
+                document.getElementById('form-message').innerHTML = "An error occurred. Please try again.";
+            });
+        });
+    </script>
+
+</body>
+</html>
