@@ -93,7 +93,15 @@ if ($data && $data['status'] === true && isset($data['data'])) {
                                 <a class="view-album" href="#foo" data-href="view-image.php?id=<?php echo $value['id'] ?>" aria-label="album"></a>
                             </div>
                             <div class="title-pic">
-                                <h3> <?php echo $value['headline'] ?></h3>
+                                <h3>
+                                <?php
+                                    if ($_SESSION['lang'] == 'vn') {
+                                        echo $value['headline'];
+                                    } else {
+                                        echo $value['headline_en'];
+                                    }
+                                    ?>
+                                </h3>
                             </div>
                         </div>
                     </div>

@@ -1,3 +1,8 @@
+<?php
+require_once "setting-all-file.php";
+
+?>
+
 <footer class="footer">
     <div class="flower-footer ani-item"><span></span> <span></span> <span></span> <span></span>
         <span></span>
@@ -9,8 +14,20 @@
         <div class="wrap-box-footer">
             <div class="company-text">
                 <div class="title-main color-white text-left">
-                    <h2 class="text-ani-item"> CÔNG TY TNHH <strong>LINGO GROUP</strong></h2>
+                    <h2 class="text-ani-item">
+                        <!-- CÔNG TY TNHH <strong>LINGO GROUP</strong> -->
+                        <?php
+                        if ($_SESSION['lang'] == 'vn') {
+                            echo 'CÔNG TY TNHH <strong>LINGO GROUP</strong>';
+                        } else {
+                            echo '<strong>LINGO GROUP</strong> Company Limited';
+                        }
+                        ?>
+                    </h2>
+
+
                 </div>
+
                 <div class="company-info ani-item">
                     <div class="title-small color-white">
                         <div class="title-sp"><?= __('Trụ sở chính') ?></div>
@@ -42,13 +59,17 @@
                 <div class="title-small">
                     <div class="title-sp"><?= __('Đăng ký nhận tin') ?></div>
                 </div>
-                <form onsubmit="return false;" id="subscribe" name="subscribe" method="post">
+                    <!-- form -->
                     <div class="input-text"><span class="holder">Email</span><input type="text"
                             data-default="Email" value="" id="emailsubscribe" name="emailsubscribe"
-                            data-error="Email không hợp lệ!" aria-label="Email"> <button class="sub-but"
+                            data-error="Email không hợp lệ!" aria-label="Email">
+                        <button class="sub-but"
                             type="button" aria-label="send" id="btn-subscribe-submit"
-                            data-page="/thank-you-.html">Gửi</button></div>
-                </form>
+                            data-page="/">
+                            <?= __('Gửi') ?>
+                        </button>
+                    </div>
+                
             </div>
         </div>
     </div>

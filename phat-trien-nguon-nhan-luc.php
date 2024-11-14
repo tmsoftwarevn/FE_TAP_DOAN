@@ -1,7 +1,43 @@
 <?php
-    require_once "setting-all-file.php";
+require_once "setting-all-file.php";
 
 
+$data_project = [];
+
+
+// Call project
+$apiUrl_project = $url_be . '/api/company/gethumanresource?api_key=8AF1apnMW2A39Ip7LUFtNstE5RjYleghk';
+
+// Initialize cURL session
+$ch = curl_init($apiUrl_project);
+
+// Set cURL options
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); // Return response as a string
+curl_setopt($ch, CURLOPT_TIMEOUT, 30); // Set timeout to 30 seconds
+
+// Execute cURL request
+$response_project = curl_exec($ch);
+
+// Check for cURL errors
+if (curl_errno($ch)) {
+    echo 'Error: ' . curl_error($ch);
+    curl_close($ch);
+    return null;
+}
+
+// Close cURL session
+curl_close($ch);
+
+// Decode the JSON data
+$data = json_decode($response_project, true);
+
+if ($data && $data['status'] === true && isset($data['data'])) {
+    $data_project = $data['data'];
+    // Optionally print the data for debugging
+    //print_r($data_project);
+} else {
+    echo "Error fetching data or no data available.";
+}
 
 ?>
 
@@ -18,10 +54,10 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="format-detection" content="telephone=no">
 
-    <title id="hdtitle">Phát triển nguồn nhân lực</title>
+    <title id="hdtitle"><?php echo $data_project['name'] ?></title>
     <meta name="description" content="LINGO GROUP">
     <meta name="keywords" content="LINGO GROUP">
-    <meta property="og:title" content="Phát triển nguồn nhân lực">
+    <meta property="og:title" content="<?php echo $data_project['name'] ?>">
     <meta property="og:description" content="LINGO GROUP">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="LINGO GROUP">
@@ -161,7 +197,16 @@ h-2.2v9.2h2.2c1.3,0,2.3-0.4,2.9-1.1c0.6-0.7,0.9-1.9,0.9-3.6c0-1.6-0.3-2.8-0.9-3.
                 <div class="tile-reveal"></div>
                 <section class="banner-inner">
                     <div class="title-page">
-                        <h1><?= __('Phát triển nguồn nhân lực') ?></h1>
+                        <!-- <h1><?= __('Phát triển nguồn nhân lực') ?></h1> -->
+                        <h1>
+                            <?php
+                            if ($_SESSION['lang'] == 'vn') {
+                                echo $data_project['name'];
+                            } else {
+                                echo $data_project['name_en'];
+                            }
+                            ?>
+                        </h1>
                     </div>
                     <div class="bg-inner"><img src="/images/bg-phattrien.jpg" data-src="/images/bg-phattrien.jpg" alt="Phát triển nguồn nhân lực" class="lazy"></div>
                     <div class="wrap-wheel">
@@ -175,14 +220,27 @@ h-2.2v9.2h2.2c1.3,0,2.3-0.4,2.9-1.1c0.6-0.7,0.9-1.9,0.9-3.6c0-1.6-0.3-2.8-0.9-3.
                     <div class="wrap-content">
                         <div class="left-content">
                             <div class="title-main text-left color-blue title-underline bold-medium">
-                                <h2 class="text-ani-item">Môi trường làm việc</h2>
+                                <h2 class="text-ani-item">
+                                    <?php
+                                    if ($_SESSION['lang'] == 'vn') {
+                                        echo $data_project['working_environment_title'];
+                                    } else {
+                                        echo $data_project['working_environment_title_en'];
+                                    }
+                                    ?>
+                                </h2>
                             </div>
                         </div>
                         <div class="right-content">
                             <div class="text-about-intro ani-item">
                                 <div class="box-txt">
-                                    <p>Môi trường làm việc tại SEN GROUP luôn công bằng, tôn trọng và mang tính kỷ luật cao. Chúng tôi luôn lắng nghe và chia sẻ những tâm tư, nguyện vọng, nhu cầu chính đáng của người lao động để không ngừng cải tiến, tạo
-                                        ra môi trường làm việc thân thiện và chuyên nghiệp.</p>
+                                    <?php
+                                    if ($_SESSION['lang'] == 'vn') {
+                                        echo $data_project['working_environment'];
+                                    } else {
+                                        echo $data_project['working_environment_en'];
+                                    }
+                                    ?>
                                 </div>
                             </div>
                         </div>
@@ -192,42 +250,78 @@ h-2.2v9.2h2.2c1.3,0,2.3-0.4,2.9-1.1c0.6-0.7,0.9-1.9,0.9-3.6c0-1.6-0.3-2.8-0.9-3.
                     <div class="wrap-content">
                         <div class="text-about-intro ani-item">
                             <div class="title-main text-left color-white title-underline bold-medium">
-                                <h2 class="text-ani-item">CƠ HỘI NGHỀ NGHIỆP</h2>
+                                <h2 class="text-ani-item">
+                                    <?php
+                                    if ($_SESSION['lang'] == 'vn') {
+                                        echo $data_project['career_opportunities_title'];
+                                    } else {
+                                        echo $data_project['career_opportunities_title_en'];
+                                    }
+                                    ?>
+                                </h2>
                             </div>
                             <div class="box-txt text-fixed color-white">
-                                <p>SEN GROUP luôn quan tâm đến cơ hội phát triển nghề nghiệp cho nhân viên, từ một sinh viên mới ra trường cho đến những người đang tìm kiếm cơ hội để phát huy năng lực và tự khẳng định mình.</p>
-                                <p>Với sự phát triển ổn định và bền vững, hàng năm, Công ty luôn có kế hoạch tuyển thêm nhiều vị trí công việc mới từ nhân viên, quản lý đến đội ngũ lãnh đạo cấp cao</p>
-                                <p>Tại SEN GROUP, lộ trình thăng tiến luôn rõ ràng theo năng lực của bạn. Với môi trường làm việc nhiều cạnh tranh &amp; trong dụng nhân tài, sẽ là nền tảng để bạn xây dựng sự nghiệp vững vàng tại SEN GROUP.</p>
+                                <?php
+                                if ($_SESSION['lang'] == 'vn') {
+                                    echo $data_project['career_opportunities'];
+                                } else {
+                                    echo $data_project['career_opportunities_en'];
+                                }
+                                ?>
+                                </h2>
                             </div>
                         </div>
                     </div>
-                    <div class="bg-cover"><img src="/banner/orange.jpg" alt="CƠ HỘI NGHỀ NGHIỆP"></div>
+                    <div class="bg-cover">
+                        <img src="<?php echo $url_be . $data_project['image'] ?>" alt="CƠ HỘI NGHỀ NGHIỆP">
+                    </div>
                     <div class="scroll-text font-accent trans-x" data-speed="4"><span>LINGO GROUP LINGO GROUP LINGO GROUP LINGO GROUP</span> <span>LINGO GROUP LINGO GROUP LINGO GROUP LINGO GROUP</span></div>
                 </section>
                 <section class="recruitment-policy">
                     <div class="wrap-content">
                         <div class="text-about-intro ani-item">
                             <div class="title-main text-left color-blue title-underline bold-medium">
-                                <h2 class="text-ani-item">VĂN HOÁ CÔNG TY</h2>
+                                <h2 class="text-ani-item">
+                                    <?php
+                                    if ($_SESSION['lang'] == 'vn') {
+                                        echo $data_project['corporate_culture_title'];
+                                    } else {
+                                        echo $data_project['corporate_culture_title_en'];
+                                    }
+                                    ?>
+                                </h2>
                             </div>
                             <div class="box-txt text-fixed">
-                                <h1><strong>SEN GROUP: MÔI TRƯỜNG LÝ TƯỞNG ĐỂ PHÁT TRIỂN</strong></h1>
-                                <p><span style="font-weight: 400;">Với phương châm: “Phát triển dự án phải đi đôi với việc phát triển nguồn nhân lực”, hàng năm, SEN GROUP luôn có kế hoạch đào tạo cho Nhân viên. SEN GROUP đã hợp tác với các chuyên gia nhiều kinh nghiệm để tổ chức các khóa học nâng cao kỹ năng chuyên môn, quản lý cho Nhân viên. Bên cạnh đó, SEN GROUP cũng tổ chức các buổi đào tạo nội bộ cho nhân viên nhằm tạo điều kiện để nhân viên nắm bắt và hoàn thiện các kỹ năng giải quyết công việc</span></p>
-                                <h1><strong>HÃY HỌC HỎI VÀ DÁM THAY ĐỔI</strong></h1>
-                                <p><span style="font-weight: 400;">Con người là tài sản quý nhất của SEN GROUP, là nền tảng cho sự thành công và phát triển của Tập đoàn. Chúng tôi luôn đòi hỏi cao về năng lực, nhiết huyết và sự tận tâm của mọi Nhân viên. SEN GROUP khuyến khích nhân viên làm việc độc lập, sáng tạo, luôn học hỏi, không ngừng nâng cao năng lực của bản thân để góp sức cho sự phát triển của Tập đoàn.</span></p>
-                                <p><br style="font-weight: 400;" /><br style="font-weight: 400;" /><br /></p>
+                                <?php
+                                if ($_SESSION['lang'] == 'vn') {
+                                    echo $data_project['corporate_culture'];
+                                } else {
+                                    echo $data_project['corporate_culture_en'];
+                                }
+                                ?>
+                                </h2>
                             </div>
                         </div>
                         <div class="text-about-intro ani-item">
                             <div class="title-main text-left color-blue title-underline bold-medium">
-                                <h2 class="text-ani-item">CHÍNH SÁCH ĐÃI NGỘ</h2>
+                                <h2 class="text-ani-item">
+                                <?php
+                                if ($_SESSION['lang'] == 'vn') {
+                                    echo $data_project['welfare_policy_title'];
+                                } else {
+                                    echo $data_project['welfare_policy_title_en'];
+                                }
+                                ?>
+                                </h2>
                             </div>
                             <div class="box-txt text-fixed">
-                                <ul>
-                                    <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Thường xuyên đào tạo và phát triển</span></li>
-                                    <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Cơ hội thăng tiến trong nghề nghiệp</span></li>
-                                    <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Chính sách hỗ trợ, trợ cấp ưu đãi</span></li>
-                                </ul>
+                            <?php
+                                if ($_SESSION['lang'] == 'vn') {
+                                    echo $data_project['welfare_policy'];
+                                } else {
+                                    echo $data_project['welfare_policy_en'];
+                                }
+                                ?>
                             </div>
                         </div>
                     </div>

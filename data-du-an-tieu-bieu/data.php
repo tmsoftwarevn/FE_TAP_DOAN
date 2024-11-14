@@ -1,4 +1,5 @@
 <?php
+require_once "../setting-all-file.php";
 
 $data_project = [];
 
@@ -42,7 +43,7 @@ if ($data && $data['status'] === true && isset($data['data'])) {
 
 
 <div class="title-main color-blue text-center title-underline bold-medium">
-    <h2 class="text-ani-item">DỰ ÁN TIÊU BIỂU</h2>
+    <h2 class="text-ani-item"><?= __('Dự án tiêu biểu') ?></h2>
 </div>
 <div class="news-list">
     <!-- <div class="item-news ani-item">
@@ -75,20 +76,20 @@ if ($data && $data['status'] === true && isset($data['data'])) {
     <?php
     foreach ($data_project as $key => $value) {
     ?>
-    <div class="item-news ani-item">
-        <div class="pic-news">
-            <!-- <div class="date">31<span>10-2024 </span></div> -->
-            <?php
+        <div class="item-news ani-item">
+            <div class="pic-news">
+                <!-- <div class="date">31<span>10-2024 </span></div> -->
+                <?php
                 $date = new DateTime($value['created_at']);
                 $day = $date->format('d');
                 $monthYear = $date->format('m-Y');
                 ?>
-            <div class="date">
-                <?php echo $day; ?>
-                <span><?php echo $monthYear; ?></span>
-            </div>
-            <div class="pic-img">
-                <img src="
+                <div class="date">
+                    <?php echo $day; ?>
+                    <span><?php echo $monthYear; ?></span>
+                </div>
+                <div class="pic-img">
+                    <img src="
                                                 <?php
                                                 echo $url_be, $value['avatar'];
                                                 ?>
@@ -101,33 +102,39 @@ if ($data && $data['status'] === true && isset($data['data'])) {
                                                     echo $value['headline'];
                                                     ?>
                                                 " class="lazy" />
+                </div>
+            </div>
+            <div class="txt-news">
+                <h3>
+
+                    <?php
+                    if ($_SESSION['lang'] == 'vn') {
+                        echo $value['headline'];
+                    } else {
+                        echo $value['headline_en'];
+                    }
+                    ?>
+                </h3>
+            </div>
+            <div class="wrap-view-details">
+                <a href="<?php echo 'du-an/' . $value['slug'] ?>-<?php echo $value['id'] ?>.html"
+                    class="view-details dark link-load"
+                    aria-label="Lingo Group ️">
+                    <span class="small-logo-ico">
+                        <?php include "../component/logoLoading.php" ?>
+                        <span class="rotate-logo">
+                            <svg>
+                                <use xlink:href="#ico-view-details-rotate"></use>
+                            </svg>
+                        </span>
+                    </span>
+                    <?= __('XEM TIN') ?>
+                    <svg class="viewdetails-svg">
+                        <use xlink:href="#arrow"></use>
+                    </svg>
+                </a>
             </div>
         </div>
-        <div class="txt-news">
-            <h3> <?php
-                        echo $value['headline'];
-                        ?>
-            </h3>
-        </div>
-        <div class="wrap-view-details">
-            <a href="<?php echo 'du-an/' . $value['slug'] ?>-<?php echo $value['id'] ?>.html"
-                class="view-details dark link-load"
-                aria-label=" SỰ KIỆN ĐÀO TẠO NỘI BỘ PHONG CÁCH BÁN HÀNG CHUẨN SEN GROUP &amp; ĐÀO TẠO DỰ ÁN THE EMERALD GOLF VIEW ️">
-                <span class="small-logo-ico">
-                    <?php include "../component/logoLoading.php" ?>
-                    <span class="rotate-logo">
-                        <svg>
-                            <use xlink:href="#ico-view-details-rotate"></use>
-                        </svg>
-                    </span>
-                </span>
-                XEM TIN
-                <svg class="viewdetails-svg">
-                    <use xlink:href="#arrow"></use>
-                </svg>
-            </a>
-        </div>
-    </div>
     <?php } ?>
 
 

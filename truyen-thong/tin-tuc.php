@@ -85,9 +85,14 @@ if ($data && $data['status'] === true && isset($data['data'])) {
                 </div>
             </div>
             <div class="txt-news">
-                <h3> <?php
+                <h3>
+                    <?php
+                    if ($_SESSION['lang'] == 'vn') {
                         echo $value['headline'];
-                        ?>
+                    } else {
+                        echo $value['headline_en'];
+                    }
+                    ?>
                 </h3>
             </div>
             <div class="wrap-view-details">
@@ -103,7 +108,7 @@ if ($data && $data['status'] === true && isset($data['data'])) {
                             </svg>
                         </span>
                     </span>
-                    XEM TIN
+                    <?= __('XEM TIN') ?>
                     <svg class="viewdetails-svg">
                         <use xlink:href="#arrow"></use>
                     </svg>

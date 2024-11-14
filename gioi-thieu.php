@@ -2,6 +2,7 @@
 require_once "setting-all-file.php";
 
 $data_project = [];
+$data_giaithuong = [];
 
 $api_key = '8AF1apnMW2A39Ip7LUFtNstE5RjYleghk';
 
@@ -33,7 +34,14 @@ if ($data && $data['status'] === true && isset($data['data'])) {
     echo "Error fetching  data or no data available.";
 }
 
+$apiUrl_giaithuong = $url_be . '/api/gallery/getlistaward?api_key=' . $api_key;
+$data = fetch_api_data($apiUrl_giaithuong);
 
+if ($data && $data['status'] === true && isset($data['data'])) {
+    $data_giaithuong = $data['data'];
+} else {
+    echo "Error fetching  data or no data available.";
+}
 ?>
 
 <!DOCTYPE HTML>
@@ -83,9 +91,11 @@ if ($data && $data['status'] === true && isset($data['data'])) {
             <div class="flower-right"><span></span> <span></span> <span></span></div>
             <div class="flower-left"><span></span> <span></span></div>
         </div>
-        <div class="wrap-enter-site"><button class="enter-site" aria-label="click"><span>Enter site</span></button></div>
+        <div class="wrap-enter-site"><button class="enter-site" aria-label="click"><span>Enter site</span></button>
+        </div>
     </div>
-    <div class="loadicon" style="display:none"><span></span> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 250">
+    <div class="loadicon" style="display:none"><span></span> <svg xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 220 250">
             <path class="stroke-line" d="M181.5,40.8c0-0.2-0.1-0.3-0.3-0.4c-0.1,0-0.2,0-0.3,0c-7.1,0.7-21.1,2.4-35.7,6.5c-2,0.6-4,1.2-5.9,1.8
 c-1.6-2.6-3.4-5.2-5.4-7.8c-8.9-12.1-18.8-22-23.9-26.8c-0.2-0.2-0.4-0.2-0.6,0c-5.1,4.8-15,14.7-23.9,26.8
 c-1.9,2.6-3.7,5.2-5.4,7.8c-1.8-0.6-3.8-1.2-5.9-1.8c-14.6-4.1-28.6-5.8-35.6-6.5c-0.1,0-0.2,0-0.3,0c-0.2,0.1-0.3,0.2-0.3,0.4
@@ -155,7 +165,8 @@ c1.8,0,3.1-0.7,3.9-2.1c0.8-1.4,1.2-3.6,1.2-6.5C115.7,223.6,115.3,221.4,114.5,220
 c-1.3,1.2-3,1.8-5.2,1.8c-2.7,0-4.8-0.6-6.2-1.9c-1.5-1.2-2.2-3-2.2-5.4v-9.9c0-0.3,0-0.6-0.2-0.7c-0.1-0.1-0.3-0.2-0.7-0.2h-0.7v-1
 h6.9v1h-0.7c-0.3,0-0.6,0.1-0.7,0.2c-0.1,0.1-0.2,0.3-0.2,0.7v10c0,2.2,0.4,3.7,1.3,4.7c0.8,0.9,2.2,1.4,4,1.4
 c1.6,0,2.8-0.5,3.8-1.5c1-1,1.5-2.5,1.5-4.4v-10.2c0-0.3,0-0.6-0.1-0.7c-0.1-0.1-0.3-0.2-0.7-0.2h-1v-1H165.1z" />
-            <path class="stroke-line" d="M200.3,217.1c2.4,0,4.2,0.5,5.3,1.6c1.1,1.1,1.6,2.4,1.6,3.9c0,0.7-0.1,1.4-0.3,2c-0.2,0.6-0.6,1.2-1.1,1.8
+            <path class="stroke-line"
+                d="M200.3,217.1c2.4,0,4.2,0.5,5.3,1.6c1.1,1.1,1.6,2.4,1.6,3.9c0,0.7-0.1,1.4-0.3,2c-0.2,0.6-0.6,1.2-1.1,1.8
 c-0.5,0.6-1.2,1-2.2,1.3c-0.9,0.3-2,0.5-3.3,0.5h-3v5.8c0,0.3,0,0.6,0.1,0.7c0.1,0.1,0.3,0.2,0.7,0.2h1.5v1h-7.7v-1h0.7
 c0.4,0,0.6-0.1,0.7-0.2c0.1-0.1,0.1-0.3,0.1-0.7v-15.1c0-0.3,0-0.6-0.1-0.7c-0.1-0.1-0.3-0.2-0.7-0.2h-0.7v-1H200.3z M199.5,218.1
 h-2.2v9.2h2.2c1.3,0,2.3-0.4,2.9-1.1c0.6-0.7,0.9-1.9,0.9-3.6c0-1.6-0.3-2.8-0.9-3.5C201.8,218.4,200.8,218.1,199.5,218.1" />
@@ -199,8 +210,7 @@ h-2.2v9.2h2.2c1.3,0,2.3-0.4,2.9-1.1c0.6-0.7,0.9-1.9,0.9-3.6c0-1.6-0.3-2.8-0.9-3.
                         data-src="/images/bg.png" 
                         alt="Giới thiệu" 
                         class="lazy"> -->
-                        <img
-                            src="
+                        <img src="
                                                 <?php
                                                 echo $url_be, $data_project['banner'];
                                                 ?>
@@ -247,19 +257,16 @@ h-2.2v9.2h2.2c1.3,0,2.3-0.4,2.9-1.1c0.6-0.7,0.9-1.9,0.9-3.6c0-1.6-0.3-2.8-0.9-3.
                             </div>
                         </div>
                     </div>
-                    <div class="scroll-text font-accent trans-x" data-speed="4"><span>LINGO GROUP LINGO GROUP LINGO GROUP LINGO GROUP</span> <span>LINGO GROUP LINGO GROUP LINGO GROUP LINGO GROUP</span></div>
+                    <div class="scroll-text font-accent trans-x" data-speed="4"><span>LINGO GROUP LINGO GROUP LINGO
+                            GROUP LINGO GROUP</span> <span>LINGO GROUP LINGO GROUP LINGO GROUP LINGO GROUP</span></div>
                 </section>
                 <section class="about-value">
                     <div class="bg-cover">
-                        <img class="trans-y lazy"
-                            data-speed="-2"
-                            src="<?php
-                                    echo $url_be, $data_project['image'];
-                                    ?>"
-                            data-src="<?php
-                                        echo $url_be, $data_project['image'];
-                                        ?>"
-                            alt="Giá trị cốt lõi">
+                        <img class="trans-y lazy" data-speed="-2" src="<?php
+                                                                        echo $url_be, $data_project['image'];
+                                                                        ?>" data-src="<?php
+                                                                                        echo $url_be, $data_project['image'];
+                                                                                        ?>" alt="Giá trị cốt lõi">
                     </div>
                     <div class="wrap-content">
                         <div class="title-main text-center color-white title-underline bold-medium">
@@ -377,7 +384,7 @@ h-2.2v9.2h2.2c1.3,0,2.3-0.4,2.9-1.1c0.6-0.7,0.9-1.9,0.9-3.6c0-1.6-0.3-2.8-0.9-3.
                         <div class="slide-achieve slide-three arrow-outside dot-blue">
                             <div class="slidebox-track">
                                 <div class="slidebox-list">
-                                    <div class="box-achievement slidebox-item">
+                                    <!-- <div class="box-achievement slidebox-item">
                                         <div class="wrap-box-achieve">
                                             <div class="pic-achievement zoom-pic zoom-hover"><img src="/banner/1920x960.png" data-src="/banner/1920x960.png" alt="TẬP ĐOÀN SEN GROUP ĐÃ HỖ TRỢ 20.000 KHẨU TRANG Y TẾ CHO CÔNG TÁC PHÒNG CHỐNG DỊCH BỆNH COVID-19"
                                                     class="lazy"></div>
@@ -385,61 +392,42 @@ h-2.2v9.2h2.2c1.3,0,2.3-0.4,2.9-1.1c0.6-0.7,0.9-1.9,0.9-3.6c0-1.6-0.3-2.8-0.9-3.
                                                 <h3>TẬP ĐOÀN SEN GROUP ĐÃ HỖ TRỢ 20.000 KHẨU TRANG 111111111</h3>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="box-achievement slidebox-item">
-                                        <div class="wrap-box-achieve">
-                                            <div class="pic-achievement zoom-pic zoom-hover"><img src="/banner/1920x960.png" data-src="/banner/1920x960.png" alt="TẬP ĐOÀN SEN GROUP ĐÃ HỖ TRỢ 20.000 KHẨU TRANG Y TẾ CHO CÔNG TÁC PHÒNG CHỐNG DỊCH BỆNH COVID-19"
-                                                    class="lazy"></div>
-                                            <div class="text-achievement">
-                                                <h3>TẬP ĐOÀN SEN GROUP ĐÃ HỖ TRỢ 20.000 KHẨU TRANG 22222222</h3>
+                                    </div> -->
+                                    <?php
+                                    foreach ($data_giaithuong as $key => $value) {
+                                    ?>
+                                        <div class="box-achievement slidebox-item">
+                                            <div class="wrap-box-achieve">
+                                                <div class="pic-achievement zoom-pic zoom-hover">
+                                                    <img src="
+                                                <?php
+                                                echo $url_be, $value['image'];
+                                                ?>
+                                                " data-src="
+                                                <?php
+                                                echo $url_be, $value['image'];
+                                                ?>
+                                                " alt="
+                                                    <?php
+                                                    echo $value['name'];
+                                                    ?>
+                                                " class="lazy" />
+                                                </div>
+                                                <div class="text-achievement">
+                                                    <h3>
+                                                        <?php
+                                                        if ($_SESSION['lang'] == 'vn') {
+                                                            echo $value['name'];
+                                                        } else {
+                                                            echo $value['name_en'];
+                                                        }
+                                                        ?>
+                                                    </h3>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="box-achievement slidebox-item">
-                                        <div class="wrap-box-achieve">
-                                            <div class="pic-achievement zoom-pic zoom-hover"><img src="/banner/1920x960.png" data-src="/banner/1920x960.png" alt="TẬP ĐOÀN SEN GROUP ĐÃ HỖ TRỢ 20.000 KHẨU TRANG Y TẾ CHO CÔNG TÁC PHÒNG CHỐNG DỊCH BỆNH COVID-19"
-                                                    class="lazy"></div>
-                                            <div class="text-achievement">
-                                                <h3>TẬP ĐOÀN SEN GROUP ĐÃ HỖ TRỢ 20.000 KHẨU TRANG Y TẾ CHO CÔNG TÁC PHÒNG CHỐNG DỊCH BỆNH COVID-19</h3>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="box-achievement slidebox-item">
-                                        <div class="wrap-box-achieve">
-                                            <div class="pic-achievement zoom-pic zoom-hover"><img src="/banner/1920x960.png" data-src="/banner/1920x960.png" alt="TẬP ĐOÀN SEN GROUP ĐÃ HỖ TRỢ 20.000 KHẨU TRANG Y TẾ CHO CÔNG TÁC PHÒNG CHỐNG DỊCH BỆNH COVID-19"
-                                                    class="lazy"></div>
-                                            <div class="text-achievement">
-                                                <h3>TẬP ĐOÀN SEN GROUP ĐÃ HỖ TRỢ 20.000 KHẨU TRANG Y TẾ CHO CÔNG TÁC PHÒNG CHỐNG DỊCH BỆNH COVID-19</h3>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="box-achievement slidebox-item">
-                                        <div class="wrap-box-achieve">
-                                            <div class="pic-achievement zoom-pic zoom-hover"><img src="/pictures/mobile/catalog/about/giai-thuong/GT5.jpg" data-src="/pictures/catalog/about/giai-thuong/GT5.jpg" alt="SÀN GIAO DỊCH BẤT ĐỘNG SẢN TIÊU BIỂU TOP 30 NĂM 2017"
-                                                    class="lazy"></div>
-                                            <div class="text-achievement">
-                                                <h3>SÀN GIAO DỊCH BẤT ĐỘNG SẢN TIÊU BIỂU TOP 30 NĂM 2017</h3>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="box-achievement slidebox-item">
-                                        <div class="wrap-box-achieve">
-                                            <div class="pic-achievement zoom-pic zoom-hover"><img src="/pictures/mobile/catalog/about/giai-thuong/GT6.jpg" data-src="/pictures/catalog/about/giai-thuong/GT6.jpg" alt="TẬP ĐOÀN SEN GROUP ĐÃ TÍCH CỰC THAM GIA ĐÓNG GÓP 10.000 KHẨU TRANG ỦNG HỘ PHÒNG, CHỐNG DỊCH COVID-19"
-                                                    class="lazy"></div>
-                                            <div class="text-achievement">
-                                                <h3>TẬP ĐOÀN SEN GROUP ĐÃ TÍCH CỰC THAM GIA ĐÓNG GÓP 10.000 KHẨU TRANG ỦNG HỘ PHÒNG, CHỐNG DỊCH COVID-19</h3>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="box-achievement slidebox-item">
-                                        <div class="wrap-box-achieve">
-                                            <div class="pic-achievement zoom-pic zoom-hover"><img src="/pictures/mobile/catalog/about/giai-thuong/GT7.jpg" data-src="/pictures/catalog/about/giai-thuong/GT7.jpg" alt="TẬP ĐOÀN SEN GROUP ĐÃ TRAO TẶNG SÁCH CHO THƯ VIỆN TỈNH KIÊN GIANG"
-                                                    class="lazy"></div>
-                                            <div class="text-achievement">
-                                                <h3>TẬP ĐOÀN SEN GROUP ĐÃ TRAO TẶNG SÁCH CHO THƯ VIỆN TỈNH KIÊN GIANG</h3>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <?php } ?>
+
                                 </div>
                             </div>
                         </div>
@@ -461,13 +449,23 @@ h-2.2v9.2h2.2c1.3,0,2.3-0.4,2.9-1.1c0.6-0.7,0.9-1.9,0.9-3.6c0-1.6-0.3-2.8-0.9-3.
                     <div class="require-col color-blue">
                         <div class="title-small color-blue text-left">
                             <div class="title-sp">Đăng ký nhận tin</div>
-                            <p>Để biết thêm chi tiết về các dự án, vui lòng để lại thông tin liên hệ, bộ phận kinh doanh của chúng tôi sẽ chủ động liên hệ trực tiếp tới Quý khách. Trân trọng.</p>
+                            <p>Để biết thêm chi tiết về các dự án, vui lòng để lại thông tin liên hệ, bộ phận kinh doanh
+                                của chúng tôi sẽ chủ động liên hệ trực tiếp tới Quý khách. Trân trọng.</p>
                         </div>
-                        <div class="input-text"><span class="holder">Họ tên<small class="red-star">*</small></span> <input id="nameregister" name="nameregister" value="" type="text" data-error="Vui lòng nhập tên!" data-default="Họ tên" aria-label="fullname"></div>
-                        <div class="input-text"><span class="holder">Email<small class="red-star">*</small></span> <input id="emailregister" name="emailregister" value="" type="text" data-error="Email không hợp lệ!" data-default="Email" aria-label="email"></div>
-                        <div class="input-text"><span class="holder">Điện thoại<small class="red-star">*</small></span> <input id="phoneregister" name="phoneregister" value="" type="text" data-error="Điện thoại không hợp lệ!" data-default="Điện thoại" aria-label="phone"></div>
-                        <div
-                            class="wrap-view-details big-view"><button class="view-details dark" aria-label="submit" id="btn-register-submit" data-page="/thank-you-.html"><span class="small-logo-ico"><svg>
+                        <div class="input-text"><span class="holder">Họ tên<small class="red-star">*</small></span>
+                            <input id="nameregister" name="nameregister" value="" type="text"
+                                data-error="Vui lòng nhập tên!" data-default="Họ tên" aria-label="fullname">
+                        </div>
+                        <div class="input-text"><span class="holder">Email<small class="red-star">*</small></span>
+                            <input id="emailregister" name="emailregister" value="" type="text"
+                                data-error="Email không hợp lệ!" data-default="Email" aria-label="email">
+                        </div>
+                        <div class="input-text"><span class="holder">Điện thoại<small class="red-star">*</small></span>
+                            <input id="phoneregister" name="phoneregister" value="" type="text"
+                                data-error="Điện thoại không hợp lệ!" data-default="Điện thoại" aria-label="phone">
+                        </div>
+                        <div class="wrap-view-details big-view"><button class="view-details dark" aria-label="submit"
+                                id="btn-register-submit" data-page="/thank-you-.html"><span class="small-logo-ico"><svg>
                                         <use xlink:href="#ico-view-details-logo"></use>
                                     </svg> <span class="rotate-logo"><svg>
                                             <use xlink:href="#ico-view-details-rotate-send"></use>
@@ -485,7 +483,8 @@ h-2.2v9.2h2.2c1.3,0,2.3-0.4,2.9-1.1c0.6-0.7,0.9-1.9,0.9-3.6c0-1.6-0.3-2.8-0.9-3.
                     <li><span class="call"><svg>
                                 <use xlink:href="#ico-phone"></use>
                             </svg></span>
-                        <p><a href="tel:028-7305-6839">(028) 7305 6839</a> - <a href="tel:0932-92-94-96">0932 92 94 96</a></p>
+                        <p><a href="tel:028-7305-6839">(028) 7305 6839</a> - <a href="tel:0932-92-94-96">0932 92 94
+                                96</a></p>
                     </li>
                     <li><span class="email"><svg>
                                 <use xlink:href="#ico-email"></use>
@@ -496,15 +495,18 @@ h-2.2v9.2h2.2c1.3,0,2.3-0.4,2.9-1.1c0.6-0.7,0.9-1.9,0.9-3.6c0-1.6-0.3-2.8-0.9-3.
                                 <use xlink:href="#ico-company-address"></use>
                             </svg></span>
                         <p><a href="https://www.google.com/maps/place/11+%C4%90.+Nguy%E1%BB%85n+C%C3%B4ng+Tr%E1%BB%A9,+Ph%C6%B0%E1%BB%9Dng+Nguy%E1%BB%85n+Th%C3%A1i+B%C3%ACnh,+Qu%E1%BA%ADn+1,+Th%C3%A0nh+ph%E1%BB%91+H%E1%BB%93+Ch%C3%AD+Minh,+Vi%E1%BB%87t+Nam/@10.7700544,106.7018674,17z/data=!3m1!4b1!4m6!3m5!1s0x31752f4174c47f21:0x184d28bc63cf70ea!8m2!3d10.7700544!4d106.7044423!16s%2Fg%2F11bw3y54pl?entry=ttu"
-                                target="_blank" rel="noopener">11 Nguyễn Công Trứ, Phường Nguyễn Thái Bình, Quận 1, TP. HCM</a></p>
+                                target="_blank" rel="noopener">11 Nguyễn Công Trứ, Phường Nguyễn Thái Bình, Quận 1, TP.
+                                HCM</a></p>
                     </li>
                 </ul>
                 <div class="social-regis">
                     <ul>
-                        <li><a class="facebook" href="https://www.facebook.com/SenGroup.vn" target="_blank" rel="noopener" aria-label="facebook"><svg>
+                        <li><a class="facebook" href="https://www.facebook.com/SenGroup.vn" target="_blank"
+                                rel="noopener" aria-label="facebook"><svg>
                                     <use xlink:href="#ico-facebook"></use>
                                 </svg></a></li>
-                        <li><a class="youtube" href="https://www.youtube.com/channel/UCImEWP7omdaGVCeN_T5G57A" target="_blank" rel="noopener" aria-label="youtube"><svg>
+                        <li><a class="youtube" href="https://www.youtube.com/channel/UCImEWP7omdaGVCeN_T5G57A"
+                                target="_blank" rel="noopener" aria-label="youtube"><svg>
                                     <use xlink:href="#ico-youtube"></use>
                                 </svg></a></li>
                     </ul>
@@ -530,17 +532,24 @@ h-2.2v9.2h2.2c1.3,0,2.3-0.4,2.9-1.1c0.6-0.7,0.9-1.9,0.9-3.6c0-1.6-0.3-2.8-0.9-3.
             <div class="form-row-search">
                 <form onsubmit="return false;" id="search" method="get">
                     <div class="search-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
-                            <path fill="currentColor" d="M33.3,31.9c-0.6,0.6-1.3,1-2,1.4l5.9,5.9c1,0.9,2.5,0.9,3.4,0c0.9-1,0.9-2.5,0-3.4l-5.9-5.9C34.4,30.6,33.9,31.3,33.3,31.9z" />
+                            <path fill="currentColor"
+                                d="M33.3,31.9c-0.6,0.6-1.3,1-2,1.4l5.9,5.9c1,0.9,2.5,0.9,3.4,0c0.9-1,0.9-2.5,0-3.4l-5.9-5.9C34.4,30.6,33.9,31.3,33.3,31.9z" />
                             <path fill="currentColor" d="M14.9,30.8c4.8,4.8,12.7,4.8,17.5,0s4.8-12.6,0-17.4s-12.7-4.8-17.5,0S10.1,25.9,14.9,30.8z M17.1,15.5
 c3.7-3.7,9.6-3.7,13.3,0s3.7,9.5,0,13.2s-9.6,3.7-13.3,0S13.4,19,17.1,15.5z" />
                         </svg></div>
-                    <div class="input-text"><span class="holder">Tìm kiếm ...</span><input type="text" id="quicksearch" name="quicksearch" data-default="Tìm kiếm ..." value="" aria-label="field-search">
+                    <div class="input-text"><span class="holder">Tìm kiếm ...</span><input type="text" id="quicksearch"
+                            name="quicksearch" data-default="Tìm kiếm ..." value="" aria-label="field-search">
                         <div class="search-error" id="errorsearch">
-                            <div class="search-error-content">Từ khóa không được dưới 3 kí tự, vui lòng nhập lại từ khóa tìm kiếm!</div>
-                        </div><button class="display-none link-search-load-typing" data-href="/tim-kiem" aria-label="search"></button>
+                            <div class="search-error-content">Từ khóa không được dưới 3 kí tự, vui lòng nhập lại từ khóa
+                                tìm kiếm!</div>
+                        </div><button class="display-none link-search-load-typing" data-href="/tim-kiem"
+                            aria-label="search"></button>
                     </div>
-                    <div class="close-search"></div><input type="hidden" id="defaultvalue" name="defaultvalue" value="Tìm kiếm ..." aria-label="default value"> <input type="hidden" id="errorsearchcode" name="errorsearch" value="Từ khóa không được dưới 3 kí tự, vui lòng nhập lại từ khóa tìm kiếm!"
-                        aria-label="errorsearch"> <input type="hidden" id="href_search" name="href_search" value="/tim-kiem" aria-label="href search">
+                    <div class="close-search"></div><input type="hidden" id="defaultvalue" name="defaultvalue"
+                        value="Tìm kiếm ..." aria-label="default value"> <input type="hidden" id="errorsearchcode"
+                        name="errorsearch" value="Từ khóa không được dưới 3 kí tự, vui lòng nhập lại từ khóa tìm kiếm!"
+                        aria-label="errorsearch"> <input type="hidden" id="href_search" name="href_search"
+                        value="/tim-kiem" aria-label="href search">
                 </form>
             </div>
         </div>

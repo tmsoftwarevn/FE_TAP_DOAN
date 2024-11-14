@@ -104,7 +104,15 @@ if ($data && $data['status'] === true && isset($data['data'])) {
                             </div>
 
                             <div class="title-pic">
-                                <h3><?php echo $value['name'] ?></h3>
+                                <h3>
+                                    <?php
+                                    if ($_SESSION['lang'] == 'vn') {
+                                        echo $value['name'];
+                                    } else {
+                                        echo $value['name_en'];
+                                    }
+                                    ?>
+                                </h3>
                             </div>
 
                         </div>
