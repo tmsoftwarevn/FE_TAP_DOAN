@@ -29,9 +29,10 @@ $lang = [
 	'Lĩnh vực hoạt động' => 'Business Sector',
 	'Dự án tiêu biểu' => 'Featured Projects',
 	
-
 	'Hình ảnh' => "IMAGE",
-	'ĐÀO TẠO NGÔN NGỮ' => 'LANGUAGE TRAINING',
+	
+	'Triết Lý' => 'Philosophy',
+	
 	'KỸ NĂNG SỐNG' => 'LIFE SKILLS',
 
 ];

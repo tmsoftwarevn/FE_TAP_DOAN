@@ -62,7 +62,6 @@ if ($data && $data['status'] === true && isset($data['data'])) {
 
 
 
-
 <!DOCTYPE HTML>
 <html lang="vi">
 
@@ -207,25 +206,23 @@ if ($data && $data['status'] === true && isset($data['data'])) {
                                     ?>
                                         <div class="bg slidebox-item">
                                             <div class="bg-cover">
-                                                <!-- <img src="
+                                                <img src="
                                                 <?php
-                                                echo $url_be, $value['image'];
+                                                echo $url_be, $value['banner'];
                                                 ?>
                                                 " data-src="
                                                 <?php
-                                                echo $url_be, $value['image'];
+                                                echo $url_be, $value['banner'];
                                                 ?>
                                                 " alt="
                                                     <?php
                                                     echo $value['name'];
                                                     ?>
-                                                " class="lazy" /> -->
-                                                <img src="banner/bg.jpg"
-                                                    data-src="banner/bg.jpg"
-                                                    alt="THE PRIVIA" class="lazy" />
+                                                " class="lazy" />
+
                                             </div>
                                             <div class="text-banner">
-                                                <div class="title-banner">
+                                                <!-- <div class="title-banner">
                                                     <h2>
                                                         <?php
                                                         echo $value['name'];
@@ -234,7 +231,27 @@ if ($data && $data['status'] === true && isset($data['data'])) {
                                                 </div>
                                                 <?php
                                                 echo $value['description'];
+                                                ?> -->
+                                                <div class="title-banner">
+                                                    <h2>
+                                                        <?php
+                                                        if ($_SESSION['lang'] == 'vn') {
+                                                            echo $value['name'];
+                                                        } else {
+                                                            echo $value['name_en'];
+                                                        }
+                                                        ?>
+                                                    </h2>
+                                                </div>
+
+                                                <?php
+                                                if ($_SESSION['lang'] == 'vn') {
+                                                    echo $value['description'];
+                                                } else {
+                                                    echo $value['description_en'];
+                                                }
                                                 ?>
+
                                                 <!-- <div class="wrap-view-details">
                                                     <a href="/du-an/detail-du-an.php" class="view-details link-load"
                                                         aria-label="link">
@@ -271,7 +288,7 @@ if ($data && $data['status'] === true && isset($data['data'])) {
                     <div class="wrap-content">
                         <div class="text-home-intro">
                             <div class="title-main color-yellow text-left">
-                                <h2 class="text-ani-item"><strong>Triết Lý</strong></h2>
+                                <h2 class="text-ani-item"><strong><?= __('Triết Lý') ?></strong></h2>
                                 <div class="home-intro-draw draw-vi">
                                     <svg class="nums-drawing" xmlns="http://www.w3.org/2000/svg"
                                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 800 220"
@@ -279,39 +296,7 @@ if ($data && $data['status'] === true && isset($data['data'])) {
                                         <image xmlns:xlink="http://www.w3.org/1999/xlink"
                                             xlink:href="/catalog/view/images/home/lotus-vi.svg" width="100%"
                                             height="100%" mask="url(#clipmask01)"></image>
-                                        <!-- <mask id="clipmask01" maskUnits="objectBoundingBox">
-                                            <path data-start="0" data-duration="15" d="M83.9,105.2c0,0-15.3-4.2-18.7-8c-3-3.2-2.9-12.3-2.4-16.6c0.6-4.4,4.7-12.6,7.6-16
-c3-3.6,10.8-9,14.8-11.5c8.2-5.3,26.1-13.8,35.4-16.9c8.1-2.8,25.2-5.4,33.7-6.5c16.4-2.1,65.8-4.3,65.8-4.3s-12.7,8.9-16.3,12.6
-c-11.1,11.7-36.9,53-36.9,53s-25.7,42.5-35.8,55.6c-6.8,8.7-21.4,25.5-30,32.4c-5.2,4.2-16.7,11.3-22.8,14.1
-c-4.3,2-13.1,5.7-17.8,6.3c-5.6,0.7-17.3,1.2-22.4-1.1c-3.3-1.5-9.2-6.5-10.6-9.8c-3.2-7.3-5.2-24.1-2.8-31.7
-c3.6-11.8,18.2-30.2,26.9-39c6-6,19.8-17.5,27.3-22.1c4.9-2.9,15.1-7.9,20.5-9.8c4-1.4,12.3-3.9,16.5-4.1c2.9-0.2,9.2-0.2,11.7,1.3
-c2.1,1.3,5.6,5.4,6.1,7.8c0.4,1.9-0.9,7.8-0.9,7.8" />
-                                            <line data-start="16" data-duration="25" style="stroke-width:20px"
-                                                x1="118.6" y1="94" x2="260.2" y2="88.3" />
-                                            <polyline data-start="32" data-duration="15" style="stroke-width:15px"
-                                                points="302.8,28.5 294.3,20.8 278.3,23.6 266.3,33.6 247,60.3 221.8,107 198.4,148.7 199.2,157.8 208.1,158.9 228.3,148.7 243.5,136.2" />
-                                            <path data-start="47" data-duration="15" style="stroke-width:15px"
-                                                d="M280.2,95.7c0,0-15.8,11.4-20,16.2c-2.8,3.1-7.1,10.4-9,14.1c-1.8,3.6-5,11.1-5.3,15.1c-0.2,2.9,0.5,9.1,2.2,11.5c1.6,2.2,6.9,4.9,9.6,5.4c3.2,0.6,9.7-1,12.8-1.9c4.5-1.3,13.2-5.1,16.9-7.8c3.3-2.4,8.6-8.9,11.1-12.2c2.8-3.7,8.5-11.4,9.8-15.9c1.3-4.6,2.2-15,0-19.3c-1.1-2.2-6-4.3-8.3-5.2c-3.4-1.3-14.2-2.7-14.2-2.7" />
-                                            <path data-start="63" data-duration="30"
-                                                d="M372.5,101.4c0,0-0.7-8.4-2.8-9.9c-2.4-1.8-9.2-0.9-12.1,0c-4.3,1.3-11.7,6.8-14.8,9.9
-c-5.5,5.6-13.9,19.1-17.1,26.2c-2.4,5.4-6.2,16.9-5.9,22.8c0.1,2,1.1,6.4,2.8,7.6c1.6,1.1,5.8,0.5,7.7,0
-c3.8-0.9,28.9-17.4,31.4-20.4c3.6-4.3,5.3-11.1,7.5-13.9c7.3-9.5,10.7-23.6,10.7-23.6l5.5,1c0,0-30.3,37.6-29.2,52.6
-c0.1,1.4,2,3.9,3.3,4.3c2.2,0.8,6.9-1,9.1-1.9c4.5-2,12.3-8.1,16-11.4c3.7-3.3,10.2-10.9,13.2-14.8c2.3-3,8.2-12.5,8.2-12.5" />
-                                            <path data-start="87" data-duration="30" d="M599.3,85.1c0,0,27.2-13.6,35.4-19.5c4.7-3.4,14-11,16.9-16.1c1.1-1.9,2.6-6.4,2-8.5
-c-0.6-2.1-4.3-5.2-6.3-6.1c-4.8-2.1-15.6-1.7-20.9-1.3c-14.3,1.2-42.3,8.2-55.8,12.8c-15,5.2-44.3,18.2-57.6,26.9
-c-11.9,7.8-36.4,24.8-42.6,37.6c-2.6,5.3-4.7,19-1.1,23.7c2,2.6,9.4,2.7,12.6,2.8c9.5,0.4,28.4-3.5,37.8-5.2
-c13.6-2.5,40.1-13,53.9-12.2c6,0.4,18.4,4,22.8,8.2c2.5,2.4,5.9,9.3,5.2,12.7c-1.7,8-17,18-23.5,23c-7.7,6-24.4,16-33.2,20.2
-c-7.8,3.7-19.3,10.4-27.8,11.8c-4,0.7-17.7,1.8-21.1-0.4c-2.5-1.6-5.5-8-4.8-11c0.9-4,9.3-8.1,12.6-10.6c3.2-2.5,9.7-7.4,13.2-9.3
-c8.8-4.8,27.5-12.2,37.1-15c18.8-5.3,77-13.3,77-13.3" />
-                                            <path data-start="117" data-duration="25" d="M648.5,130.4c0,0,4.1-3.2,8.8-6.7c3.9-3,10.5-10.5,13-14.8c1.3-2.1,4-6.9,3.5-9.3
-c-0.5-2.5-4.3-6.9-6.7-7.4c-4.1-0.8-11.8,4.5-15,7.2c-4.5,3.8-11.3,13.7-13.5,19.1c-2.1,5.2-4.1,16.7-3.7,22.4
-c0.3,3.9,2.1,12.1,4.8,15c1.7,1.8,6.8,3.4,9.3,3.7c3.1,0.4,9.4-0.6,12.4-1.5c4.6-1.4,12.9-6.3,16.9-8.9
-c4.4-2.9,10.9-11.7,10.9-11.7" />
-                                            <path data-start="142" data-duration="40"
-                                                d="M690.1,157.4l32.4-61.7c0,0-0.9,15.3,1.5,13c4.8-4.5,10.8-10.4,14.3-12.5
-c3.4-2,8.8-6.1,12.6-6.9c1.7-0.4,6.3,1.6,7.4,2.9c2.3,2.9-1.7,11.1-3,14.6c-2.2,5.8-9.9,15.8-12.6,21.4c-2.4,5-7.1,15.1-8.3,20.5
-c-0.4,2.1-1.7,7.1-0.2,8.7c1,1,4.5,0.4,5.9,0c3.2-0.9,12.7-3.9,15.5-5.8c4.6-3.1,11.4-12.1,15.2-16.1c4-4.3,11.2-18.1,11.2-18.1" />
-                                        </mask> -->
+
                                     </svg>
 
                                 </div>
@@ -369,9 +354,7 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                                     </path>
                                                 </clipPath>
                                             </defs>
-                                            <!-- <image clip-path="url(#maskID0)" width="100" height="100"
-                                                xlink:href="/pictures/catalog/home/home-business/Dao-Tao-Ngon-ngu.jpg">
-                                            </image> -->
+
                                             <image clip-path="url(#maskID0)" width="100" height="100"
                                                 xlink:href="<?php echo $url_be . $data_banner[0]['image'] ?>">
                                             </image>
@@ -383,14 +366,14 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                                 d="M46.3,97.3L2.7,53.7c-2.1-2.1-2.1-5.4,0-7.5L46.3,2.7c2.1-2.1,5.4-2.1,7.5,0l43.5,43.5c2.1,2.1,2.1,5.4,0,7.5L53.7,97.3C51.7,99.3,48.3,99.3,46.3,97.3z">
                                         </svg>
                                     </div>
-                                    <!-- <a href="/cong-ty-thanh-vien/sen-healthcare.html" class="link-load"
-                                        aria-label="ĐÀO TẠO NGÔN NGỮ">
-                                    </a> -->
-                                    <span class="logo-bus-home">
-                                        <!-- hover:bg-white hover:rounded-full duration-300 -->
-                                        <img src="/images/ngon ngu.png"
-                                            class="w-[50px] lg:w-[90px] h-auto object-cover mb-10 " />
 
+                                    <span class="logo-bus-home">
+                                        <!-- <img
+                                            src="/images/ngon ngu.png"
+                                            class="w-[50px] lg:w-[90px] h-auto object-cover mb-10 " /> -->
+                                        <img
+                                            src="<?php echo $url_be . $data_banner[0]['avatar'] ?>"
+                                            class="w-[50px] lg:w-[90px] h-auto object-cover mb-10 " />
                                     </span>
                                 </div>
                                 <div class="business-home trigger-tab" data-name="business-05">
@@ -403,9 +386,7 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                                     </path>
                                                 </clipPath>
                                             </defs>
-                                            <!-- <image clip-path="url(#maskID1)" width="100" height="100"
-                                                xlink:href="/pictures/catalog/home/home-business/du-hoc.jpg">
-                                            </image> -->
+
                                             <image clip-path="url(#maskID0)" width="100" height="100"
                                                 xlink:href="<?php echo $url_be . $data_banner[1]['image'] ?>">
                                             </image>
@@ -418,7 +399,8 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                     </a> -->
                                     <span class="logo-bus-home">
 
-                                        <img src="/images/du hoc.png"
+                                        <img
+                                            src="<?php echo $url_be . $data_banner[1]['avatar'] ?>"
                                             class="w-[50px] lg:w-[90px] h-auto object-cover mr-10 " />
 
                                     </span>
@@ -433,9 +415,7 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                                     </path>
                                                 </clipPath>
                                             </defs>
-                                            <!-- <image clip-path="url(#maskID2)" width="100" height="100"
-                                                xlink:href="/pictures/catalog/home/home-business/xuat-khau-lao-dong.jpg">
-                                            </image> -->
+
                                             <image clip-path="url(#maskID0)" width="100" height="100"
                                                 xlink:href="<?php echo $url_be . $data_banner[2]['image'] ?>">
                                             </image>
@@ -444,12 +424,10 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                             <path
                                                 d="M46.3,97.3L2.7,53.7c-2.1-2.1-2.1-5.4,0-7.5L46.3,2.7c2.1-2.1,5.4-2.1,7.5,0l43.5,43.5c2.1,2.1,2.1,5.4,0,7.5L53.7,97.3C51.7,99.3,48.3,99.3,46.3,97.3z">
                                         </svg></div>
-                                    <!-- <a href="/cong-ty-thanh-vien/sen-construction.html" class="link-load"
-                                        aria-label="XUẤT KHẨU LAO ĐỘNG">
-                                    </a> -->
+
                                     <span class="logo-bus-home">
 
-                                        <img src="/images/xuat khau.png"
+                                        <img src="<?php echo $url_be . $data_banner[2]['avatar'] ?>"
                                             class="w-[50px] lg:w-[90px] h-auto object-cover ml-10 " />
 
                                     </span>
@@ -467,7 +445,7 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                             <!-- <image clip-path="url(#maskID3)" width="100" height="100"
                                                 xlink:href="/pictures/catalog/home/home-business/ky-nang-song.jpg">
                                             </image> -->
-                                            <image clip-path="url(#maskID0)" width="100" height="100"
+                                            <image clip-path="url(#maskID3)" width="100" height="100"
                                                 xlink:href="<?php echo $url_be . $data_banner[3]['image'] ?>">
                                             </image>
                                         </svg> <svg class="svg-stroke" xmlns="https://www.w3.org/2000/svg"
@@ -480,7 +458,7 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                     </a> -->
                                     <span class="logo-bus-home">
 
-                                        <img src="/images/ky nang.png"
+                                        <img src="<?php echo $url_be . $data_banner[3]['avatar'] ?>"
                                             class="w-[50px] lg:w-[90px] h-auto object-cover mt-10 " />
 
                                     </span>
@@ -498,7 +476,7 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                             <!-- <image clip-path="url(#maskID4)" width="100" height="100"
                                                 xlink:href="/pictures/catalog/home/home-business/lingo-connecto.jpg">
                                             </image> -->
-                                            <image clip-path="url(#maskID0)" width="100" height="100"
+                                            <image clip-path="url(#maskID4)" width="100" height="100"
                                                 xlink:href="<?php echo $url_be . $data_banner[4]['image'] ?>">
                                             </image>
                                         </svg> <svg class="svg-stroke" xmlns="https://www.w3.org/2000/svg"
@@ -511,7 +489,7 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                     </a> -->
                                     <span class="logo-bus-home">
 
-                                        <img src="/images/lingo.png"
+                                        <img src="<?php echo $url_be . $data_banner[4]['avatar'] ?>"
 
                                             class="w-[50px] lg:w-[90px] h-auto object-cover " />
 
@@ -522,14 +500,23 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                 <div class="tab-content" data-tab="business-02">
                                     <div class="content-bus-tab-home">
                                         <h3 class="!text-blue-500">
-                                            <?php echo $data_banner[0]['name'] ?>
+                                            <?php
+                                            if ($_SESSION['lang'] == 'vn') {
+                                                echo $data_banner[0]['name'];
+                                            } else {
+                                                echo $data_banner[0]['name_en'];
+                                            }
+                                            ?>
                                         </h3>
-                                        <div id="content-1" class="content color-white content-collapse">
-                                            <!-- <p>Sứ mệnh &quot;Vì một Việt Nam khỏe đẹp&quot; SEN HEALTHCARE mong muốn góp
-                                                một phần vào chăm sóc sức khỏe cộng đồng và trở thành một hệ sinh thái
-                                                toàn diện của Tập đoàn LINGO GROUP.</p> -->
-                                            <?php echo $data_banner[0]['description'] ?>
 
+                                        <div id="content-1" class="content color-white content-collapse">
+                                            <?php
+                                            if ($_SESSION['lang'] == 'vn') {
+                                                echo $data_banner[0]['description'];
+                                            } else {
+                                                echo $data_banner[0]['description_en'];
+                                            }
+                                            ?>
                                         </div>
                                         <div class="nav-drop" onclick="toggleFullHeightById('content-1')"></div>
                                     </div>
@@ -537,13 +524,23 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                 <div class="tab-content" data-tab="business-05">
                                     <div class="content-bus-tab-home">
                                         <h3 class="!text-blue-500">
-                                        <?php echo $data_banner[1]['name'] ?>
+                                            <?php
+                                            if ($_SESSION['lang'] == 'vn') {
+                                                echo $data_banner[1]['name'];
+                                            } else {
+                                                echo $data_banner[1]['name_en'];
+                                            }
+                                            ?>
                                         </h3>
                                         <div id="content-2" class="content color-white content-collapse">
-                                            <!-- <p>SEN MINING là lĩnh vực mũi nhọn nằm trong kế hoạch phát triển tương lai
-                                                gần của LINGO GROUP.</p> -->
 
-                                            <?php echo $data_banner[1]['description'] ?>
+                                            <?php
+                                            if ($_SESSION['lang'] == 'vn') {
+                                                echo $data_banner[1]['description'];
+                                            } else {
+                                                echo $data_banner[1]['description_en'];
+                                            }
+                                            ?>
 
                                         </div>
                                         <div class="nav-drop" onclick="toggleFullHeightById('content-2')"></div>
@@ -552,14 +549,24 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                 <div class="tab-content" data-tab="business-03">
                                     <div class="content-bus-tab-home">
                                         <h3 class="!text-blue-500">
-                                        <?php echo $data_banner[2]['name'] ?>
+
+                                            <?php
+                                            if ($_SESSION['lang'] == 'vn') {
+                                                echo $data_banner[2]['name'];
+                                            } else {
+                                                echo $data_banner[2]['name_en'];
+                                            }
+                                            ?>
                                         </h3>
                                         <div id="content-3" class="content color-white content-collapse">
-                                            <!-- <p>SEN CONSTRUCTION tập trung lĩnh vực đầu tư, thiết kế và XUẤT KHẨU LAO
-                                                ĐỘNG công
-                                                trình là một mắt xích quan trọng trong hệ sinh thái của Tập đoàn SEN
-                                                GROUP.</p> -->
-                                            <?php echo $data_banner[2]['description'] ?>
+
+                                            <?php
+                                            if ($_SESSION['lang'] == 'vn') {
+                                                echo $data_banner[2]['description'];
+                                            } else {
+                                                echo $data_banner[2]['description_en'];
+                                            }
+                                            ?>
 
                                         </div>
                                         <div class="nav-drop" onclick="toggleFullHeightById('content-3')"></div>
@@ -568,25 +575,48 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                 <div class="tab-content" data-tab="business-04">
                                     <div class="content-bus-tab-home">
                                         <h3 class="!text-blue-500">
-                                        <?php echo $data_banner[3]['name'] ?>
+
+                                            <?php
+                                            if ($_SESSION['lang'] == 'vn') {
+                                                echo $data_banner[3]['name'];
+                                            } else {
+                                                echo $data_banner[3]['name_en'];
+                                            }
+                                            ?>
                                         </h3>
                                         <div id="content-4" class="content color-white content-collapse">
-                                            <!-- <p>SEN RESORT kết hợp cùng tập đoàn chuyên nghiệp nước ngoài để vận hành và
-                                                quản lý các chuỗi KỸ NĂNG SỐNG, chăm sóc sức khỏe.
-                                            </p> -->
-                                            <?php echo $data_banner[3]['description'] ?>
 
+                                            <?php
+                                            if ($_SESSION['lang'] == 'vn') {
+                                                echo $data_banner[3]['description'];
+                                            } else {
+                                                echo $data_banner[3]['description_en'];
+                                            }
+                                            ?>
                                         </div>
                                         <div class="nav-drop" onclick="toggleFullHeightById('content-4')"></div>
                                     </div>
                                 </div>
                                 <div class="tab-content" data-tab="business-01">
                                     <div class="content-bus-tab-home">
-                                        <h3 class="!text-blue-500">LINGO GROUP</h3>
+                                        <h3 class="!text-blue-500">
+
+                                            <?php
+                                            if ($_SESSION['lang'] == 'vn') {
+                                                echo $data_banner[4]['name'];
+                                            } else {
+                                                echo $data_banner[4]['name_en'];
+                                            }
+                                            ?>
+                                        </h3>
                                         <div id="content-5" class="content color-white content-collapse">
-                                            <p>
-                                                Lingo Group 
-                                            </p>
+                                            <?php
+                                            if ($_SESSION['lang'] == 'vn') {
+                                                echo $data_banner[4]['description'];
+                                            } else {
+                                                echo $data_banner[4]['description_en'];
+                                            }
+                                            ?>
                                         </div>
                                         <div class="nav-drop" onclick="toggleFullHeightById('content-5')"></div>
                                     </div>
@@ -648,9 +678,23 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                                 <div class="text-project-home">
                                                     <div class="title-post">
                                                         <h3>
-                                                            <?php echo $value['headline'] ?>
+
+                                                            <?php
+                                                            if ($_SESSION['lang'] == 'vn') {
+                                                                echo $value['headline'];
+                                                            } else {
+                                                                echo $value['headline_en'];
+                                                            }
+                                                            ?>
                                                         </h3>
-                                                        <?php echo $value['description'] ?>
+
+                                                        <?php
+                                                        if ($_SESSION['lang'] == 'vn') {
+                                                            echo $value['description'];
+                                                        } else {
+                                                            echo $value['description_en'];
+                                                        }
+                                                        ?>
                                                     </div>
                                                 </div>
                                             </div>
@@ -750,7 +794,14 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                         </div>
                                         <div class="txt-news-home">
                                             <h3>
-                                                <?php echo $value['headline'] ?>
+
+                                                <?php
+                                                if ($_SESSION['lang'] == 'vn') {
+                                                    echo $value['headline'];
+                                                } else {
+                                                    echo $value['headline_en'];
+                                                }
+                                                ?>
                                             </h3>
                                             <div class="wrap-view-details">
                                                 <a
