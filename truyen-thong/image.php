@@ -3,7 +3,7 @@ require_once "../setting-all-file.php";
 
 $data_project = [];
 
-$url_be = 'https://belingo.tmsoftware.vn';
+
 // Call project
 $apiUrl_project = $url_be . '/api/gallery/getlistgallery?api_key=8AF1apnMW2A39Ip7LUFtNstE5RjYleghk';
 

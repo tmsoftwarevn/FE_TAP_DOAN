@@ -2,9 +2,9 @@
 
 require 'setting-language.php';
 
-$info_web = [];
-
 $url_be = 'https://belingo.tmsoftware.vn';
+
+$info_web = [];
 // Call project
 $apiUrl = $url_be . '/api/company/getconfig?api_key=8AF1apnMW2A39Ip7LUFtNstE5RjYleghk';
 

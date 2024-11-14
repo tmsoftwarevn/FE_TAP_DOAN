@@ -6,7 +6,6 @@ $data_banner = [];
 $data_project = [];
 $data_blog = [];
 
-$url_be = 'https://belingo.tmsoftware.vn';
 $api_key = '8AF1apnMW2A39Ip7LUFtNstE5RjYleghk';
 
 // Function to make API requests using cURL
@@ -57,6 +56,18 @@ if ($data && $data['status'] === true && isset($data['data'])) {
 } else {
     echo "Error fetching blog data or no data available.";
 }
+
+// call triết lý
+$data_trietly = '';
+$apiUrl_trietly = $url_be . '/api/company/getphilosophy?api_key=' . $api_key;
+$data = fetch_api_data($apiUrl_trietly);
+
+if ($data && $data['status'] === true && isset($data['data'])) {
+    $data_trietly = $data['data'];
+} else {
+    echo "Error fetching blog data or no data available.";
+}
+
 
 ?>
 
@@ -323,9 +334,15 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                     </svg></div>
                             </div>
                             <div class="box-txt-home-intro ani-item">
-                                <p>Một loài hoa mang sức sống mãnh liệt, khao khát lan tỏa giá trị cao đẹp, vươn lên từ
-                                    bùn lầy, vượt qua thử thách để hướng đến ánh mặt trời, toả ngát hương thơm và làm
-                                    đẹp cho đời.</p>
+                                <p>
+                                    <?php
+                                    if ($_SESSION['lang'] == 'vn') {
+                                        echo  $data_trietly['description'];
+                                    } else {
+                                        echo $data_trietly['description_en'];
+                                    }
+                                    ?>
+                                </p>
                             </div>
                         </div>
                     </div>

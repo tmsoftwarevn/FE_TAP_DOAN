@@ -33,6 +33,13 @@ $lang = [
 	
 	'Triết Lý' => 'Philosophy',
 	
-	'KỸ NĂNG SỐNG' => 'LIFE SKILLS',
+	'TỔNG QUAN' => 'OVERVIEW',
+
+	'Giá trị cốt lõi' => 'CORE VALUE',
+
+	'Tầm Nhìn' => 'VISION',
+	'Sứ mệnh' => 'MISSION',
+
+	'Giải thưởng' => 'Awards',
 
 ];

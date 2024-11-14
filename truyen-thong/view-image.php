@@ -1,4 +1,5 @@
 <?php
+require_once "../setting-all-file.php";
 
 $id = 1;
 if (isset($_GET['id'])) {
@@ -8,7 +9,7 @@ if (isset($_GET['id'])) {
     echo "Khong nhan duoc ID";
 }
 
-$url_be = 'https://belingo.tmsoftware.vn';
+
 $detail = '';
 
 

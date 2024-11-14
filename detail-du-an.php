@@ -9,7 +9,7 @@ if (isset($_GET['id'])) {
     echo "Khong nhan duoc ID";
 }
 
-$url_be = 'https://belingo.tmsoftware.vn';
+
 $api_key = '8AF1apnMW2A39Ip7LUFtNstE5RjYleghk';
 
 function fetchApiData($url) {

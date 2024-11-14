@@ -1,6 +1,37 @@
 <?php
-    require_once "setting-all-file.php";
+require_once "setting-all-file.php";
 
+$data_project = [];
+
+$api_key = '8AF1apnMW2A39Ip7LUFtNstE5RjYleghk';
+
+// Function to make API requests using cURL
+function fetch_api_data($url)
+{
+    $ch = curl_init($url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_TIMEOUT, 20); // Set timeout in seconds
+    $response = curl_exec($ch);
+
+    // Check for cURL errors
+    if (curl_errno($ch)) {
+        echo 'Error: ' . curl_error($ch);
+        curl_close($ch);
+        return null;
+    }
+
+    curl_close($ch);
+    return json_decode($response, true);
+}
+
+$apiUrl_gioithieu = $url_be . '/api/company/getabout?api_key=' . $api_key;
+$data = fetch_api_data($apiUrl_gioithieu);
+
+if ($data && $data['status'] === true && isset($data['data'])) {
+    $data_project = $data['data'];
+} else {
+    echo "Error fetching  data or no data available.";
+}
 
 
 ?>
@@ -163,7 +194,23 @@ h-2.2v9.2h2.2c1.3,0,2.3-0.4,2.9-1.1c0.6-0.7,0.9-1.9,0.9-3.6c0-1.6-0.3-2.8-0.9-3.
                     <div class="title-page">
                         <h1><?= __('Giới thiệu') ?></h1>
                     </div>
-                    <div class="bg-inner"><img src="/images/bg.png" data-src="/images/bg.png" alt="Giới thiệu" class="lazy"></div>
+                    <div class="bg-inner">
+                        <!-- <img src="/images/bg.png" 
+                        data-src="/images/bg.png" 
+                        alt="Giới thiệu" 
+                        class="lazy"> -->
+                        <img
+                            src="
+                                                <?php
+                                                echo $url_be, $data_project['banner'];
+                                                ?>
+                                                " data-src="
+                                                <?php
+                                                echo $url_be, $data_project['banner'];
+                                                ?>
+                                                " alt="Giới thiệu" class="lazy" />
+                    </div>
+
                     <div class="wrap-wheel">
                         <div class="wheel"><span>Scroll down</span></div>
                     </div>
@@ -175,27 +222,48 @@ h-2.2v9.2h2.2c1.3,0,2.3-0.4,2.9-1.1c0.6-0.7,0.9-1.9,0.9-3.6c0-1.6-0.3-2.8-0.9-3.
                     <div class="wrap-content">
                         <div class="left-content">
                             <div class="title-main text-left color-blue title-underline bold-medium">
-                                <h2 class="text-ani-item">TỔNG QUAN</h2>
+                                <h2 class="text-ani-item"><?= __('TỔNG QUAN') ?></h2>
                             </div>
                         </div>
                         <div class="right-content">
                             <div class="text-about-intro ani-item text-fixed">
-                                <div class="box-txt">
+                                <!-- <div class="box-txt">
                                     <p style="text-align: justify;"><span style="font-size: 14pt;">SEN GROUP được hình thành từ năm 2015, mang trong mình ngọn lửa của Ý Chí chinh phục mọi khó khăn và Khát Vọng Cống Hiến những giá trị tốt đẹp nhất cho cuộc sống!</span></p>
                                     <p style="text-align: justify;"><span style="font-size: 14pt;">Để hiện thực hóa mục tiêu trở thành tập đoàn kinh tế tư nhân hàng đầu Việt Nam SEN GROUP đang tập trung xây dựng 5 mũi nhọn chiến lược: Bất động sản, Chăm sóc sức khoẻ, Du lịch, Xây dựng và Khai thác khoáng sản.</span></p>
                                     <p style="text-align: justify;"><span style="font-size: 14pt;">Với những tiền đề và nội lực sẵn có cùng sự quyết tâm không ngừng đổi mới và hoàn thiện. SEN GROUP sẽ hoàn thành những mục tiêu đề ra và mang đến những giá trị tốt đẹp cho đối tác và khách hàng, chung tay xây dựng một Việt Nam Phồn Vinh và Thịnh Vượng!</span></p>
                                     <p style="text-align: justify;"><span style="font-size: 14pt;">Với bề dày kinh nghiệm trong lĩnh vực Bất Động Sản cùng sự đam mê, tận tâm và nhiệt huyết của tất cả cán bộ công nhân viên, SEN GROUP đã cùng với các khách hàng, đối tác gặt hái rất nhiều thành công qua các dự án và sản phẩm mà SEN GROUP triển khai, nhanh chóng trở thành đơn vị hợp tác đầu tư, phân phối bất động sản hàng đầu tại thị trường Phú Quốc.</span></p>
+                                </div> -->
+                                <div class="box-txt">
+                                    <?php
+                                    if ($_SESSION['lang'] == 'vn') {
+                                        echo $data_project['content'];
+                                    } else {
+                                        echo $data_project['content_en'];
+                                    }
+                                    ?>
+
                                 </div>
+
                             </div>
                         </div>
                     </div>
                     <div class="scroll-text font-accent trans-x" data-speed="4"><span>LINGO GROUP LINGO GROUP LINGO GROUP LINGO GROUP</span> <span>LINGO GROUP LINGO GROUP LINGO GROUP LINGO GROUP</span></div>
                 </section>
                 <section class="about-value">
-                    <div class="bg-cover"><img class="trans-y lazy" data-speed="-2" src="/banner/1920x960.png" data-src="/banner/1920x960.png" alt="Giá trị cốt lõi"></div>
+                    <div class="bg-cover">
+                        <img class="trans-y lazy"
+                            data-speed="-2"
+                            src="<?php
+                                    echo $url_be, $data_project['image'];
+                                    ?>"
+                            data-src="<?php
+                                        echo $url_be, $data_project['image'];
+                                        ?>"
+                            alt="Giá trị cốt lõi">
+                    </div>
                     <div class="wrap-content">
                         <div class="title-main text-center color-white title-underline bold-medium">
-                            <h2 class="text-ani-item">Giá trị cốt lõi</h2>
+                            <h2 class="text-ani-item"><?= __('Giá trị cốt lõi') ?></h2>
                         </div>
                         <div class="value-list ani-item">
                             <div class="box-value color-white">
@@ -217,10 +285,19 @@ h-2.2v9.2h2.2c1.3,0,2.3-0.4,2.9-1.1c0.6-0.7,0.9-1.9,0.9-3.6c0-1.6-0.3-2.8-0.9-3.
                                 </div>
 
                                 <div class="title-small color-yellow">
-                                    <h2>Tầm Nhìn</h2>
+                                    <h2><?= __('Tầm Nhìn') ?></h2>
                                 </div>
                                 <ul>
-                                    <li>2028: Trở thành 1 trong 10 tập đoàn kinh tế tư nhân hàng đầu Việt Nam</li>
+                                    <li>
+                                        <?php
+                                        if ($_SESSION['lang'] == 'vn') {
+                                            echo $data_project['core_value_1'];
+                                        } else {
+                                            echo $data_project['core_value_en_1'];
+                                        }
+                                        ?>
+                                    </li>
+
                                 </ul>
                             </div>
                             <div class="box-value color-white">
@@ -241,13 +318,18 @@ h-2.2v9.2h2.2c1.3,0,2.3-0.4,2.9-1.1c0.6-0.7,0.9-1.9,0.9-3.6c0-1.6-0.3-2.8-0.9-3.
 
                                 </div>
                                 <div class="title-small color-yellow">
-                                    <h2>Sứ mệnh</h2>
+                                    <h2><?= __('Sứ mệnh') ?></h2>
                                 </div>
                                 <ul>
-                                    <li>Mang đến cho khách hàng những sản phẩm, dịch vụ tốt nhất với sự hài lòng cao nhất.</li>
-                                    <li>Thấu hiểu, hỗ trợ và giữ uy tín để đồng hành cùng đối tác.</li>
-                                    <li>Tạo tối đa mọi điều kiện cho nhân viên phát triển đúng năng lực bản thân và hưởng xứng đáng những thành quả đạt được.</li>
-                                    <li>Chung tay góp sức vì một xã hội giàu mạnh và đầy lòng nhân ái.</li>
+                                    <li>
+                                        <?php
+                                        if ($_SESSION['lang'] == 'vn') {
+                                            echo $data_project['core_value_2'];
+                                        } else {
+                                            echo $data_project['core_value_en_2'];
+                                        }
+                                        ?>
+                                    </li>
                                 </ul>
                             </div>
                             <div class="box-value color-white">
@@ -268,10 +350,17 @@ h-2.2v9.2h2.2c1.3,0,2.3-0.4,2.9-1.1c0.6-0.7,0.9-1.9,0.9-3.6c0-1.6-0.3-2.8-0.9-3.
 
                                 </div>
                                 <div class="title-small color-yellow">
-                                    <h2>Giá trị cốt lõi</h2>
+                                    <h2><?= __('Giá trị cốt lõi') ?></h2>
                                 </div>
-                                <p><span style="font-size: 18pt;"><strong>ĐẠO ĐỨC - TRÍ TUỆ - UY TÍN</strong></span><br />Với 3 chữ làm kim chỉ nam: ĐẠO ĐỨC làm gốc, TRÍ TUỆ dẫn đường và UY TÍN để đi xa hơn, trong mọi hoạt động của công ty, chúng tôi luôn
-                                    tâm niệm phải mang lại những giá trị Đích Thực cho Khách Hàng, Đối Tác và Nhân Viên.</p>
+                                <li>
+                                    <?php
+                                    if ($_SESSION['lang'] == 'vn') {
+                                        echo $data_project['core_value_3'];
+                                    } else {
+                                        echo $data_project['core_value_en_3'];
+                                    }
+                                    ?>
+                                </li>
                             </div>
                         </div>
                     </div>
@@ -283,7 +372,7 @@ h-2.2v9.2h2.2c1.3,0,2.3-0.4,2.9-1.1c0.6-0.7,0.9-1.9,0.9-3.6c0-1.6-0.3-2.8-0.9-3.
                     </div>
                     <div class="wrap-content">
                         <div class="title-main text-center color-blue title-underline bold-medium">
-                            <h2 class="text-ani-item">Giải thưởng</h2>
+                            <h2 class="text-ani-item"><?= __('Giải thưởng') ?></h2>
                         </div>
                         <div class="slide-achieve slide-three arrow-outside dot-blue">
                             <div class="slidebox-track">
