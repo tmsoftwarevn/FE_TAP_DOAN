@@ -12,7 +12,8 @@ if (isset($_GET['id'])) {
 
 $api_key = '8AF1apnMW2A39Ip7LUFtNstE5RjYleghk';
 
-function fetchApiData($url) {
+function fetchApiData($url)
+{
     $ch = curl_init($url);
 
     // Set cURL options
@@ -237,18 +238,27 @@ h-2.2v9.2h2.2c1.3,0,2.3-0.4,2.9-1.1c0.6-0.7,0.9-1.9,0.9-3.6c0-1.6-0.3-2.8-0.9-3.
                     <div class="wrap-content">
                         <div class="breadcrumb">
                             <ul>
-                                <li><a class="link-load" href="/">Trang chủ</a></li>
-                                <li><a class="link-load" href="/du-an-tieu-bieu">Dự án tiêu biểu</a></li>
+                                <li><a class="link-load" href="/"><?= __('Trang chủ') ?></a></li>
+                                <li><a class="link-load" href="/du-an-tieu-bieu"><?= __('Dự án tiêu biểu') ?></a></li>
 
                             </ul>
                         </div>
                         <div class="left-content">
                             <div class="title-main title-underline color-blue title-underline text-left bold-medium">
-                                <h1 class="text-ani-item"><?php echo $detail['headline'] ?></h1>
+                                <h1 class="text-ani-item">
+
+                                    <?php
+                                    if ($_SESSION['lang'] == 'vn') {
+                                        echo $detail['headline'];
+                                    } else {
+                                        echo $detail['headline_en'];
+                                    }
+                                    ?>
+                                </h1>
                             </div>
                             <div class="share"><span>Share</span>
                                 <ul>
-                                    <li><a class="facebook" href="#" target="_blank" rel="noreferrer"><svg
+                                    <li><a class="facebook" href="https://www.facebook.com/?locale=vi_VN" target="_blank" rel="noreferrer"><svg
                                                 viewBox="0 0 60 60">
                                                 <path fill="currentColor" d="M36.7,25.1h-4.5c-0.25-4.86,0.18-4.22,4.3-4.2V16c-8.4-0.67-10.99,1.62-10.4,9.2h-2.8v5h2.8c0,6.4,0,14.2,0,14.2H32
 c0,0,0-7.8,0-14.2h3.9L36.7,25.1z"></path>
@@ -275,7 +285,14 @@ C77.5,30.76,77.5,33.53,76.19,35.13z"></path>
                             </div>
                         </div>
                         <div class="right-content">
-                            <?php echo $detail['content'] ?>
+
+                            <?php
+                            if ($_SESSION['lang'] == 'vn') {
+                                echo $detail['content'];
+                            } else {
+                                echo $detail['content_en'];
+                            }
+                            ?>
                         </div>
 
                     </div>
@@ -284,7 +301,7 @@ C77.5,30.76,77.5,33.53,76.19,35.13z"></path>
                 <section class="news-relative mb-10">
                     <div class="wrap-content md:!p-0">
                         <div class="title-post text-center color-blue title-underline">
-                            <h2 class="text-ani-item">Dự án khác</h2>
+                            <h2 class="text-ani-item"><?= __('Dự án khác') ?></h2>
                         </div>
                         <div class="slide-news-relative ani-item arrow-outside dot-dark">
                             <div class="slidebox-track">
@@ -354,9 +371,14 @@ C77.5,30.76,77.5,33.53,76.19,35.13z"></path>
                                             </div>
 
                                             <div class="txt-news" onclick="location.reload();">
-                                                <h3> <?php
+                                                <h3>
+                                                    <?php
+                                                    if ($_SESSION['lang'] == 'vn') {
                                                         echo $value['headline'];
-                                                        ?>
+                                                    } else {
+                                                        echo $value['headline_en'];
+                                                    }
+                                                    ?>
                                                 </h3>
                                             </div>
 
@@ -373,7 +395,7 @@ C77.5,30.76,77.5,33.53,76.19,35.13z"></path>
                                                             </svg>
                                                         </span>
                                                     </span>
-                                                    XEM TIN
+                                                    <?= __('XEM TIN') ?>
                                                     <svg class="viewdetails-svg">
                                                         <use xlink:href="#arrow"></use>
                                                     </svg>
