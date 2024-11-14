@@ -54,7 +54,6 @@ if ($data && $data['status'] === true && isset($data['data'])) {
 </div>
 <div class="news-list">
     <?php
-
     foreach ($data_project as $key => $value) {
     ?>
         <div class="item-news ani-item">

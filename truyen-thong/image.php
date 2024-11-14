@@ -50,7 +50,7 @@ if ($data && $data['status'] === true && isset($data['data'])) {
 </script>
 
 <div class="title-main color-blue text-center title-underline bold-medium">
-    <h2 class="text-ani-item"><?= __('Hình ảnh') ?></h2>
+    <h2 class="text-ani-item">Albums</h2>
 </div>
 
 <div class="news-list">

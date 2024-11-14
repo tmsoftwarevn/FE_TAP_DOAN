@@ -1,5 +1,39 @@
 <?php
-    require_once "setting-all-file.php";
+require_once "setting-all-file.php";
+
+$data_project = [];
+
+$api_key = '8AF1apnMW2A39Ip7LUFtNstE5RjYleghk';
+
+// Function to make API requests using cURL
+function fetch_api_data($url)
+{
+    $ch = curl_init($url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_TIMEOUT, 20); // Set timeout in seconds
+    $response = curl_exec($ch);
+
+    // Check for cURL errors
+    if (curl_errno($ch)) {
+        echo 'Error: ' . curl_error($ch);
+        curl_close($ch);
+        return null;
+    }
+
+    curl_close($ch);
+    return json_decode($response, true);
+}
+
+$apiUrl_gioithieu = $url_be . '/api/contact/getlistoffice?api_key=' . $api_key;
+$data = fetch_api_data($apiUrl_gioithieu);
+
+if ($data && $data['status'] === true && isset($data['data'])) {
+    $data_project = $data['data'];
+    //print_r($data_project);
+} else {
+    echo "Error fetching  data or no data available.";
+}
+
 
 ?>
 
@@ -33,7 +67,7 @@
 
     <link rel="icon" href="/images/logo.png" type="image/x-icon" />
     <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.png" />
-    
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.0.0/css/flag-icons.min.css" />
 
     <link rel="stylesheet" href="/css/main.css">
@@ -172,13 +206,23 @@ h-2.2v9.2h2.2c1.3,0,2.3-0.4,2.9-1.1c0.6-0.7,0.9-1.9,0.9-3.6c0-1.6-0.3-2.8-0.9-3.
                     </div>
                     <div class="wrap-content">
                         <div class="title-main text-left color-blue title-underline">
-                            <h2 class="text-ani-item">Thông tin <strong>liên hệ</strong></h2>
+                            <h2 class="text-ani-item"> <strong><?= __('Liên hệ') ?></strong></h2>
                         </div>
                         <div class="wrap-all-company">
                             <div class="title-small color-black text-left font-thin">
-                                <h2 class="text-ani-item">CÔNG TY TNHH <strong>LINGO GROUP</strong></h2>
+                                <!-- <h2 class="text-ani-item">CÔNG TY TNHH <strong>LINGO GROUP</strong></h2> -->
+                                <h2 class="text-ani-item">
+
+                                    <?php
+                                    if ($_SESSION['lang'] == 'vn') {
+                                        echo 'CÔNG TY TNHH <strong>LINGO GROUP</strong>';
+                                    } else {
+                                        echo '<strong>LINGO GROUP</strong> Company Limited';
+                                    }
+                                    ?>
+                                </h2>
                             </div>
-                            <div class="company-info ani-item">
+                            <!-- <div class="company-info ani-item">
                                 <div class="title-small color-black text-left font-thin">
                                     <div class="title-sp">Trụ sở chính <strong>TP.HCM</strong> </div>
                                 </div>
@@ -216,61 +260,64 @@ h-2.2v9.2h2.2c1.3,0,2.3-0.4,2.9-1.1c0.6-0.7,0.9-1.9,0.9-3.6c0-1.6-0.3-2.8-0.9-3.
                                         <p><a href="tel:028-7305-6839">(028) 7305 6839</a> - <a href="tel:0932-92-94-96">0932 92 94 96</a></p>
                                     </li>
                                 </ul>
-                            </div>
-                            <div class="company-info ani-item">
-                                <div class="title-small color-black text-left font-thin">
-                                    <div class="title-sp">Văn phòng <strong>Hà Nội</strong> </div>
+                            </div> -->
+                            <?php
+                            foreach ($data_project as $key => $value) {
+                            ?>
+                                <div class="company-info ani-item">
+                                    <div class="title-small color-black text-left font-thin">
+                                        <div class="title-sp">
+
+                                            <?php
+                                            if ($_SESSION['lang'] == 'vn') {
+                                                echo $value['name'];
+                                            } else {
+                                                echo $value['name_en'];
+                                            }
+                                            ?>
+                                        </div>
+                                    </div>
+                                    <ul>
+                                        <li class="company-address">
+                                            <span class="address">
+                                                <svg>
+                                                    <use xlink:href="#ico-company-address"></use>
+                                                </svg>
+                                            </span>
+                                            <p>
+                                                <a href="<?php echo $value['map'] ?>"
+                                                    target="_blank" rel="noopener">
+                                                    <?php
+                                                    if ($_SESSION['lang'] == 'vn') {
+                                                        echo $value['address'];
+                                                    } else {
+                                                        echo $value['address_en'];
+                                                    }
+                                                    ?>
+                                                </a>
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <span class="call">
+                                                <svg>
+                                                    <use xlink:href="#ico-phone"></use>
+                                                </svg>
+                                            </span>
+                                            <p>
+                                                <?php echo $value['phone'] ?>
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <span class="email">
+                                                <svg>
+                                                    <use xlink:href="#ico-email"></use>
+                                                </svg>
+                                            </span>
+                                            <a href="mailto:<?php echo $value['email'] ?>"><?php echo $value['email'] ?></a>
+                                        </li>
+                                    </ul>
                                 </div>
-                                <ul>
-                                    <li class="company-address"><span class="address"><svg>
-                                                <use xlink:href="#ico-company-address"></use>
-                                            </svg></span>
-                                        <p><a href="https://www.google.com/maps/place/C%C3%B4ng+Ty+C%E1%BB%95+Ph%E1%BA%A7n+T%E1%BA%ADp+%C4%90o%C3%A0n+SenGroup/@10.7828839,106.6932583,17z/data=!3m1!4b1!4m5!3m4!1s0x31752f72c920c81f:0x5e6f7b7b0e5a5b06!8m2!3d10.7828786!4d106.695447"
-                                                target="_blank" rel="noopener">34-36 Liễu Giai, P.Cống Vị, Ba Đình, Hà Nội</a></p>
-                                    </li>
-                                    <li><span class="call"><svg>
-                                                <use xlink:href="#ico-phone"></use>
-                                            </svg></span>
-                                        <p><a href="tel:028-7305-6839">(028) 7305 6839</a> - <a href="tel:0932-92-94-96">0932 92 94 96</a></p>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="company-info ani-item">
-                                <div class="title-small color-black text-left font-thin">
-                                    <div class="title-sp">Văn phòng <strong>Đồng Nai</strong> </div>
-                                </div>
-                                <ul>
-                                    <li class="company-address"><span class="address"><svg>
-                                                <use xlink:href="#ico-company-address"></use>
-                                            </svg></span>
-                                        <p><a href="https://www.google.com/maps/place/C%C3%B4ng+Ty+C%E1%BB%95+Ph%E1%BA%A7n+T%E1%BA%ADp+%C4%90o%C3%A0n+SenGroup/@10.7828839,106.6932583,17z/data=!3m1!4b1!4m5!3m4!1s0x31752f72c920c81f:0x5e6f7b7b0e5a5b06!8m2!3d10.7828786!4d106.695447"
-                                                target="_blank" rel="noopener">Phú Hữu, Nhơn Trạch, Đồng Nai</a></p>
-                                    </li>
-                                    <li><span class="call"><svg>
-                                                <use xlink:href="#ico-phone"></use>
-                                            </svg></span>
-                                        <p><a href="tel:028-7305-6839">(028) 7305 6839</a> - <a href="tel:0932-92-94-96">0932 92 94 96</a></p>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="company-info ani-item">
-                                <div class="title-small color-black text-left font-thin">
-                                    <div class="title-sp">Văn phòng <strong>Thanh Hóa</strong> </div>
-                                </div>
-                                <ul>
-                                    <li class="company-address"><span class="address"><svg>
-                                                <use xlink:href="#ico-company-address"></use>
-                                            </svg></span>
-                                        <p><a href="https://www.google.com/maps/place/C%C3%B4ng+Ty+C%E1%BB%95+Ph%E1%BA%A7n+T%E1%BA%ADp+%C4%90o%C3%A0n+SenGroup/@10.7828839,106.6932583,17z/data=!3m1!4b1!4m5!3m4!1s0x31752f72c920c81f:0x5e6f7b7b0e5a5b06!8m2!3d10.7828786!4d106.695447"
-                                                target="_blank" rel="noopener">301 Lạc Long Quân, Phường Đông Vệ, TP. Thanh Hóa</a></p>
-                                    </li>
-                                    <li><span class="call"><svg>
-                                                <use xlink:href="#ico-phone"></use>
-                                            </svg></span>
-                                        <p><a href="tel:028-7305-6839">(028) 7305 6839</a> - <a href="tel:0932-92-94-96">0932 92 94 96</a></p>
-                                    </li>
-                                </ul>
-                            </div>
+                            <?php } ?>
                         </div>
                     </div>
                 </section>
@@ -281,23 +328,23 @@ h-2.2v9.2h2.2c1.3,0,2.3-0.4,2.9-1.1c0.6-0.7,0.9-1.9,0.9-3.6c0-1.6-0.3-2.8-0.9-3.
                     <div class="wrap-content">
                         <div class="left-content">
                             <div class="title-main text-left color-white title-underline">
-                                <h2 class="text-ani-item">Form <strong>Liên Hệ</strong></h2>
+                                <h2 class="text-ani-item">Form <strong><?= __('Liên hệ') ?></strong></h2>
                             </div>
                         </div>
                         <div class="right-content">
                             <div class="contact-form">
                                 <form onsubmit="return false;" id="contact_form" name="contact_form" method="post">
-                                    <div class="input-text ani-item"><span class="holder">HỌ VÀ TÊN<small class="red-star">*</small></span> <input class="o2o-name" id="name" name="name" value="" type="text" data-error="Vui lòng nhập tên!" data-default="HỌ VÀ TÊN" aria-label="fullname"></div>
+                                    <div class="input-text ani-item"><span class="holder"><?= __('HỌ VÀ TÊN') ?><small class="red-star">*</small></span> <input class="o2o-name" id="name" name="name" value="" type="text" data-error="Vui lòng nhập tên!" data-default="HỌ VÀ TÊN" aria-label="fullname"></div>
                                     <div
-                                        class="input-text ani-item"><span class="holder">ĐIỆN THOẠI<small class="red-star">*</small></span> <input id="phone" class="o2o-phone" type="text" name="phone" value="" data-error="Điện thoại không hợp lệ!" data-default="ĐIỆN THOẠI" aria-label="phone"></div>
+                                        class="input-text ani-item"><span class="holder"><?= __('ĐIỆN THOẠI') ?><small class="red-star">*</small></span> <input id="phone" class="o2o-phone" type="text" name="phone" value="" data-error="Điện thoại không hợp lệ!" data-default="ĐIỆN THOẠI" aria-label="phone"></div>
                                     <div
-                                        class="input-text ani-item"><span class="holder">EMAIL<small class="red-star">*</small></span> <input class="o2o-email" id="email" name="email" value="" type="text" data-error="Email không hợp lệ!" data-default="EMAIL" aria-label="email"></div>
-                                    <div class="input-area ani-item"><span class="holder">NỘI DUNG CẦN LIÊN HỆ</span><textarea class="o2o-note" name="comments" id="comments" data-error="Vui lòng nhập nội dung!" data-default="NỘI DUNG CẦN LIÊN HỆ" aria-label="comment"></textarea></div>
+                                        class="input-text ani-item"><span class="holder"><?= __('EMAIL') ?><small class="red-star">*</small></span> <input class="o2o-email" id="email" name="email" value="" type="text" data-error="Email không hợp lệ!" data-default="EMAIL" aria-label="email"></div>
+                                    <div class="input-area ani-item"><span class="holder"><?= __('NỘI DUNG CẦN LIÊN HỆ') ?></span><textarea class="o2o-note" name="comments" id="comments" data-error="Vui lòng nhập nội dung!" data-default="NỘI DUNG CẦN LIÊN HỆ" aria-label="comment"></textarea></div>
                                     <div class="wrap-view-details big-view ani-item"><button class="view-details" aria-label="link" id="btn-contact-submit" data-page="/thank-you-.html"><span class="small-logo-ico"><svg>
                                                     <use xlink:href="#ico-view-details-logo"></use>
                                                 </svg> <span class="rotate-logo"><svg>
                                                         <use xlink:href="#ico-view-details-rotate-send"></use>
-                                                    </svg> </span></span> GỬI THÔNG TIN <svg class="viewdetails-svg">
+                                                    </svg> </span></span> <?= __('Gửi') ?> <svg class="viewdetails-svg">
                                                 <use xlink:href="#arrow"></use>
                                             </svg></button></div>
                                 </form>
@@ -306,12 +353,19 @@ h-2.2v9.2h2.2c1.3,0,2.3-0.4,2.9-1.1c0.6-0.7,0.9-1.9,0.9-3.6c0-1.6-0.3-2.8-0.9-3.
                     </div>
                     <div class="subscribe subscribe-footer ani-item">
                         <div class="title-small">
-                            <div class="title-sp">Đăng ký nhận tin</div>
+                            <div class="title-sp"><?= __('Đăng ký nhận tin') ?></div>
                         </div>
-                        <form onsubmit="return false;" id="subscribe" name="subscribe" method="post">
-                            <div class="input-text"><span class="holder">Email</span><input type="text" data-default="Email" value="" id="emailsubscribe" name="emailsubscribe" data-error="Email không hợp lệ!" aria-label="Email"> <button class="sub-but" type="button" aria-label="send" id="btn-subscribe-submit"
-                                    data-page="/thank-you-.html">Gửi</button></div>
-                        </form>
+                        <!-- form -->
+                        <div class="input-text"><span class="holder">Email</span><input type="text"
+                                data-default="Email" value="" id="emailsubscribe" name="emailsubscribe"
+                                data-error="Email không hợp lệ!" aria-label="Email">
+                            <button class="sub-but"
+                                type="button" aria-label="send" id="btn-subscribe-submit"
+                                data-page="/">
+                                <?= __('Gửi') ?>
+                            </button>
+                        </div>
+
                     </div>
                 </section>
                 <?php require "footer.php" ?>

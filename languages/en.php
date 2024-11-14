@@ -39,13 +39,14 @@ $lang = [
 
 	'Tầm Nhìn' => 'VISION',
 	'Sứ mệnh' => 'MISSION',
-
 	'Giải thưởng' => 'Awards',
-
-	
 	'Gửi' => 'Send',
-	'Giải thưởng' => 'Awards',
-	'Giải thưởng' => 'Awards',
-	'Giải thưởng' => 'Awards',
+
+	'Thông tin' => 'DETAILS',
+
+	'HỌ VÀ TÊN' => 'NAME',
+	'ĐIỆN THOẠI' => 'MOBILE PHONE',
+	'EMAIL' => 'EMAIL',
+	'NỘI DUNG CẦN LIÊN HỆ' => 'MESSAGE',
 
 ];
