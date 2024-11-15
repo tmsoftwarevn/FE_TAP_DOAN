@@ -88,7 +88,7 @@ if ($data && $data['status'] === true && isset($data['data'])) {
 
     <title id="hdtitle"><?php echo $info_web['headline'] ?></title>
     <meta name="description" content="<?php echo $info_web['description'] ?>">
-    <meta name="keywords" content="LINGO GROUP">
+    <meta name="keywords" content="<?php echo $info_web['keywords'] ?>">
     <meta property="og:title" content="<?php echo $info_web['headline'] ?>">
     <meta property="og:description" content="<?php echo $info_web['description'] ?>">
     <meta property="og:type" content="website">

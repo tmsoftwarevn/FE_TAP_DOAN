@@ -256,8 +256,13 @@ h-2.2v9.2h2.2c1.3,0,2.3-0.4,2.9-1.1c0.6-0.7,0.9-1.9,0.9-3.6c0-1.6-0.3-2.8-0.9-3.
                                             <a class="link-load"
                                                 href="<?php echo 'tin-tuc/' . $value['slug'] ?>-<?php echo $value['id'] ?>.html"
                                                 aria-label="link">
+                                                
                                                 <?php
-                                                echo $value['description'];
+                                                if ($_SESSION['lang'] == 'vn') {
+                                                    echo $value['description'];
+                                                } else {
+                                                    echo $value['description_en'];
+                                                }
                                                 ?>
                                             </a>
                                         </div>
