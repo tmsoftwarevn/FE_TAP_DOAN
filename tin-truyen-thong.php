@@ -25,7 +25,7 @@ require_once "setting-all-file.php";
     <meta property="og:description" content="LINGO GROUP">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="LINGO GROUP">
-    <meta property="og:image" content="/images/logo.png">
+    <meta property="og:image" content="<?php echo $url_be . $info_web['image'] ?>">
     <meta property="og:locale" content="vi">
 
     <meta name="mobile-web-app-capable" content="yes">
@@ -36,10 +36,10 @@ require_once "setting-all-file.php";
     <link rel="icon" href="<?php echo $url_be . $info_web['favicon'] ?>" type="image/x-icon" />
     <link rel="shortcut icon" type="image/x-icon" href="<?php echo $url_be . $info_web['favicon'] ?>" />
 
-    <link href="/tin-truyen-thong.php" rel="canonical">
-    <meta property="og:url" content="/tin-truyen-thong.php">
+    <link href="/tin-truyen-thong" rel="canonical">
+    <meta property="og:url" content="/tin-truyen-thong">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.0.0/css/flag-icons.min.css" />
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.0.0/css/flag-icons.min.css" /> -->
 
     <link rel="stylesheet" href="/css/main.css">
     <script src="https://cdn.tailwindcss.com"></script>

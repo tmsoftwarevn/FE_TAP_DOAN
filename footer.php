@@ -79,8 +79,8 @@ require_once "setting-all-file.php";
         <div class="left-footer">
             <div
                 class="copyright footer-copyright detect-copry name-of-copyright footer-strong footer-company-strong footer-company-copyright color-white a-w a-s x-y z-y abc-c h-eck d-fl q-u r-t s-e i-o">
-                <p>2024 © <strong>LINGO GROUP</strong>. <span>All Rights Reserved.</span></p><a
-                    href="https://www.btq.vn" target="_blank" rel="noreferrer">DEVELOPED BY 3GRAPHIC</a>
+                <!-- <p>2024 © <strong>LINGO GROUP</strong>. <span>All Rights Reserved.</span></p> -->
+                <?php echo $info_web['content'] ?>
             </div>
         </div>
     </div>

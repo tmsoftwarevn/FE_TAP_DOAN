@@ -5884,7 +5884,7 @@ table th {
 }
 
 .copyright a {
-    display: none
+    /* display: none */
 }
 
 .content-table {
