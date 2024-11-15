@@ -168,7 +168,7 @@
 }
 
 .pic-contact-intro .bg-cover.bg-lazy::after {
-    background: url(../images/contact/01.png) no-repeat center center/cover
+    background: url(../images/menu/register-bg.png) no-repeat center center/cover
 }
 
 .pic-search-bg .bg-cover.bg-lazy::after {

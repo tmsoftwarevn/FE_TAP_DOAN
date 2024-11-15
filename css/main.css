@@ -5633,7 +5633,8 @@ table.table-recruitment {
     position: relative;
     display: flex;
     justify-content: space-between;
-    margin: 0 0 4rem
+    /* margin: 0 0 4rem */
+    margin: 0 0 2rem
 }
 
 .company-text .title-main {
@@ -5663,7 +5664,7 @@ table.table-recruitment {
     justify-content: flex-start;
     align-items: center;
     color: var(--color-white);
-    margin: 0 0 7px
+    /* margin: 0 0 7px */
 }
 
 .company-info li span {

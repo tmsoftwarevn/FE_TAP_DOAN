@@ -4,9 +4,9 @@ require_once "setting-all-file.php";
 ?>
 
 <footer class="footer">
-    <div class="flower-footer ani-item"><span></span> <span></span> <span></span> <span></span>
+    <!-- <div class="flower-footer ani-item"><span></span> <span></span> <span></span> <span></span>
         <span></span>
-    </div>
+    </div> -->
     <div class="box-footer">
         <div class="go-top"><svg>
                 <use xlink:href="#ico-go-top"></use>
@@ -15,12 +15,12 @@ require_once "setting-all-file.php";
             <div class="company-text">
                 <div class="title-main color-white text-left">
                     <h2 class="text-ani-item">
-                        <!-- CÔNG TY TNHH <strong>LINGO GROUP</strong> -->
+                        
                         <?php
                         if ($_SESSION['lang'] == 'vn') {
-                            echo 'CÔNG TY TNHH <strong>LINGO GROUP</strong>';
+                            echo 'CÔNG TY CỔ PHẦN TẬP ĐOÀN <strong>LINGO GROUP</strong>';
                         } else {
-                            echo '<strong>LINGO GROUP</strong> Company Limited';
+                            echo '<strong>LINGO GROUP</strong> JOINT STOCK COMPANY';
                         }
                         ?>
                     </h2>
