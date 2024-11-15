@@ -40,7 +40,7 @@ if ($data && $data['status'] === true && isset($data['data'])) {
     $data_project = $data['data'];
     //print_r($data_project);
 } else {
-    echo "Error fetching  data or no data available.";
+    //echo "Error fetching  data or no data available.";
 }
 
 

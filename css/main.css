@@ -884,10 +884,13 @@ li::marker {
     position: relative;
     display: inline-block;
     font-size: 13px;
-    /* color: var(--coloractive); */
-    color: rgb(72, 72, 246);
+    color: var(--coloractive);
+    
     font-weight: 500;
     z-index: 10
+}
+.enter-site:hover{
+    color: white;
 }
 
 .enter-site span,
