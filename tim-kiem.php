@@ -12,36 +12,34 @@ if (isset($_GET['quicksearch'])) {
     exit();
 }
 
-$api_key = '8AF1apnMW2A39Ip7LUFtNstE5RjYleghk';
+$apiUrl_project = $url_be . '/api/blog/search?api_key=8AF1apnMW2A39Ip7LUFtNstE5RjYleghk&query=' . urlencode($search);
 
-// Function to make API requests using cURL
-function fetch_api_data($url)
-{
-    $ch = curl_init($url);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($ch, CURLOPT_TIMEOUT, 20); // Set timeout in seconds
-    $response = curl_exec($ch);
+// Initialize cURL session
+$ch = curl_init($apiUrl_project);
 
-    // Check for cURL errors
-    if (curl_errno($ch)) {
-        echo 'Error: ' . curl_error($ch);
-        curl_close($ch);
-        return null;
-    }
+// Set cURL options
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); // Return response as a string
+curl_setopt($ch, CURLOPT_TIMEOUT, 30);         // Set timeout to 30 seconds
 
-    curl_close($ch);
-    return json_decode($response, true);
-}
+// Execute cURL request
+$response = curl_exec($ch);
 
-$apiUrl = $url_be . '/api/blog/search?api_key=' . $api_key . '&query=' . $search;
-$data = fetch_api_data($apiUrl);
-
-if ($data && $data['status'] === true && isset($data['data'])) {
-    $data_project = $data['data'];
-    //print_r($data_project);
+// Check for cURL errors
+if (curl_errno($ch)) {
+    echo 'Error: ' . curl_error($ch);
 } else {
-    //echo "Error fetching  data or no data available.";
+    $data = json_decode($response, true);
+
+    // Check if the response structure is valid
+    if ($data && isset($data['status']) && $data['status'] === true && isset($data['data'])) {
+        $data_project = $data['data'];
+    }
 }
+
+// Close cURL session
+curl_close($ch);
+
+
 
 
 ?>
@@ -256,7 +254,7 @@ h-2.2v9.2h2.2c1.3,0,2.3-0.4,2.9-1.1c0.6-0.7,0.9-1.9,0.9-3.6c0-1.6-0.3-2.8-0.9-3.
                                             <a class="link-load"
                                                 href="<?php echo 'tin-tuc/' . $value['slug'] ?>-<?php echo $value['id'] ?>.html"
                                                 aria-label="link">
-                                                
+
                                                 <?php
                                                 if ($_SESSION['lang'] == 'vn') {
                                                     echo $value['description'];
@@ -369,27 +367,29 @@ h-2.2v9.2h2.2c1.3,0,2.3-0.4,2.9-1.1c0.6-0.7,0.9-1.9,0.9-3.6c0-1.6-0.3-2.8-0.9-3.
     <div class="search-overlay"><span></span>
         <div class="search-form">
             <div class="form-row-search">
-                <form onsubmit="return false;" id="search" method="get">
-                    <div class="search-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
-                            <path fill="currentColor"
-                                d="M33.3,31.9c-0.6,0.6-1.3,1-2,1.4l5.9,5.9c1,0.9,2.5,0.9,3.4,0c0.9-1,0.9-2.5,0-3.4l-5.9-5.9C34.4,30.6,33.9,31.3,33.3,31.9z" />
-                            <path fill="currentColor" d="M14.9,30.8c4.8,4.8,12.7,4.8,17.5,0s4.8-12.6,0-17.4s-12.7-4.8-17.5,0S10.1,25.9,14.9,30.8z M17.1,15.5
+
+                <div class="search-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                        <path fill="currentColor"
+                            d="M33.3,31.9c-0.6,0.6-1.3,1-2,1.4l5.9,5.9c1,0.9,2.5,0.9,3.4,0c0.9-1,0.9-2.5,0-3.4l-5.9-5.9C34.4,30.6,33.9,31.3,33.3,31.9z" />
+                        <path fill="currentColor" d="M14.9,30.8c4.8,4.8,12.7,4.8,17.5,0s4.8-12.6,0-17.4s-12.7-4.8-17.5,0S10.1,25.9,14.9,30.8z M17.1,15.5
 c3.7-3.7,9.6-3.7,13.3,0s3.7,9.5,0,13.2s-9.6,3.7-13.3,0S13.4,19,17.1,15.5z" />
-                        </svg></div>
-                    <div class="input-text"><span class="holder"> <?= __('Tìm kiếm') ?></span><input type="text" id="quicksearch"
-                            name="quicksearch" data-default="Tìm kiếm ..." value="" aria-label="field-search">
-                        <div class="search-error" id="errorsearch">
-                            <div class="search-error-content">Từ khóa không được dưới 3 kí tự, vui lòng nhập lại từ khóa
-                                tìm kiếm!</div>
-                        </div><button class="display-none link-search-load-typing" data-href="/tim-kiem"
-                            aria-label="search"></button>
-                    </div>
-                    <div class="close-search"></div><input type="hidden" id="defaultvalue" name="defaultvalue"
-                        value="Tìm kiếm ..." aria-label="default value"> <input type="hidden" id="errorsearchcode"
-                        name="errorsearch" value="Từ khóa không được dưới 3 kí tự, vui lòng nhập lại từ khóa tìm kiếm!"
-                        aria-label="errorsearch"> <input type="hidden" id="href_search" name="href_search"
-                        value="/tim-kiem" aria-label="href search">
-                </form>
+                    </svg></div>
+                <!-- quicksearch -->
+
+                <div class="input-text"><span class="holder"> <?= __('Tìm kiếm') ?></span><input type="text" id="quicksearch"
+                        name="quicksearch" data-default="Tìm kiếm ..." value="" aria-label="field-search">
+                    <div class="search-error" id="errorsearch">
+                        <div class="search-error-content">Từ khóa không được dưới 3 kí tự, vui lòng nhập lại từ khóa
+                            tìm kiếm!</div>
+                    </div><button class="display-none link-search-load-typing" data-href="http://test.local/tim-kiem"
+                        aria-label="search"></button>
+                </div>
+                <div class="close-search"></div><input type="hidden" id="defaultvalue" name="defaultvalue"
+                    value="Tìm kiếm ..." aria-label="default value"> <input type="hidden" id="errorsearchcode"
+                    name="errorsearch" value="Từ khóa không được dưới 3 kí tự, vui lòng nhập lại từ khóa tìm kiếm!"
+                    aria-label="errorsearch"> <input type="hidden" id="href_search" name="href_search"
+                    value="http://test.local/tim-kiem" aria-label="href search">
+
             </div>
         </div>
         <div class="search-loading">

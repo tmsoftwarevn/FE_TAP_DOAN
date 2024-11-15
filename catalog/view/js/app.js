@@ -8420,7 +8420,7 @@ function Search() {
           document
             .querySelector(".search-form .holder")
             .classList.remove("hide"),
-          document.getElementById("search").reset(),
+          // document.getElementById("search").reset(),
           Container.classList.add("blur"),
           Header.classList.add("blur"),
           WinScroll.stop()),
