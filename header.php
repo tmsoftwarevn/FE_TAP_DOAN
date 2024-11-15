@@ -5,7 +5,12 @@ require_once "setting-all-file.php";
 
 <header class="header">
     <div class="logo">
-        <img src="/images/logo.png" class="w-[70px] sm:w-[80px] h-auto object-cover" />
+        <!-- <img 
+        src="/images/logo.png" 
+        class="w-[70px] sm:w-[80px] h-auto object-cover" /> -->
+        <img 
+        src="<?php echo $url_be . $info_web['image'] ?>" 
+        class="w-[70px] sm:w-[80px] h-auto object-cover" />
 
     </div>
     <div class="nav-click">
@@ -113,21 +118,21 @@ require_once "setting-all-file.php";
             </ul> -->
             <ul>
                 <?php if ($_SESSION['lang'] == 'vn'): ?>
-                    
+
                     <li>
-                        <a href="?lang=en" >
+                        <a href="?lang=en">
                             <!-- <span style="font-size: 20px;" class="fi fi-vn"></span> -->
-                            <button>English</button> 
-                            
+                            <button>English</button>
+
                         </a>
                     </li>
                 <?php else: ?>
-                   
+
                     <li>
                         <a href="?lang=vn">
                             <!-- <span style="font-size: 20px; margin-right: 5px;" class="fi fi-gb"></span> -->
                             <button>Tiếng Việt</button>
-                            
+
                         </a>
                     </li>
                 <?php endif; ?>
@@ -138,19 +143,48 @@ require_once "setting-all-file.php";
     <div class="social">
         <ul>
 
-            <li><a class="facebook !text-blue-600" href="https://www.facebook.com/SenGroup.vn" target="_blank" rel="noopener"
+            <li><a class="facebook !text-blue-600" href="<?php echo $info_web['page_facebook'] ?>" target="_blank" rel="noopener"
                     aria-label="Facebook">Facebook</a></li>
-            <li><a class="youtube !text-blue-600" href="https://www.youtube.com/channel/UCImEWP7omdaGVCeN_T5G57A" target="_blank"
+            <li><a class="youtube !text-blue-600" href="https://www.youtube.com/@Lingogroup" target="_blank"
                     rel="noopener" aria-label="Youtube">Youtube</a></li>
         </ul>
     </div>
 </header>
 <div class="header-widget">
-    <a class="news-regis news-hotline" href="tel:0932929496" aria-label="news-register"><span
-            class="icon-news-regis"><svg>
+    <a class="news-regis news-hotline" href="tel:<?php echo $info_web['phone'] ?>" aria-label="news-register">
+        <span
+            class="icon-news-regis">
+            <svg>
                 <use xlink:href="#ico-phone"></use>
-            </svg> </span><span class="text-news-regis">0932 92 94 96</span></a> <button
-        class="news-regis load-subscribe" aria-label="news-register"><span class="icon-news-regis"><svg>
+            </svg>
+        </span>
+        <span class="text-news-regis"><?php echo $info_web['phone'] ?></span>
+    </a>
+    <a class="news-regis news-hotline" href="<?php echo $info_web['page_zalo'] ?>" target="_blank" aria-label="news-register">
+        <span
+            class="icon-news-regis">
+            <svg>
+                <use xlink:href="#ico-zalo"></use>
+            </svg>
+        </span>
+        <span class="text-news-regis"><?= __('Liên hệ') ?></span>
+    </a>
+    <a class="news-regis news-hotline" href="<?php echo $info_web['page_facebook'] ?>" target="_blank" aria-label="news-register">
+        <span
+            class="icon-news-regis">
+            <svg>
+                <use xlink:href="#ico-fb"></use>
+            </svg>
+        </span>
+        <span class="text-news-regis"><?= __('Liên hệ') ?></span>
+    </a>
+    <!-- <button
+        class="news-regis load-subscribe" aria-label="news-register">
+        <span class="icon-news-regis">
+            <svg>
                 <use xlink:href="#ico-register"></use>
-            </svg> </span><span class="text-news-regis">Đăng ký nhận tin</span></button>
+            </svg>
+        </span>
+        <span class="text-news-regis">Liên hệ</span>
+    </button> -->
 </div>

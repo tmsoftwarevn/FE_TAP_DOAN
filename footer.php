@@ -37,20 +37,22 @@ require_once "setting-all-file.php";
                                     <use xlink:href="#ico-company-address"></use>
                                 </svg></span>
                             <p>
-                                25/12 Cống Quỳnh, Phường Nguyễn Cư Trinh, Quận 1, Thành phố Hồ Chí Minh
+                                <?php echo $info_web['address'] ?>
                             </p>
                         </li>
                         <li><span class="call !text-blue-500"><svg>
                                     <use xlink:href="#ico-phone"></use>
                                 </svg></span>
                             <p>
-                                0318 048 557 - 0933 848 596
+                            <?php echo $info_web['phone'] ?>
                             </p>
                         </li>
                         <li><span class="email !text-blue-500"><svg>
                                     <use xlink:href="#ico-email"></use>
                                 </svg></span>
-                            <p>Info@lingoconnector.edu.vn</p>
+                            <p>
+                            <?php echo $info_web['email'] ?>
+                            </p>
                         </li>
                     </ul>
                 </div>

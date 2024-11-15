@@ -72,8 +72,10 @@ if ($data && $data['status'] === true && isset($data['data'])) {
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="LINGO GROUP">
 
-    <link rel="icon" href="/images/logo.png" type="image/x-icon" />
-    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.png" />
+    <!-- <link rel="icon" href="/images/logo.png" type="image/x-icon" />
+    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.png" /> -->
+    <link rel="icon" href="<?php echo $url_be . $info_web['favicon'] ?>" type="image/x-icon" />
+    <link rel="shortcut icon" type="image/x-icon" href="<?php echo $url_be . $info_web['favicon'] ?>" />
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.0.0/css/flag-icons.min.css" />
     <link rel="stylesheet" href="/css/main.css">

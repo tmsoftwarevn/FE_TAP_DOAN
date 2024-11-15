@@ -1,5 +1,47 @@
 <?php
-    require_once "setting-all-file.php";
+require_once "setting-all-file.php";
+
+$data_project = [];
+$search = '';
+if (isset($_GET['quicksearch'])) {
+    $search = $_GET['quicksearch'];
+    //echo 'id blog la:' . $id;
+} else {
+    //echo "Khong nhan duoc search";
+    header("Location: /");
+    exit();
+}
+
+$api_key = '8AF1apnMW2A39Ip7LUFtNstE5RjYleghk';
+
+// Function to make API requests using cURL
+function fetch_api_data($url)
+{
+    $ch = curl_init($url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_TIMEOUT, 20); // Set timeout in seconds
+    $response = curl_exec($ch);
+
+    // Check for cURL errors
+    if (curl_errno($ch)) {
+        echo 'Error: ' . curl_error($ch);
+        curl_close($ch);
+        return null;
+    }
+
+    curl_close($ch);
+    return json_decode($response, true);
+}
+
+$apiUrl = $url_be . '/api/blog/search?api_key=' . $api_key . '&query=' . $search;
+$data = fetch_api_data($apiUrl);
+
+if ($data && $data['status'] === true && isset($data['data'])) {
+    $data_project = $data['data'];
+    //print_r($data_project);
+} else {
+    echo "Error fetching  data or no data available.";
+}
 
 
 ?>
@@ -32,8 +74,8 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="LINGO GROUP">
 
-    <link rel="icon" href="/images/logo.png" type="image/x-icon" />
-    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.png" />
+    <link rel="icon" href="<?php echo $url_be . $info_web['favicon'] ?>" type="image/x-icon" />
+    <link rel="shortcut icon" type="image/x-icon" href="<?php echo $url_be . $info_web['favicon'] ?>" />
 
     <link rel="stylesheet" href="/css/main.css">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -167,11 +209,13 @@ h-2.2v9.2h2.2c1.3,0,2.3-0.4,2.9-1.1c0.6-0.7,0.9-1.9,0.9-3.6c0-1.6-0.3-2.8-0.9-3.
                     </div>
                     <div class="wrap-content">
                         <div class="title-main text-left color-white title-underline">
-                            <h1 class="text-ani-item"><strong>69</strong> Kết quả</h1>
+                            <h1 class="text-ani-item"><strong>
+                                    <?php echo count($data_project); ?>
+                                </strong> <?= __('Kết quả') ?></h1>
                         </div>
                         <div class="search-box ani-item">
                             <div class="list-result">
-                                <div class="item-search ani-item">
+                                <!-- <div class="item-search ani-item">
                                     <div class="pic-search"><img class="lazy"
                                             src="/banner/1920x960.png"
                                             data-src="/banner/1920x960.png"
@@ -181,40 +225,45 @@ h-2.2v9.2h2.2c1.3,0,2.3-0.4,2.9-1.1c0.6-0.7,0.9-1.9,0.9-3.6c0-1.6-0.3-2.8-0.9-3.
                                             href="/cong-ty-thanh-vien/sen-real/the-emerald-golf-view.html"
                                             aria-label="link">cong-ty-thanh-vien/sen-real/the-emerald-golf-view.html</a>
                                     </div>
-                                </div>
-                                <div class="item-search ani-item">
-                                    <div class="pic-search"><img class="lazy"
-                                            src="/banner/1920x960.png"
-                                            data-src="/banner/1920x960.png"
-                                            alt="THE EMERALD GOLF VIEW"></div>
-                                    <div class="title-search">
-                                        <h3>THE PRIVIA</h3><a class="link-load"
-                                            href="/cong-ty-thanh-vien/sen-real/the-privia.html"
-                                            aria-label="link">cong-ty-thanh-vien/sen-real/the-privia.html</a>
+                                </div> -->
+                                <?php
+                                foreach ($data_project as $key => $value) {
+                                ?>
+                                    <div class="item-search ani-item">
+                                        <div class="pic-search">
+                                            <img src="
+                                                <?php
+                                                echo $url_be, $value['image'];
+                                                ?>
+                                                " data-src="
+                                                <?php
+                                                echo $url_be, $value['image'];
+                                                ?>
+                                                " alt="<?php
+                                                        echo $value['headline'];
+                                                        ?>" class="lazy" />
+                                        </div>
+                                        <div class="title-search">
+                                            <h3>
+                                                <?php
+                                                if ($_SESSION['lang'] == 'vn') {
+                                                    echo $value['headline'];
+                                                } else {
+                                                    echo $value['headline_en'];
+                                                }
+                                                ?>
+                                            </h3>
+                                            <a class="link-load"
+                                                href="<?php echo 'tin-tuc/' . $value['slug'] ?>-<?php echo $value['id'] ?>.html"
+                                                aria-label="link">
+                                                <?php
+                                                echo $value['description'];
+                                                ?>
+                                            </a>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="item-search ani-item">
-                                    <div class="pic-search"><img class="lazy"
-                                            src="/banner/1920x960.png"
-                                            data-src="/banner/1920x960.png"
-                                            alt="THE EMERALD GOLF VIEW"></div>
-                                    <div class="title-search">
-                                        <h3>PICITY SKY PARK</h3><a class="link-load"
-                                            href="/cong-ty-thanh-vien/sen-real/picity-sky-park.html"
-                                            aria-label="link">cong-ty-thanh-vien/sen-real/picity-sky-park.html</a>
-                                    </div>
-                                </div>
-                                <div class="item-search ani-item">
-                                    <div class="pic-search"><img class="lazy"
-                                            src="/banner/1920x960.png"
-                                            data-src="/banner/1920x960.png"
-                                            alt="THE EMERALD GOLF VIEW"></div>
-                                    <div class="title-search">
-                                        <h3>The Global City</h3><a class="link-load"
-                                            href="/cong-ty-thanh-vien/sen-real/the-global-city.html"
-                                            aria-label="link">cong-ty-thanh-vien/sen-real/the-global-city.html</a>
-                                    </div>
-                                </div>
+                                <?php } ?>
+
 
                             </div>
                         </div>
@@ -322,7 +371,7 @@ h-2.2v9.2h2.2c1.3,0,2.3-0.4,2.9-1.1c0.6-0.7,0.9-1.9,0.9-3.6c0-1.6-0.3-2.8-0.9-3.
                             <path fill="currentColor" d="M14.9,30.8c4.8,4.8,12.7,4.8,17.5,0s4.8-12.6,0-17.4s-12.7-4.8-17.5,0S10.1,25.9,14.9,30.8z M17.1,15.5
 c3.7-3.7,9.6-3.7,13.3,0s3.7,9.5,0,13.2s-9.6,3.7-13.3,0S13.4,19,17.1,15.5z" />
                         </svg></div>
-                    <div class="input-text"><span class="holder">Tìm kiếm ...</span><input type="text" id="quicksearch"
+                    <div class="input-text"><span class="holder"> <?= __('Tìm kiếm') ?></span><input type="text" id="quicksearch"
                             name="quicksearch" data-default="Tìm kiếm ..." value="" aria-label="field-search">
                         <div class="search-error" id="errorsearch">
                             <div class="search-error-content">Từ khóa không được dưới 3 kí tự, vui lòng nhập lại từ khóa

@@ -6,7 +6,9 @@ if (isset($_GET['id'])) {
     $id = $_GET['id'];
     // echo 'id blog la:' . $id;
 } else {
-    echo "Khong nhan duoc ID";
+    //echo "Khong nhan duoc ID";
+    header("Location: /");
+    exit();
 }
 
 
@@ -85,8 +87,8 @@ if ($data && $data['status'] === true && isset($data['data'])) {
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="LINGO GROUP">
 
-    <link rel="icon" href="/images/logo.png" type="image/x-icon" />
-    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.png" />
+    <link rel="icon" href="<?php echo $url_be . $info_web['favicon'] ?>" type="image/x-icon" />
+    <link rel="shortcut icon" type="image/x-icon" href="<?php echo $url_be . $info_web['favicon'] ?>" />
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.0.0/css/flag-icons.min.css" />
     <link rel="stylesheet" href="/css/main.css">
@@ -215,6 +217,11 @@ h-2.2v9.2h2.2c1.3,0,2.3-0.4,2.9-1.1c0.6-0.7,0.9-1.9,0.9-3.6c0-1.6-0.3-2.8-0.9-3.
                 </script>
                 <div class="tile-reveal"></div>
                 <section class="banner-inner">
+                    <div class="title-page">
+                        <h1>
+                        <?= __('Dự án tiêu biểu') ?>
+                        </h1>
+                    </div>
                     <div class="bg-inner">
                         <img src="
                                                 <?php

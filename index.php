@@ -86,7 +86,7 @@ if ($data && $data['status'] === true && isset($data['data'])) {
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="format-detection" content="telephone=no">
 
-    <title id="hdtitle">LINGO GROUP</title>
+    <title id="hdtitle"><?php echo $info_web['headline'] ?></title>
     <meta name="description" content="LINGO GROUP">
     <meta name="keywords" content="LINGO GROUP">
     <meta property="og:title" content="LINGO GROUP">
@@ -101,8 +101,8 @@ if ($data && $data['status'] === true && isset($data['data'])) {
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="LINGO GROUP">
 
-    <link rel="icon" href="/images/logo.png" type="image/x-icon" />
-    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.png" />
+    <link rel="icon" href="<?php echo $url_be . $info_web['favicon'] ?>" type="image/x-icon" />
+    <link rel="shortcut icon" type="image/x-icon" href="<?php echo $url_be . $info_web['favicon'] ?>" />
 
     <!-- <link rel="apple-touch-icon" sizes="180x180" href="/catalog/view/images/apple-touch-icon.png"> -->
     <!-- <link rel="manifest" href="/manifest.json"> -->
@@ -687,7 +687,8 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                         <div class="item-project-home slidebox-item">
                                             <span class="logo-pro-home">
 
-                                                <img src="/images/logo2.png"
+                                                <img
+                                                    src="<?php echo $url_be . $info_web['image'] ?>"
                                                     class="w-[55px] h-auto rounded-full object-contain" />
 
                                             </span>

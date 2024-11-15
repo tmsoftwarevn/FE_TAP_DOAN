@@ -33,11 +33,11 @@ require_once "setting-all-file.php";
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="LINGO GROUP">
 
-    <link rel="icon" href="/images/logo.png" type="image/x-icon" />
-    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.png" />
+    <link rel="icon" href="<?php echo $url_be . $info_web['favicon'] ?>" type="image/x-icon" />
+    <link rel="shortcut icon" type="image/x-icon" href="<?php echo $url_be . $info_web['favicon'] ?>" />
 
-    <link href="/truyen-thong.php" rel="canonical">
-    <meta property="og:url" content="/truyen-thong.php">
+    <link href="/tin-truyen-thong.php" rel="canonical">
+    <meta property="og:url" content="/tin-truyen-thong.php">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.0.0/css/flag-icons.min.css" />
 

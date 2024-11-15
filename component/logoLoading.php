@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" version="1.0" width="50.000000pt" height="50.000000pt"
+ <svg xmlns="http://www.w3.org/2000/svg" version="1.0" width="50.000000pt" height="50.000000pt"
     viewBox="0 0 584.000000 584.000000" preserveAspectRatio="xMidYMid meet">
 
     <g transform="translate(0.000000,584.000000) scale(0.100000,-0.100000)" fill="#0077bf" stroke="none">
@@ -22,4 +22,5 @@
             d="M1200 2430 c0 -8 13 -74 29 -147 176 -794 571 -1515 1178 -2150 l88 -93 90 -12 c120 -16 532 -16 665 0 241 30 516 98 723 178 107 42 354 161 412 199 l40 26 -85 -5 c-112 -6 -417 10 -560 29 -608 82 -1160 303 -1608 642 -451 341 -766 761 -938 1253 -19 52 -34 88 -34 80z" />
 
     </g>
-</svg>
+</svg> 
+
