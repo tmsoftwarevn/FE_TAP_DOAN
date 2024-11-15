@@ -3030,7 +3030,7 @@ html[lang=vi] .draw-vi {
 .text-banner::after {
     content: '';
     /* background-color: var(--bgactive80); */
-    background-color: hsl(202.62deg 100% 37.45% / 71%);
+    background-color: hsla(40, 92%, 52%, 0.71);
     border-radius: 10px;
     z-index: -1
 }
@@ -8854,7 +8854,8 @@ input[type=range]:focus::-moz-range-track {
     }
 
     .content-bus-tab-home.active h3 {
-        color: var(--coloractive)
+        /* color: var(--coloractive) */
+        color: #d7b846;
     }
 
     .content-bus-tab-home::after {

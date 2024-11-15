@@ -120,7 +120,7 @@ require_once "setting-all-file.php";
                 <?php if ($_SESSION['lang'] == 'vn'): ?>
 
                     <li>
-                        <a href="?lang=en">
+                        <a href="/?lang=en">
                             <!-- <span style="font-size: 20px;" class="fi fi-vn"></span> -->
                             <button>English</button>
 
@@ -129,7 +129,7 @@ require_once "setting-all-file.php";
                 <?php else: ?>
 
                     <li>
-                        <a href="?lang=vn">
+                        <a href="/?lang=vn">
                             <!-- <span style="font-size: 20px; margin-right: 5px;" class="fi fi-gb"></span> -->
                             <button>Tiếng Việt</button>
 

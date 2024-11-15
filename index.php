@@ -176,7 +176,7 @@ if ($data && $data['status'] === true && isset($data['data'])) {
                 </div>
                 <section class="home-banner">
                     <div class="background">
-                        <div class="slide-background" data-time="10000">
+                        <div class="slide-background" data-time="5000">
                             <div class="slidebox-track"><span class="color-overlay"></span>
                                 <div class="slidebox-list">
                                     <!-- <div class="bg slidebox-item">
@@ -518,7 +518,7 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                             <div class="all-tab-content all-tab-bus">
                                 <div class="tab-content" data-tab="business-02">
                                     <div class="content-bus-tab-home">
-                                        <h3 class="!text-blue-500">
+                                        <h3 class="">
                                             <?php
                                             if ($_SESSION['lang'] == 'vn') {
                                                 echo $data_banner[0]['name'];
@@ -542,7 +542,7 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                 </div>
                                 <div class="tab-content" data-tab="business-05">
                                     <div class="content-bus-tab-home">
-                                        <h3 class="!text-blue-500">
+                                        <h3 class="">
                                             <?php
                                             if ($_SESSION['lang'] == 'vn') {
                                                 echo $data_banner[1]['name'];
@@ -567,7 +567,7 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                 </div>
                                 <div class="tab-content" data-tab="business-03">
                                     <div class="content-bus-tab-home">
-                                        <h3 class="!text-blue-500">
+                                        <h3 class="">
 
                                             <?php
                                             if ($_SESSION['lang'] == 'vn') {
@@ -593,7 +593,7 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                 </div>
                                 <div class="tab-content" data-tab="business-04">
                                     <div class="content-bus-tab-home">
-                                        <h3 class="!text-blue-500">
+                                        <h3 class="">
 
                                             <?php
                                             if ($_SESSION['lang'] == 'vn') {
@@ -618,7 +618,7 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                 </div>
                                 <div class="tab-content" data-tab="business-01">
                                     <div class="content-bus-tab-home">
-                                        <h3 class="!text-blue-500">
+                                        <h3 class="">
 
                                             <?php
                                             if ($_SESSION['lang'] == 'vn') {
