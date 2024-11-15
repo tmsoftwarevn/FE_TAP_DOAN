@@ -14,7 +14,8 @@ if (isset($_GET['id'])) {
 
 $api_key = '8AF1apnMW2A39Ip7LUFtNstE5RjYleghk';
 
-function fetchApiData($url) {
+function fetchApiData($url)
+{
     $ch = curl_init($url);
 
     // Set cURL options
@@ -236,7 +237,7 @@ h-2.2v9.2h2.2c1.3,0,2.3-0.4,2.9-1.1c0.6-0.7,0.9-1.9,0.9-3.6c0-1.6-0.3-2.8-0.9-3.
                         <div class="left-content">
                             <div class="title-main title-underline color-blue title-underline text-left bold-medium">
                                 <h1 class="text-ani-item">
-                                <?php
+                                    <?php
                                     if ($_SESSION['lang'] == 'vn') {
                                         echo $detail['headline'];
                                     } else {
@@ -248,15 +249,17 @@ h-2.2v9.2h2.2c1.3,0,2.3-0.4,2.9-1.1c0.6-0.7,0.9-1.9,0.9-3.6c0-1.6-0.3-2.8-0.9-3.
                             <div class="share"><span>Share</span>
                                 <ul>
                                     <li><a class="facebook"
-                                            href="https://www.facebook.com/?locale=vi_VN"
+                                            href="<?php echo $info_web['page_facebook'] ?>"
                                             target="_blank" rel="noreferrer"><svg viewBox="0 0 60 60">
                                                 <path fill="currentColor" d="M36.7,25.1h-4.5c-0.25-4.86,0.18-4.22,4.3-4.2V16c-8.4-0.67-10.99,1.62-10.4,9.2h-2.8v5h2.8c0,6.4,0,14.2,0,14.2H32
 c0,0,0-7.8,0-14.2h3.9L36.7,25.1z"></path>
                                             </svg></a></li>
-                                    <li><button class="zalo zalo-share-button"
+                                    <li>
+                                        <button class="zalo zalo-share-button"
                                             data-href="#"
                                             data-oaid="579745863508352884" data-layout="icon-text" data-customize="true"
-                                            aria-label="zalo"><svg viewBox="0 0 100 60">
+                                            aria-label="zalo">
+                                            <svg viewBox="0 0 100 60">
                                                 <path fill="currentColor" d="M25.82,35.86h9.03c1.6,0,2.62,0.73,2.76,2.03c0.14,1.6-0.73,2.77-2.62,2.77h-13.1c-1.16,0-2.48-0.29-3.06-1.6
 c-0.59-1.31-0.14-2.33,0.58-3.35c3.2-4.08,6.41-8.3,9.76-12.38c0.14-0.29,0.44-0.44,0.58-0.73c-0.14-0.29-0.44-0.14-0.73-0.14h-6.84
 c-0.58,0-1.02,0-1.6-0.14c-1.16-0.29-1.89-1.46-1.6-2.62c0.14-0.73,0.87-1.46,1.6-1.6c0.44-0.14,1.02-0.14,1.6-0.14h11.2
@@ -271,12 +274,14 @@ C50.28,30.76,50.28,33.38,49.11,34.98z M82.44,31.64c-0.14-5.24-4.08-8.88-9.46-8.5
 c-0.14,5.24,4.22,9.17,9.76,8.59C79.39,40.81,82.59,37.02,82.44,31.64z M76.19,35.13c-1.16,1.46-3.35,1.75-4.81,0.59
 c-0.29-0.14-0.44-0.44-0.59-0.59c-0.58-0.87-0.87-1.89-0.87-2.91c0-2.62,1.6-4.36,3.79-4.22c1.02,0,1.89,0.58,2.47,1.31
 C77.5,30.76,77.5,33.53,76.19,35.13z"></path>
-                                            </svg></button></li>
+                                            </svg>
+                                        </button>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
                         <div class="right-content">
-                        <?php
+                            <?php
                             if ($_SESSION['lang'] == 'vn') {
                                 echo $detail['content'];
                             } else {
@@ -324,7 +329,7 @@ C77.5,30.76,77.5,33.53,76.19,35.13z"></path>
                                     </div> -->
                                     <?php
                                     shuffle($data_project);
-                                    $firstBlogs = array_slice($data_project, 0,8);
+                                    $firstBlogs = array_slice($data_project, 0, 8);
                                     foreach ($firstBlogs as $key => $value) {
                                     ?>
 
@@ -358,8 +363,8 @@ C77.5,30.76,77.5,33.53,76.19,35.13z"></path>
                                             </div>
 
                                             <div class="txt-news" onclick="location.reload();">
-                                                <h3> 
-                                                <?php
+                                                <h3>
+                                                    <?php
                                                     if ($_SESSION['lang'] == 'vn') {
                                                         echo $value['headline'];
                                                     } else {
