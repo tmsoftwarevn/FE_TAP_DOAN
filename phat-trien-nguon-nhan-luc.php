@@ -208,7 +208,19 @@ h-2.2v9.2h2.2c1.3,0,2.3-0.4,2.9-1.1c0.6-0.7,0.9-1.9,0.9-3.6c0-1.6-0.3-2.8-0.9-3.
                             ?>
                         </h1>
                     </div>
-                    <div class="bg-inner"><img src="/images/bg-phattrien.jpg" data-src="/images/bg-phattrien.jpg" alt="Phát triển nguồn nhân lực" class="lazy"></div>
+                    <div class="bg-inner">
+                        <img src="
+                                                <?php
+                                                echo $url_be, $info_banner[2]['banner'];
+                                                ?>
+                                                " data-src="
+                                                <?php
+                                                echo $url_be, $info_banner[2]['banner'];
+                                                ?>
+                                                "
+                            alt="Phát triển nguồn nhân lực"
+                            class="lazy">
+                    </div>
                     <div class="wrap-wheel">
                         <div class="wheel"><span>Scroll down</span></div>
                     </div>
@@ -305,17 +317,17 @@ h-2.2v9.2h2.2c1.3,0,2.3-0.4,2.9-1.1c0.6-0.7,0.9-1.9,0.9-3.6c0-1.6-0.3-2.8-0.9-3.
                         <div class="text-about-intro ani-item">
                             <div class="title-main text-left color-blue title-underline bold-medium">
                                 <h2 class="text-ani-item">
-                                <?php
-                                if ($_SESSION['lang'] == 'vn') {
-                                    echo $data_project['welfare_policy_title'];
-                                } else {
-                                    echo $data_project['welfare_policy_title_en'];
-                                }
-                                ?>
+                                    <?php
+                                    if ($_SESSION['lang'] == 'vn') {
+                                        echo $data_project['welfare_policy_title'];
+                                    } else {
+                                        echo $data_project['welfare_policy_title_en'];
+                                    }
+                                    ?>
                                 </h2>
                             </div>
                             <div class="box-txt text-fixed">
-                            <?php
+                                <?php
                                 if ($_SESSION['lang'] == 'vn') {
                                     echo $data_project['welfare_policy'];
                                 } else {

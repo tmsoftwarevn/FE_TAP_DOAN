@@ -164,7 +164,18 @@ h-2.2v9.2h2.2c1.3,0,2.3-0.4,2.9-1.1c0.6-0.7,0.9-1.9,0.9-3.6c0-1.6-0.3-2.8-0.9-3.
                     <div class="title-page">
                         <h1><?= __('Dự án tiêu biểu') ?></h1>
                     </div>
-                    <div class="bg-inner"><img src="/images/bg-duan.jpg" data-src="/images/bg-duan.jpg" alt="Dự án tiêu biểu" class="lazy"></div>
+                    <div class="bg-inner">
+                    <img src="
+                                                <?php
+                                                echo $url_be, $info_banner[1]['banner'];
+                                                ?>
+                                                " data-src="
+                                                <?php
+                                                echo $url_be, $info_banner[1]['banner'];
+                                                ?>
+                                                "
+                            alt="Dự án tiêu biểu"
+                            class="lazy">                    </div>
                     <div class="wrap-wheel">
                         <div class="wheel"><span>Scroll down</span></div>
                     </div>

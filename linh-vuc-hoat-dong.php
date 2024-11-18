@@ -196,7 +196,19 @@ h-2.2v9.2h2.2c1.3,0,2.3-0.4,2.9-1.1c0.6-0.7,0.9-1.9,0.9-3.6c0-1.6-0.3-2.8-0.9-3.
                     <div class="title-page">
                         <h1><?= __('Lĩnh vực hoạt động') ?></h1>
                     </div>
-                    <div class="bg-inner"><img src="/images/bg.png" data-src="/images/bg.png" alt="Lĩnh vực hoạt động" class="lazy"></div>
+                    <div class="bg-inner">
+                        <img src="
+                                                <?php
+                                                echo $url_be, $info_banner[0]['banner'];
+                                                ?>
+                                                " data-src="
+                                                <?php
+                                                echo $url_be, $info_banner[0]['banner'];
+                                                ?>
+                                                "
+                            alt="Lĩnh vực hoạt động"
+                            class="lazy">
+                    </div>
                     <div class="wrap-wheel">
                         <div class="wheel"><span>Scroll down</span></div>
                     </div>
