@@ -5,12 +5,13 @@ require_once "setting-all-file.php";
 
 <header class="header">
     <div class="logo">
-        <!-- <img 
-        src="/images/logo.png" 
-        class="w-[70px] sm:w-[80px] h-auto object-cover" /> -->
         <img 
         src="<?php echo $url_be . $info_web['image'] ?>" 
-        class="w-[70px] sm:w-[80px] h-auto object-cover" />
+        class="w-full h-auto object-cover" />
+        
+        <!-- <img 
+        src="<?php echo $url_be . $info_web['image'] ?>" 
+        class="w-[70px] sm:w-[80px] h-auto object-cover" /> -->
 
     </div>
     <div class="nav-click">

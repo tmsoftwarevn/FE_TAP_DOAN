@@ -811,7 +811,8 @@
         transition: height .4s ease-in-out
     }
     .header.hide .logo {
-        height: min(6rem, 100px)
+        /* height: min(6rem, 100px) */
+        height: min(5rem, 100px)
     }
     .header.hide .nav-click svg {
         width: 80%;

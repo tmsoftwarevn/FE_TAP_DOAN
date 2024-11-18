@@ -165,7 +165,7 @@ h-2.2v9.2h2.2c1.3,0,2.3-0.4,2.9-1.1c0.6-0.7,0.9-1.9,0.9-3.6c0-1.6-0.3-2.8-0.9-3.
                 <div class="tile-reveal"></div>
                 <section class="banner-inner">
                     <div class="title-page">
-                        <h1><?= __('Truyền thông') ?></h1>
+                        <h1><?= __('Tin tức & sự kiện') ?></h1>
                     </div>
                     <div class="bg-inner"><img src="/images/bg-truyenthong.jpg" data-src="/images/bg-truyenthong.jpg" alt="Truyền thông" class="lazy"></div>
                     <div class="wrap-wheel">

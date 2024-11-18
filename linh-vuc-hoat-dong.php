@@ -275,7 +275,12 @@ h-2.2v9.2h2.2c1.3,0,2.3-0.4,2.9-1.1c0.6-0.7,0.9-1.9,0.9-3.6c0-1.6-0.3-2.8-0.9-3.
                     </div> -->
                     <div class="list-business">
                         <?php
+                        $totalItems = count($data_project);
                         foreach ($data_project as $key => $value) {
+                            if ($key === $totalItems - 1) {
+                                // Skip the last item
+                                continue;
+                            }
                         ?>
                             <div class="content-business-page"><span class="circle-stroke ani-item"></span>
                                 <div class="pic-business-page ani-item">

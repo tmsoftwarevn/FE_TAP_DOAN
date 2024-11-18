@@ -215,7 +215,12 @@ if ($data && $data['status'] === true && isset($data['data'])) {
                                         </div>
                                     </div> -->
                                     <?php
+                                    $totalItems = count($data_banner);
                                     foreach ($data_banner as $key => $value) {
+                                        if ($key === $totalItems - 1) {
+                                            // Skip the last item
+                                            continue;
+                                        }
                                     ?>
                                         <div class="bg slidebox-item">
                                             <div class="bg-cover">
@@ -235,16 +240,7 @@ if ($data && $data['status'] === true && isset($data['data'])) {
 
                                             </div>
                                             <div class="text-banner">
-                                                <!-- <div class="title-banner">
-                                                    <h2>
-                                                        <?php
-                                                        echo $value['name'];
-                                                        ?>
-                                                    </h2>
-                                                </div>
-                                                <?php
-                                                echo $value['description'];
-                                                ?> -->
+                                                
                                                 <div class="title-banner">
                                                     <h2>
                                                         <?php

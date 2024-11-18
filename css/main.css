@@ -1043,6 +1043,7 @@ li::marker {
 .header::after,
 .logo {
     background-color: var(--bgactive);
+    
     position: absolute
 }
 
@@ -1062,7 +1063,8 @@ li::marker {
 }
 
 .logo {
-    --widthlogo: 8rem;
+    
+    --widthlogo: 6rem;
     border-radius: 0 0 10px 10px;
     width: var(--widthlogo);
     height: calc(220/250*var(--widthlogo));
@@ -1071,7 +1073,8 @@ li::marker {
     display: flex;
     align-items: center;
     justify-content: center;
-    filter: drop-shadow(1px 1px 10px rgba(0, 0, 0, .1))
+    filter: drop-shadow(1px 1px 10px rgba(0, 0, 0, .1));
+    padding: 5px 10px;
 }
 
 .logo svg {
@@ -2258,8 +2261,9 @@ section {
     }
 
     .logo {
-        height: 80px;
-        width: 8rem;
+        /* height: 80px; */
+        height: 68px;
+        /* width: 8rem; */
         left: calc(50% - 4rem)
     }
 
@@ -2453,8 +2457,8 @@ section {
     }
 
     .logo {
-        width: 26vw;
-        left: calc(50% - 13vw)
+        width: 16vw;
+        left: calc(50% - 8vw)
     }
 
     .wrap-enter-site {
