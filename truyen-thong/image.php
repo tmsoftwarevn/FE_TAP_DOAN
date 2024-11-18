@@ -45,7 +45,7 @@ if ($data && $data['status'] === true && isset($data['data'])) {
     // Check if the page was loaded due to a refresh
     if (performance.navigation.type === performance.navigation.TYPE_RELOAD) {
         // Redirect to /truyen-thong.php on refresh
-        window.location.href = "/tin-truyen-thong";
+        window.location.href = "/tin-tuc-su-kien";
     }
 </script>
 

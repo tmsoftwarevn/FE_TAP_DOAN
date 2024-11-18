@@ -10138,7 +10138,7 @@ function LinkPage() {
           "home-page" == this.getAttribute("data-name")
             ? ((o = Body),
               (r = 1),
-              (document.documentElement.style.background = "#004a8f"))
+              (document.documentElement.style.background = "#d7b846"))
             : ((o = Container),
               (r = 0.5),
               (document.documentElement.style.background = "#ffffff")),

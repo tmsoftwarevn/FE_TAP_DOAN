@@ -69,11 +69,11 @@ require_once "setting-all-file.php";
                         data-hrefvi="/phat-trien-nguon-nhan-luc" data-title="Phát triển nguồn nhân lực"
                         data-description="LINGO GROUP" data-keyword="LINGO GROUP" aria-label="link-change-url"></div>
                 </li>
-                <li class="nav-item <?php if ($currentPath == '/tin-truyen-thong' || strpos($currentPath, '/tin-tuc') === 0) echo 'current'; ?>">
-                    <a class="link-load nav-item-a" href="/tin-truyen-thong" data-name="news-page"
-                        aria-label="nav"><?= __('Truyền thông') ?></a>
-                    <div class="class-hidden link-change-url" data-hrefen="/tin-truyen-thong" data-hrefvi="/tin-truyen-thong"
-                        data-title="Truyền thông" data-description="LINGO GROUP" data-keyword="LINGO GROUP"
+                <li class="nav-item <?php if ($currentPath == '/tin-tuc-su-kien' || strpos($currentPath, '/tin-tuc') === 0) echo 'current'; ?>">
+                    <a class="link-load nav-item-a" href="/tin-tuc-su-kien" data-name="news-page"
+                        aria-label="nav"><?= __('Tin tức & sự kiện') ?></a>
+                    <div class="class-hidden link-change-url" data-hrefen="/tin-tuc-su-kien" data-hrefvi="/tin-tuc-su-kien"
+                        data-title="Tin tức - sự kiện" data-description="LINGO GROUP" data-keyword="LINGO GROUP"
                         aria-label="link-change-url"></div>
                 </li>
                 <li class="nav-item <?php if ($currentPath == '/lien-he') echo 'current'; ?>">

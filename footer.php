@@ -18,11 +18,13 @@ require_once "setting-all-file.php";
                         
                         <?php
                         if ($_SESSION['lang'] == 'vn') {
-                            echo 'CÔNG TY CỔ PHẦN TẬP ĐOÀN <strong>LINGO GROUP</strong>';
+                            echo 'Tập đoàn giáo dục  <strong>LINGO GROUP</strong>';
                         } else {
-                            echo '<strong>LINGO GROUP</strong> JOINT STOCK COMPANY';
+                            echo '<strong>LINGO GROUP</strong> EDUCATION Corporation';
                         }
                         ?>
+                       
+
                     </h2>
 
 
@@ -44,7 +46,7 @@ require_once "setting-all-file.php";
                                     <use xlink:href="#ico-phone"></use>
                                 </svg></span>
                             <p>
-                            <?php echo $info_web['phone'] ?>
+                            <?php echo $info_web['hotline'] ?>
                             </p>
                         </li>
                         <li><span class="email !text-blue-500"><svg>

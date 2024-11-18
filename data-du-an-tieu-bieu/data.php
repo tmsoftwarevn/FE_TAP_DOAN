@@ -117,8 +117,8 @@ if ($data && $data['status'] === true && isset($data['data'])) {
                 </h3>
             </div>
             <div class="wrap-view-details">
-                <a href="<?php echo 'du-an/' . $value['slug'] ?>-<?php echo $value['id'] ?>.html"
-                    class="view-details dark link-load"
+                <a href="<?php echo 'du-an/' . $value['slug'] ?>-<?php echo $value['id'] ?>.html" target='_blank'
+                    class="view-details dark "
                     aria-label="Lingo Group ️">
                     <span class="small-logo-ico">
                         <?php include "../component/logoLoading.php" ?>

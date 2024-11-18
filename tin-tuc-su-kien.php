@@ -18,7 +18,7 @@ require_once "setting-all-file.php";
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="format-detection" content="telephone=no">
 
-    <title id="hdtitle">Truyền thông</title>
+    <title id="hdtitle">Tin tức và sự kiện</title>
     <meta name="description" content="LINGO GROUP">
     <meta name="keywords" content="LINGO GROUP">
     <meta property="og:title" content="Truyền thông">
@@ -36,8 +36,8 @@ require_once "setting-all-file.php";
     <link rel="icon" href="<?php echo $url_be . $info_web['favicon'] ?>" type="image/x-icon" />
     <link rel="shortcut icon" type="image/x-icon" href="<?php echo $url_be . $info_web['favicon'] ?>" />
 
-    <link href="/tin-truyen-thong" rel="canonical">
-    <meta property="og:url" content="/tin-truyen-thong">
+    <link href="/tin-tuc-su-kien" rel="canonical">
+    <meta property="og:url" content="/tin-tuc-su-kien">
 
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.0.0/css/flag-icons.min.css" /> -->
 

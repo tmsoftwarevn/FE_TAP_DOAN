@@ -52,5 +52,6 @@ $lang = [
 	"Dự án khác" =>'Other project',
 	"Các tin khác" => 'Other News',
 	"Kết quả" => "Result",
+	"Tin tức & sự kiện" => "NEWS & EVENTS",
 
 ];

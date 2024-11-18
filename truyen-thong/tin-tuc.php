@@ -46,7 +46,7 @@ if ($data && $data['status'] === true && isset($data['data'])) {
     // Check if the page was loaded due to a refresh
     if (performance.navigation.type === performance.navigation.TYPE_RELOAD) {
         // Redirect to /truyen-thong.php on refresh
-        window.location.href = "/tin-truyen-thong";
+        window.location.href = "/tin-tuc-su-kien";
     }
 </script>
 <div class="title-main color-blue text-center title-underline bold-medium">
@@ -96,8 +96,8 @@ if ($data && $data['status'] === true && isset($data['data'])) {
             </div>
             <div class="wrap-view-details">
                 <a
-                    href="<?php echo 'tin-tuc/' . $value['slug'] ?>-<?php echo $value['id'] ?>.html"
-                    class="view-details dark link-load"
+                    href="<?php echo '/tin-tuc/' . $value['slug'] ?>-<?php echo $value['id'] ?>.html" target='_blank'
+                    class="view-details dark"
                     aria-label=" Lingo group ️">
                     <span class="small-logo-ico">
                         <?php include "../component/logoLoading.php" ?>

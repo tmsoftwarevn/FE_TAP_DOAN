@@ -255,7 +255,7 @@ h-2.2v9.2h2.2c1.3,0,2.3-0.4,2.9-1.1c0.6-0.7,0.9-1.9,0.9-3.6c0-1.6-0.3-2.8-0.9-3.
 c0,0,0-7.8,0-14.2h3.9L36.7,25.1z"></path>
                                             </svg></a></li>
                                     <li>
-                                        <a class="zalo zalo-share-button"
+                                        <a class="zalo "
                                             href="<?php echo $info_web['page_zalo'] ?>"
                                             target="_blank">
                                             <svg viewBox="0 0 100 60">

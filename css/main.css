@@ -3258,10 +3258,11 @@ html[lang=vi] .draw-vi {
 }
 
 .scroll-text span {
-    font-size: 8vw;
+    /* font-size: 8vw; */
+    font-size: 6vw;
     position: relative;
     font-weight: 600;
-    color: #fff3b4;
+    color: #d7b846;
     
     padding: 0 1vw
 }

@@ -42,7 +42,7 @@ if ($data && $data['status'] === true && isset($data['data'])) {
 
 <script>
     if (performance.navigation.type === performance.navigation.TYPE_RELOAD) {
-        window.location.href = "/tin-truyen-thong";
+        window.location.href = "/tin-tuc-su-kien";
     }
 </script>
 
