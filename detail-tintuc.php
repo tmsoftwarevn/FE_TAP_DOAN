@@ -72,11 +72,11 @@ if ($data && $data['status'] === true && isset($data['data'])) {
     <meta name="format-detection" content="telephone=no">
 
     <title id="hdtitle"><?php echo $detail['headline'] ?></title>
-    <meta name="description" content="<?php echo $detail['description'] ?>">
-    <meta name="keywords" content="<?php echo $detail['keywords'] ?>">
+    <meta name="description" content="<?php echo strip_tags($detail['description']); ?>">
+    <meta name="keywords" content="<?php echo strip_tags($detail['keywords']); ?>">
 
     <meta property="og:title" content="<?php echo $detail['headline'] ?>">
-    <meta property="og:description" content="<?php echo $detail['description'] ?>">
+    <meta property="og:description" content="<?php echo strip_tags($detail['description']); ?>">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="LINGO GROUP">
     <meta property="og:image" content="<?php echo $url_be . $detail['image'] ?>">

@@ -58,10 +58,10 @@ if ($data && $data['status'] === true && isset($data['data'])) {
     <meta name="format-detection" content="telephone=no">
 
     <title id="hdtitle">Giới thiệu</title>
-    <meta name="description" content="<?php echo $data_project['description'] ?>">
+    <meta name="description" content="<?php echo strip_tags($data_project['description']); ?>">
     <meta name="keywords" content="LINGO GROUP">
     <meta property="og:title" content="Giới thiệu">
-    <meta property="og:description" content="<?php echo $data_project['description'] ?>">
+    <meta property="og:description" content="<?php echo strip_tags($data_project['description']); ?>">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="LINGO GROUP">
     <meta property="og:image" content="<?php echo $url_be . $info_web['image'] ?>">
