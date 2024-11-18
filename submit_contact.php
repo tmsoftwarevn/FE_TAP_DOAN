@@ -1,6 +1,6 @@
 <?php
 // Define the API endpoint
-$api_url = "https://belingo.tmsoftware.vn/api/contact/storecontact?api_key=8AF1apnMW2A39Ip7LUFtNstE5RjYleghk";
+$api_url = $url_be . "/api/contact/storecontact?api_key=8AF1apnMW2A39Ip7LUFtNstE5RjYleghk";
 
 // Collect form data securely
 $name = htmlspecialchars($_POST['name'] ?? '');

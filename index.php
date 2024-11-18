@@ -756,36 +756,7 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                         </div>
                         <div class="right-content">
                             <div class="news-list-home ani-item">
-                                <!-- <div class="item-news-home">
-                                    <div class="pic-news-home">
-                                        <div class="pic-img"><img src="/banner/1920x960.png"
-                                                data-src="/banner/1920x960.png"
-                                                alt="“CHÀO HÈ RỰC RỠ - BỨT PHÁ THÀNH CÔNG” – HÀNH TRÌNH KHÔNG THỂ NÀO QUÊN CỦA SENGROUP TẠI PHAN THIẾT"
-                                                class="lazy"></div>
-                                    </div>
-                                    <div class="txt-news-home">
-                                        <h3>“CHÀO HÈ RỰC RỠ - BỨT PHÁ THÀNH CÔNG” – HÀNH TRÌNH KHÔNG THỂ NÀO QUÊN CỦA
-                                            SENGROUP TẠI PHAN THIẾT</h3>
-                                        <div class="wrap-view-details">
-                                            <a href="/tin-tuc/detail-tintuc.php"
-                                                class="view-details dark link-load" aria-label="link">
-                                                <span
-                                                    class="small-logo-ico">
-                                                    <?php include "component/logoLoading.php" ?>
-                                                    <span class="rotate-logo">
-                                                        <svg>
-                                                            <use xlink:href="#ico-view-details-rotate"></use>
-                                                        </svg>
-                                                    </span>
-                                                </span>
-                                                XEM TIN
-                                                <svg class="viewdetails-svg">
-                                                    <use xlink:href="#arrow"></use>
-                                                </svg>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div> -->
+                                
                                 <?php
                                 $firstBlogs = array_slice($data_blog, 0, 4);
                                 foreach ($firstBlogs as $key => $value) {
