@@ -136,10 +136,7 @@ if ($data && $data['status'] === true && isset($data['data'])) {
     </div>
 
     <div class="loadicon" style="display:none"><span></span>
-
         <img src="/images/logo-intro.png" class="w-full h-auto object-contain" />
-
-
     </div>
 
     <script>
@@ -240,7 +237,7 @@ if ($data && $data['status'] === true && isset($data['data'])) {
 
                                             </div>
                                             <div class="text-banner">
-                                                
+
                                                 <div class="title-banner">
                                                     <h2>
                                                         <?php
@@ -731,8 +728,8 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                                 " class="lazy" />
                                                 </div>
 
-                                                <a 
-                                                    href="<?php echo 'du-an/' . $value['slug'] ?>-<?php echo $value['id'] ?>.html" target="_blank">    
+                                                <a
+                                                    href="<?php echo 'du-an/' . $value['slug'] ?>-<?php echo $value['id'] ?>.html" target="_blank">
                                                 </a>
 
                                             </div>
@@ -756,7 +753,7 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                         </div>
                         <div class="right-content">
                             <div class="news-list-home ani-item">
-                                
+
                                 <?php
                                 $firstBlogs = array_slice($data_blog, 0, 4);
                                 foreach ($firstBlogs as $key => $value) {
@@ -982,6 +979,7 @@ c3.7-3.7,9.6-3.7,13.3,0s3.7,9.5,0,13.2s-9.6,3.7-13.3,0S13.4,19,17.1,15.5z" />
         });
     </script>
 
+    <!-- // click linh vuc o mobile -->
     <script>
         function toggleFullHeightById(contentId) {
             // Find the content div by its ID
@@ -995,3 +993,39 @@ c3.7-3.7,9.6-3.7,13.3,0s3.7,9.5,0,13.2s-9.6,3.7-13.3,0S13.4,19,17.1,15.5z" />
             }
         }
     </script>
+
+    <!-- <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mask = document.querySelector('.mask');
+            const loadicon = document.querySelector('.loadicon');
+            const enterSiteButton = document.querySelector('.enter-site');
+
+            // Check localStorage for the last visit time
+            const lastVisitTime = localStorage.getItem('lastVisitTime');
+            const currentTime = new Date().getTime();
+
+            // Show loader if more than 5 minutes (300,000ms) have passed
+            if (!lastVisitTime || currentTime - lastVisitTime > 300000) {
+                // Show the loader
+                loadicon.style.display = 'block';
+
+                // Auto-hide mask after 5 seconds
+                setTimeout(() => {
+                    mask.style.display = 'block';
+                    loadicon.style.display = 'none';
+                }, 2000);
+
+                // Update the last visit time in localStorage
+                localStorage.setItem('lastVisitTime', currentTime.toString());
+            } else {
+                // Skip the loader and mask
+                mask.style.display = 'none';
+                loadicon.style.display = 'none';
+            }
+
+            // Button interaction to hide the mask
+            enterSiteButton.addEventListener('click', () => {
+                mask.style.display = 'none';
+            });
+        });
+    </script> -->
