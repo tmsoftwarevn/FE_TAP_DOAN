@@ -11,13 +11,14 @@ if (isset($_GET['quicksearch'])) {
     header("Location: /");
     exit();
 }
+// search blog
+//$apiUrl_project = $url_be . '/api/blog/search?api_key=8AF1apnMW2A39Ip7LUFtNstE5RjYleghk&query=' . urlencode($search);
 
-$apiUrl_project = $url_be . '/api/blog/search?api_key=8AF1apnMW2A39Ip7LUFtNstE5RjYleghk&query=' . urlencode($search);
+// list all project
+$apiUrl_project = $url_be . '/api/project/getlistproject?api_key=8AF1apnMW2A39Ip7LUFtNstE5RjYleghk';
 
-// Initialize cURL session
+
 $ch = curl_init($apiUrl_project);
-
-// Set cURL options
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); // Return response as a string
 curl_setopt($ch, CURLOPT_TIMEOUT, 30);         // Set timeout to 30 seconds
 
@@ -200,7 +201,7 @@ h-2.2v9.2h2.2c1.3,0,2.3-0.4,2.9-1.1c0.6-0.7,0.9-1.9,0.9-3.6c0-1.6-0.3-2.8-0.9-3.
                 </script>
                 <div class="tile-reveal"></div>
                 <section class="search-result" id="sticky">
-                    <div class="scroll-text font-accent trans-x" data-speed="4"><span>LINGO GROUP LINGO GROUP LINGO GROUP LINGO GROUP</span> <span>LINGO GROUP LINGO GROUP LINGO GROUP LINGO GROUP</span></div>
+                    <!-- <div class="scroll-text font-accent trans-x" data-speed="4"><span>LINGO GROUP LINGO GROUP LINGO GROUP LINGO GROUP</span> <span>LINGO GROUP LINGO GROUP LINGO GROUP LINGO GROUP</span></div> -->
 
                     <div class="pic-search-bg">
                         <div class="bg-cover bg-fixed"></div>
@@ -213,28 +214,19 @@ h-2.2v9.2h2.2c1.3,0,2.3-0.4,2.9-1.1c0.6-0.7,0.9-1.9,0.9-3.6c0-1.6-0.3-2.8-0.9-3.
                         </div>
                         <div class="search-box ani-item">
                             <div class="list-result">
-                                <!-- <div class="item-search ani-item">
-                                    <div class="pic-search"><img class="lazy"
-                                            src="/banner/1920x960.png"
-                                            data-src="/banner/1920x960.png"
-                                            alt="THE EMERALD GOLF VIEW"></div>
-                                    <div class="title-search">
-                                        <h3>THE EMERALD GOLF VIEW</h3><a class="link-load"
-                                            href="/cong-ty-thanh-vien/sen-real/the-emerald-golf-view.html"
-                                            aria-label="link">cong-ty-thanh-vien/sen-real/the-emerald-golf-view.html</a>
-                                    </div>
-                                </div> -->
+                                
                                 <?php
                                 foreach ($data_project as $key => $value) {
                                 ?>
-                                    <div class="item-search ani-item">
+                                    <!-- <div class="item-search ani-item">
                                         <div class="pic-search">
                                             <img src="
                                                 <?php
-                                                echo $url_be, $value['image'];
+                                                 echo $url_be, $value['image'];
+                                                
                                                 ?>
                                                 " data-src="
-                                                <?php
+                                                <?php                                       
                                                 echo $url_be, $value['image'];
                                                 ?>
                                                 " alt="<?php
@@ -253,6 +245,46 @@ h-2.2v9.2h2.2c1.3,0,2.3-0.4,2.9-1.1c0.6-0.7,0.9-1.9,0.9-3.6c0-1.6-0.3-2.8-0.9-3.
                                             </h3>
                                             <a class=""
                                                 href="<?php echo 'tin-tuc/' . $value['slug'] ?>-<?php echo $value['id'] ?>.html"
+                                                aria-label="link" target="_blank">
+
+                                                <?php
+                                                if ($_SESSION['lang'] == 'vn') {
+                                                    echo $value['description'];
+                                                } else {
+                                                    echo $value['description_en'];
+                                                }
+                                                ?>
+                                            </a>
+                                        </div>
+                                    </div> -->
+
+                                    <div class="item-search ani-item">
+                                        <div class="pic-search">
+                                            <img src="
+                                                <?php
+                                               
+                                                echo $url_be, $value['banner'];
+                                                ?>
+                                                " data-src="
+                                                <?php                                       
+                                                echo $url_be, $value['banner'];
+                                                ?>
+                                                " alt="<?php
+                                                        echo $value['headline'];
+                                                        ?>" class="lazy" />
+                                        </div>
+                                        <div class="title-search">
+                                            <h3>
+                                                <?php
+                                                if ($_SESSION['lang'] == 'vn') {
+                                                    echo $value['headline'];
+                                                } else {
+                                                    echo $value['headline_en'];
+                                                }
+                                                ?>
+                                            </h3>
+                                            <a class=""
+                                                href="<?php echo '/du-an/' . $value['slug'] ?>-<?php echo $value['id'] ?>.html"
                                                 aria-label="link" target="_blank">
 
                                                 <?php
