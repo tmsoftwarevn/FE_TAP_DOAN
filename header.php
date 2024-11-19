@@ -5,10 +5,10 @@ require_once "setting-all-file.php";
 
 <header class="header">
     <div class="logo">
-        <img 
-        src="<?php echo $url_be . $info_web['image'] ?>" 
-        class="w-full h-auto object-cover" />
-        
+        <img
+            src="<?php echo $url_be . $info_web['image'] ?>"
+            class="w-full h-auto object-cover" />
+
         <!-- <img 
         src="<?php echo $url_be . $info_web['image'] ?>" 
         class="w-[70px] sm:w-[80px] h-auto object-cover" /> -->
@@ -31,6 +31,11 @@ require_once "setting-all-file.php";
                 <?php
                 // Get the current URL path
                 $currentPath = $_SERVER['REQUEST_URI'];
+
+                $currentPath = parse_url($currentPath, PHP_URL_PATH);
+
+                
+
                 ?>
                 <li class="nav-item <?php if ($currentPath == '/') echo 'current'; ?>">
                     <a class="link-home link-load nav-item-a" href="/" data-name="home-page" aria-label="nav"><?= __('Trang chủ') ?></a>
@@ -50,7 +55,7 @@ require_once "setting-all-file.php";
                         data-hrefvi="/linh-vuc-hoat-dong" data-title="Lĩnh vực hoạt động" data-description="LINGO GROUP"
                         data-keyword="LINGO GROUP" aria-label="link-change-url"></div>
                 </li>
-               
+
                 <li class="nav-item <?php if ($currentPath == '/du-an-tieu-bieu' || strpos($currentPath, '/du-an') === 0) echo 'current'; ?>">
                     <a class=" nav-item-a" href="/du-an-tieu-bieu"
                         data-name="activities-page" aria-label="nav" target="<?php if ($currentPath == '/') echo '_blank'; ?>"><?= __('Dự án tiêu biểu') ?></a>
@@ -65,13 +70,13 @@ require_once "setting-all-file.php";
                         data-hrefvi="/phat-trien-nguon-nhan-luc" data-title="Phát triển nguồn nhân lực"
                         data-description="LINGO GROUP" data-keyword="LINGO GROUP" aria-label="link-change-url"></div>
                 </li>
-                <li class="nav-item <?php if ($currentPath == '/tin-tuc-su-kien' || strpos($currentPath, '/tin-tuc') === 0) echo 'current'; ?>">
+                <!-- <li class="nav-item <?php if ($currentPath == '/tin-tuc-su-kien' || strpos($currentPath, '/tin-tuc') === 0) echo 'current'; ?>">
                     <a class=" nav-item-a" href="/tin-tuc-su-kien" data-name="news-page"
                         aria-label="nav" target="<?php if ($currentPath == '/') echo '_blank'; ?>"><?= __('Tin tức & sự kiện') ?></a>
                     <div class="class-hidden link-change-url" data-hrefen="/tin-tuc-su-kien" data-hrefvi="/tin-tuc-su-kien"
                         data-title="Tin tức - sự kiện" data-description="LINGO GROUP" data-keyword="LINGO GROUP"
                         aria-label="link-change-url"></div>
-                </li>
+                </li> -->
                 <li class="nav-item <?php if ($currentPath == '/lien-he') echo 'current'; ?>">
                     <a class=" nav-item-a" href="/lien-he" data-name="contact-page"
                         aria-label="nav" target="<?php if ($currentPath == '/') echo '_blank'; ?>"><?= __('Liên hệ') ?></a>
