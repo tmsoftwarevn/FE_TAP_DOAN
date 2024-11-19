@@ -497,6 +497,8 @@ c3.7-3.7,9.6-3.7,13.3,0s3.7,9.5,0,13.2s-9.6,3.7-13.3,0S13.4,19,17.1,15.5z" />
     <script src="/catalog/view/js/app.js?ver=1.0.8" type="text/javascript"></script>
 
     <script>
+        const $url_be = "https://belingo.tmsoftware.vn";
+
         document.getElementById("btn-contact-submit2").addEventListener("click", function(e) {
             e.preventDefault();
 
@@ -516,9 +518,9 @@ c3.7-3.7,9.6-3.7,13.3,0s3.7,9.5,0,13.2s-9.6,3.7-13.3,0S13.4,19,17.1,15.5z" />
 
                 // Prepare form data for submission
                 const formData = new URLSearchParams(new FormData(document.forms.contact_form));
+                const url = `${$url_be}/api/contact/storecontact?api_key=8AF1apnMW2A39Ip7LUFtNstE5RjYleghk`;
 
-                // Send data to the API endpoint
-                fetch("https://belingo.tmsoftware.vn/api/contact/storecontact?api_key=8AF1apnMW2A39Ip7LUFtNstE5RjYleghk", {
+                fetch(url, {
                         method: "POST",
                         headers: {
                             "Content-type": "application/x-www-form-urlencoded",

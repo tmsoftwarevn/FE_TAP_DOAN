@@ -251,9 +251,9 @@ h-2.2v9.2h2.2c1.3,0,2.3-0.4,2.9-1.1c0.6-0.7,0.9-1.9,0.9-3.6c0-1.6-0.3-2.8-0.9-3.
                                                 }
                                                 ?>
                                             </h3>
-                                            <a class="link-load"
+                                            <a class=""
                                                 href="<?php echo 'tin-tuc/' . $value['slug'] ?>-<?php echo $value['id'] ?>.html"
-                                                aria-label="link">
+                                                aria-label="link" target="_blank">
 
                                                 <?php
                                                 if ($_SESSION['lang'] == 'vn') {

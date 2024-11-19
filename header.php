@@ -39,47 +39,42 @@ require_once "setting-all-file.php";
                         data-keyword="LINGO GROUP" aria-label="link-change-url"></div>
                 </li>
                 <li class="nav-item <?php if ($currentPath == '/gioi-thieu') echo 'current'; ?>">
-                    <a class="link-load nav-item-a" href="/gioi-thieu" data-name="about-page" aria-label="nav"><?= __('Giới thiệu') ?></a>
+                    <a class=" nav-item-a" href="/gioi-thieu" data-name="about-page" aria-label="nav" target="<?php if ($currentPath == '/') echo '_blank'; ?>"><?= __('Giới thiệu') ?></a>
                     <div class="class-hidden link-change-url" data-hrefen="/gioi-thieu"
                         data-hrefvi="/gioi-thieu" data-title="Giới thiệu" data-description="LINGO GROUP"
                         data-keyword="LINGO GROUP" aria-label="link-change-url"></div>
                 </li>
                 <li class="nav-item <?php if ($currentPath == '/linh-vuc-hoat-dong') echo 'current'; ?>">
-                    <a class="link-load nav-item-a" href="/linh-vuc-hoat-dong" data-name="business-page" aria-label="nav"><?= __('Lĩnh vực hoạt động') ?></a>
+                    <a class=" nav-item-a" href="/linh-vuc-hoat-dong" data-name="business-page" aria-label="nav" target="<?php if ($currentPath == '/') echo '_blank'; ?>"><?= __('Lĩnh vực hoạt động') ?></a>
                     <div class="class-hidden link-change-url" data-hrefen="/linh-vuc-hoat-dong"
                         data-hrefvi="/linh-vuc-hoat-dong" data-title="Lĩnh vực hoạt động" data-description="LINGO GROUP"
                         data-keyword="LINGO GROUP" aria-label="link-change-url"></div>
                 </li>
-                <!-- <li class="nav-item"><a class="link-load nav-item-a" href="/cong-ty-thanh-vien.html"
-                        data-name="project-page" aria-label="nav">Công ty thành viên</a>
-                    <div class="class-hidden link-change-url" data-hrefen="/members.html"
-                        data-hrefvi="/cong-ty-thanh-vien.html" data-title="Công ty thành viên"
-                        data-description="LINGO GROUP" data-keyword="LINGO GROUP" aria-label="link-change-url"></div>
-                </li> -->
+               
                 <li class="nav-item <?php if ($currentPath == '/du-an-tieu-bieu' || strpos($currentPath, '/du-an') === 0) echo 'current'; ?>">
-                    <a class="link-load nav-item-a" href="/du-an-tieu-bieu"
-                        data-name="activities-page" aria-label="nav"><?= __('Dự án tiêu biểu') ?></a>
+                    <a class=" nav-item-a" href="/du-an-tieu-bieu"
+                        data-name="activities-page" aria-label="nav" target="<?php if ($currentPath == '/') echo '_blank'; ?>"><?= __('Dự án tiêu biểu') ?></a>
                     <div class="class-hidden link-change-url" data-hrefen="/du-an-tieu-bieu"
                         data-hrefvi="/du-an-tieu-bieu" data-title="Hoạt động tiêu biểu"
                         data-description="LINGO GROUP" data-keyword="LINGO GROUP" aria-label="link-change-url"></div>
                 </li>
                 <li class="nav-item <?php if ($currentPath == '/phat-trien-nguon-nhan-luc') echo 'current'; ?>">
-                    <a class="link-load nav-item-a" href="/phat-trien-nguon-nhan-luc"
-                        data-name="recruitment-page" aria-label="nav"><?= __('Phát triển nguồn nhân lực') ?></a>
+                    <a class=" nav-item-a" href="/phat-trien-nguon-nhan-luc"
+                        data-name="recruitment-page" aria-label="nav" target="<?php if ($currentPath == '/') echo '_blank'; ?>"><?= __('Phát triển nguồn nhân lực') ?></a>
                     <div class="class-hidden link-change-url" data-hrefen="/phat-trien-nguon-nhan-luc"
                         data-hrefvi="/phat-trien-nguon-nhan-luc" data-title="Phát triển nguồn nhân lực"
                         data-description="LINGO GROUP" data-keyword="LINGO GROUP" aria-label="link-change-url"></div>
                 </li>
                 <li class="nav-item <?php if ($currentPath == '/tin-tuc-su-kien' || strpos($currentPath, '/tin-tuc') === 0) echo 'current'; ?>">
-                    <a class="link-load nav-item-a" href="/tin-tuc-su-kien" data-name="news-page"
-                        aria-label="nav"><?= __('Tin tức & sự kiện') ?></a>
+                    <a class=" nav-item-a" href="/tin-tuc-su-kien" data-name="news-page"
+                        aria-label="nav" target="<?php if ($currentPath == '/') echo '_blank'; ?>"><?= __('Tin tức & sự kiện') ?></a>
                     <div class="class-hidden link-change-url" data-hrefen="/tin-tuc-su-kien" data-hrefvi="/tin-tuc-su-kien"
                         data-title="Tin tức - sự kiện" data-description="LINGO GROUP" data-keyword="LINGO GROUP"
                         aria-label="link-change-url"></div>
                 </li>
                 <li class="nav-item <?php if ($currentPath == '/lien-he') echo 'current'; ?>">
-                    <a class="link-load nav-item-a" href="/lien-he" data-name="contact-page"
-                        aria-label="nav"><?= __('Liên hệ') ?></a>
+                    <a class=" nav-item-a" href="/lien-he" data-name="contact-page"
+                        aria-label="nav" target="<?php if ($currentPath == '/') echo '_blank'; ?>"><?= __('Liên hệ') ?></a>
                     <div class="class-hidden link-change-url" data-hrefen="/lien-he" data-hrefvi="/lien-he"
                         data-title="Liên hệ" data-description="LINGO GROUP" data-keyword="LINGO GROUP"
                         aria-label="link-change-url"></div>

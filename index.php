@@ -994,38 +994,3 @@ c3.7-3.7,9.6-3.7,13.3,0s3.7,9.5,0,13.2s-9.6,3.7-13.3,0S13.4,19,17.1,15.5z" />
         }
     </script>
 
-    <!-- <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const mask = document.querySelector('.mask');
-            const loadicon = document.querySelector('.loadicon');
-            const enterSiteButton = document.querySelector('.enter-site');
-
-            // Check localStorage for the last visit time
-            const lastVisitTime = localStorage.getItem('lastVisitTime');
-            const currentTime = new Date().getTime();
-
-            // Show loader if more than 5 minutes (300,000ms) have passed
-            if (!lastVisitTime || currentTime - lastVisitTime > 300000) {
-                // Show the loader
-                loadicon.style.display = 'block';
-
-                // Auto-hide mask after 5 seconds
-                setTimeout(() => {
-                    mask.style.display = 'block';
-                    loadicon.style.display = 'none';
-                }, 2000);
-
-                // Update the last visit time in localStorage
-                localStorage.setItem('lastVisitTime', currentTime.toString());
-            } else {
-                // Skip the loader and mask
-                mask.style.display = 'none';
-                loadicon.style.display = 'none';
-            }
-
-            // Button interaction to hide the mask
-            enterSiteButton.addEventListener('click', () => {
-                mask.style.display = 'none';
-            });
-        });
-    </script> -->
