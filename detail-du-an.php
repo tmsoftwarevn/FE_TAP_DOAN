@@ -206,7 +206,7 @@ h-2.2v9.2h2.2c1.3,0,2.3-0.4,2.9-1.1c0.6-0.7,0.9-1.9,0.9-3.6c0-1.6-0.3-2.8-0.9-3.
 
     <main class="main">
         <div class="smooth-scroll">
-            <div class="container" id="project-details-page">
+            <div class="container" id="news-details-page">
                 <script>
                     if (document.querySelector('#home-page')) {
                         Array.from(document.querySelectorAll('.mask, .loadicon'), function(element) {
@@ -397,7 +397,7 @@ C77.5,30.76,77.5,33.53,76.19,35.13z"></path>
                                                 <a
                                                     href="<?php echo '/' . 'du-an/' . $value['slug'] ?>-<?php echo $value['id'] ?>.html"
                                                     class="view-details dark link-load"
-                                                    aria-label=" SỰ KIỆN ĐÀO TẠO NỘI BỘ PHONG CÁCH BÁN HÀNG CHUẨN SEN GROUP &amp; ĐÀO TẠO DỰ ÁN THE EMERALD GOLF VIEW ️">
+                                                    aria-label="lingo GROUP">
                                                     <span class="small-logo-ico">
                                                         <?php include "component/logoLoading.php" ?>
                                                         <span class="rotate-logo">

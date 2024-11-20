@@ -27,7 +27,9 @@
 p {
     margin: 0.75em 0 !important;
   }
-
+iframe{
+    max-width: 100% !important;
+}
 
 @keyframes fadeIn {
     0% {

@@ -326,6 +326,7 @@ C77.5,30.76,77.5,33.53,76.19,35.13z"></path>
                                                 data-description="" data-keyword="" aria-label="link-change-url"></div>
                                         </div>
                                     </div> -->
+                                    
                                     <?php
                                     shuffle($data_project);
                                     $firstBlogs = array_slice($data_project, 0, 8);
@@ -377,7 +378,7 @@ C77.5,30.76,77.5,33.53,76.19,35.13z"></path>
                                                 <a
                                                     href="<?php echo '/' . 'tin-tuc/' . $value['slug'] ?>-<?php echo $value['id'] ?>.html"
                                                     class="view-details dark link-load"
-                                                    aria-label=" SỰ KIỆN ĐÀO TẠO NỘI BỘ PHONG CÁCH BÁN HÀNG CHUẨN SEN GROUP &amp; ĐÀO TẠO DỰ ÁN THE EMERALD GOLF VIEW ️">
+                                                    aria-label=" Lingo group">
                                                     <span class="small-logo-ico">
                                                         <?php include "component/logoLoading.php" ?>
                                                         <span class="rotate-logo">
@@ -393,27 +394,9 @@ C77.5,30.76,77.5,33.53,76.19,35.13z"></path>
                                                 </a>
 
                                             </div>
-
-                                            <!-- <div class="wrap-view-details"><a
-                                                    href="<?php echo '/' . 'tin-tuc/' . $value['slug'] ?>-<?php echo $value['id'] ?>.html"
-                                                    class="view-details dark" data-details="news-398"
-                                                    aria-label="link"><span class="small-logo-ico"><svg>
-                                                            <use xlink:href="#ico-view-details-logo"></use>
-                                                        </svg> <span class="rotate-logo"><svg>
-                                                                <use xlink:href="#ico-view-details-rotate"></use>
-                                                            </svg> </span></span> XEM TIN <svg class="viewdetails-svg">
-                                                        <use xlink:href="#arrow"></use>
-                                                    </svg></a>
-                                                <div class="class-hidden link-change-url"
-                                                    data-title="<?php
-                                                                echo $value['headline'];
-                                                                ?>"
-                                                    data-description="" data-keyword="" aria-label="link-change-url"></div>
-                                            </div> -->
-
                                         </div>
-
                                     <?php } ?>
+
                                 </div>
                             </div>
                         </div>
