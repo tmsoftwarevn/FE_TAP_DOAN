@@ -59,7 +59,7 @@ if ($data && $data['status'] === true && isset($data['data'])) {
     <meta property="og:description" content="Lĩnh vực hoạt động">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="LINGO GROUP">
-    <meta property="og:image" content="<?php echo $url_be . $info_web['image'] ?>">
+    <meta property="og:image" content="/images/image-social.jpg">
     <meta property="og:locale" content="vi">
 
     <meta name="mobile-web-app-capable" content="yes">
