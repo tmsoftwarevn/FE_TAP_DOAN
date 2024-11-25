@@ -172,7 +172,7 @@ if ($data && $data['status'] === true && isset($data['data'])) {
                 </div>
                 <section class="home-banner">
                     <div class="background">
-                        <div class="slide-background" data-time="6000">
+                        <div class="slide-background" data-time="5000">
                             <div class="slidebox-track"><span class="color-overlay"></span>
                                 <div class="slidebox-list">
                                     <!-- <div class="bg slidebox-item">
