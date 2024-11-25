@@ -3441,7 +3441,8 @@ html[lang=vi] .draw-vi {
 }
 
 .content-bus-tab-home p {
-    font-size: .9rem
+    /* font-size: .9rem */
+    font-size: 1rem
 }
 
 .content-bus-tab-home::before {
@@ -3779,6 +3780,10 @@ html[lang=vi] .draw-vi {
 .text-about-intro {
     position: relative;
     display: block
+}
+
+.text-about-intro p{
+    font-size: 1.1rem;
 }
 
 .about-intro .wrap-content {
@@ -7869,7 +7874,8 @@ input[type=range]:focus::-moz-range-track {
     padding: 0 0 0 20px;
     position: relative;
     display: block;
-    margin: 12px 0
+    margin: 12px 0;
+    font-size: 1.1rem;
 }
 
 .text-fixed ol li::before,
@@ -9697,7 +9703,7 @@ input[type=range]:focus::-moz-range-track {
     .pic-about-intro {
         /* width: 55vw;
         height: calc(11/12*55vw); */
-        width: 31vw;
+        width: 0;
         height: calc(11/12*38vw);
         bottom: 0;
         left: auto;
@@ -9944,11 +9950,13 @@ input[type=range]:focus::-moz-range-track {
     }
 
     .about-intro.recruitment-intro .wrap-content {
-        padding: 7vw 0 20vw
+        /* padding: 7vw 0 20vw */
+        padding: 7vw 0 10vw;
     }
 
     .about-intro.recruitment-intro .pic-about-intro {
-        width: 65vw;
+        width: 0;
+        /* width: 65vw; */
         height: calc(11/12*65vw);
         bottom: 0;
         left: auto;

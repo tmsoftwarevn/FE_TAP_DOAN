@@ -396,7 +396,7 @@ h-2.2v9.2h2.2c1.3,0,2.3-0.4,2.9-1.1c0.6-0.7,0.9-1.9,0.9-3.6c0-1.6-0.3-2.8-0.9-3.
                                             </div>
                                         </div>
                                     </div> -->
-                                    
+
                                     <?php
                                     foreach ($data_giaithuong as $key => $value) {
                                     ?>
@@ -440,8 +440,8 @@ h-2.2v9.2h2.2c1.3,0,2.3-0.4,2.9-1.1c0.6-0.7,0.9-1.9,0.9-3.6c0-1.6-0.3-2.8-0.9-3.
                 </section>
 
                 <?php require "footer.php" ?>
-
             </div>
+
         </div>
     </main>
     <div class="register"><span></span> <button class="close-regis close-format" aria-label="close"><svg>

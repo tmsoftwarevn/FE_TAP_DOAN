@@ -90,7 +90,7 @@ if ($data && $data['status'] === true && isset($data['data'])) {
                                                     ?>
                                                 " class="lazy" />
                                 </div>
-                                <a class="view-album" href="#foo" data-href="view-image.php?id=<?php echo $value['id'] ?>" aria-label="album"></a>
+                                <a class="view-album" href="#foo" data-href="/truyen-thong/view-image.php?id=<?php echo $value['id'] ?>" aria-label="album"></a>
                             </div>
                             <div class="title-pic">
                                 <h3>
