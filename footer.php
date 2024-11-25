@@ -15,7 +15,7 @@ require_once "setting-all-file.php";
             <div class="company-text">
                 <div class="title-main color-white text-left">
                     <h2 class="text-ani-item">
-                        
+
                         <?php
                         if ($_SESSION['lang'] == 'vn') {
                             echo 'Tập đoàn giáo dục  <strong>LINGO GROUP</strong>';
@@ -23,7 +23,7 @@ require_once "setting-all-file.php";
                             echo '<strong>LINGO GROUP</strong> EDUCATION Corporation';
                         }
                         ?>
-                       
+
 
                     </h2>
 
@@ -42,18 +42,25 @@ require_once "setting-all-file.php";
                                 <?php echo $info_web['address'] ?>
                             </p>
                         </li>
+                        <li class="company-address"><span class="address !text-blue-500"><svg>
+                                    <use xlink:href="#ico-company-address"></use>
+                                </svg></span>
+                            <p>
+                                CN: 425 Âu Cơ, Tân Phú, Tp Hồ Chí Minh
+                            </p>
+                        </li>
                         <li><span class="call !text-blue-500"><svg>
                                     <use xlink:href="#ico-phone"></use>
                                 </svg></span>
                             <p>
-                            <?php echo $info_web['hotline'] ?>
+                                <?php echo $info_web['hotline'] ?>
                             </p>
                         </li>
                         <li><span class="email !text-blue-500"><svg>
                                     <use xlink:href="#ico-email"></use>
                                 </svg></span>
                             <p>
-                            <?php echo $info_web['email'] ?>
+                                <?php echo $info_web['email'] ?>
                             </p>
                         </li>
                     </ul>
@@ -63,17 +70,17 @@ require_once "setting-all-file.php";
                 <div class="title-small">
                     <div class="title-sp"><?= __('Đăng ký nhận tin') ?></div>
                 </div>
-                    <!-- form -->
-                    <div class="input-text"><span class="holder">Email</span><input type="text"
-                            data-default="Email" value="" id="emailsubscribe" name="emailsubscribe"
-                            data-error="Email không hợp lệ!" aria-label="Email">
-                        <button class="sub-but"
-                            type="button" aria-label="send" id="btn-subscribe-submit"
-                            data-page="/">
-                            <?= __('Gửi') ?>
-                        </button>
-                    </div>
-                
+                <!-- form -->
+                <div class="input-text"><span class="holder">Email</span><input type="text"
+                        data-default="Email" value="" id="emailsubscribe" name="emailsubscribe"
+                        data-error="Email không hợp lệ!" aria-label="Email">
+                    <button class="sub-but"
+                        type="button" aria-label="send" id="btn-subscribe-submit"
+                        data-page="/">
+                        <?= __('Gửi') ?>
+                    </button>
+                </div>
+
             </div>
         </div>
     </div>

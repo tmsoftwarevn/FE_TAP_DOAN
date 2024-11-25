@@ -172,7 +172,7 @@ if ($data && $data['status'] === true && isset($data['data'])) {
                 </div>
                 <section class="home-banner">
                     <div class="background">
-                        <div class="slide-background" data-time="5000">
+                        <div class="slide-background" data-time="6000">
                             <div class="slidebox-track"><span class="color-overlay"></span>
                                 <div class="slidebox-list">
                                     <!-- <div class="bg slidebox-item">
@@ -293,7 +293,7 @@ if ($data && $data['status'] === true && isset($data['data'])) {
                     <div class="wrap-content">
                         <div class="text-home-intro">
                             <div class="title-main color-yellow text-left">
-                                <h2 class="text-ani-item"><strong><?= __('Triết Lý') ?></strong></h2>
+                                <h2 class="text-ani-item"><strong><?= __('Giá trị') ?></strong></h2>
                                 <div class="home-intro-draw draw-vi">
                                     <svg class="nums-drawing" xmlns="http://www.w3.org/2000/svg"
                                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 800 220"

@@ -8533,6 +8533,7 @@ var SlidePicture = {
       }),
       t.mount());
   },
+  
   ProHomeSlide: function () {
     var e,
       t = document.querySelector(".slide-project:not(.slide-already)");

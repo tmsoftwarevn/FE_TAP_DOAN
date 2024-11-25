@@ -497,7 +497,7 @@ c3.7-3.7,9.6-3.7,13.3,0s3.7,9.5,0,13.2s-9.6,3.7-13.3,0S13.4,19,17.1,15.5z" />
     <script src="/catalog/view/js/app.js?ver=1.0.8" type="text/javascript"></script>
 
     <script>
-        const $url_be = "https://belingo.tmsoftware.vn";
+        const $url_be = "https://admin.lingogroup.vn";
 
         document.getElementById("btn-contact-submit2").addEventListener("click", function(e) {
             e.preventDefault();

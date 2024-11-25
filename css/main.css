@@ -9695,8 +9695,10 @@ input[type=range]:focus::-moz-range-track {
     }
 
     .pic-about-intro {
-        width: 55vw;
-        height: calc(11/12*55vw);
+        /* width: 55vw;
+        height: calc(11/12*55vw); */
+        width: 31vw;
+        height: calc(11/12*38vw);
         bottom: 0;
         left: auto;
         right: 0;

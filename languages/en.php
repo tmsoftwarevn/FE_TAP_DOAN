@@ -31,7 +31,7 @@ $lang = [
 
 	'Hình ảnh' => "IMAGE",
 
-	'Triết Lý' => 'Philosophy',
+	'Giá trị' => 'Value',
 
 	'TỔNG QUAN' => 'OVERVIEW',
 
@@ -53,5 +53,8 @@ $lang = [
 	"Các tin khác" => 'Other News',
 	"Kết quả" => "Result",
 	"Tin tức & sự kiện" => "NEWS & EVENTS",
+	"Thành tựu" => "Achievements",
+
+
 
 ];

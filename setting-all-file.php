@@ -2,7 +2,7 @@
 
 require 'setting-language.php';
 
-$url_be = 'https://belingo.tmsoftware.vn';
+$url_be = 'https://admin.lingogroup.vn';
 
 $info_web = [];
 // Call project
