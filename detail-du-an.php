@@ -52,6 +52,7 @@ $data = fetchApiData($apiUrl_project);
 
 if ($data && $data['status'] === true && isset($data['data'])) {
     $data_project = $data['data'];
+    
 } else {
     echo "Error fetching project list or no data available.";
 }

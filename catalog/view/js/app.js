@@ -8539,9 +8539,7 @@ var SlidePicture = {
       n = Container.querySelector(".slide-background:not(.slide-already)");
     n &&
       (n.classList.add("slide-already"),
-      ((r = n.getAttribute("data-time")) &&
-        null != r &&
-        "0000" != r) ||
+      ((r = n.getAttribute("data-time")) && null != r && "0000" != r) ||
         (r = 5e3),
       (t = new Splide(n, {
         type: "fade",
@@ -8805,6 +8803,10 @@ var SlidePicture = {
           e.mount());
       });
   },
+  
+  
+
+
   SlideFourObject: function () {
     var e = document.querySelectorAll(".slide-four:not(.slide-already)");
     e &&
