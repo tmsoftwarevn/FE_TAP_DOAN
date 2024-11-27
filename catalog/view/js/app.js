@@ -9984,53 +9984,53 @@ function ContentLoad() {
       (OuterNav && SubOverSize(),
       SlidePicture.SliderRelative(),
       SlidePicture.SliderOrderProject(),
-      (n = Container.querySelectorAll(".news-relative .item-news")).forEach(
-        function (e) {
-          e.addEventListener("click", function (e) {
-            e.preventDefault();
-            var t,
-              e = Container.querySelector(".load-content"),
-              o = Container.querySelector(".load-details"),
-              r =
-                (n.forEach(function (e) {
-                  e.classList.remove("current");
-                }),
-                this.classList.add("current"),
-                this.querySelector("a").getAttribute("data-details"),
-                this.querySelector("a").getAttribute("href"));
-            return (
-              1 == isFirst &&
-                addURL(
-                  this.querySelector("a"),
-                  this.querySelector("a").getAttribute("data-details")
-                ),
-              (isFirst = 1) == Details &&
-                (Body.insertAdjacentHTML(
-                  "beforeend",
-                  '<div class="loadx" style="display:block"></div>'
-                ),
-                (t = document.querySelector(".loadx")),
-                gsap.to(t, {
-                  duration: 0.3,
-                  opacity: 1,
-                  ease: "none",
-                }),
-                (t = e.offsetTop - 60),
-                ScrollTos(t)),
-              gsap.to(o, {
-                duration: 0.5,
-                opacity: 0,
-                filter: "blur(20px)",
-                ease: "none",
-                onComplete: function () {
-                  NewsLoad(r);
-                },
-              }),
-              !1
-            );
-          });
-        }
-      ),
+      // (n = Container.querySelectorAll(".news-relative .item-news")).forEach(
+      //   function (e) {
+      //     e.addEventListener("click", function (e) {
+      //       e.preventDefault();
+      //       var t,
+      //         e = Container.querySelector(".load-content"),
+      //         o = Container.querySelector(".load-details"),
+      //         r =
+      //           (n.forEach(function (e) {
+      //             e.classList.remove("current");
+      //           }),
+      //           this.classList.add("current"),
+      //           this.querySelector("a").getAttribute("data-details"),
+      //           this.querySelector("a").getAttribute("href"));
+      //       return (
+      //         1 == isFirst &&
+      //           addURL(
+      //             this.querySelector("a"),
+      //             this.querySelector("a").getAttribute("data-details")
+      //           ),
+      //         (isFirst = 1) == Details &&
+      //           (Body.insertAdjacentHTML(
+      //             "beforeend",
+      //             '<div class="loadx" style="display:block"></div>'
+      //           ),
+      //           (t = document.querySelector(".loadx")),
+      //           gsap.to(t, {
+      //             duration: 0.3,
+      //             opacity: 1,
+      //             ease: "none",
+      //           }),
+      //           (t = e.offsetTop - 60),
+      //           ScrollTos(t)),
+      //         gsap.to(o, {
+      //           duration: 0.5,
+      //           opacity: 0,
+      //           filter: "blur(20px)",
+      //           ease: "none",
+      //           onComplete: function () {
+      //             NewsLoad(r);
+      //           },
+      //         }),
+      //         !1
+      //       );
+      //     });
+      //   }
+      // ),
       (Container.querySelector(".news-relative .item-news.current")
         ? Container.querySelector(".news-relative .item-news.current")
         : Container.querySelector(".news-relative .item-news:first-child")

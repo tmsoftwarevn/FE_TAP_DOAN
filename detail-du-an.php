@@ -52,7 +52,7 @@ $data = fetchApiData($apiUrl_project);
 
 if ($data && $data['status'] === true && isset($data['data'])) {
     $data_project = $data['data'];
-    
+    // echo count($data_project) .'dem';
 } else {
     echo "Error fetching project list or no data available.";
 }
@@ -354,7 +354,37 @@ C77.5,30.76,77.5,33.53,76.19,35.13z"></path>
                                     ?>
 
                                         <div class="item-news slidebox-item ">
-                                            <div class="pic-news" onclick="location.reload();">
+                                            <a
+                                                href="<?php echo '/' . 'du-an/' . $value['slug'] ?>-<?php echo $value['id'] ?>.html">
+                                                <div class="pic-news">
+                                                    <?php
+                                                    $date = new DateTime($value['created_at']);
+                                                    $day = $date->format('d');
+                                                    $monthYear = $date->format('m-Y');
+                                                    ?>
+                                                    <div class="date">
+                                                        <?php echo $day; ?>
+                                                        <span><?php echo $monthYear; ?></span>
+                                                    </div>
+                                                    <div class="pic-img">
+                                                        <img src="
+                                                <?php
+                                                echo $url_be, $value['avatar'];
+                                                ?>
+                                                " data-src="
+                                                <?php
+                                                echo $url_be, $value['avatar'];
+                                                ?>
+                                                " alt="
+                                                    <?php
+                                                    echo $value['headline'];
+                                                    ?>
+                                                " class="lazy" />
+                                                    </div>
+
+                                                </div>
+                                            </a>
+                                            <!-- <div class="pic-news">
                                                 <?php
                                                 $date = new DateTime($value['created_at']);
                                                 $day = $date->format('d');
@@ -380,9 +410,9 @@ C77.5,30.76,77.5,33.53,76.19,35.13z"></path>
                                                 " class="lazy" />
                                                 </div>
 
-                                            </div>
+                                            </div> -->
 
-                                            <div class="txt-news" onclick="location.reload();">
+                                            <div class="txt-news">
                                                 <h3>
                                                     <?php
                                                     if ($_SESSION['lang'] == 'vn') {
@@ -397,7 +427,8 @@ C77.5,30.76,77.5,33.53,76.19,35.13z"></path>
                                             <div class="wrap-view-details">
                                                 <a
                                                     href="<?php echo '/' . 'du-an/' . $value['slug'] ?>-<?php echo $value['id'] ?>.html"
-                                                    class="view-details dark link-load"
+
+                                                    class="view-details dark "
                                                     aria-label="lingo GROUP">
                                                     <span class="small-logo-ico">
                                                         <?php include "component/logoLoading.php" ?>
