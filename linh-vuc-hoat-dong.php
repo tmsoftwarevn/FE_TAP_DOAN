@@ -53,13 +53,13 @@ if ($data && $data['status'] === true && isset($data['data'])) {
     <meta name="format-detection" content="telephone=no">
 
     <title id="hdtitle">Lĩnh vực hoạt động</title>
-    <meta name="description" content="Lĩnh vực hoạt động">
+    <meta name="description" content="<?php echo strip_tags($info_web['description']); ?>">
     <meta name="keywords" content="LINGO GROUP">
     <meta property="og:title" content="Lĩnh vực hoạt động">
-    <meta property="og:description" content="Lĩnh vực hoạt động">
+    <meta property="og:description" content="<?php echo strip_tags($info_web['description']); ?>">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="LINGO GROUP">
-    <meta property="og:image" content="/images/image-social.jpg">
+    <meta property="og:image" content="https://lingogroup.vn/images/image-social.jpg">
     <meta property="og:locale" content="vi">
 
     <meta name="mobile-web-app-capable" content="yes">

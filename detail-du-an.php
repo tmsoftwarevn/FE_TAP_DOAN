@@ -264,7 +264,8 @@ h-2.2v9.2h2.2c1.3,0,2.3-0.4,2.9-1.1c0.6-0.7,0.9-1.9,0.9-3.6c0-1.6-0.3-2.8-0.9-3.
                                     ?>
                                 </h1>
                             </div>
-                            <div class="share"><span>Share</span>
+                            <div class="share">
+                                <!-- <span>Share</span> -->
                                 <ul>
                                     <li><a class="facebook" href="<?php echo $info_web['page_facebook'] ?>" target="_blank" rel="noreferrer"><svg
                                                 viewBox="0 0 60 60">
