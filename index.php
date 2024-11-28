@@ -674,7 +674,6 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                                 href="/du-an/detail-du-an.php"></a>
                                         </div>
                                     </div> -->
-
                                     <?php
                                     foreach ($data_project as $key => $value) {
                                     ?>

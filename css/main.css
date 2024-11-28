@@ -9185,7 +9185,7 @@ input[type=range]:focus::-moz-range-track {
     .share {
         position: relative;
         right: auto;
-        margin: 30px auto
+        /* margin: 30px auto */
     }
 
     .share>span {
