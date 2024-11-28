@@ -49,7 +49,7 @@ $lang = [
 	'EMAIL' => 'EMAIL',
 	'NỘI DUNG CẦN LIÊN HỆ' => 'MESSAGE',
 
-	"Dự án khác" =>'Other project',
+	"Dự án khác" =>'Other projects',
 	"Các tin khác" => 'Other News',
 	"Kết quả" => "Result",
 	"Tin tức & sự kiện" => "NEWS & EVENTS",

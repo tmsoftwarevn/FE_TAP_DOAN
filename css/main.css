@@ -10271,7 +10271,7 @@ input[type=range]:focus::-moz-range-track {
 
     .text-fixed p {
         margin: 0 0 20px;
-        font-size: 14px
+        /* font-size: 14px */
     }
 
     .search-result {
