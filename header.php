@@ -56,11 +56,11 @@ require_once "setting-all-file.php";
                         data-keyword="LINGO GROUP" aria-label="link-change-url"></div>
                 </li>
 
-                <li class="nav-item <?php if ($currentPath == '/du-an-tieu-bieu' || strpos($currentPath, '/du-an') === 0) echo 'current'; ?>">
-                    <a class=" nav-item-a" href="/du-an-tieu-bieu"
+                <li class="nav-item <?php if ($currentPath == '/cac-du-an-tieu-bieu' || strpos($currentPath, '/du-an-tieu-bieu') === 0) echo 'current'; ?>">
+                    <a class=" nav-item-a" href="/cac-du-an-tieu-bieu"
                         data-name="activities-page" aria-label="nav" target="<?php if ($currentPath == '/') echo '_blank'; ?>"><?= __('Dự án tiêu biểu') ?></a>
-                    <div class="class-hidden link-change-url" data-hrefen="/du-an-tieu-bieu"
-                        data-hrefvi="/du-an-tieu-bieu" data-title="Hoạt động tiêu biểu"
+                    <div class="class-hidden link-change-url" data-hrefen="/cac-du-an-tieu-bieu"
+                        data-hrefvi="/cac-du-an-tieu-bieu" data-title="Hoạt động tiêu biểu"
                         data-description="LINGO GROUP" data-keyword="LINGO GROUP" aria-label="link-change-url"></div>
                 </li>
                 <li class="nav-item <?php if ($currentPath == '/phat-trien-nguon-nhan-luc') echo 'current'; ?>">

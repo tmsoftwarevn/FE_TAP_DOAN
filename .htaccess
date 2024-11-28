@@ -1,23 +1,9 @@
-# RewriteEngine On
-
-# RewriteRule ^trang-chu index.php [QSA]
-# RewriteRule ^gioi-thieu gioi-thieu.php [QSA]
-# RewriteRule ^truyen-thong truyen-thong.php [QSA]
-# RewriteRule ^truyen-thong/tin-tuc truyen-thong/tin-tuc.php [QSA]
-# RewriteRule ^truyen-thong/videos truyen-thong/videos.php [QSA]
-# RewriteRule ^truyen-thong/image truyen-thong/image.php [QSA]
-
-# RewriteRule ^phat-trien-nguon-nhan-luc phat-trien-nguon-nhan-luc.php [QSA]
-# RewriteRule ^du-an-tieu-bieu du-an-tieu-bieu.php [QSA]
-# RewriteRule ^linh-vuc-hoat-dong linh-vuc-hoat-dong.php [QSA]
-# RewriteRule ^lien-he lien-he.php [QSA]
-
-# // save
 RewriteEngine On
 
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}.php -f
 RewriteRule ^(.*)$ $1.php [L]
 
-RewriteRule du-an/(.*)-([0-9]+)\.html$ detail-du-an.php?id=$2 [QSA,L]
+RewriteRule du-an-tieu-bieu/(.*)-([0-9]+)$ detail-du-an.php?id=$2 [QSA,L]
+
 RewriteRule tin-tuc/(.*)-([0-9]+)\.html$ detail-tintuc.php?id=$2 [QSA,L]

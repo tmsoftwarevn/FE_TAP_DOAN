@@ -355,7 +355,7 @@ C77.5,30.76,77.5,33.53,76.19,35.13z"></path>
 
                                         <div class="item-news slidebox-item ">
                                             <a
-                                                href="<?php echo '/' . 'du-an/' . $value['slug'] ?>-<?php echo $value['id'] ?>.html">
+                                                href="<?php echo '/' . 'du-an-tieu-bieu/' . $value['slug'] ?>-<?php echo $value['id'] ?>">
                                                 <div class="pic-news">
                                                     <?php
                                                     $date = new DateTime($value['created_at']);
@@ -411,22 +411,25 @@ C77.5,30.76,77.5,33.53,76.19,35.13z"></path>
                                                 </div>
 
                                             </div> -->
+                                            <a
+                                                href="<?php echo '/' . 'du-an-tieu-bieu/' . $value['slug'] ?>-<?php echo $value['id'] ?>">
+                                                <div class="txt-news">
+                                                    <h3>
+                                                        <?php
+                                                        if ($_SESSION['lang'] == 'vn') {
+                                                            echo $value['headline'];
+                                                        } else {
+                                                            echo $value['headline_en'];
+                                                        }
+                                                        ?>
+                                                    </h3>
+                                                </div>
+                                            </a>
 
-                                            <div class="txt-news">
-                                                <h3>
-                                                    <?php
-                                                    if ($_SESSION['lang'] == 'vn') {
-                                                        echo $value['headline'];
-                                                    } else {
-                                                        echo $value['headline_en'];
-                                                    }
-                                                    ?>
-                                                </h3>
-                                            </div>
 
                                             <div class="wrap-view-details">
                                                 <a
-                                                    href="<?php echo '/' . 'du-an/' . $value['slug'] ?>-<?php echo $value['id'] ?>.html"
+                                                    href="<?php echo '/' . 'du-an-tieu-bieu/' . $value['slug'] ?>-<?php echo $value['id'] ?>"
 
                                                     class="view-details dark "
                                                     aria-label="lingo GROUP">

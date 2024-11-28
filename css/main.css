@@ -31,6 +31,28 @@ iframe{
     max-width: 100% !important;
 }
 
+ul {
+    list-style-type: disc !important;
+    list-style-position: inside !important;
+  }
+  ol {
+    list-style-type: decimal !important;
+    list-style-position: inside !important;
+  }
+  ul ul,
+  ol ul {
+    list-style-type: circle !important;
+    list-style-position: inside !important;
+    margin-left: 15px !important;
+  }
+  ol ol,
+  ul ol {
+    list-style-type: lower-latin !important;
+    list-style-position: inside !important;
+    margin-left: 15px !important;
+  }
+  
+
 @keyframes fadeIn {
     0% {
         opacity: 0
@@ -7750,6 +7772,9 @@ input[type=range]:focus::-moz-range-track {
     position: relative;
     display: block;
     width: 50%
+}
+.right-content p{
+    font-size: 1.1rem;
 }
 
 .details-content.no-after::after,
