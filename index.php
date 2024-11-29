@@ -384,7 +384,7 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                             class="w-[50px] lg:w-[90px] h-auto object-cover mb-10 " /> -->
                                         <img
                                             src="<?php echo $url_be . $data_banner[0]['avatar'] ?>"
-                                            class="w-[70px] lg:w-[90px] h-auto object-cover mb-10 " />
+                                            class="w-[80px] lg:w-[100px] h-auto object-cover mb-10 " />
                                     </span>
                                 </div>
                                 <div class="business-home trigger-tab" data-name="business-05">
@@ -412,7 +412,7 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
 
                                         <img
                                             src="<?php echo $url_be . $data_banner[1]['avatar'] ?>"
-                                            class="w-[70px] lg:w-[90px] h-auto object-cover mr-10 " />
+                                            class="w-[80px] lg:w-[100px] h-auto object-cover mr-10 " />
 
                                     </span>
                                 </div>
@@ -439,7 +439,7 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                     <span class="logo-bus-home">
 
                                         <img src="<?php echo $url_be . $data_banner[2]['avatar'] ?>"
-                                            class="w-[70px] lg:w-[90px] h-auto object-cover ml-10 " />
+                                            class="w-[80px] lg:w-[100px] h-auto object-cover ml-10 " />
 
                                     </span>
                                 </div>
@@ -470,7 +470,7 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
                                     <span class="logo-bus-home">
 
                                         <img src="<?php echo $url_be . $data_banner[3]['avatar'] ?>"
-                                            class="w-[70px] lg:w-[90px] h-auto object-cover mt-10 " />
+                                            class="w-[80px] lg:w-[100px] h-auto object-cover mt-10 " />
 
                                     </span>
                                 </div>
@@ -502,7 +502,7 @@ c5.6-2.8,15.7-10.7,19.5-15.6c3.8-5,10.9-16.2,11.4-22.5c0.4-4.9-1.2-15.9-4.9-19.2
 
                                         <img src="<?php echo $url_be . $data_banner[4]['avatar'] ?>"
 
-                                            class="w-[70px] lg:w-[90px] h-auto object-cover " />
+                                            class="w-[80px] lg:w-[100px] h-auto object-cover " />
 
                                     </span>
                                 </div>
