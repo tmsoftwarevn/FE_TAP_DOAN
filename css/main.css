@@ -4033,6 +4033,10 @@ html[lang=vi] .draw-vi {
     width: 54%
 }
 
+.text-business-page p{
+    font-size: 1.1rem;
+}
+
 .pic-business-page .bg-cover {
     border-radius: 12px;
     overflow: hidden;
